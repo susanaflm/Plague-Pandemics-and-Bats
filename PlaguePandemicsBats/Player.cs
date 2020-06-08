@@ -11,9 +11,11 @@ namespace PlaguePandemicsBats
 {
     class Player : DrawableGameComponent
     {
-        public Player(Game1 game) : base(game)
-        {
+        private int _playerType;
 
+        public Player(Game1 game, int playerType) : base(game)
+        {
+            _playerType = playerType;
         }
     }
 }
