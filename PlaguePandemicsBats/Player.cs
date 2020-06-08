@@ -9,13 +9,23 @@ using Microsoft.Xna.Framework.Input;
 
 namespace PlaguePandemicsBats
 {
-    class Player : DrawableGameComponent
+    class Player : Sprite
     {
         private int _playerType;
 
-        public Player(Game1 game, int playerType) : base(game)
+        /// <summary>
+        /// Player Constructor
+        /// </summary>
+        /// <param name="game"></param>
+        /// <param name="playerType"></param>
+        public Player(Game1 game, string name, float scale = 1f) : base(game, name, scale: scale, collides: true )
         {
-            _playerType = playerType;
+            
+        }
+
+        public override void Update(GameTime gameTime)
+        {
+            base.Update(gameTime);
         }
     }
 }

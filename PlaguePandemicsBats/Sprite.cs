@@ -1,10 +1,8 @@
 using System;
-using IPCA.Camera;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using IPCA.Collision;
 
-namespace CarsGame
+namespace PlaguePandemicsBats
 {
     public class Sprite
     {
@@ -15,11 +13,16 @@ namespace CarsGame
         internal Vector2 size; // Tamanho em unidades "reais"
         internal Vector2 position; // Posição no ambiente "real"
         internal float rotation = 0f;
-        internal OBBCollider collider;
         internal Game1 _game;
         internal Color _color = Color.White;
+        internal OBBCollider obbCollider;
+        internal CircleCollider cCollider;
+        internal AABBCollider aabbCollider;
 
-        public Sprite(Game1 game, string name, float width = 0, float height = 0, float scale = 0, bool collides = false)
+        public enum ColliderType
+        { OBB, AABB, Circle }
+
+        public Sprite(Game1 game, string name, ColliderType colliderType = ColliderType.Circle, float width = 0, float height = 0, float scale = 0, bool collides = false)
         {
             _game = game;
 
@@ -67,9 +70,26 @@ namespace CarsGame
             position = new Vector2(0, 0);
             if (collides)
             {
-                collider = new OBBCollider(game, name, position, size, rotation);
-                collider.SetDebug(false);
-                game.cManager.Add(collider);
+                if (colliderType == ColliderType.OBB)
+                {
+                    obbCollider = new OBBCollider(game, name, position, size, rotation);
+                    obbCollider.SetDebug(false);
+                    game.cManager.Add(obbCollider);
+                }
+                else if (colliderType == ColliderType.AABB)
+                {
+                    aabbCollider = new AABBCollider(game, name, position, size);
+                    aabbCollider.SetDebug(false);
+                    game.cManager.Add(aabbCollider);
+                }
+                else if (colliderType == ColliderType.Circle)
+                {
+                    //In a Circle Collider width = height
+                    cCollider = new CircleCollider(game, name, position, size.X >= size.Y ? size.X : size.Y);
+                    cCollider.SetDebug(false);
+                    game.cManager.Add(cCollider);
+                }
+                
             }
         }
 
@@ -82,13 +102,15 @@ namespace CarsGame
         public Sprite SetPosition(Vector2 position)
         {
             this.position = position;
-            collider?.SetPosition(position);
+            aabbCollider?.SetPosition(position);
+            obbCollider?.SetPosition(position);
+            cCollider?.SetPosition(position);
             return this;
         }
 
         public Sprite SetRotation(float rotation)
         {
-            collider?.Rotate(rotation);
+            obbCollider?.Rotate(rotation);
             this.rotation = rotation;
             return this;
         }
@@ -105,7 +127,9 @@ namespace CarsGame
                 SpriteEffects.None,
                 0);
 
-            collider?.Draw(null);
+            obbCollider?.Draw(null);
+            aabbCollider?.Draw(null);
+            cCollider?.Draw(null);
         }
 
         public virtual void Update(GameTime gameTime)

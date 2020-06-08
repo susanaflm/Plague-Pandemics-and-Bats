@@ -11,8 +11,11 @@ namespace PlaguePandemicsBats
     {
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
+        
 
         public Camera Camera { get; private set; }
+        public SpriteManager SpriteManager { get; private set; }
+        public CollisionManager cManager;
 
         public Game1()
         {
