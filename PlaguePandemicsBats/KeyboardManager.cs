@@ -5,7 +5,7 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
 
 
-namespace IPCA.KeyboardManager {
+namespace PlaguePandemicsBats {
 
     public class KeyboardManager : GameComponent {
 
