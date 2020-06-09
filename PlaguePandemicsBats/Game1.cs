@@ -36,6 +36,10 @@ namespace PlaguePandemicsBats
             _graphics.PreferredBackBufferWidth = GraphicsDevice.DisplayMode.Width;
             _graphics.ApplyChanges();
 
+            Components.Add(new KeyboardManager(this));
+            SpriteManager = new SpriteManager(this);
+            Camera = new Camera(this, worldWidth: 20f);
+
             base.Initialize();
         }
 
@@ -46,6 +50,10 @@ namespace PlaguePandemicsBats
         protected override void LoadContent()
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
+
+            cManager = new CollisionManager();
+
+            SpriteManager.AddSpriteSheet("texture");
 
             // TODO: use this.Content to load your game content here
         }
