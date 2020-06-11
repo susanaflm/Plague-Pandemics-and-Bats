@@ -13,6 +13,14 @@ namespace PlaguePandemicsBats
     }
 
     /// <summary>
+    /// Type of Colliders, used when drawing a sprite
+    /// </summary>
+    public enum ColliderType
+    { 
+        OBB, AABB, Circle
+    }
+
+    /// <summary>
     /// This is the main type for your game.
     /// </summary>
     public class Game1 : Game

@@ -19,9 +19,6 @@ namespace PlaguePandemicsBats
         internal CircleCollider cCollider;
         internal AABBCollider aabbCollider;
 
-        public enum ColliderType
-        { OBB, AABB, Circle }
-
         public Sprite(Game1 game, string name, ColliderType colliderType = ColliderType.Circle, float width = 0, float height = 0, float scale = 0, bool collides = false) : base(game)
         {
             _game = game;
