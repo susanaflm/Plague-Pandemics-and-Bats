@@ -18,5 +18,10 @@ namespace PlaguePandemicsBats
         {
             return (float)gameTime.ElapsedGameTime.TotalSeconds;
         }
+
+        public static float TotalTime(this GameTime gameTime)
+        {
+            return (float)gameTime.TotalGameTime.TotalSeconds;
+        }
     }
 }

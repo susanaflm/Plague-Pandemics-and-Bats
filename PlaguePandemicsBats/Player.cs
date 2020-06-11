@@ -11,6 +11,8 @@ namespace PlaguePandemicsBats
 {
     class Player : DrawableGameComponent
     {
+        private const float playerWidth = 0.4f;
+
         private Game1 _game;
         private int _playerGender;
         private Dictionary<Direction, Vector2> _playerDirection;
@@ -45,18 +47,18 @@ namespace PlaguePandemicsBats
 
             _spriteDirectionMale = new Dictionary<Direction, Sprite[]>
             {
-                [Direction.Up] = new [] { new Sprite(game, "GU0", width: 0.5f), new Sprite(game, "GU1",width: 0.5f), new Sprite(game, "GU2", width: 0.5f) },
-                [Direction.Down] = new [] { new Sprite(game, "GD0", width: 0.5f), new Sprite(game, "GD1", width: 0.5f), new Sprite(game, "GD2", width: 0.5f) },
-                [Direction.Left] = new [] { new Sprite(game, "GL0", width: 0.5f), new Sprite(game, "GL1", width: 0.5f), new Sprite(game, "GL2", width: 0.5f) },
-                [Direction.Right] = new [] { new Sprite(game, "GR0", width: 0.5f), new Sprite(game, "GR1", width: 0.5f), new Sprite(game, "GR2", width: 0.5f) }
+                [Direction.Up] = new [] { new Sprite(game, "GU0", width: playerWidth), new Sprite(game, "GU1",width: playerWidth), new Sprite(game, "GU2", width: playerWidth) },
+                [Direction.Down] = new [] { new Sprite(game, "GD0", width: playerWidth), new Sprite(game, "GD1", width: playerWidth), new Sprite(game, "GD2", width: playerWidth) },
+                [Direction.Left] = new [] { new Sprite(game, "GL0", width: playerWidth), new Sprite(game, "GL1", width: playerWidth), new Sprite(game, "GL2", width: playerWidth) },
+                [Direction.Right] = new [] { new Sprite(game, "GR0", width: playerWidth), new Sprite(game, "GR1", width: playerWidth), new Sprite(game, "GR2", width: playerWidth) }
             };
 
             _spriteDirectionFemale = new Dictionary<Direction, Sprite[]>
             {
-                [Direction.Up] = new[] { new Sprite(game, "WU0", width: 0.5f), new Sprite(game, "WU1", width: 0.5f), new Sprite(game, "WU2", width: 0.5f) },
-                [Direction.Down] = new[] { new Sprite(game, "WD0", width: 0.5f), new Sprite(game, "WD1", width: 0.5f), new Sprite(game, "WD2", width: 0.5f) },
-                [Direction.Left] = new[] { new Sprite(game, "WL0", width: 0.5f), new Sprite(game, "WL1", width: 0.5f), new Sprite(game, "WL2", width: 0.5f) },
-                [Direction.Right] = new[] { new Sprite(game, "WR0", width: 0.5f), new Sprite(game, "WR1", width: 0.5f), new Sprite(game, "WR2", width: 0.5f) }
+                [Direction.Up] = new[] { new Sprite(game, "WU0", width: playerWidth), new Sprite(game, "WU1", width: playerWidth), new Sprite(game, "WU2", width: playerWidth) },
+                [Direction.Down] = new[] { new Sprite(game, "WD0", width: playerWidth), new Sprite(game, "WD1", width: playerWidth), new Sprite(game, "WD2", width: playerWidth) },
+                [Direction.Left] = new[] { new Sprite(game, "WL0", width: playerWidth), new Sprite(game, "WL1", width: playerWidth), new Sprite(game, "WL2", width: playerWidth) },
+                [Direction.Right] = new[] { new Sprite(game, "WR0", width: playerWidth), new Sprite(game, "WR1", width: playerWidth), new Sprite(game, "WR2", width: playerWidth) }
             };
 
             if (_playerGender == 0)
@@ -80,6 +82,7 @@ namespace PlaguePandemicsBats
         public override void Update(GameTime gameTime)
         {
             float deltaTime = gameTime.DeltaTime();
+            float totalTime = gameTime.TotalTime();
 
             if (_playerGender == 0)
             {
@@ -99,13 +102,19 @@ namespace PlaguePandemicsBats
             _currentSprite.SetPosition(_position);
             _acceleration = 0;
 
-            if ((_currentSprite.position.X + _currentSprite.position.Y) % 8 == 0)
+            if (_oldPosition != _position)
             {
-                _frame++;
+                _frame = (int) (totalTime * 6 ) % 3;
                 if (_frame > 2)
-                    _frame = 0;
+                    _frame = 1;
                 Console.WriteLine($"frame: {_frame}");
+                Console.WriteLine($"deltatime : {totalTime}");
             }
+            else
+            {
+                _frame = 0;
+            }
+            
 
             Camera.LookAt(_position);
         }
