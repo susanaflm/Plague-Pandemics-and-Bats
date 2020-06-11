@@ -2,13 +2,12 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace PlaguePandemicsBats
 {
-    public static class Vector2Extension
+    public static class Extensions
     {
         public static float Pos(this Vector2 vector, int i)
         {
@@ -17,5 +16,11 @@ namespace PlaguePandemicsBats
             else
                 return vector.Y;
         }
+
+        public static float DeltaTime(this GameTime gameTime)
+        {
+            return (float)gameTime.ElapsedGameTime.TotalSeconds;
+        }
+        
     }
 }
