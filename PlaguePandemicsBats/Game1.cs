@@ -70,9 +70,9 @@ namespace PlaguePandemicsBats
         /// </summary>
         protected override void Initialize()
         {
-            _graphics.PreferredBackBufferHeight = GraphicsDevice.DisplayMode.Height / 2;
+            _graphics.PreferredBackBufferHeight = GraphicsDevice.DisplayMode.Height;
             
-            _graphics.PreferredBackBufferWidth = GraphicsDevice.DisplayMode.Width / 2;
+            _graphics.PreferredBackBufferWidth = GraphicsDevice.DisplayMode.Width;
             
             _graphics.ApplyChanges();
 
@@ -99,7 +99,7 @@ namespace PlaguePandemicsBats
 
             SpriteManager.AddSpriteSheet("Fullgrass");
 
-            _player = new Player(this, 1);
+            _player = new Player(this, 0);
 
             background = new TilingBackground(this, "Fullgrass", new Vector2(3, 3)); ;
         }
