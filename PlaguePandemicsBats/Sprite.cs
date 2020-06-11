@@ -4,7 +4,7 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace PlaguePandemicsBats
 {
-    public class Sprite : GameComponent
+    public class Sprite
     {
         private Texture2D texture; // Texture da SpriteSheet
         internal Rectangle bounds; // Posição na SpriteSheet
@@ -19,7 +19,7 @@ namespace PlaguePandemicsBats
         internal CircleCollider cCollider;
         internal AABBCollider aabbCollider;
 
-        public Sprite(Game1 game, string name, ColliderType colliderType = ColliderType.Circle, float width = 0, float height = 0, float scale = 0, bool collides = false) : base(game)
+        public Sprite(Game1 game, string name, ColliderType colliderType = ColliderType.Circle, float width = 0, float height = 0, float scale = 0, bool collides = true)
         {
             _game = game;
 
@@ -70,20 +70,20 @@ namespace PlaguePandemicsBats
                 if (colliderType == ColliderType.OBB)
                 {
                     obbCollider = new OBBCollider(game, name, position, size, rotation);
-                    obbCollider.SetDebug(false);
+                    obbCollider.SetDebug(true);
                     game.CollisionManager.Add(obbCollider);
                 }
                 else if (colliderType == ColliderType.AABB)
                 {
                     aabbCollider = new AABBCollider(game, name, position, size);
-                    aabbCollider.SetDebug(false);
+                    aabbCollider.SetDebug(true);
                     game.CollisionManager.Add(aabbCollider);
                 }
                 else if (colliderType == ColliderType.Circle)
                 {
                     //In a Circle Collider width = height
                     cCollider = new CircleCollider(game, name, position, size.X >= size.Y ? size.X : size.Y);
-                    cCollider.SetDebug(false);
+                    cCollider.SetDebug(true);
                     game.CollisionManager.Add(cCollider);
                 }
                 
@@ -112,7 +112,7 @@ namespace PlaguePandemicsBats
             return this;
         }
 
-        public virtual void Draw(SpriteBatch spriteBatch)
+        public void Draw(SpriteBatch spriteBatch)
         {
             spriteBatch.Draw(
                 texture,
@@ -127,14 +127,6 @@ namespace PlaguePandemicsBats
             obbCollider?.Draw(null);
             aabbCollider?.Draw(null);
             cCollider?.Draw(null);
-        }
-
-        public override void Update(GameTime gameTime)
-        {
-        }
-
-        public void LateUpdate(GameTime gameTime)
-        {
         }
     }
 }

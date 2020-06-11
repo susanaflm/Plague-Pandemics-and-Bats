@@ -32,6 +32,7 @@ namespace PlaguePandemicsBats
         private Camera _camera;
         private SpriteManager _spriteManager;
         private CollisionManager _collisionManager;
+        private Player _player;
 
         public Game1()
         {
@@ -68,13 +69,13 @@ namespace PlaguePandemicsBats
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
-            _graphics.PreferredBackBufferHeight = GraphicsDevice.DisplayMode.Height;
-            _graphics.PreferredBackBufferWidth = GraphicsDevice.DisplayMode.Width;
+            _graphics.PreferredBackBufferHeight = GraphicsDevice.DisplayMode.Height / 2;
+            _graphics.PreferredBackBufferWidth = GraphicsDevice.DisplayMode.Width / 2;
             _graphics.ApplyChanges();
 
             Components.Add(new KeyboardManager(this));
             _spriteManager = new SpriteManager(this);
-            _camera = new Camera(this, worldWidth: 20f);
+            _camera = new Camera(this, worldWidth: 10f);
 
             base.Initialize();
         }
@@ -90,6 +91,8 @@ namespace PlaguePandemicsBats
             _collisionManager = new CollisionManager();
 
             SpriteManager.AddSpriteSheet("texture");
+
+            _player = new Player(this, 1);
 
             // TODO: use this.Content to load your game content here
         }
@@ -113,7 +116,8 @@ namespace PlaguePandemicsBats
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
 
-            // TODO: Add your update logic here
+            _player.Update(gameTime);
+            //_player.LateUpdate(gameTime);
 
             base.Update(gameTime);
         }
@@ -124,9 +128,11 @@ namespace PlaguePandemicsBats
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.White);
+            GraphicsDevice.Clear(Color.CornflowerBlue);
 
-            // TODO: Add your drawing code here
+            _spriteBatch.Begin(samplerState: SamplerState.PointClamp);
+            _player.Draw(_spriteBatch);
+            _spriteBatch.End();
 
             base.Draw(gameTime);
         }
