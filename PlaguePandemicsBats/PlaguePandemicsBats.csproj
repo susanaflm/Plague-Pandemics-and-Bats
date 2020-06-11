@@ -47,6 +47,7 @@
     <Compile Include="CircleCollider.cs" />
     <Compile Include="Collider.cs" />
     <Compile Include="CollisionManager.cs" />
+    <Compile Include="Extension.cs" />
     <Compile Include="Game1.cs" />
     <Compile Include="KeyboardManager.cs" />
     <Compile Include="OBBCollider.cs" />
@@ -57,7 +58,6 @@
     <Compile Include="Sprite.cs" />
     <Compile Include="SpriteManager.cs" />
     <Compile Include="TilingBackground.cs" />
-    <Compile Include="Vector2Extension.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="MonoGame.Framework">
