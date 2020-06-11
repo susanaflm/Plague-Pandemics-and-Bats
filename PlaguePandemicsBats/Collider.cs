@@ -8,6 +8,7 @@ namespace PlaguePandemicsBats
     {
         protected Game _game;
         protected bool _debug;
+        
         internal Vector2 _position;
         internal bool _inCollision;
         internal List<Collider> collisions;

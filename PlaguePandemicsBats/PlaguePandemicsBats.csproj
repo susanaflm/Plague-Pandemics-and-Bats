@@ -56,6 +56,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sprite.cs" />
     <Compile Include="SpriteManager.cs" />
+    <Compile Include="TilingBackground.cs" />
     <Compile Include="Vector2Extension.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -119,12 +120,16 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="app.manifest" />
+    <None Include="Content\Fullgrass.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="Content\texture.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\Fullgrass.png" />
     <Content Include="Content\texture.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -20,19 +20,21 @@ namespace PlaguePandemicsBats
         OBB, AABB, Circle
     }
 
-    /// <summary>
-    /// This is the main type for your game.
-    /// </summary>
     public class Game1 : Game
     {
         private GraphicsDeviceManager _graphics;
+
         private SpriteBatch _spriteBatch;
 
-
         private Camera _camera;
+
         private SpriteManager _spriteManager;
+
         private CollisionManager _collisionManager;
+
         private Player _player;
+
+        public TilingBackground background;
 
         public Game1()
         {
@@ -68,13 +70,16 @@ namespace PlaguePandemicsBats
         /// </summary>
         protected override void Initialize()
         {
-            // TODO: Add your initialization logic here
             _graphics.PreferredBackBufferHeight = GraphicsDevice.DisplayMode.Height / 2;
+            
             _graphics.PreferredBackBufferWidth = GraphicsDevice.DisplayMode.Width / 2;
+            
             _graphics.ApplyChanges();
 
             Components.Add(new KeyboardManager(this));
+            
             _spriteManager = new SpriteManager(this);
+            
             _camera = new Camera(this, worldWidth: 10f);
 
             base.Initialize();
@@ -92,9 +97,11 @@ namespace PlaguePandemicsBats
 
             SpriteManager.AddSpriteSheet("texture");
 
+            SpriteManager.AddSpriteSheet("Fullgrass");
+
             _player = new Player(this, 1);
 
-            // TODO: use this.Content to load your game content here
+            background = new TilingBackground(this, "Fullgrass", new Vector2(3, 3)); ;
         }
 
         /// <summary>
@@ -130,8 +137,12 @@ namespace PlaguePandemicsBats
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
+            background.Draw(gameTime);
+
             _spriteBatch.Begin(samplerState: SamplerState.PointClamp);
+           
             _player.Draw(_spriteBatch);
+            
             _spriteBatch.End();
 
             base.Draw(gameTime);
