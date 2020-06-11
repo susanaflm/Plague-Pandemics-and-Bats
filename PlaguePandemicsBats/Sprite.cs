@@ -4,7 +4,7 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace PlaguePandemicsBats
 {
-    public class Sprite
+    public class Sprite : GameComponent
     {
         private Texture2D texture; // Texture da SpriteSheet
         internal Rectangle bounds; // Posição na SpriteSheet
@@ -22,7 +22,7 @@ namespace PlaguePandemicsBats
         public enum ColliderType
         { OBB, AABB, Circle }
 
-        public Sprite(Game1 game, string name, ColliderType colliderType = ColliderType.Circle, float width = 0, float height = 0, float scale = 0, bool collides = false)
+        public Sprite(Game1 game, string name, ColliderType colliderType = ColliderType.Circle, float width = 0, float height = 0, float scale = 0, bool collides = false) : base(game)
         {
             _game = game;
 
@@ -74,20 +74,20 @@ namespace PlaguePandemicsBats
                 {
                     obbCollider = new OBBCollider(game, name, position, size, rotation);
                     obbCollider.SetDebug(false);
-                    game.cManager.Add(obbCollider);
+                    game.CollisionManager.Add(obbCollider);
                 }
                 else if (colliderType == ColliderType.AABB)
                 {
                     aabbCollider = new AABBCollider(game, name, position, size);
                     aabbCollider.SetDebug(false);
-                    game.cManager.Add(aabbCollider);
+                    game.CollisionManager.Add(aabbCollider);
                 }
                 else if (colliderType == ColliderType.Circle)
                 {
                     //In a Circle Collider width = height
                     cCollider = new CircleCollider(game, name, position, size.X >= size.Y ? size.X : size.Y);
                     cCollider.SetDebug(false);
-                    game.cManager.Add(cCollider);
+                    game.CollisionManager.Add(cCollider);
                 }
                 
             }
@@ -132,10 +132,11 @@ namespace PlaguePandemicsBats
             cCollider?.Draw(null);
         }
 
-        public virtual void Update(GameTime gameTime)
+        public override void Update(GameTime gameTime)
         {
         }
-        public virtual void LateUpdate(GameTime gameTime)
+
+        public void LateUpdate(GameTime gameTime)
         {
         }
     }

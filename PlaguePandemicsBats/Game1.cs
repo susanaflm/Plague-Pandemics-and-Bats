@@ -5,23 +5,51 @@ using Microsoft.Xna.Framework.Input;
 namespace PlaguePandemicsBats
 {
     /// <summary>
+    /// Can be used to know the direction of the player or of the enemies
+    /// </summary>
+    public enum Direction
+    {
+        Up, Down, Left, Right
+    }
+
+    /// <summary>
     /// This is the main type for your game.
     /// </summary>
     public class Game1 : Game
     {
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
-        
 
-        public Camera Camera { get; private set; }
-        public SpriteManager SpriteManager { get; private set; }
-        public CollisionManager cManager;
+
+        private Camera _camera;
+        private SpriteManager _spriteManager;
+        private CollisionManager _collisionManager;
 
         public Game1()
         {
             _graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
         }
+
+        /// <summary>
+        /// Get game's sprite batch.
+        /// </summary>
+        public SpriteBatch SpriteBatch => _spriteBatch;
+
+        /// <summary>
+        /// Get the game's Camera
+        /// </summary>
+        public Camera Camera => _camera;
+
+        /// <summary>
+        /// Get game's sprite manager
+        /// </summary>
+        public SpriteManager SpriteManager => _spriteManager;
+
+        /// <summary>
+        /// Get game's collision manager
+        /// </summary>
+        public CollisionManager CollisionManager => _collisionManager;
 
         /// <summary>
         /// Allows the game to perform any initialization it needs to before starting to run.
@@ -37,8 +65,8 @@ namespace PlaguePandemicsBats
             _graphics.ApplyChanges();
 
             Components.Add(new KeyboardManager(this));
-            SpriteManager = new SpriteManager(this);
-            Camera = new Camera(this, worldWidth: 20f);
+            _spriteManager = new SpriteManager(this);
+            _camera = new Camera(this, worldWidth: 20f);
 
             base.Initialize();
         }
@@ -51,7 +79,7 @@ namespace PlaguePandemicsBats
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
 
-            cManager = new CollisionManager();
+            _collisionManager = new CollisionManager();
 
             SpriteManager.AddSpriteSheet("texture");
 
