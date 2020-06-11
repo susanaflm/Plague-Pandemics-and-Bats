@@ -34,6 +34,7 @@ namespace PlaguePandemicsBats
 
         public void Draw(GameTime gameTime)
         {
+            //center 
             Vector2 center = _background.Bounds.Size.ToVector2() / 2f;
 
             //convert coordenates from the worlsize to pixels
