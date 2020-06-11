@@ -11,13 +11,13 @@ namespace PlaguePandemicsBats
 {
     public class TilingBackground
     {
-        private  Texture2D _background;
+        private  readonly Texture2D _background;
 
-        private  Vector2 _realSize;
+        private readonly Vector2 _realSize;
 
-        private  Game _game;
+        private readonly Game _game;
 
-        private SpriteBatch _spriteBatch;
+        private readonly SpriteBatch _spriteBatch;
 
         public TilingBackground(Game game, string texture, Vector2 realSize)
         {
@@ -34,7 +34,6 @@ namespace PlaguePandemicsBats
 
         public void Draw(GameTime gameTime)
         {
-            //center 
             Vector2 center = _background.Bounds.Size.ToVector2() / 2f;
 
             //convert coordenates from the worlsize to pixels
