@@ -82,7 +82,7 @@ namespace PlaguePandemicsBats
                 else if (colliderType == ColliderType.Circle)
                 {
                     //In a Circle Collider width = height
-                    cCollider = new CircleCollider(game, name, position, size.X >= size.Y ? size.X : size.Y);
+                    cCollider = new CircleCollider(game, name, position, size.X);
                     cCollider.SetDebug(true);
                     game.CollisionManager.Add(cCollider);
                 }

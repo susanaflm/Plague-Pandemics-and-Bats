@@ -107,15 +107,12 @@ namespace PlaguePandemicsBats
                 _frame = (int) (totalTime * 6 ) % 3;
                 if (_frame > 2)
                     _frame = 1;
-                Console.WriteLine($"frame: {_frame}");
-                Console.WriteLine($"deltatime : {totalTime}");
             }
             else
             {
                 _frame = 0;
             }
             
-
             Camera.LookAt(_position);
         }
 

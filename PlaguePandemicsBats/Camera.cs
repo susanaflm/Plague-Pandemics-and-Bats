@@ -65,6 +65,11 @@ namespace PlaguePandemicsBats
             return len * instance.ratio;
         }
 
+        public static float PixelSize(float x)
+        {
+            return x * instance.ratio.X;
+        }
+
         public static void LookAt(Vector2 tgt) {
             instance.target = tgt;
         }

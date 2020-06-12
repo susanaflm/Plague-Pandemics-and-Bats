@@ -11,13 +11,13 @@ namespace PlaguePandemicsBats
 {
     public class TilingBackground
     {
-        private  readonly Texture2D _background;
+        private Texture2D _background;
 
-        private readonly Vector2 _realSize;
+        private Vector2 _realSize;
 
-        private readonly Game _game;
+        private Game _game;
 
-        private readonly SpriteBatch _spriteBatch;
+        private SpriteBatch _spriteBatch;
 
         public TilingBackground(Game game, string texture, Vector2 realSize)
         {
