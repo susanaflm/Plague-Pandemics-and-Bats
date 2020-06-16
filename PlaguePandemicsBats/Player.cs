@@ -75,7 +75,7 @@ namespace PlaguePandemicsBats
         {
             if (_currentSprite.cCollider._inCollision)
             {
-                _currentSprite.SetPosition(_oldPosition);
+                _position = _oldPosition;
             }
         }
 
@@ -118,27 +118,27 @@ namespace PlaguePandemicsBats
 
         public void HandleInput(GameTime gameTime)
         {
-            if (KeyboardManager.IsKeyDown(Keys.W))
+            if (KeyboardManager.IsKeyDown(Keys.W) || KeyboardManager.IsKeyDown(Keys.Up))
             {
                 _direction = Direction.Up;
                 _acceleration = 2f;
             }
-            if (KeyboardManager.IsKeyDown(Keys.S))
+            if (KeyboardManager.IsKeyDown(Keys.S) || KeyboardManager.IsKeyDown(Keys.Down))
             {
                 _direction = Direction.Down;
                 _acceleration = 2f;
             }
-            if (KeyboardManager.IsKeyDown(Keys.A))
+            if (KeyboardManager.IsKeyDown(Keys.A) || KeyboardManager.IsKeyDown(Keys.Left))
             {
                 _direction = Direction.Left;
                 _acceleration = 2f;
             }
-            if (KeyboardManager.IsKeyDown(Keys.D))
+            if (KeyboardManager.IsKeyDown(Keys.D) || KeyboardManager.IsKeyDown(Keys.Right))
             {
                 _direction = Direction.Right;
                 _acceleration = 2f;
             }
-            if (KeyboardManager.IsKeyDown(Keys.Space))
+            if (KeyboardManager.IsKeyDown(Keys.LeftShift))
             {
                 _position = Vector2.Zero;
             }

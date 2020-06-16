@@ -17,7 +17,7 @@ namespace PlaguePandemicsBats
         {
             if (_debug)
             {
-                Pixel.DrawCircle(Camera.ToPixel(_position), Camera.PixelSize(_radius), _inCollision ? Color.Red : Color.Blue);
+                Pixel.DrawCircle(_position, _radius, _inCollision ? Color.Red : Color.Blue);
             }
         }
 

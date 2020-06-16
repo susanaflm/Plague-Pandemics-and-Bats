@@ -6,10 +6,10 @@ namespace PlaguePandemicsBats
     public class Camera {
 
         public static Camera instance; 
-        Vector2 pxSize; // Monogame window size
-        Vector2 wdSize; // Monogame window in worldsize
-        Vector2 ratio;
-        Vector2 target;
+        private Vector2 pxSize; // Monogame window size
+        private Vector2 wdSize; // Monogame window in worldsize
+        private Vector2 ratio;
+        private Vector2 target;
      
         public static Vector2 Size() {
             return instance.wdSize;

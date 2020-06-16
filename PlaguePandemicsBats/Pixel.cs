@@ -22,21 +22,30 @@ namespace PlaguePandemicsBats
             spriteBatch = new SpriteBatch(game.GraphicsDevice);
         }
 
-        public static void Draw(Vector2 position, Color color) {  // FIXME!!!! CAmera
-            instance._Draw(position, color);
+        public static void Draw(Vector2 position, Color color) 
+        {  
+            instance._Draw(Camera.ToPixel(position), color);
         }
          public static void DrawLine(Vector2 a, Vector2 b, Color color)
          {
              Vector2 pixelA = Camera.ToPixel(a);
              Vector2 pixelB = Camera.ToPixel(b);
              instance._DrawLine(pixelA.ToPoint(), pixelB.ToPoint(), color);
-        }
+         }
 
-        public static void DrawRectangle(Rectangle rectangle, Color color) {   // FIXME !!! Camera
+        public static void DrawRectangle(Rectangle rectangle, Color color)
+        {   // FIXME !!! Camera
+            //Vector2 recPosition = Camera.ToPixel(rectangle.Location.ToVector2());
+            //Vector2 recSize = Camera.ToLength(rectangle.Size.ToVector2());
+
+            //Rectangle pixelRectangle = new Rectangle(recPosition.ToPoint(), recSize.ToPoint());
+
             instance._Rectangle(rectangle, color);
         }
 
         public static void DrawCircle(Vector2 center, float radius, Color color) { // FIXME!! Camera
+            center = Camera.ToPixel(center);
+            radius = Camera.PixelSize(radius);
             instance._DrawCircle(center, radius, color);
         }
 
