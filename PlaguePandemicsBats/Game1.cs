@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using System.Collections.Generic;
 
 namespace PlaguePandemicsBats
 {
@@ -23,16 +24,12 @@ namespace PlaguePandemicsBats
     public class Game1 : Game
     {
         private GraphicsDeviceManager _graphics;
-
         private SpriteBatch _spriteBatch;
-
         private Camera _camera;
-
         private SpriteManager _spriteManager;
-
         private CollisionManager _collisionManager;
-
         private Player _player;
+        private List<Projectile> _projectiles;
 
         public TilingBackground background;
 
@@ -63,6 +60,16 @@ namespace PlaguePandemicsBats
         public CollisionManager CollisionManager => _collisionManager;
 
         /// <summary>
+        /// Get game's player 
+        /// </summary>
+        public Player Player => _player;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public List<Projectile> Projectiles => _projectiles;
+
+        /// <summary>
         /// Allows the game to perform any initialization it needs to before starting to run.
         /// This is where it can query for any required services and load any non-graphic
         /// related content.  Calling base.Initialize will enumerate through any components
@@ -70,17 +77,15 @@ namespace PlaguePandemicsBats
         /// </summary>
         protected override void Initialize()
         {
-            _graphics.PreferredBackBufferHeight = GraphicsDevice.DisplayMode.Height;
-            
-            _graphics.PreferredBackBufferWidth = GraphicsDevice.DisplayMode.Width;
-            
+            _graphics.PreferredBackBufferHeight = GraphicsDevice.DisplayMode.Height / 2;
+            _graphics.PreferredBackBufferWidth = GraphicsDevice.DisplayMode.Width / 2;
             _graphics.ApplyChanges();
 
             Components.Add(new KeyboardManager(this));
             
             _spriteManager = new SpriteManager(this);
             
-            _camera = new Camera(this, worldWidth: 10f);
+            _camera = new Camera(this, worldWidth: 30f);
 
             base.Initialize();
         }
@@ -96,10 +101,11 @@ namespace PlaguePandemicsBats
             _collisionManager = new CollisionManager();
 
             SpriteManager.AddSpriteSheet("texture");
-
             SpriteManager.AddSpriteSheet("Fullgrass");
 
-            _player = new Player(this, 0);
+            _player = new Player(this, 1);
+
+            _projectiles = new List<Projectile>();
 
             background = new TilingBackground(this, "Fullgrass", new Vector2(3, 3)); ;
         }
@@ -124,7 +130,12 @@ namespace PlaguePandemicsBats
                 Exit();
 
             _player.Update(gameTime);
-            //_player.LateUpdate(gameTime);
+            _player.LateUpdate(gameTime);
+
+            foreach (Projectile p in Projectiles.ToArray())
+            {
+                p.Update(gameTime);
+            }
 
             base.Update(gameTime);
         }
@@ -135,13 +146,18 @@ namespace PlaguePandemicsBats
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.CornflowerBlue);
+            GraphicsDevice.Clear(Color.White);
 
             background.Draw(gameTime);
 
             _spriteBatch.Begin(samplerState: SamplerState.PointClamp);
            
             _player.Draw(_spriteBatch);
+
+            foreach (Projectile projectile in Projectiles.ToArray())
+            {
+                projectile.Draw(_spriteBatch);
+            }
             
             _spriteBatch.End();
 

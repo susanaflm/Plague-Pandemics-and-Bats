@@ -9,7 +9,7 @@ using Microsoft.Xna.Framework.Input;
 
 namespace PlaguePandemicsBats
 {
-    class Player : DrawableGameComponent
+    public class Player : DrawableGameComponent
     {
         private const float playerWidth = 0.4f;
 
@@ -71,11 +71,38 @@ namespace PlaguePandemicsBats
             }
         }
 
+        /// <summary>
+        /// Get the Player's Position
+        /// </summary>
+        public Vector2 Position => _position;
+
+        /// <summary>
+        /// Get the Player's Direction;
+        /// </summary>
+        public Direction Direction => _direction;
+
+        /// <summary>
+        /// Get the Player's Current Sprite;
+        /// </summary>
+        public Sprite CurrentSprite => _currentSprite;
+
         public void LateUpdate(GameTime gameTime)
         {
             if (_currentSprite.cCollider._inCollision)
             {
-                _position = _oldPosition;
+                bool extraCollision = false;
+                foreach (Collider c in _currentSprite.cCollider.collisions)
+                {
+                    if (c.Tag != "cure")
+                    {
+                        extraCollision = true;
+                    }
+                }
+
+                if (extraCollision)
+                {
+                    _position = _oldPosition;
+                }
             }
         }
 
@@ -98,8 +125,8 @@ namespace PlaguePandemicsBats
             HandleInput(gameTime);
 
             _position += _acceleration * deltaTime * _playerDirection[_direction];
-
             _currentSprite.SetPosition(_position);
+
             _acceleration = 0;
 
             if (_oldPosition != _position)
@@ -121,26 +148,32 @@ namespace PlaguePandemicsBats
             if (KeyboardManager.IsKeyDown(Keys.W) || KeyboardManager.IsKeyDown(Keys.Up))
             {
                 _direction = Direction.Up;
-                _acceleration = 2f;
+                _acceleration = 1.5f;
             }
             if (KeyboardManager.IsKeyDown(Keys.S) || KeyboardManager.IsKeyDown(Keys.Down))
             {
                 _direction = Direction.Down;
-                _acceleration = 2f;
+                _acceleration = 1.5f;
             }
             if (KeyboardManager.IsKeyDown(Keys.A) || KeyboardManager.IsKeyDown(Keys.Left))
             {
                 _direction = Direction.Left;
-                _acceleration = 2f;
+                _acceleration = 1.5f;
             }
             if (KeyboardManager.IsKeyDown(Keys.D) || KeyboardManager.IsKeyDown(Keys.Right))
             {
                 _direction = Direction.Right;
-                _acceleration = 2f;
+                _acceleration = 1.5f;
             }
             if (KeyboardManager.IsKeyDown(Keys.LeftShift))
             {
                 _position = Vector2.Zero;
+            }
+            if (KeyboardManager.IsKeyGoingDown(Keys.Space))
+            {
+                Projectile proj = new Projectile(_game);
+                _game.Projectiles.Add(proj);
+                proj.Shoot();
             }
             
         }

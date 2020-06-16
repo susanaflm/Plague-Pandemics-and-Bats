@@ -1,4 +1,5 @@
 using System;
+using System.Runtime.InteropServices;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
@@ -10,6 +11,7 @@ namespace PlaguePandemicsBats
         internal Rectangle bounds; // Posição na SpriteSheet
         private Vector2 origin;
 
+        internal string _spriteName;
         internal Vector2 size; // Tamanho em unidades "reais"
         internal Vector2 position; // Posição no ambiente "real"
         internal float rotation = 0f;
@@ -22,6 +24,7 @@ namespace PlaguePandemicsBats
         public Sprite(Game1 game, string name, ColliderType colliderType = ColliderType.Circle, float width = 0, float height = 0, float scale = 0, bool collides = true)
         {
             _game = game;
+            _spriteName = name;
 
             try
             {
@@ -65,6 +68,7 @@ namespace PlaguePandemicsBats
 
             size = new Vector2(width, height);
             position = new Vector2(0, 0);
+
             if (collides)
             {
                 if (colliderType == ColliderType.OBB)
