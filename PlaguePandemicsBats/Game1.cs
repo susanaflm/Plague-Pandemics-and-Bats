@@ -107,7 +107,7 @@ namespace PlaguePandemicsBats
 
             _projectiles = new List<Projectile>();
 
-            background = new TilingBackground(this, "Fullgrass", new Vector2(2)); ;
+            background = new TilingBackground(this, "Fullgrass", new Vector2(4,3)); ;
         }
 
         /// <summary>

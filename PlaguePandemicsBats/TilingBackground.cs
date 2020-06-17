@@ -12,11 +12,8 @@ namespace PlaguePandemicsBats
     public class TilingBackground
     {
         private Texture2D _background;
-
         private Vector2 _realSize;
-
         private Game _game;
-
         private SpriteBatch _spriteBatch;
 
         public TilingBackground(Game game, string texture, Vector2 realSize)
@@ -34,24 +31,46 @@ namespace PlaguePandemicsBats
 
         public void Draw(GameTime gameTime)
         {
+            int x, y;
+
+            Rectangle cameraBounds = new Rectangle((Camera.Target() - Camera.Size() / 2f).ToPoint(), Camera.Size().ToPoint());
+            
             Vector2 center = _background.Bounds.Size.ToVector2() / 2f;
 
-            Rectangle cameraBounds = new Rectangle(Camera.Target().ToPoint(), Camera.Size().ToPoint());
+            Point bottomL = new Point(0);
+            Point topR = new Point(0);
 
-            //convert coordenates from the worlsize to pixels
-            Rectangle outRec = new Rectangle(Camera.ToPixel(Vector2.Zero).ToPoint(), Camera.ToLength(_realSize).ToPoint());
-            
+            bottomL.X = (int)_realSize.X * (((int)(cameraBounds.Width / 2f) / 2) - 1);
+
+            while (bottomL.X > cameraBounds.Left) bottomL.X -= (int)_realSize.X;
+
+            while (bottomL.Y > cameraBounds.Top) bottomL.Y -= (int)_realSize.Y;
+
+            while (topR.X < cameraBounds.Right) topR.X += (int)_realSize.X;
+
+            while (topR.Y < cameraBounds.Bottom) topR.Y += (int)_realSize.Y;
+                              
             _spriteBatch.Begin();
 
-            _spriteBatch.Draw(texture: _background, 
-                destinationRectangle: outRec, 
-                sourceRectangle: null,
-                color: Color.White, 
-                rotation: 0f, 
-                origin: center, 
-                effects: SpriteEffects.None, 
-                layerDepth: 0);
+            for( x = bottomL.X; x <= topR.X; x +=(int)_realSize.X )
+            {
+                for( y = bottomL.Y; y <= topR.Y; y+= (int)_realSize.Y )
+                {
+                    //convert coordenates from the worlsize to pixels
+                    Rectangle outRec = new Rectangle(Camera.ToPixel(new Vector2(x,y)).ToPoint(), Camera.ToLength(_realSize).ToPoint());
 
+                    _spriteBatch.Draw(texture: _background,
+                     destinationRectangle: outRec,
+                     sourceRectangle: null,
+                     color: Color.White,
+                     rotation: 0f,
+                     origin: center,
+                     effects: SpriteEffects.None,
+                     layerDepth: 0);
+
+                }
+            }
+            
             _spriteBatch.End();
         }
     }

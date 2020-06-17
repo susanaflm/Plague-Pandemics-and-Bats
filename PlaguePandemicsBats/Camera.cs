@@ -92,6 +92,7 @@ namespace PlaguePandemicsBats
         public static void LookAt(Vector2 tgt) {
             instance._target = tgt;
         }
+
         public static Vector2 Target()
         {
             return instance._target;
