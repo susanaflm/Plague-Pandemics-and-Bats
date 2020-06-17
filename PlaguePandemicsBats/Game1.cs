@@ -85,7 +85,7 @@ namespace PlaguePandemicsBats
             
             _spriteManager = new SpriteManager(this);
             
-            _camera = new Camera(this, worldWidth: 30f);
+            _camera = new Camera(this, worldWidth: 8f);
 
             base.Initialize();
         }
@@ -107,7 +107,7 @@ namespace PlaguePandemicsBats
 
             _projectiles = new List<Projectile>();
 
-            background = new TilingBackground(this, "Fullgrass", new Vector2(3, 3)); ;
+            background = new TilingBackground(this, "Fullgrass", new Vector2(2)); ;
         }
 
         /// <summary>

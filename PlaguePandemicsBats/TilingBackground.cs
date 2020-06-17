@@ -36,6 +36,8 @@ namespace PlaguePandemicsBats
         {
             Vector2 center = _background.Bounds.Size.ToVector2() / 2f;
 
+            Rectangle cameraBounds = new Rectangle(Camera.Target().ToPoint(), Camera.Size().ToPoint());
+
             //convert coordenates from the worlsize to pixels
             Rectangle outRec = new Rectangle(Camera.ToPixel(Vector2.Zero).ToPoint(), Camera.ToLength(_realSize).ToPoint());
             
