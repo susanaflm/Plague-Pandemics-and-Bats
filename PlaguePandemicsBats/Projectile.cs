@@ -61,7 +61,6 @@ namespace PlaguePandemicsBats
         {
             if (_projectileCollider._inCollision)
             {
-                Console.WriteLine("Projectile Collided");
                 if (_projectileCollider.collisions[0].Tag != _game.Player.Collider.Tag|| _projectileCollider.collisions.Count != 1)
                 {
                     _game.Projectiles.Remove(this);
