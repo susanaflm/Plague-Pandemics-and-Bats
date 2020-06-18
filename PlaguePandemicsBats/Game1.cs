@@ -130,6 +130,7 @@ namespace PlaguePandemicsBats
                 Exit();
 
             _player.Update(gameTime);
+            _collisionManager.Update(gameTime);
             _player.LateUpdate(gameTime);
 
             foreach (Projectile p in Projectiles.ToArray())

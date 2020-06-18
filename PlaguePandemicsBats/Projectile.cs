@@ -9,7 +9,7 @@ namespace PlaguePandemicsBats
     {
         private const float _projectileSpeed = 3f;
         private const float _projectileWidth = 0.2f;
-        private const float _maxDistance = 5f;
+        private const float _maxDistance = 4f;
 
         private Game1 _game;
         private Vector2 _position;
@@ -17,6 +17,7 @@ namespace PlaguePandemicsBats
         private float _rotation;
         private Direction _direction;
         private Sprite _sprite;
+        private OBBCollider _projectileCollider;
 
         private Dictionary<Direction, Vector2> _projectileDirection;
 
@@ -27,7 +28,7 @@ namespace PlaguePandemicsBats
             _position = game.Player.Position;
             _direction = game.Player.Direction;
 
-            _sprite = new Sprite(game, "cure", colliderType: ColliderType.OBB, width: _projectileWidth);
+            _sprite = new Sprite(game, "cure", width: _projectileWidth);
 
             if (_direction == Direction.Down)
                 _rotation = 0;
@@ -45,6 +46,10 @@ namespace PlaguePandemicsBats
                 [Direction.Left] = -Vector2.UnitX,
                 [Direction.Right] = Vector2.UnitX
             };
+
+            _projectileCollider = new OBBCollider(game, "Projectile", _position, _sprite.size, _rotation);
+            _projectileCollider.SetDebug(true);
+            game.CollisionManager.Add(_projectileCollider);
         }
 
         public void Shoot()
@@ -54,11 +59,13 @@ namespace PlaguePandemicsBats
 
         public override void Update(GameTime gameTime)
         {
-            if (_sprite.obbCollider._inCollision)
+            if (_projectileCollider._inCollision)
             {
-                if (_sprite.obbCollider.collisions[0].Tag != _game.Player.CurrentSprite._spriteName || _sprite.obbCollider.collisions.Count != 1)
+                Console.WriteLine("Projectile Collided");
+                if (_projectileCollider.collisions[0].Tag != _game.Player.Collider.Tag|| _projectileCollider.collisions.Count != 1)
                 {
                     _game.Projectiles.Remove(this);
+                    _game.CollisionManager.Remove(_projectileCollider);
                 }
             }
 
@@ -67,18 +74,22 @@ namespace PlaguePandemicsBats
             if (dist >= _maxDistance)
             {
                 _game.Projectiles.Remove(this);
+                _game.CollisionManager.Remove(_projectileCollider);
             }
             else
             {
                 _position += _projectileDirection[_direction] * gameTime.DeltaTime() * _projectileSpeed;
                 _sprite.SetPosition(_position);
                 _sprite.SetRotation(_rotation);
+                _projectileCollider.SetPosition(_position);
+                _projectileCollider.Rotate(_rotation);
             }
         }
 
         public void Draw(SpriteBatch sb)
         {
             _sprite.Draw(sb);
+            _projectileCollider?.Draw(null);
         }
 
     }

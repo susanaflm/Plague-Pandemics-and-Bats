@@ -18,6 +18,7 @@ namespace PlaguePandemicsBats
         private Dictionary<Direction, Vector2> _playerDirection;
         private Dictionary<Direction, Sprite[]> _spriteDirectionMale;
         private Dictionary<Direction, Sprite[]> _spriteDirectionFemale;
+        private CircleCollider _playerCollider;
 
         private Direction _direction = Direction.Down;
         private Vector2 _oldPosition;
@@ -69,6 +70,10 @@ namespace PlaguePandemicsBats
             {
                 _currentSprite = _spriteDirectionMale[_direction][_frame];
             }
+
+            _playerCollider = new CircleCollider(game, "Player", _position, _currentSprite.size.X >= _currentSprite.size.Y ? _currentSprite.size.X / 2f: _currentSprite.size.Y / 2f);
+            _playerCollider.SetDebug(true);
+            game.CollisionManager.Add(_playerCollider);
         }
 
         /// <summary>
@@ -86,14 +91,19 @@ namespace PlaguePandemicsBats
         /// </summary>
         public Sprite CurrentSprite => _currentSprite;
 
+        /// <summary>
+        /// Get the Player's Collider
+        /// </summary>
+        public CircleCollider Collider => _playerCollider;
+
         public void LateUpdate(GameTime gameTime)
         {
-            if (_currentSprite.cCollider._inCollision)
+            if (_playerCollider._inCollision)
             {
                 bool extraCollision = false;
-                foreach (Collider c in _currentSprite.cCollider.collisions)
+                foreach (Collider c in _playerCollider.collisions)
                 {
-                    if (c.Tag != "cure")
+                    if (c.Tag != "Projectile")
                     {
                         extraCollision = true;
                     }
@@ -126,6 +136,7 @@ namespace PlaguePandemicsBats
 
             _position += _acceleration * deltaTime * _playerDirection[_direction];
             _currentSprite.SetPosition(_position);
+            _playerCollider.SetPosition(_position);
 
             _acceleration = 0;
 
@@ -178,9 +189,16 @@ namespace PlaguePandemicsBats
             
         }
 
+        public void SetPosition(Vector2 position)
+        {
+            _position = position;
+            _playerCollider.SetPosition(position);
+        }
+
         public void Draw(SpriteBatch sb)
         {
             _currentSprite.Draw(sb);
+            _playerCollider?.Draw(null);
         }
     }
 }

@@ -21,7 +21,7 @@ namespace PlaguePandemicsBats
         internal CircleCollider cCollider;
         internal AABBCollider aabbCollider;
 
-        public Sprite(Game1 game, string name, ColliderType colliderType = ColliderType.Circle, float width = 0, float height = 0, float scale = 0, bool collides = true)
+        public Sprite(Game1 game, string name, ColliderType colliderType = ColliderType.Circle, float width = 0, float height = 0, float scale = 0, bool collides = false)
         {
             _game = game;
             _spriteName = name;
@@ -74,20 +74,20 @@ namespace PlaguePandemicsBats
                 if (colliderType == ColliderType.OBB)
                 {
                     obbCollider = new OBBCollider(game, name, position, size, rotation);
-                    obbCollider.SetDebug(true);
+                    obbCollider.SetDebug(false);
                     game.CollisionManager.Add(obbCollider);
                 }
                 else if (colliderType == ColliderType.AABB)
                 {
                     aabbCollider = new AABBCollider(game, name, position, size);
-                    aabbCollider.SetDebug(true);
+                    aabbCollider.SetDebug(false);
                     game.CollisionManager.Add(aabbCollider);
                 }
                 else if (colliderType == ColliderType.Circle)
                 {
                     //In a Circle Collider width = height
                     cCollider = new CircleCollider(game, name, position, size.X >= size.Y ? size.X / 2f : size.Y / 2f);
-                    cCollider.SetDebug(true);
+                    cCollider.SetDebug(false);
                     game.CollisionManager.Add(cCollider);
                 }
                 
