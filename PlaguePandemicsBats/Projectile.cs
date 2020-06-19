@@ -8,7 +8,7 @@ namespace PlaguePandemicsBats
     public class Projectile : DrawableGameComponent
     {
         private const float _projectileSpeed = 3f;
-        private const float _projectileWidth = 0.2f;
+        private const float _projectileWidth = 0.07f;
         private const float _maxDistance = 4f;
 
         private Game1 _game;
@@ -61,7 +61,7 @@ namespace PlaguePandemicsBats
         {
             if (_projectileCollider._inCollision)
             {
-                if (_projectileCollider.collisions[0].Tag != _game.Player.Collider.Tag|| _projectileCollider.collisions.Count != 1)
+                if (_projectileCollider.collisions[0].Tag != _game.Player.Collider.Tag || _projectileCollider.collisions.Count != 1)
                 {
                     _game.Projectiles.Remove(this);
                     _game.CollisionManager.Remove(_projectileCollider);
