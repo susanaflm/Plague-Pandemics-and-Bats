@@ -11,6 +11,7 @@ namespace PlaguePandemicsBats
     class Bat : Enemy
     {
         private const float _batWidth = 0.2f;
+        private const float _batHeight = 0.3f;
 
         public Bat(Game1 game) : base(game)
         {
@@ -18,7 +19,7 @@ namespace PlaguePandemicsBats
             _spritesDirection = new Dictionary<Direction, Sprite[]>
             {
                 [Direction.Up] = new [] {new Sprite(game, "BatU", width: _batWidth), new Sprite(game, "BatUD", width: _batWidth), new Sprite(game, "BatUU", width: _batWidth) },
-                [Direction.Down] = new[] { new Sprite(game, "BatFront", width: _batWidth), new Sprite(game, "BatFrontD", width: _batWidth), new Sprite(game, "BatFrontU", width: _batWidth) },
+                [Direction.Down] = new[] { new Sprite(game, "BatFront", width: _batWidth, height: _batHeight), new Sprite(game, "BatFrontD", width: _batWidth, height: _batHeight), new Sprite(game, "BatFrontU", width: _batWidth, height: _batHeight) },
                 [Direction.Left] = new[] { new Sprite(game, "BatL", width: _batWidth), new Sprite(game, "BatLD", width: _batWidth), new Sprite(game, "BatLU", width: _batWidth) },
                 [Direction.Right] = new[] { new Sprite(game, "BatR", width: _batWidth), new Sprite(game, "BatRD", width: _batWidth), new Sprite(game, "BatRU", width: _batWidth) }
             };
