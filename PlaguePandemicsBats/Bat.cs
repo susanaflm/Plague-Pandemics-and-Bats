@@ -12,8 +12,6 @@ namespace PlaguePandemicsBats
     {
         private const float _batWidth = 0.2f;
 
-        private float _rotation;
-
         public Bat(Game1 game) : base(game)
         {
             _position = new Vector2(3, 0);
@@ -31,7 +29,7 @@ namespace PlaguePandemicsBats
 
             _currentSprite = _spritesDirection[_direction][_frame];
 
-            _enemyCollider = new CircleCollider(game, "Enemy", _position, _currentSprite.size.X >= _currentSprite.size.Y ? _currentSprite.size.X / 2f : _currentSprite.size.Y / 2f);
+            _enemyCollider = new OBBCollider(game, "Enemy", _position, _currentSprite.size, 0);
             _enemyCollider.SetDebug(true);
             game.CollisionManager.Add(_enemyCollider);
         }
@@ -41,13 +39,10 @@ namespace PlaguePandemicsBats
             Vector2 faceDir = _game.Player.Position - _position;
             float angle = (float) Math.Atan2(faceDir.Y, faceDir.X);
 
-            _rotation = angle;
-
             faceDir.Normalize();
 
             _position += faceDir * _acceleration * gameTime.DeltaTime();
-            _currentSprite.SetPosition(_position);
-            _enemyCollider.SetPosition(_position);
+            Console.WriteLine($"sprite: {_currentSprite.position}");
         }
     }
 }

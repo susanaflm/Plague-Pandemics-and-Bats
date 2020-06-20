@@ -18,7 +18,7 @@ namespace PlaguePandemicsBats
         private Dictionary<Direction, Vector2> _playerDirection;
         private Dictionary<Direction, Sprite[]> _spriteDirectionMale;
         private Dictionary<Direction, Sprite[]> _spriteDirectionFemale;
-        private CircleCollider _playerCollider;
+        private OBBCollider _playerCollider;
 
         private Direction _direction = Direction.Down;
         private Vector2 _oldPosition;
@@ -73,8 +73,8 @@ namespace PlaguePandemicsBats
                 _currentSprite = _spriteDirectionMale[_direction][_frame];
             }
 
-            _playerCollider = new CircleCollider(game, "Player", _position, _currentSprite.size.X >= _currentSprite.size.Y ? _currentSprite.size.X / 2f: _currentSprite.size.Y / 2f);
-            _playerCollider.SetDebug(false);
+            _playerCollider = new OBBCollider(game, "Player", _position, _currentSprite.size, rotation: 0);
+            _playerCollider.SetDebug(true);
             game.CollisionManager.Add(_playerCollider);
         }
 
@@ -96,7 +96,7 @@ namespace PlaguePandemicsBats
         /// <summary>
         /// Get the Player's Collider
         /// </summary>
-        public CircleCollider Collider => _playerCollider;
+        public Collider Collider => _playerCollider;
 
         public void LateUpdate(GameTime gameTime)
         {
@@ -106,6 +106,10 @@ namespace PlaguePandemicsBats
                 foreach (Collider c in _playerCollider.collisions)
                 {
                     if (c.Tag != "Projectile")
+                    {
+                        extraCollision = true;
+                    }
+                    else if (c.Tag != "Enemy")
                     {
                         extraCollision = true;
                     }

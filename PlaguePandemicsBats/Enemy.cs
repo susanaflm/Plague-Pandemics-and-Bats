@@ -16,7 +16,7 @@ namespace PlaguePandemicsBats
         internal Vector2 _oldPosition;
         internal Direction _direction = Direction.Down;
         internal float _acceleration;
-        internal CircleCollider _enemyCollider;
+        internal OBBCollider _enemyCollider;
         internal int _health;
         internal int _damage;
         internal Dictionary<Direction, Sprite[]> _spritesDirection;
@@ -24,6 +24,7 @@ namespace PlaguePandemicsBats
         internal int _frame = 0;
 
         private Dictionary<Direction, Vector2> _enemyDirection;
+        private float _deltaTime = 0;
 
 
         public Enemy(Game1 game)
@@ -56,6 +57,7 @@ namespace PlaguePandemicsBats
                     if (c.Tag == "Player")
                     {
                         _game.Player.UpdateHealth(_damage);
+                        _position = _oldPosition;
                     }
                     if (c.Tag == "Projectile")
                     {
@@ -68,20 +70,19 @@ namespace PlaguePandemicsBats
 
         public void Update(GameTime gameTime)
         {
-            float totalTime = gameTime.TotalTime();
+            _deltaTime += gameTime.DeltaTime();
+
+            _oldPosition = _position;
 
             Movement(gameTime);
-
-            if (_oldPosition != _position)
-            {
-                _frame = (int)(totalTime * 6) % 3;
-                if (_frame > 2)
-                    _frame = 1;
-            }
-            else
+           
+            _frame = (int)(_deltaTime * 6) % 3;
+            if (_frame > 2)
                 _frame = 0;
 
             _currentSprite = _spritesDirection[_direction][_frame];
+            _currentSprite.SetPosition(_position);
+            _enemyCollider.SetPosition(_position);
         }
 
         public void Draw(SpriteBatch sb)
