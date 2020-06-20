@@ -20,10 +20,11 @@ namespace PlaguePandemicsBats
         internal int _health;
         internal int _damage;
         internal Dictionary<Direction, Sprite[]> _spritesDirection;
+        internal Sprite _currentSprite;
+        internal int _frame = 0;
 
-        private int _frame = 0;
         private Dictionary<Direction, Vector2> _enemyDirection;
-        private Sprite _currentSprite;
+
 
         public Enemy(Game1 game)
         {
@@ -36,20 +37,14 @@ namespace PlaguePandemicsBats
                 [Direction.Left] = -Vector2.UnitX,
                 [Direction.Right] = Vector2.UnitX
             };
-
-            _currentSprite = _spritesDirection[_direction][_frame];
-
-            _enemyCollider = new CircleCollider(game, "Enemy", _position, _currentSprite.size.X >= _currentSprite.size.Y ? _currentSprite.size.X / 2f : _currentSprite.size.Y / 2f);
-            _enemyCollider.SetDebug(true);
-            game.CollisionManager.Add(_enemyCollider);
-
         }
 
-        public abstract void Movement();
+        public abstract void Movement(GameTime gameTime);
 
         internal void SetPosition(Vector2 position)
         {
             _position = position;
+            _enemyCollider.SetPosition(position);
         }
 
         public void LateUpdate(GameTime gameTime)
@@ -62,20 +57,20 @@ namespace PlaguePandemicsBats
                     {
                         _game.Player.UpdateHealth(_damage);
                     }
+                    if (c.Tag == "Projectile")
+                    {
+                        _game.CollisionManager.Remove(_enemyCollider);
+                        _game.Enemies.Remove(this);
+                    }
                 }
             }
         }
 
         public void Update(GameTime gameTime)
         {
-            float deltaTime = gameTime.DeltaTime();
             float totalTime = gameTime.TotalTime();
 
-            _oldPosition = _position;
-
-            Movement();
-
-            _position += _acceleration * _enemyDirection[_direction] * deltaTime;
+            Movement(gameTime);
 
             if (_oldPosition != _position)
             {
@@ -85,6 +80,8 @@ namespace PlaguePandemicsBats
             }
             else
                 _frame = 0;
+
+            _currentSprite = _spritesDirection[_direction][_frame];
         }
 
         public void Draw(SpriteBatch sb)

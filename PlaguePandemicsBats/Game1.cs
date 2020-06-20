@@ -29,7 +29,9 @@ namespace PlaguePandemicsBats
         private SpriteManager _spriteManager;
         private CollisionManager _collisionManager;
         private Player _player;
+        private Bat _bat;
         private List<Projectile> _projectiles;
+        private List<Enemy> _enemies;
 
         public TilingBackground background;
 
@@ -65,9 +67,14 @@ namespace PlaguePandemicsBats
         public Player Player => _player;
 
         /// <summary>
-        /// 
+        /// Get game's Projectiles
         /// </summary>
         public List<Projectile> Projectiles => _projectiles;
+
+        /// <summary>
+        /// Geet game's enemies
+        /// </summary>
+        public List<Enemy> Enemies => _enemies;
 
         /// <summary>
         /// Allows the game to perform any initialization it needs to before starting to run.
@@ -105,6 +112,11 @@ namespace PlaguePandemicsBats
 
             _player = new Player(this, 1);
 
+            _enemies = new List<Enemy>();
+
+            _bat = new Bat(this);
+            _enemies.Add(_bat);
+
             _projectiles = new List<Projectile>();
 
             background = new TilingBackground(this, "Fullgrass", new Vector2(4,3)); ;
@@ -138,6 +150,12 @@ namespace PlaguePandemicsBats
                 p.Update(gameTime);
             }
 
+            foreach (Enemy e in Enemies.ToArray())
+            {
+                e.Update(gameTime);
+                e.LateUpdate(gameTime);
+            }
+
             base.Update(gameTime);
         }
 
@@ -159,7 +177,12 @@ namespace PlaguePandemicsBats
             {
                 projectile.Draw(_spriteBatch);
             }
-            
+
+            foreach (Enemy e in Enemies.ToArray())
+            {
+                e.Draw(_spriteBatch);
+            }
+
             _spriteBatch.End();
 
             base.Draw(gameTime);
