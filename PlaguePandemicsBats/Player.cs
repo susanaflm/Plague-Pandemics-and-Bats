@@ -109,10 +109,6 @@ namespace PlaguePandemicsBats
                     {
                         extraCollision = true;
                     }
-                    else if (c.Tag != "Enemy")
-                    {
-                        extraCollision = true;
-                    }
                 }
 
                 if (extraCollision)
