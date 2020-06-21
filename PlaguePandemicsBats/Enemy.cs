@@ -40,6 +40,10 @@ namespace PlaguePandemicsBats
             };
         }
 
+        /// <summary>
+        /// This Function handles the movement of the enemy
+        /// </summary>
+        /// <param name="gameTime"></param>
         public abstract void Movement(GameTime gameTime);
 
         internal void SetPosition(Vector2 position)

@@ -102,16 +102,17 @@ namespace PlaguePandemicsBats
         {
             if (_playerCollider._inCollision)
             {
-                bool extraCollision = false;
+                int extraCollision = 0;
+
                 foreach (Collider c in _playerCollider.collisions)
                 {
                     if (c.Tag != "Projectile")
                     {
-                        extraCollision = true;
+                        extraCollision += 1;
                     }
                 }
 
-                if (extraCollision)
+                if (extraCollision == 2)
                 {
                     _position = _oldPosition;
                 }
