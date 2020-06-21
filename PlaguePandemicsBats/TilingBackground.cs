@@ -50,6 +50,7 @@ namespace PlaguePandemicsBats
                 for (float y = bottomleft.Y; y <= topright.Y; y += _realSize.Y)
                 {
                     Rectangle outRectangle = new Rectangle(Camera.ToPixel(new Vector2(x, y)).ToPoint(),(Camera.ToLength(_realSize) + Vector2.One).ToPoint());
+                    
                     _spriteBatch.Draw(_background, 
                         outRectangle,   
                         null, Color.White, 0f,  
