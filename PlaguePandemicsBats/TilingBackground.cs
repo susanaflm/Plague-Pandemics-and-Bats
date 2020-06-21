@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Xna.Framework;
@@ -31,46 +32,31 @@ namespace PlaguePandemicsBats
 
         public void Draw(GameTime gameTime)
         {
-            int x, y;
+            Vector2 camTopLeft = Camera.Target() - Camera.Size() / 2f;
+            Vector2 camBottomRight = Camera.Target() + Camera.Size() / 2f;
 
-            Rectangle cameraBounds = new Rectangle((Camera.Target() - Camera.Size() / 2f).ToPoint(), Camera.Size().ToPoint());
-            
-            Vector2 center = _background.Bounds.Size.ToVector2() / 2f;
 
-            Point bottomL = new Point(0);
-            Point topR = new Point(0);
+            Vector2 bottomleft = new Vector2(x: ((int)(camTopLeft.X / _realSize.X) - 1) * _realSize.X,
+                                             y: ((int)(camTopLeft.Y / _realSize.Y) - 1) * _realSize.Y);
 
-            bottomL.X = (int)_realSize.X * (((int)(cameraBounds.Width / 2f) / 2) - 1);
 
-            while (bottomL.X > cameraBounds.Left) bottomL.X -= (int)_realSize.X;
+            Vector2 topright = new Vector2(x: ((int)(camBottomRight.X / _realSize.X) + 1) * _realSize.X,
+                                           y: ((int)(camBottomRight.Y / _realSize.Y) + 1) * _realSize.Y);
 
-            while (bottomL.Y > cameraBounds.Top) bottomL.Y -= (int)_realSize.Y;
-
-            while (topR.X < cameraBounds.Right) topR.X += (int)_realSize.X;
-
-            while (topR.Y < cameraBounds.Bottom) topR.Y += (int)_realSize.Y;
-                              
             _spriteBatch.Begin();
 
-            for( x = bottomL.X; x <= topR.X; x +=(int)_realSize.X )
+            for (float x = bottomleft.X; x <= topright.X; x += _realSize.X)
             {
-                for( y = bottomL.Y; y <= topR.Y; y+= (int)_realSize.Y )
+                for (float y = bottomleft.Y; y <= topright.Y; y += _realSize.Y)
                 {
-                    //convert coordenates from the worlsize to pixels
-                    Rectangle outRec = new Rectangle(Camera.ToPixel(new Vector2(x,y)).ToPoint(), Camera.ToLength(_realSize).ToPoint());
-
-                    _spriteBatch.Draw(texture: _background,
-                     destinationRectangle: outRec,
-                     sourceRectangle: null,
-                     color: Color.White,
-                     rotation: 0f,
-                     origin: center,
-                     effects: SpriteEffects.None,
-                     layerDepth: 0);
-
+                    Rectangle outRectangle = new Rectangle(Camera.ToPixel(new Vector2(x, y)).ToPoint(),(Camera.ToLength(_realSize) + Vector2.One).ToPoint());
+                    _spriteBatch.Draw(_background, 
+                        outRectangle,   
+                        null, Color.White, 0f,  
+                        _background.Bounds.Size.ToVector2() / 2f, 
+                        SpriteEffects.None, 0);
                 }
             }
-            
             _spriteBatch.End();
         }
     }
