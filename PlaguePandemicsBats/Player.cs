@@ -24,10 +24,11 @@ namespace PlaguePandemicsBats
         private Vector2 _oldPosition;
         private Vector2 _position;
         private float _acceleration;
-        private int _frame = 0;
-        private Sprite _currentSprite;
+        private int _frame = 0; 
         private int _health = 100;
         private int lives = 3;
+        private Sprite _currentSprite;
+       
 
         /// <summary>
         /// Player Constructor
@@ -78,6 +79,7 @@ namespace PlaguePandemicsBats
             game.CollisionManager.Add(_playerCollider);
         }
 
+        #region Properties
         /// <summary>
         /// Get the Player's Position
         /// </summary>
@@ -97,6 +99,7 @@ namespace PlaguePandemicsBats
         /// Get the Player's Collider
         /// </summary>
         public Collider Collider => _playerCollider;
+        #endregion
 
         public void LateUpdate(GameTime gameTime)
         {

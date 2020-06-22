@@ -45,6 +45,7 @@
     <Compile Include="AABBCollider.cs" />
     <Compile Include="Bat.cs" />
     <Compile Include="Camera.cs" />
+    <Compile Include="Cat.cs" />
     <Compile Include="CircleCollider.cs" />
     <Compile Include="Collider.cs" />
     <Compile Include="CollisionManager.cs" />

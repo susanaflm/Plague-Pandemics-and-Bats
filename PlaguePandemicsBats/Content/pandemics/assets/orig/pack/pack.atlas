@@ -137,6 +137,13 @@ Fullgrass
   orig: 44, 44
   offset: 0, 0
   index: -1
+grassSquare
+  rotate: false
+  xy: 679, 203
+  size: 44, 44
+  orig: 44, 44
+  offset: 0, 0
+  index: -1
 GD0
   rotate: false
   xy: 385, 204
@@ -349,7 +356,7 @@ HollowFence
   index: -1
 HorizontalFence
   rotate: false
-  xy: 1631, 298
+  xy: 1631, 279
   size: 31, 14
   orig: 31, 14
   offset: 0, 0
@@ -398,7 +405,7 @@ Tree
   index: -1
 TreeTrunk
   rotate: false
-  xy: 875, 230
+  xy: 1631, 295
   size: 30, 17
   orig: 30, 17
   offset: 0, 0
@@ -774,6 +781,13 @@ floor
   orig: 42, 40
   offset: 0, 0
   index: -1
+garlic
+  rotate: false
+  xy: 875, 218
+  size: 29, 29
+  orig: 29, 29
+  offset: 0, 0
+  index: -1
 grave
   rotate: false
   xy: 842, 218
@@ -814,6 +828,13 @@ tallB
   xy: 1045, 222
   size: 106, 286
   orig: 106, 286
+  offset: 0, 0
+  index: -1
+vaccinePoc
+  rotate: false
+  xy: 310, 40
+  size: 24, 29
+  orig: 24, 29
   offset: 0, 0
   index: -1
 verticalFence

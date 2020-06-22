@@ -18,10 +18,11 @@ namespace PlaguePandemicsBats
         internal float _acceleration;
         internal OBBCollider _enemyCollider;
         internal int _health;
-        internal int _damage;
+        internal int _damage;   
+        internal int _frame = 0;
         internal Dictionary<Direction, Sprite[]> _spritesDirection;
         internal Sprite _currentSprite;
-        internal int _frame = 0;
+     
 
         private Dictionary<Direction, Vector2> _enemyDirection;
         private float _deltaTime = 0;
@@ -52,7 +53,7 @@ namespace PlaguePandemicsBats
             _enemyCollider.SetPosition(position);
         }
 
-        public void LateUpdate(GameTime gameTime)
+        public virtual void LateUpdate(GameTime gameTime)
         {
             if (_enemyCollider._inCollision)
             {

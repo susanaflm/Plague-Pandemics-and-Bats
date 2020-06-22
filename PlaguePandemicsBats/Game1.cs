@@ -23,6 +23,7 @@ namespace PlaguePandemicsBats
 
     public class Game1 : Game
     {
+        #region  private variables
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
         private Camera _camera;
@@ -30,8 +31,10 @@ namespace PlaguePandemicsBats
         private CollisionManager _collisionManager;
         private Player _player;
         private Bat _bat;
+        private Cat _cat;
         private List<Projectile> _projectiles;
         private List<Enemy> _enemies;
+        #endregion
 
         public TilingBackground background;
 
@@ -41,6 +44,7 @@ namespace PlaguePandemicsBats
             Content.RootDirectory = "Content";
         }
 
+        #region Properties
         /// <summary>
         /// Get game's sprite batch.
         /// </summary>
@@ -75,6 +79,7 @@ namespace PlaguePandemicsBats
         /// Geet game's enemies
         /// </summary>
         public List<Enemy> Enemies => _enemies;
+        #endregion
 
         /// <summary>
         /// Allows the game to perform any initialization it needs to before starting to run.
@@ -114,8 +119,10 @@ namespace PlaguePandemicsBats
 
             _enemies = new List<Enemy>();
 
-            _bat = new Bat(this);
-            _enemies.Add(_bat);
+            //_bat = new Bat(this);
+            _cat = new Cat(this);
+            //_enemies.Add(_bat);
+            _enemies.Add(_cat);
 
             _projectiles = new List<Projectile>();
 
