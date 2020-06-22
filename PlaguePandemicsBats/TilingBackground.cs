@@ -35,10 +35,8 @@ namespace PlaguePandemicsBats
             Vector2 camTopLeft = Camera.Target() - Camera.Size() / 2f;
             Vector2 camBottomRight = Camera.Target() + Camera.Size() / 2f;
 
-
             Vector2 bottomleft = new Vector2(x: ((int)(camTopLeft.X / _realSize.X) - 1) * _realSize.X,
                                              y: ((int)(camTopLeft.Y / _realSize.Y) - 1) * _realSize.Y);
-
 
             Vector2 topright = new Vector2(x: ((int)(camBottomRight.X / _realSize.X) + 1) * _realSize.X,
                                            y: ((int)(camBottomRight.Y / _realSize.Y) + 1) * _realSize.Y);
