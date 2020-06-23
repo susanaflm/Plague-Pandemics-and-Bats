@@ -10,10 +10,11 @@ namespace PlaguePandemicsBats
 {
     class Bat : Enemy
     {
+
         private const float _batWidth = 0.2f;
         private const float _batHeight = 0.3f;
 
-        private int _state = 0;
+        //private int _state = 0;
         public Bat(Game1 game) : base(game)
         {
             _position = new Vector2(3, 0);

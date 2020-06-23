@@ -11,6 +11,7 @@ namespace PlaguePandemicsBats
 {
     public class Player
     {
+        #region Private variables
         private const float playerWidth = 0.3f;
 
         private Game1 _game;
@@ -28,8 +29,9 @@ namespace PlaguePandemicsBats
         private int _health = 100;
         private int lives = 3;
         private Sprite _currentSprite;
-       
+        #endregion
 
+        #region Constructor
         /// <summary>
         /// Player Constructor
         /// </summary>
@@ -78,6 +80,7 @@ namespace PlaguePandemicsBats
             _playerCollider.SetDebug(true);
             game.CollisionManager.Add(_playerCollider);
         }
+        #endregion
 
         #region Properties
         /// <summary>
@@ -101,6 +104,7 @@ namespace PlaguePandemicsBats
         public Collider Collider => _playerCollider;
         #endregion
 
+        #region Methods
         public void LateUpdate(GameTime gameTime)
         {
             if (_playerCollider._inCollision)
@@ -226,5 +230,6 @@ namespace PlaguePandemicsBats
             _currentSprite.Draw(sb);
             _playerCollider?.Draw(null);
         }
+        #endregion
     }
 }

@@ -6,13 +6,16 @@ namespace PlaguePandemicsBats
     public class AABBCollider : Collider
     {
         internal Rectangle _rectangle;
-        
+
+        #region Constructor
         public AABBCollider(Game game, string tag, Vector2 center, Vector2 size) : base(game, tag)
         {
             _position = center;
             _rectangle = new Rectangle((center - size / 2f).ToPoint(), size.ToPoint());
         }
+        #endregion
 
+        #region Methods
         public OBBCollider ToObb()
         {
             return new OBBCollider(_game, Tag, _position, _rectangle.Size.ToVector2(), 0f);
@@ -36,5 +39,6 @@ namespace PlaguePandemicsBats
             _position = position;
             _rectangle.Location = (position - _rectangle.Size.ToVector2() / 2f).ToPoint();
         }
+        #endregion
     }
 }

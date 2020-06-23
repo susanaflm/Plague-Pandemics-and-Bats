@@ -25,6 +25,8 @@ namespace PlaguePandemicsBats
         #region Constructor
         public Button(Game1 game, Texture2D texture, Vector2 position) : base(game)
         {
+            DrawOrder = 0;
+
             _game = game;
             _texture = texture;
             _position = position;

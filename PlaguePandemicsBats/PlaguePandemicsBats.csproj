@@ -54,6 +54,7 @@
     <Compile Include="Extension.cs" />
     <Compile Include="Game1.cs" />
     <Compile Include="KeyboardManager.cs" />
+    <Compile Include="MainMenu.cs" />
     <Compile Include="OBBCollider.cs" />
     <Compile Include="PinkZombie.cs" />
     <Compile Include="Pixel.cs" />
@@ -140,7 +141,11 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\button.png" />
     <Content Include="Content\Fullgrass.png" />
+    <Content Include="Content\girlbutton.png" />
+    <Content Include="Content\guybutton.png" />
+    <Content Include="Content\mainmenu.png" />
     <Content Include="Content\pause.png" />
     <Content Include="Content\play.png" />
     <Content Include="Content\quit.png" />

@@ -13,9 +13,12 @@ namespace PlaguePandemicsBats
     public class UI : DrawableGameComponent
     {
         #region Private variables
+        private const float _blinkRate = 0.5f;
+
         private SpriteFont _spriteFont;
         private Game _game;
         private string _input = "";
+        private float _blinkTimer = 0f;
         #endregion
 
         #region Constructor
@@ -53,9 +56,21 @@ namespace PlaguePandemicsBats
         /// Draws back the input of the user
         /// </summary>
         /// <param name="spriteBatch"></param>
-        public void Draw(SpriteBatch spriteBatch)
+        public void Draw(SpriteBatch spriteBatch, GameTime gameTime)
         {
-            spriteBatch.DrawString(_spriteFont, _input, new Vector2(20, 50), color: Color.Black);
+            Vector2 inputSize = _spriteFont.MeasureString(_input);
+            Vector2 position = new Vector2(20, 50);
+                       
+            spriteBatch.DrawString(_spriteFont, _input, position, color: Color.Black);
+
+            position.X = inputSize.X;
+
+            if (_blinkTimer < _blinkRate)
+                spriteBatch.DrawString(_spriteFont, "_", position, color: Color.Black);
+            else if (_blinkTimer > 2 * _blinkRate)
+                _blinkTimer = 0f;
+
+            _blinkTimer += (float)gameTime.ElapsedGameTime.TotalSeconds;
         }
         #endregion
     }
