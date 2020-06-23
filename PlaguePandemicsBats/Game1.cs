@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using Newtonsoft.Json.Serialization;
 using System.Collections.Generic;
 
 namespace PlaguePandemicsBats
@@ -19,6 +20,14 @@ namespace PlaguePandemicsBats
     public enum ColliderType
     {
         OBB, AABB, Circle
+    }
+
+    /// <summary>
+    /// Used to know in Which State the game is
+    /// </summary>
+    public enum GameState
+    {
+        MainMenu, Options, Playing, Paused
     }
 
     public class Game1 : Game
@@ -41,11 +50,12 @@ namespace PlaguePandemicsBats
         private List<Enemy> _enemies;
         private List<Cat> _friendlies;
         private List<Button> _buttons;
+        private bool _paused = false;
+        private GameState _gameState = GameState.Playing;
         #endregion
 
         #region Public variables
         public TilingBackground background;
-        public bool paused = false;
         #endregion
 
         #region Constructor
@@ -82,7 +92,9 @@ namespace PlaguePandemicsBats
         /// </summary>
         public Player Player => _player;
 
-
+        /// <summary>
+        /// Get game's UI
+        /// </summary>
         public UI UI => _ui;
 
         /// <summary>
@@ -91,14 +103,18 @@ namespace PlaguePandemicsBats
         public List<Projectile> Projectiles => _projectiles;
 
         /// <summary>
-        /// Geet game's enemies
+        /// Get game's enemies
         /// </summary>
         public List<Enemy> Enemies => _enemies;
 
-
+        /// <summary>
+        /// Get game's player friendlies
+        /// </summary>
         public List<Cat> Friendlies => _friendlies;
 
-
+        /// <summary>
+        /// Get Game's Button
+        /// </summary>
         public List<Button> Buttons => _buttons;
         #endregion
 
@@ -139,11 +155,10 @@ namespace PlaguePandemicsBats
             /*PAUSE STUFF*/
             _pausedTexture = Content.Load<Texture2D>("pause");
             _pausedRect = new Rectangle(-1, 0, _pausedTexture.Width/2, _pausedTexture.Height/2);
+
             //buttons 
-            _buttonPlay = new Button(this);
-            _buttonPlay.Load(Content.Load<Texture2D>("play"),Camera.ToPixel(new Vector2(-1, 0.9f)));
-            _buttonQuit = new Button(this);
-            _buttonQuit.Load(Content.Load<Texture2D>("quit"),Camera.ToPixel(new Vector2(-1, 0)));
+            _buttonPlay = new Button(this, Content.Load<Texture2D>("play"), new Vector2(GraphicsDevice.Viewport.Width / 2, GraphicsDevice.Viewport.Height / 2));
+            _buttonQuit = new Button(this, Content.Load<Texture2D>("quit"), new Vector2(GraphicsDevice.Viewport.Width / 2, GraphicsDevice.Viewport.Height / 1.5f));
 
             _ui = new UI(this);
 
@@ -182,57 +197,61 @@ namespace PlaguePandemicsBats
         {
             IsMouseVisible = true;
 
-            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
+            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.F1))
                 Exit();
 
             MouseState mouseState = Mouse.GetState();
 
-            if (!paused)
+            switch (_gameState)
             {
-                if(KeyboardManager.IsKeyDown(Keys.Enter))
-                {
-                    paused = true;
+                case GameState.MainMenu:
+                    break;
+                case GameState.Options:
+                    break;
+                case GameState.Playing:
+                    if (KeyboardManager.IsKeyGoingDown(Keys.Escape))
+                    {
+                        _gameState = GameState.Paused;
 
-                    _buttonPlay.isClicked = false;
-                }
+                        _buttonPlay.isClicked = false;
+                    }
 
-                _ui.Update(gameTime);
-                _player.Update(gameTime);
-                _collisionManager.Update(gameTime);
-                _player.LateUpdate(gameTime);
+                    _ui.Update(gameTime);
+                    _player.Update(gameTime);
+                    _collisionManager.Update(gameTime);
+                    _player.LateUpdate(gameTime);
 
-                foreach (Projectile p in Projectiles.ToArray())
-                {
-                    p.Update(gameTime);
-                }
+                    foreach (Projectile p in Projectiles.ToArray())
+                    {
+                        p.Update(gameTime);
+                    }
 
-                foreach (Enemy e in Enemies.ToArray())
-                {
-                    e.Update(gameTime);
-                    e.LateUpdate(gameTime);
-                }
+                    foreach (Enemy e in Enemies.ToArray())
+                    {
+                        e.Update(gameTime);
+                        e.LateUpdate(gameTime);
+                    }
 
-                foreach (Cat c in Friendlies.ToArray())
-                {
-                    c.Update(gameTime);
-                    c.LateUpdate(gameTime);
-                }
-            }
-            else if (paused)
-            {
-                if (KeyboardManager.IsKeyDown(Keys.Enter))
-                {
-                    paused = false;
-                }
+                    foreach (Cat c in Friendlies.ToArray())
+                    {
+                        c.Update(gameTime);
+                        c.LateUpdate(gameTime);
+                    }
+                    break;
+                case GameState.Paused:
 
-                if (_buttonPlay.isClicked)
-                    paused = false;
+                    if (KeyboardManager.IsKeyGoingDown(Keys.Escape))
+                        _gameState = GameState.Playing;
+                    if (_buttonPlay.isClicked)
+                        _gameState = GameState.Playing;
+                    if (_buttonQuit.isClicked)
+                        Exit();
 
-                if (_buttonQuit.isClicked)
-                    Exit();
-
-                _buttonPlay.Update(mouseState);
-                _buttonQuit.Update(mouseState);
+                    _buttonPlay.Update(mouseState);
+                    _buttonQuit.Update(mouseState);
+                    break;
+                default:
+                    break;
             }
             base.Update(gameTime);
         }
@@ -246,16 +265,6 @@ namespace PlaguePandemicsBats
             GraphicsDevice.Clear(Color.White);
 
             _spriteBatch.Begin(samplerState: SamplerState.PointClamp);
-            
-            if (paused)
-            {
-                _spriteBatch.Draw(_pausedTexture, _pausedRect, Color.White);
-
-                  foreach (Button b in Buttons.ToArray())
-                  {
-                    b.Draw(_spriteBatch);
-                  }
-            }
 
             _ui.Draw(_spriteBatch);
 
@@ -276,6 +285,16 @@ namespace PlaguePandemicsBats
             foreach (Cat c in Friendlies.ToArray())
             {
                 c.Draw(_spriteBatch);
+            }
+
+            if (_gameState == GameState.Paused)
+            {
+                _spriteBatch.Draw(_pausedTexture, _pausedRect, Color.White);
+
+                foreach (Button b in Buttons.ToArray())
+                {
+                    b.Draw(_spriteBatch);
+                }
             }
 
             _spriteBatch.End();

@@ -2,12 +2,6 @@
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Cryptography;
-using System.Text;
-using System.Threading.Tasks;
-
 
 namespace PlaguePandemicsBats
 {
@@ -15,9 +9,10 @@ namespace PlaguePandemicsBats
     {
         #region Private variables
         private Texture2D _texture;
-        private SpriteBatch _spriteBatch;
         private Game1 _game;
+
         private Vector2 _position;
+        private Vector2 _origin;
         private Rectangle _rec;
         private Color _color = new Color(255,255,255,255);
         private bool down;
@@ -28,25 +23,17 @@ namespace PlaguePandemicsBats
         #endregion
 
         #region Constructor
-        public Button(Game1 game) : base(game)
+        public Button(Game1 game, Texture2D texture, Vector2 position) : base(game)
         {
             _game = game;
-            _spriteBatch = new SpriteBatch(_game.GraphicsDevice);
+            _texture = texture;
+            _position = position;
+
+            _origin = _texture.Bounds.Size.ToVector2() / 2;
         }
         #endregion
 
         #region Methods
-        /// <summary>
-        /// Loads the texture 
-        /// </summary>
-        /// <param name="texture"></param>
-        /// <param name="position"></param>
-        public void Load(Texture2D texture, Vector2 position)
-        {
-            _texture = texture;
-            _position = position;
-        }
-
         /// <summary>
         /// shifts the colors of the buttons depending on the position of the mouse
         /// </summary>
@@ -54,7 +41,7 @@ namespace PlaguePandemicsBats
         public void Update(MouseState mouse)
         {
             Rectangle mouseRec = new Rectangle(mouse.X, mouse.Y, 1, 1);
-            
+
             mouse = Mouse.GetState();
             _rec = new Rectangle((int)_position.X, (int)_position.Y, _texture.Width, _texture.Height);
         
@@ -79,7 +66,15 @@ namespace PlaguePandemicsBats
         /// <param name="spriteBatch"></param>
         public void Draw(SpriteBatch spriteBatch)
         {
-            spriteBatch.Draw(_texture, _rec, _color);
+            spriteBatch.Draw(
+                _texture,
+                _rec,
+                null,
+                _color,
+                rotation: 0,
+                _origin,
+                SpriteEffects.None,
+                0);
         }
         #endregion
     }

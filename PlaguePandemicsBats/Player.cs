@@ -9,7 +9,7 @@ using Microsoft.Xna.Framework.Input;
 
 namespace PlaguePandemicsBats
 {
-    public class Player : DrawableGameComponent
+    public class Player
     {
         private const float playerWidth = 0.3f;
 
@@ -35,7 +35,7 @@ namespace PlaguePandemicsBats
         /// </summary>
         /// <param name="game">Game1 Instance</param>
         /// <param name="playerGender">The gender of the character</param>
-        public Player(Game1 game, int playerGender) : base(game)
+        public Player(Game1 game, int playerGender)
         {
             _playerGender = playerGender;
             _game = game;
@@ -122,7 +122,7 @@ namespace PlaguePandemicsBats
             }
         }
 
-        public override void Update(GameTime gameTime)
+        public void Update(GameTime gameTime)
         {
             float deltaTime = gameTime.DeltaTime();
             float totalTime = gameTime.TotalTime();
