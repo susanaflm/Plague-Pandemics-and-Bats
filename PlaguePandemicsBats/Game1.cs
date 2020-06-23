@@ -17,7 +17,7 @@ namespace PlaguePandemicsBats
     /// Type of Colliders, used when drawing a sprite
     /// </summary>
     public enum ColliderType
-    { 
+    {
         OBB, AABB, Circle
     }
 
@@ -26,23 +26,35 @@ namespace PlaguePandemicsBats
         #region  private variables
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
+        private SpriteFont _spriteFont;
+        private Texture2D _pausedTexture;
+        private Rectangle _pausedRect;
         private Camera _camera;
         private SpriteManager _spriteManager;
         private CollisionManager _collisionManager;
         private Player _player;
         private Bat _bat;
         private Cat _cat;
+        private Button _buttonPlay, _buttonQuit;
+        private UI _ui;
         private List<Projectile> _projectiles;
         private List<Enemy> _enemies;
+        private List<Cat> _friendlies;
+        private List<Button> _buttons;
         #endregion
 
+        #region Public variables
         public TilingBackground background;
+        public bool paused = false;
+        #endregion
 
+        #region Constructor
         public Game1()
         {
             _graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
         }
+        #endregion
 
         #region Properties
         /// <summary>
@@ -70,6 +82,9 @@ namespace PlaguePandemicsBats
         /// </summary>
         public Player Player => _player;
 
+
+        public UI UI => _ui;
+
         /// <summary>
         /// Get game's Projectiles
         /// </summary>
@@ -79,6 +94,12 @@ namespace PlaguePandemicsBats
         /// Geet game's enemies
         /// </summary>
         public List<Enemy> Enemies => _enemies;
+
+
+        public List<Cat> Friendlies => _friendlies;
+
+
+        public List<Button> Buttons => _buttons;
         #endregion
 
         /// <summary>
@@ -94,9 +115,9 @@ namespace PlaguePandemicsBats
             _graphics.ApplyChanges();
 
             Components.Add(new KeyboardManager(this));
-            
+
             _spriteManager = new SpriteManager(this);
-            
+
             _camera = new Camera(this, worldWidth: 8f);
 
             base.Initialize();
@@ -109,24 +130,38 @@ namespace PlaguePandemicsBats
         protected override void LoadContent()
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
-
+            _spriteFont = Content.Load<SpriteFont>("minecraft");
             _collisionManager = new CollisionManager();
 
             SpriteManager.AddSpriteSheet("texture");
             SpriteManager.AddSpriteSheet("Fullgrass");
 
+            /*PAUSE STUFF*/
+            _pausedTexture = Content.Load<Texture2D>("pause");
+            _pausedRect = new Rectangle(-1, 0, _pausedTexture.Width/2, _pausedTexture.Height/2);
+            //buttons 
+            _buttonPlay = new Button(this);
+            _buttonPlay.Load(Content.Load<Texture2D>("play"),Camera.ToPixel(new Vector2(-1, 0.9f)));
+            _buttonQuit = new Button(this);
+            _buttonQuit.Load(Content.Load<Texture2D>("quit"),Camera.ToPixel(new Vector2(-1, 0)));
+
+            _ui = new UI(this);
+
             _player = new Player(this, 1);
 
             _enemies = new List<Enemy>();
-
-            //_bat = new Bat(this);
-            _cat = new Cat(this);
-            //_enemies.Add(_bat);
-            _enemies.Add(_cat);
-
+            _friendlies = new List<Cat>();
+            _buttons = new List<Button>();
             _projectiles = new List<Projectile>();
-
-            background = new TilingBackground(this, "Fullgrass", new Vector2(4,3)); ;
+            
+            _bat = new Bat(this);
+            _cat = new Cat(this);
+            _enemies.Add(_bat);
+            _friendlies.Add(_cat);
+            _buttons.Add(_buttonPlay);
+            _buttons.Add(_buttonQuit);
+         
+            background = new TilingBackground(this, "Fullgrass", new Vector2(4, 3)); ;
         }
 
         /// <summary>
@@ -145,24 +180,59 @@ namespace PlaguePandemicsBats
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Update(GameTime gameTime)
         {
+            IsMouseVisible = true;
+
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
 
-            _player.Update(gameTime);
-            _collisionManager.Update(gameTime);
-            _player.LateUpdate(gameTime);
+            MouseState mouseState = Mouse.GetState();
 
-            foreach (Projectile p in Projectiles.ToArray())
+            if (!paused)
             {
-                p.Update(gameTime);
-            }
+                if(KeyboardManager.IsKeyDown(Keys.Enter))
+                {
+                    paused = true;
 
-            foreach (Enemy e in Enemies.ToArray())
+                    _buttonPlay.isClicked = false;
+                }
+
+                _ui.Update(gameTime);
+                _player.Update(gameTime);
+                _collisionManager.Update(gameTime);
+                _player.LateUpdate(gameTime);
+
+                foreach (Projectile p in Projectiles.ToArray())
+                {
+                    p.Update(gameTime);
+                }
+
+                foreach (Enemy e in Enemies.ToArray())
+                {
+                    e.Update(gameTime);
+                    e.LateUpdate(gameTime);
+                }
+
+                foreach (Cat c in Friendlies.ToArray())
+                {
+                    c.Update(gameTime);
+                }
+            }
+            else if (paused)
             {
-                e.Update(gameTime);
-                e.LateUpdate(gameTime);
-            }
+                if (KeyboardManager.IsKeyDown(Keys.Enter))
+                {
+                    paused = false;
+                }
 
+                if (_buttonPlay.isClicked)
+                    paused = false;
+
+                if (_buttonQuit.isClicked)
+                    Exit();
+
+                _buttonPlay.Update(mouseState);
+                _buttonQuit.Update(mouseState);
+            }
             base.Update(gameTime);
         }
 
@@ -174,10 +244,22 @@ namespace PlaguePandemicsBats
         {
             GraphicsDevice.Clear(Color.White);
 
+            _spriteBatch.Begin(samplerState: SamplerState.PointClamp);
+
+            if (paused)
+            {
+                _spriteBatch.Draw(_pausedTexture, _pausedRect, Color.White);
+
+                  foreach (Button b in Buttons.ToArray())
+                  {
+                    b.Draw(_spriteBatch);
+                  }
+            }
+
+            _ui.Draw(_spriteBatch);
+
             background.Draw(gameTime);
 
-            _spriteBatch.Begin(samplerState: SamplerState.PointClamp);
-           
             _player.Draw(_spriteBatch);
 
             foreach (Projectile projectile in Projectiles.ToArray())
@@ -188,6 +270,11 @@ namespace PlaguePandemicsBats
             foreach (Enemy e in Enemies.ToArray())
             {
                 e.Draw(_spriteBatch);
+            }
+
+            foreach (Cat c in Friendlies.ToArray())
+            {
+                c.Draw(_spriteBatch);
             }
 
             _spriteBatch.End();

@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="AABBCollider.cs" />
     <Compile Include="Bat.cs" />
+    <Compile Include="Button.cs" />
     <Compile Include="Camera.cs" />
     <Compile Include="Cat.cs" />
     <Compile Include="CircleCollider.cs" />
@@ -65,6 +66,7 @@
     <Compile Include="Sprite.cs" />
     <Compile Include="SpriteManager.cs" />
     <Compile Include="TilingBackground.cs" />
+    <Compile Include="UI.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="MonoGame.Framework">
@@ -127,9 +129,11 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="app.manifest" />
+    <None Include="Content\font.spritefont" />
     <None Include="Content\Fullgrass.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Include="Content\minecraft.spritefont" />
     <None Include="Content\texture.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -137,6 +141,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\Fullgrass.png" />
+    <Content Include="Content\pause.png" />
+    <Content Include="Content\play.png" />
+    <Content Include="Content\quit.png" />
     <Content Include="Content\texture.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
