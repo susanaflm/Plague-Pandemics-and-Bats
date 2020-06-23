@@ -12,11 +12,14 @@ namespace PlaguePandemicsBats
 {
     public class TilingBackground
     {
+        #region Private variables
         private Texture2D _background;
         private Vector2 _realSize;
         private Game _game;
         private SpriteBatch _spriteBatch;
+        #endregion
 
+        #region Constructor
         public TilingBackground(Game game, string texture, Vector2 realSize)
         {
             _game = game;
@@ -29,7 +32,14 @@ namespace PlaguePandemicsBats
             _spriteBatch = new SpriteBatch(_game.GraphicsDevice);
 
         }
+        #endregion
 
+        #region Methods
+
+        /// <summary>
+        /// Draws the whole scene of the background 
+        /// </summary>
+        /// <param name="gameTime"></param>
         public void Draw(GameTime gameTime)
         {
             Vector2 camTopLeft = Camera.Target() - Camera.Size() / 2f;
@@ -58,5 +68,6 @@ namespace PlaguePandemicsBats
             }
             _spriteBatch.End();
         }
+        #endregion
     }
 }

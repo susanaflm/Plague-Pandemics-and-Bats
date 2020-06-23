@@ -215,6 +215,7 @@ namespace PlaguePandemicsBats
                 foreach (Cat c in Friendlies.ToArray())
                 {
                     c.Update(gameTime);
+                    c.LateUpdate(gameTime);
                 }
             }
             else if (paused)
@@ -245,7 +246,7 @@ namespace PlaguePandemicsBats
             GraphicsDevice.Clear(Color.White);
 
             _spriteBatch.Begin(samplerState: SamplerState.PointClamp);
-
+            
             if (paused)
             {
                 _spriteBatch.Draw(_pausedTexture, _pausedRect, Color.White);

@@ -10,7 +10,8 @@ using System.Threading.Tasks;
 namespace PlaguePandemicsBats
 {
     public class Cat
-    {                
+    {
+        #region Private variables
         private const float _catWidth = 0.4f;
         private const float _batHeight = 0.3f;
        
@@ -26,7 +27,9 @@ namespace PlaguePandemicsBats
         private Dictionary<Direction, Sprite []> _spritesDirection;
         private Sprite _currentSprite;
         private float _deltaTime = 0;
+        #endregion
 
+        #region Constructor
         public Cat(Game1 game)
         {
             _game = game;
@@ -49,12 +52,24 @@ namespace PlaguePandemicsBats
             _catCollider.SetDebug(true);
             game.CollisionManager.Add(_catCollider);
         }
+        #endregion
+
+        #region Methods
+
+        /// <summary>
+        /// sets the cats position
+        /// </summary>
+        /// <param name="position"></param>
         public void SetPosition(Vector2 position)
         {
             _position = position;
             _catCollider.SetPosition(position);
         }
 
+        /// <summary>
+        /// updates the cats frames and movement
+        /// </summary>
+        /// <param name="gameTime"></param>
         public void Update(GameTime gameTime)
         {
             _deltaTime += gameTime.DeltaTime();
@@ -72,6 +87,30 @@ namespace PlaguePandemicsBats
             _catCollider.SetPosition(_position);
         }
 
+        /// <summary>
+        /// Updates the colision effects
+        /// </summary>
+        /// <param name="gameTime"></param>
+        public virtual void LateUpdate(GameTime gameTime)
+        {
+            if (_catCollider._inCollision)
+            {
+                foreach (Collider c in _catCollider.collisions)
+                {
+                    if (c.Tag == "Enemy")
+                    {
+                        _health -= 10;
+                        _position = _oldPosition;
+                    }
+                   
+                }
+            }
+        }
+
+        /// <summary>
+        /// moves the cat according to the frames and angle
+        /// </summary>
+        /// <param name="gameTime"></param>
         public void Movement(GameTime gameTime)
         {
 
@@ -98,12 +137,17 @@ namespace PlaguePandemicsBats
 
         }
 
+        /// <summary>
+        /// Draws the cat
+        /// </summary>
+        /// <param name="spriteBatch"></param>
         public void Draw(SpriteBatch spriteBatch)
         {
             _currentSprite.Draw(spriteBatch);
             _catCollider?.Draw(null);
         }
 
+        #endregion
     }
 }
 
