@@ -6,6 +6,7 @@ using System.Collections.Generic;
 
 namespace PlaguePandemicsBats
 {
+    #region Enumerators
     /// <summary>
     /// Can be used to know the direction of the player or of the enemies
     /// </summary>
@@ -23,12 +24,13 @@ namespace PlaguePandemicsBats
     }
 
     /// <summary>
-    /// Used to know in Which State the game is
+    /// Used to know in Which State the game is in
     /// </summary>
     public enum GameState
     {
-        MainMenu, Options, Playing, Paused
+        MainMenu, Options, Highscores, Playing, Paused
     }
+    #endregion
 
     public class Game1 : Game
     {
@@ -44,14 +46,14 @@ namespace PlaguePandemicsBats
         private Player _player;
         private Bat _bat;
         private Cat _cat;
-        private Button _buttonPlay, _buttonQuit;
+        private Button _buttonPlay, _buttonQuit, _guyButton, _girlButton;
         private UI _ui;
         private List<Projectile> _projectiles;
         private List<Enemy> _enemies;
         private List<Cat> _friendlies;
         private List<Button> _buttons;
         private bool _paused = false;
-        private GameState _gameState = GameState.Playing;
+        private GameState _gameState = GameState.MainMenu;
         #endregion
 
         #region Public variables
@@ -154,28 +156,29 @@ namespace PlaguePandemicsBats
 
             /*PAUSE STUFF*/
             _pausedTexture = Content.Load<Texture2D>("pause");
-            _pausedRect = new Rectangle(-1, 0, _pausedTexture.Width/2, _pausedTexture.Height/2);
+            _pausedRect = new Rectangle(-1, 0, _pausedTexture.Width / 2, _pausedTexture.Height / 2);
 
             //buttons 
             _buttonPlay = new Button(this, Content.Load<Texture2D>("play"), new Vector2(GraphicsDevice.Viewport.Width / 2, GraphicsDevice.Viewport.Height / 2));
             _buttonQuit = new Button(this, Content.Load<Texture2D>("quit"), new Vector2(GraphicsDevice.Viewport.Width / 2, GraphicsDevice.Viewport.Height / 1.5f));
-
+            _guyButton = new Button(this, Content.Load<Texture2D>("guybutton"), new Vector2(3, 0));
+            _girlButton = new Button(this, Content.Load<Texture2D>("girlbutton"), new Vector2(-1, 0));
+         
             _ui = new UI(this);
-
             _player = new Player(this, 1);
-
+            _bat = new Bat(this);
+            _cat = new Cat(this);
+            /*LISTS*/
             _enemies = new List<Enemy>();
             _friendlies = new List<Cat>();
             _buttons = new List<Button>();
             _projectiles = new List<Projectile>();
-            
-            _bat = new Bat(this);
-            _cat = new Cat(this);
+            /*ADDING TO LISTS*/
             _enemies.Add(_bat);
             _friendlies.Add(_cat);
             _buttons.Add(_buttonPlay);
             _buttons.Add(_buttonQuit);
-         
+
             background = new TilingBackground(this, "Fullgrass", new Vector2(4, 3)); ;
         }
 
@@ -185,7 +188,7 @@ namespace PlaguePandemicsBats
         /// </summary>
         protected override void UnloadContent()
         {
-            // TODO: Unload any non ContentManager content here
+
         }
 
         /// <summary>
@@ -205,6 +208,13 @@ namespace PlaguePandemicsBats
             switch (_gameState)
             {
                 case GameState.MainMenu:
+                    if (_buttonPlay.isClicked)
+                        _gameState = GameState.Playing;
+
+                    _buttonPlay.Update(gameTime);
+
+                    break;
+                case GameState.Highscores:
                     break;
                 case GameState.Options:
                     break;
@@ -238,6 +248,7 @@ namespace PlaguePandemicsBats
                         c.LateUpdate(gameTime);
                     }
                     break;
+
                 case GameState.Paused:
 
                     if (KeyboardManager.IsKeyGoingDown(Keys.Escape))
@@ -266,25 +277,28 @@ namespace PlaguePandemicsBats
 
             _spriteBatch.Begin(samplerState: SamplerState.PointClamp);
 
-            _ui.Draw(_spriteBatch);
-
-            background.Draw(gameTime);
-
-            _player.Draw(_spriteBatch);
-
-            foreach (Projectile projectile in Projectiles.ToArray())
+            if (_gameState == GameState.Playing)
             {
-                projectile.Draw(_spriteBatch);
-            }
+                _ui.Draw(_spriteBatch, gameTime);
 
-            foreach (Enemy e in Enemies.ToArray())
-            {
-                e.Draw(_spriteBatch);
-            }
+                background.Draw(gameTime);
 
-            foreach (Cat c in Friendlies.ToArray())
-            {
-                c.Draw(_spriteBatch);
+                _player.Draw(_spriteBatch);
+
+                foreach (Projectile p in Projectiles.ToArray())
+                {
+                    p.Draw(_spriteBatch);
+                }
+
+                foreach (Enemy e in Enemies.ToArray())
+                {
+                    e.Draw(_spriteBatch);
+                }
+
+                foreach (Cat c in Friendlies.ToArray())
+                {
+                    c.Draw(_spriteBatch);
+                }
             }
 
             if (_gameState == GameState.Paused)
@@ -295,6 +309,21 @@ namespace PlaguePandemicsBats
                 {
                     b.Draw(_spriteBatch);
                 }
+            }
+
+            if (_gameState == GameState.MainMenu)
+            {
+                //main menu ratio screen size
+                float widthRatio = GraphicsDevice.Viewport.Width / 900;
+                float heightRatio = GraphicsDevice.Viewport.Height / 620;
+
+                _spriteBatch.Draw(Content.Load<Texture2D>("mainmenu"), new Rectangle(0, 0, GraphicsDevice.Viewport.Width, GraphicsDevice.Viewport.Height), Color.White);
+            }
+
+            if (_gameState == GameState.Options)
+            {
+                _girlButton.Draw(gameTime);
+                _guyButton.Draw(gameTime);
             }
 
             _spriteBatch.End();
