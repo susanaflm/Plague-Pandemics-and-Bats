@@ -53,7 +53,6 @@ namespace PlaguePandemicsBats
         private List<Enemy> _enemies;
         private List<Cat> _friendlies;
         private List<Button> _buttons;
-        private bool _paused = false;
         private GameState _gameState = GameState.MainMenu;
         #endregion
 
@@ -137,7 +136,7 @@ namespace PlaguePandemicsBats
 
             _spriteManager = new SpriteManager(this);
 
-            _camera = new Camera(this, worldWidth: 8.3f);
+            _camera = new Camera(this, worldWidth: 10f);
 
             base.Initialize();
         }

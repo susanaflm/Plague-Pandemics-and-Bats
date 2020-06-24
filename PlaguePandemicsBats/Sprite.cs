@@ -31,7 +31,7 @@ namespace PlaguePandemicsBats
                 texture = game.SpriteManager.getTexture(name);
                 bounds = game.SpriteManager.getRectangle(name);
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 texture = game.Content.Load<Texture2D>(name);
                 bounds = texture.Bounds;

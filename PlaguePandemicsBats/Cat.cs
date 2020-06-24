@@ -42,7 +42,6 @@ namespace PlaguePandemicsBats
                 [Direction.Right] = new [] { new Sprite(game, "catR0", width: _catWidth, height: _batHeight), new Sprite(game, "catR1", width: _catWidth, height: _batHeight), new Sprite(game, "catR2", width: _catWidth, height: _batHeight) }
             };
 
-            _acceleration = 1.1f;
             _health = 100;
             _damage = 10;
 
@@ -80,9 +79,17 @@ namespace PlaguePandemicsBats
 
             _frame = (int)(_deltaTime * 6) % 3;
             if (_frame > 2)
-                _frame = 0;
+                _frame = 1;
 
-            _currentSprite = _spritesDirection [_direction] [_frame];
+            if (_oldPosition == _position)
+            {
+                _currentSprite = _spritesDirection[_direction][0];
+            }
+            else
+            {
+                _currentSprite = _spritesDirection[_direction][_frame];
+            }
+
             _currentSprite.SetPosition(_position);
             _catCollider.SetPosition(_position);
         }
@@ -113,28 +120,32 @@ namespace PlaguePandemicsBats
         /// <param name="gameTime"></param>
         public void Movement(GameTime gameTime)
         {
+            Vector2 faceDir = _game.Player.Position - _position;
+            float angle = (float)Math.Atan2(faceDir.Y, faceDir.X);
 
-            if (Camera.PixelSize(Vector2.Distance(_game.Player.Position, _position)) >= Camera.PixelSize(0.5f))
-            {
-                Vector2 faceDir = _game.Player.Position - _position;
-                float angle = (float)Math.Atan2(faceDir.Y, faceDir.X);
+            if (angle <= -3 * Math.PI / 4)
+                _direction = Direction.Left;
+            else if (angle <= -Math.PI / 4)
+                _direction = Direction.Down;
+            else if (angle <= Math.PI / 4)
+                _direction = Direction.Right;
+            else if (angle <= 3 * Math.PI / 4)
+                _direction = Direction.Up;
+            else
+                _direction = Direction.Left;
 
-                if (angle <= -3 * Math.PI / 4)
-                    _direction = Direction.Left;
-                else if (angle <= -Math.PI / 4)
-                    _direction = Direction.Down;
-                else if (angle <= Math.PI / 4)
-                    _direction = Direction.Right;
-                else if (angle <= 3 * Math.PI / 4)
-                    _direction = Direction.Up;
-                else
-                    _direction = Direction.Left;
+            faceDir.Normalize();
 
-                faceDir.Normalize();
-                _position += faceDir * _acceleration * gameTime.DeltaTime();
+            float dist = Vector2.Distance(_game.Player.Position, _position);
 
-            }
+            if (Camera.PixelSize(dist) >= Camera.PixelSize(1f))
+                _acceleration = 1.1f;
+            else if (Camera.PixelSize(dist) >= Camera.PixelSize(0.5f))
+                _acceleration *= 0.97f;
+            else
+                _acceleration = 0f;
 
+            _position += faceDir * _acceleration * gameTime.DeltaTime();
         }
 
         /// <summary>
