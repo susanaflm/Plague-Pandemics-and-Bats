@@ -214,7 +214,8 @@ namespace PlaguePandemicsBats
                     if (_buttonPlay.isClicked || KeyboardManager.IsKeyGoingDown(Keys.Enter))
                         _gameState = GameState.Playing;
 
-                    _buttonPlay.Update(gameTime);
+                    _buttonPlay.Update(mouseState);
+                    _buttonQuit.Update(mouseState);
 
                     break;
                 case GameState.Highscores:

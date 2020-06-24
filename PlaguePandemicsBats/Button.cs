@@ -45,7 +45,7 @@ namespace PlaguePandemicsBats
             Rectangle mouseRec = new Rectangle(mouse.X, mouse.Y, 1, 1);
 
             mouse = Mouse.GetState();
-            _rec = new Rectangle((int)_position.X, (int)_position.Y, _texture.Width, _texture.Height);
+            _rec = new Rectangle((int)_position.X - (_texture.Width / 2), (int)_position.Y - (_texture.Height / 2), _texture.Width, _texture.Height);
         
             if (mouseRec.Intersects(_rec))
             {
@@ -70,7 +70,7 @@ namespace PlaguePandemicsBats
         {
             spriteBatch.Draw(
                 _texture,
-                _rec,
+                new Rectangle(_position.ToPoint(), _texture.Bounds.Size),
                 null,
                 _color,
                 rotation: 0,
