@@ -3,14 +3,15 @@ using Microsoft.Xna.Framework;
 
 namespace PlaguePandemicsBats
 {
-    // Oriented Bounding Box
     public class OBBCollider : Collider
     {
-        private float _rotation; // radians
+        // radians
+        private float _rotation; 
         internal Vector2 _extends;
-        internal Vector2 _orientation1; // One of the orientation vectors
+        internal Vector2 _orientation1;
         internal Vector2 _orientation2 => new Vector2(-_orientation1.Y, _orientation1.X);
-        
+
+        #region Constructor
         public OBBCollider(Game game, string tag, Vector2 center, Vector2 size, float rotation) : base(game, tag)
         {
             _rotation = rotation ;
@@ -18,7 +19,9 @@ namespace PlaguePandemicsBats
             _extends = size / 2f;
             UpdateOrientation();
         }
+        #endregion
 
+        #region Methods
         void UpdateOrientation()
         {
             _orientation1 = new Vector2((float)Math.Cos(_rotation), (float)-Math.Sin(_rotation)); 
@@ -46,5 +49,6 @@ namespace PlaguePandemicsBats
             _rotation = rotation;
             UpdateOrientation();
         }
+        #endregion
     }
 }

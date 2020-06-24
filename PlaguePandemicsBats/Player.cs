@@ -43,6 +43,7 @@ namespace PlaguePandemicsBats
             _game = game;
             _position = new Vector2(0, 0);
 
+            #region Dictionaries
             _playerDirection = new Dictionary<Direction, Vector2>
             {
                 [Direction.Up] = Vector2.UnitY,
@@ -66,6 +67,7 @@ namespace PlaguePandemicsBats
                 [Direction.Left] = new[] { new Sprite(game, "GirlL0", width: playerWidth), new Sprite(game, "GirlL1", width: playerWidth), new Sprite(game, "GirlL2", width: playerWidth) },
                 [Direction.Right] = new[] { new Sprite(game, "GirlR0", width: playerWidth), new Sprite(game, "GirlR1", width: playerWidth), new Sprite(game, "GirlR2", width: playerWidth) }
             };
+            #endregion
 
             if (_playerGender == 0)
             {

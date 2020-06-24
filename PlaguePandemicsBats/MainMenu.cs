@@ -11,22 +11,29 @@ namespace PlaguePandemicsBats
 {   
     public class MainMenu
     {
+        #region Private variables
         private Texture2D _texture;
         private Vector2 _position;
         private Rectangle _rec;
         private bool down;
 
         private Color _color = new Color(255, 255, 255, 255);
+        #endregion
 
+        #region Public
         public Vector2 size;
         public bool isClicked;
+        #endregion
 
+        #region Constructor
         public MainMenu(Texture2D texture, GraphicsDevice graphicsDevice)
         {
             _texture = texture;
             size = new Vector2(graphicsDevice.Viewport.Width / 8, graphicsDevice.Viewport.Height / 30);
         }
+        #endregion
 
+        #region Methods
         public void Update(MouseState mouse)
         {
             Rectangle mouseRec = new Rectangle(mouse.X, mouse.Y, 1, 1);
@@ -60,5 +67,6 @@ namespace PlaguePandemicsBats
         {
             spriteBatch.Draw(_texture, _rec, _color);
         }
+        #endregion
     }
 }

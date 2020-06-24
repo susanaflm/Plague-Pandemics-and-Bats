@@ -349,7 +349,12 @@ namespace PlaguePandemicsBats
                 _spriteBatch.Draw(texture , rec , color);
                 
                 _optnButton.Draw(_spriteBatch);
-                                                
+
+                foreach (Button b in Buttons.ToArray())
+                {
+                    b.Draw(_spriteBatch);
+                }
+
             }
 
             if (_gameState == GameState.Options)

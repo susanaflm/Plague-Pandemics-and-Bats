@@ -16,7 +16,9 @@ namespace PlaguePandemicsBats {
         // Permitir o acesso ubiquo a uma instancia de uma classe
         // Permitir o acesso à UNICA instância de uma classe.
 
+        #region Enumerators
         internal enum KeyState { Down, Up, GoingDown, GoingUp }
+        #endregion
 
         /*
             Associar a cada tecla o seu estado na frame atual
@@ -33,6 +35,7 @@ namespace PlaguePandemicsBats {
  
         */
 
+        #region internal to the class
         internal class KeyActions {
             internal KeyState state;
             internal Dictionary <KeyState, List<Action>> actions;
@@ -45,11 +48,15 @@ namespace PlaguePandemicsBats {
                 }
             }
         }
+        #endregion
 
+        #region Public variables
         public static KeyboardManager instance;
 
         Dictionary<Keys, KeyActions> keyState;
+        #endregion
 
+        #region Constructor
         public KeyboardManager(Game game) : base(game)
         {
             keyState = new Dictionary<Keys, KeyActions>();
@@ -59,8 +66,9 @@ namespace PlaguePandemicsBats {
                 throw new System.Exception("Singleton with more than one instance for KeyboardManager");
             }
         }
+        #endregion
 
-
+        #region Methods
         public override void Update(GameTime gameTime)
         {
             // Detetar mudanças de estado nas teclas... (todas)
@@ -147,8 +155,9 @@ namespace PlaguePandemicsBats {
                 keyState[key] = new KeyActions(KeyState.Up);
             }
             keyState[key].actions[ks].Add(a);
-        }            
+        }
+        #endregion
 
-    } 
+    }
 
 }
