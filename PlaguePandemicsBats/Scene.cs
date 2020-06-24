@@ -39,9 +39,10 @@ namespace PlaguePandemicsBats
                 float x = image ["x"]?.Value<float>() ?? 0f;
                 float y = image ["y"]?.Value<float>() ?? 0f;
                 float rotation = deg2Reg * (image["rotation"]?.Value<float>() ?? 0f);
-                float scale = image ["scaleX"]?.Value<float>() ?? 1;
+                float scaleX = image ["scaleX"]?.Value<float>() ?? 1;
+                float scaleY = image ["scaleY"]?.Value<float>() ?? 1;
 
-                Sprite sprite = new Sprite(_game, imgName, scale: scale);
+                Sprite sprite = new Sprite(_game, imgName, scale: new Vector2(scaleX,scaleY));
                 sprite.SetPosition(new Vector2(x, y));
                 sprite.SetRotation(rotation);
 

@@ -21,7 +21,7 @@ namespace PlaguePandemicsBats
         internal CircleCollider cCollider;
         internal AABBCollider aabbCollider;
 
-        public Sprite(Game1 game, string name, ColliderType colliderType = ColliderType.Circle, float width = 0, float height = 0, float scale = 0, bool collides = false)
+        public Sprite(Game1 game, string name, ColliderType colliderType = ColliderType.Circle, float width = 0, float height = 0, Vector2? scale = null, bool collides = false)
         {
             _game = game;
             _spriteName = name;
@@ -41,16 +41,15 @@ namespace PlaguePandemicsBats
 
             
             // Se nao indicaram largura nem altura, dar erro
-            if (scale == 0 && width == 0f && height == 0f)
+            if (!scale.HasValue && width == 0f && height == 0f)
                 throw new Exception("Sprite constructor requires scale, width or height");
 
-            if (scale > 0)
+            if (scale.HasValue)
             {
-                width = scale * bounds.Width / 80f;
-                height = scale * bounds.Height / 80f;
+                width = scale.Value.X * bounds.Width / 80f;
+                height = scale.Value.Y * bounds.Height / 80f;
             }
-            
-            
+
             if (width == 0f)
             {
                 /* height -> bounds.height
