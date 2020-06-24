@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace PlaguePandemicsBats
 {
-    class PinkZombie : Enemy
+    public class PinkZombie : Enemy
     {
         private const float _zombieWidth = 0.4f;
 

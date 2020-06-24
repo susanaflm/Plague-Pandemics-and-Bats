@@ -46,6 +46,7 @@ namespace PlaguePandemicsBats
         private SpriteManager _spriteManager;
         private CollisionManager _collisionManager;
         private Player _player;
+        private PinkZombie _pinkZombie;
         private Bat _bat;
         private Cat _cat;
         private Scene _scene;
@@ -95,6 +96,8 @@ namespace PlaguePandemicsBats
         /// Get game's player 
         /// </summary>
         public Player Player => _player;
+
+        public PinkZombie PinkZombie => _pinkZombie;
 
         /// <summary>
         /// Get game's UI
@@ -158,6 +161,8 @@ namespace PlaguePandemicsBats
             SpriteManager.AddSpriteSheet("texture");
             SpriteManager.AddSpriteSheet("Fullgrass");
             _scene = new Scene(this, "MainScene");
+            _player = _scene.Player;
+            _pinkZombie = _scene.PinkZombie;
 
             /*PAUSE STUFF*/
             _pausedTexture = Content.Load<Texture2D>("pause");
@@ -171,7 +176,7 @@ namespace PlaguePandemicsBats
             _optnButton = new Button(this, Content.Load<Texture2D>("play"), new Vector2(GraphicsDevice.Viewport.Width / 2, GraphicsDevice.Viewport.Height / 2));
 
             _ui = new UI(this);
-            _player = new Player(this, 1);
+            //_player = new Player(this, 1);
             _bat = new Bat(this);
             _cat = new Cat(this);
             /*LISTS*/
@@ -181,6 +186,7 @@ namespace PlaguePandemicsBats
             _projectiles = new List<Projectile>();
             /*ADDING TO LISTS*/
             _enemies.Add(_bat);
+            _enemies.Add(_pinkZombie);
             _friendlies.Add(_cat);
             _buttons.Add(_buttonPlay);
             _buttons.Add(_buttonQuit);
@@ -214,8 +220,6 @@ namespace PlaguePandemicsBats
             switch (_gameState)
             {
                 case GameState.MainMenu:
-                    _menuSound.Play();
-
                     if (_buttonPlay.isClicked || KeyboardManager.IsKeyGoingDown(Keys.Enter))
                     {
                         _gameState = GameState.Playing;
@@ -286,6 +290,8 @@ namespace PlaguePandemicsBats
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Draw(GameTime gameTime)
         {
+            int soundCount = 0;
+
             GraphicsDevice.Clear(Color.White);
 
             _spriteBatch.Begin(samplerState: SamplerState.PointClamp);
@@ -351,6 +357,11 @@ namespace PlaguePandemicsBats
 
             if (_gameState == GameState.MainMenu)
             {
+                soundCount++;
+
+                //if(soundCount <= 1)
+                    //_menuSound.Play();
+               
                 Texture2D texture = Content.Load<Texture2D>("mainmenu");
                 //fullscreen
                 Rectangle rec = new Rectangle(0, 0, GraphicsDevice.Viewport.Width, GraphicsDevice.Viewport.Height);
