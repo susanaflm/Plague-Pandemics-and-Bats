@@ -47,17 +47,14 @@ namespace PlaguePandemicsBats
         
             if (mouseRec.Intersects(_rec))
             {
-                if (_color.A == 255) down = false;
-                if (_color.A == 0) down = true;
-                if (down) _color.A += 3; else _color.A -= 3;
+                _color = new Color(180, 180, 180, 255);
                 if (mouse.LeftButton == ButtonState.Pressed)
                 {
                     isClicked = true;
-                    _color.A = 255;
                 }
             }
-            else if (_color.A < 255)
-                _color.A += 3;
+            else
+                _color = Color.White;
         }
 
         /// <summary>
