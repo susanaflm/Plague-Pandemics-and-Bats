@@ -1,4 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Newtonsoft.Json.Serialization;
@@ -36,6 +37,7 @@ namespace PlaguePandemicsBats
     {
         #region  private variables
         private GraphicsDeviceManager _graphics;
+        private SoundEffect _playSound;
         private SpriteBatch _spriteBatch;
         private SpriteFont _spriteFont;
         private Texture2D _pausedTexture;
@@ -150,11 +152,12 @@ namespace PlaguePandemicsBats
             _spriteBatch = new SpriteBatch(GraphicsDevice);
             _spriteFont = Content.Load<SpriteFont>("minecraft");
             _collisionManager = new CollisionManager();
+            _playSound = Content.Load<SoundEffect>("playsound");
 
             SpriteManager.AddSpriteSheet("texture");
             SpriteManager.AddSpriteSheet("Fullgrass");
             _scene = new Scene(this, "MainScene");
-            
+
             /*PAUSE STUFF*/
             _pausedTexture = Content.Load<Texture2D>("pause");
             _pausedRect = new Rectangle(-1, 0, _pausedTexture.Width / 2, _pausedTexture.Height / 2);
@@ -211,7 +214,11 @@ namespace PlaguePandemicsBats
             {
                 case GameState.MainMenu:
                     if (_buttonPlay.isClicked || KeyboardManager.IsKeyGoingDown(Keys.Enter))
+                    {
                         _gameState = GameState.Playing;
+                        _playSound.Play();
+                    }
+                        
 
                     _buttonPlay.Update(mouseState);
                     _buttonQuit.Update(mouseState);
@@ -347,8 +354,6 @@ namespace PlaguePandemicsBats
                 Color color = Color.White;
                 
                 _spriteBatch.Draw(texture , rec , color);
-                
-                _optnButton.Draw(_spriteBatch);
 
                 foreach (Button b in Buttons.ToArray())
                 {

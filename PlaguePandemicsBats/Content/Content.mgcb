@@ -111,6 +111,12 @@
 /processorParam:TextureFormat=Color
 /build:play.png
 
+#begin playsound.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:playsound.wav
+
 #begin quit.png
 /importer:TextureImporter
 /processor:TextureProcessor

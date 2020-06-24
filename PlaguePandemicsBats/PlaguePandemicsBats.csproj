@@ -281,6 +281,7 @@
     <Content Include="Content\pandemics\export\orig\pack.png" />
     <Content Include="Content\pause.png" />
     <Content Include="Content\play.png" />
+    <Content Include="Content\playsound.wav" />
     <Content Include="Content\quit.png" />
     <Content Include="Content\texture.png" />
   </ItemGroup>
