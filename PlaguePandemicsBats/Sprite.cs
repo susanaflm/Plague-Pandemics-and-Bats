@@ -46,9 +46,6 @@ namespace PlaguePandemicsBats
 
             if (scale > 0)
             {
-                // FIXME: hardcoded que 80 pixeis sao uma unidade no overlap2d
-                // pixeis / 80 => unidade
-                // scale * pixeis / 80
                 width = scale * bounds.Width / 80f;
                 height = scale * bounds.Height / 80f;
             }

@@ -285,11 +285,7 @@ namespace PlaguePandemicsBats
                 background.Draw(gameTime);
                 
                 _scene.Draw(gameTime);
-
-                _ui.Draw(_spriteBatch, gameTime);
-
-                
-
+                _ui.Draw(_spriteBatch, gameTime);            
                 _player.Draw(_spriteBatch);
 
                 foreach (Projectile p in Projectiles.ToArray())
@@ -297,10 +293,10 @@ namespace PlaguePandemicsBats
                     p.Draw(_spriteBatch);
                 }
 
-                //foreach (Enemy e in Enemies.ToArray())
-                //{
-                //    e.Draw(_spriteBatch);
-                //}
+                foreach (Enemy e in Enemies.ToArray())
+                {
+                    e.Draw(_spriteBatch);
+                }
 
                 foreach (Cat c in Friendlies.ToArray())
                 {
@@ -310,6 +306,31 @@ namespace PlaguePandemicsBats
 
             if (_gameState == GameState.Paused)
             {
+                background.Draw(gameTime);
+
+                _scene.Draw(gameTime);
+                _ui.Draw(_spriteBatch, gameTime);
+                _player.Draw(_spriteBatch);
+
+                foreach (Projectile p in Projectiles.ToArray())
+                {
+                    p.Draw(_spriteBatch);
+                }
+
+                foreach (Enemy e in Enemies.ToArray())
+                {
+                    e.Draw(_spriteBatch);
+                }
+
+                foreach (Cat c in Friendlies.ToArray())
+                {
+                    c.Draw(_spriteBatch);
+                }
+
+                Rectangle rec = new Rectangle(0, 0, GraphicsDevice.Viewport.Width, GraphicsDevice.Viewport.Height);
+
+                Pixel.DrawRectangle(rec, Color.Black * 0.5f);
+
                 _spriteBatch.Draw(_pausedTexture, _pausedRect, Color.White);
 
                 foreach (Button b in Buttons.ToArray())
@@ -324,10 +345,11 @@ namespace PlaguePandemicsBats
                 //fullscreen
                 Rectangle rec = new Rectangle(0, 0, GraphicsDevice.Viewport.Width, GraphicsDevice.Viewport.Height);
                 Color color = Color.White;
-
-                _optnButton.Draw(_spriteBatch);
+                
                 _spriteBatch.Draw(texture , rec , color);
-                                
+                
+                _optnButton.Draw(_spriteBatch);
+                                                
             }
 
             if (_gameState == GameState.Options)

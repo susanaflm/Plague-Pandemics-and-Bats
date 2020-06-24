@@ -435,19 +435,6 @@
         "imageName": "OrangeTree"
       },
       {
-        "uniqueId": 11,
-        "tags": [],
-        "x": -3.243775,
-        "y": 3.3124752,
-        "scaleX": 1.0624171,
-        "scaleY": 1.0817144,
-        "originX": 0.3,
-        "originY": 0.30625,
-        "zIndex": 37,
-        "layerName": "back",
-        "imageName": "GD2"
-      },
-      {
         "uniqueId": 1070,
         "tags": [],
         "x": 26.775019,
@@ -456,7 +443,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 38,
+        "zIndex": 37,
         "layerName": "back",
         "imageName": "verticalFence"
       },
@@ -469,7 +456,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 39,
+        "zIndex": 38,
         "layerName": "back",
         "imageName": "verticalFence"
       },
@@ -482,7 +469,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 40,
+        "zIndex": 39,
         "layerName": "fences vertical",
         "imageName": "verticalFence"
       },
@@ -495,7 +482,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 41,
+        "zIndex": 40,
         "layerName": "fences vertical",
         "imageName": "verticalFence"
       },
@@ -508,7 +495,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 42,
+        "zIndex": 41,
         "layerName": "fences vertical",
         "imageName": "verticalFence"
       },
@@ -521,7 +508,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 43,
+        "zIndex": 42,
         "layerName": "fences vertical",
         "imageName": "verticalFence"
       },
@@ -534,7 +521,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 44,
+        "zIndex": 43,
         "layerName": "fences vertical",
         "imageName": "verticalFence"
       },
@@ -547,7 +534,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 45,
+        "zIndex": 44,
         "layerName": "fences vertical",
         "imageName": "verticalFence"
       },
@@ -560,7 +547,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 46,
+        "zIndex": 45,
         "layerName": "fences vertical",
         "imageName": "verticalFence"
       },
@@ -574,7 +561,7 @@
         "originX": 0.04375,
         "originY": 0.16875,
         "rotation": 180,
-        "zIndex": 47,
+        "zIndex": 46,
         "layerName": "fences vertical",
         "imageName": "verticalFence"
       },
@@ -587,7 +574,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 48,
+        "zIndex": 47,
         "layerName": "fences vertical",
         "imageName": "verticalFence"
       },
@@ -600,7 +587,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 49,
+        "zIndex": 48,
         "layerName": "fences vertical",
         "imageName": "verticalFence"
       },
@@ -613,7 +600,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 50,
+        "zIndex": 49,
         "layerName": "fences vertical",
         "imageName": "verticalFence"
       },
@@ -626,7 +613,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 51,
+        "zIndex": 50,
         "layerName": "fences vertical",
         "imageName": "verticalFence"
       },
@@ -639,7 +626,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 52,
+        "zIndex": 51,
         "layerName": "fences vertical",
         "imageName": "verticalFence"
       },
@@ -652,7 +639,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 53,
+        "zIndex": 52,
         "layerName": "fences vertical",
         "imageName": "verticalFence"
       },
@@ -665,7 +652,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 54,
+        "zIndex": 53,
         "layerName": "fences vertical",
         "imageName": "verticalFence"
       },
@@ -678,7 +665,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 55,
+        "zIndex": 54,
         "layerName": "fences vertical",
         "imageName": "verticalFence"
       },
@@ -691,7 +678,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 56,
+        "zIndex": 55,
         "layerName": "fences vertical",
         "imageName": "verticalFence"
       },
@@ -704,7 +691,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 57,
+        "zIndex": 56,
         "layerName": "fences vertical",
         "imageName": "verticalFence"
       },
@@ -717,7 +704,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 58,
+        "zIndex": 57,
         "layerName": "fences vertical",
         "imageName": "verticalFence"
       },
@@ -730,7 +717,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 59,
+        "zIndex": 58,
         "layerName": "fences vertical",
         "imageName": "verticalFence"
       },
@@ -743,7 +730,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 60,
+        "zIndex": 59,
         "layerName": "fences vertical",
         "imageName": "verticalFence"
       },
@@ -756,7 +743,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 61,
+        "zIndex": 60,
         "layerName": "fences vertical",
         "imageName": "verticalFence"
       },
@@ -769,7 +756,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 62,
+        "zIndex": 61,
         "layerName": "fences vertical",
         "imageName": "verticalFence"
       },
@@ -782,7 +769,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 63,
+        "zIndex": 62,
         "layerName": "fences vertical",
         "imageName": "verticalFence"
       },
@@ -795,7 +782,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 64,
+        "zIndex": 63,
         "layerName": "fences vertical",
         "imageName": "verticalFence"
       },
@@ -808,7 +795,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 65,
+        "zIndex": 64,
         "layerName": "fences vertical",
         "imageName": "verticalFence"
       },
@@ -821,7 +808,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 66,
+        "zIndex": 65,
         "layerName": "fences vertical",
         "imageName": "verticalFence"
       },
@@ -834,7 +821,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 67,
+        "zIndex": 66,
         "layerName": "fences vertical",
         "imageName": "verticalFence"
       },
@@ -847,7 +834,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 68,
+        "zIndex": 67,
         "layerName": "fences vertical",
         "imageName": "verticalFence"
       },
@@ -860,7 +847,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 69,
+        "zIndex": 68,
         "layerName": "fences vertical",
         "imageName": "verticalFence"
       },
@@ -873,7 +860,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 70,
+        "zIndex": 69,
         "layerName": "fences vertical",
         "imageName": "verticalFence"
       },
@@ -886,7 +873,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 71,
+        "zIndex": 70,
         "layerName": "fences vertical",
         "imageName": "verticalFence"
       },
@@ -899,7 +886,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 72,
+        "zIndex": 71,
         "layerName": "fences vertical",
         "imageName": "verticalFence"
       },
@@ -912,7 +899,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 73,
+        "zIndex": 72,
         "layerName": "fences vertical",
         "imageName": "verticalFence"
       },
@@ -925,7 +912,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 74,
+        "zIndex": 73,
         "layerName": "fences vertical",
         "imageName": "verticalFence"
       },
@@ -938,7 +925,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 75,
+        "zIndex": 74,
         "layerName": "fences vertical",
         "imageName": "verticalFence"
       },
@@ -951,7 +938,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 76,
+        "zIndex": 75,
         "layerName": "fences vertical",
         "imageName": "verticalFence"
       },
@@ -964,7 +951,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 77,
+        "zIndex": 76,
         "layerName": "fences vertical",
         "imageName": "verticalFence"
       },
@@ -977,7 +964,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 78,
+        "zIndex": 77,
         "layerName": "fences vertical",
         "imageName": "verticalFence"
       },
@@ -990,7 +977,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 79,
+        "zIndex": 78,
         "layerName": "fences vertical",
         "imageName": "verticalFence"
       },
@@ -1003,7 +990,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 80,
+        "zIndex": 79,
         "layerName": "fences vertical",
         "imageName": "verticalFence"
       },
@@ -1016,7 +1003,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 81,
+        "zIndex": 80,
         "layerName": "fences vertical",
         "imageName": "verticalFence"
       },
@@ -1029,7 +1016,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 82,
+        "zIndex": 81,
         "layerName": "fences vertical",
         "imageName": "verticalFence"
       },
@@ -1042,7 +1029,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 83,
+        "zIndex": 82,
         "layerName": "fences vertical",
         "imageName": "verticalFence"
       },
@@ -1055,7 +1042,7 @@
         "scaleY": 1.6435543,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 84,
+        "zIndex": 83,
         "layerName": "fences vertical",
         "imageName": "Tree"
       },
@@ -1066,7 +1053,7 @@
         "y": 3.75,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 85,
+        "zIndex": 84,
         "layerName": "fences vertical",
         "imageName": "DarkOakTree"
       },
@@ -1079,7 +1066,7 @@
         "scaleY": 1.3574283,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 86,
+        "zIndex": 85,
         "layerName": "fences vertical",
         "imageName": "Tree"
       },
@@ -1092,7 +1079,7 @@
         "scaleY": 1.4995776,
         "originX": 0.29375,
         "originY": 0.3625,
-        "zIndex": 87,
+        "zIndex": 86,
         "layerName": "fences vertical",
         "imageName": "BigTree"
       },
@@ -1105,7 +1092,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 88,
+        "zIndex": 87,
         "layerName": "fences vertical",
         "imageName": "HorizontalFence"
       },
@@ -1118,7 +1105,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 89,
+        "zIndex": 88,
         "layerName": "fences vertical",
         "imageName": "HorizontalFence"
       },
@@ -1131,7 +1118,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 90,
+        "zIndex": 89,
         "layerName": "fences vertical",
         "imageName": "HorizontalFence"
       },
@@ -1144,7 +1131,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 91,
+        "zIndex": 90,
         "layerName": "fences vertical",
         "imageName": "HorizontalFence"
       },
@@ -1157,7 +1144,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 92,
+        "zIndex": 91,
         "layerName": "fences vertical",
         "imageName": "HorizontalFence"
       },
@@ -1170,7 +1157,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 93,
+        "zIndex": 92,
         "layerName": "fences vertical",
         "imageName": "HorizontalFence"
       },
@@ -1183,7 +1170,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 94,
+        "zIndex": 93,
         "layerName": "fences vertical",
         "imageName": "HorizontalFence"
       },
@@ -1196,7 +1183,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 95,
+        "zIndex": 94,
         "layerName": "fences vertical",
         "imageName": "HorizontalFence"
       },
@@ -1209,7 +1196,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 96,
+        "zIndex": 95,
         "layerName": "fences vertical",
         "imageName": "HorizontalFence"
       },
@@ -1222,7 +1209,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 97,
+        "zIndex": 96,
         "layerName": "fences vertical",
         "imageName": "HorizontalFence"
       },
@@ -1235,7 +1222,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 98,
+        "zIndex": 97,
         "layerName": "fences vertical",
         "imageName": "HorizontalFence"
       },
@@ -1248,7 +1235,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 99,
+        "zIndex": 98,
         "layerName": "fences vertical",
         "imageName": "verticalFence"
       },
@@ -1261,7 +1248,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 100,
+        "zIndex": 99,
         "layerName": "fences vertical",
         "imageName": "verticalFence"
       },
@@ -1274,7 +1261,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 101,
+        "zIndex": 100,
         "layerName": "fences vertical",
         "imageName": "verticalFence"
       },
@@ -1287,7 +1274,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 102,
+        "zIndex": 101,
         "layerName": "fences vertical",
         "imageName": "HorizontalFence"
       },
@@ -1300,7 +1287,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 103,
+        "zIndex": 102,
         "layerName": "fences vertical",
         "imageName": "HorizontalFence"
       },
@@ -1313,7 +1300,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 104,
+        "zIndex": 103,
         "layerName": "fences vertical",
         "imageName": "HorizontalFence"
       },
@@ -1326,7 +1313,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 105,
+        "zIndex": 104,
         "layerName": "fences vertical",
         "imageName": "HorizontalFence"
       },
@@ -1338,7 +1325,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 106,
+        "zIndex": 105,
         "layerName": "fences vertical",
         "imageName": "HorizontalFence"
       },
@@ -1351,7 +1338,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 107,
+        "zIndex": 106,
         "layerName": "fences vertical",
         "imageName": "HorizontalFence"
       },
@@ -1364,7 +1351,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 108,
+        "zIndex": 107,
         "layerName": "fences vertical",
         "imageName": "HorizontalFence"
       },
@@ -1377,7 +1364,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 109,
+        "zIndex": 108,
         "layerName": "fences vertical",
         "imageName": "HorizontalFence"
       },
@@ -1390,7 +1377,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 110,
+        "zIndex": 109,
         "layerName": "fences vertical",
         "imageName": "HorizontalFence"
       },
@@ -1403,7 +1390,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 111,
+        "zIndex": 110,
         "layerName": "fences vertical",
         "imageName": "HorizontalFence"
       },
@@ -1416,7 +1403,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 112,
+        "zIndex": 111,
         "layerName": "fences vertical",
         "imageName": "HorizontalFence"
       },
@@ -1429,7 +1416,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 113,
+        "zIndex": 112,
         "layerName": "fences vertical",
         "imageName": "HorizontalFence"
       },
@@ -1442,7 +1429,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 114,
+        "zIndex": 113,
         "layerName": "fences vertical",
         "imageName": "HorizontalFence"
       },
@@ -1455,7 +1442,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 115,
+        "zIndex": 114,
         "layerName": "fences vertical",
         "imageName": "HorizontalFence"
       },
@@ -1468,7 +1455,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 116,
+        "zIndex": 115,
         "layerName": "fences vertical",
         "imageName": "HorizontalFence"
       },
@@ -1481,7 +1468,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 117,
+        "zIndex": 116,
         "layerName": "fences vertical",
         "imageName": "HorizontalFence"
       },
@@ -1494,7 +1481,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 118,
+        "zIndex": 117,
         "layerName": "fences vertical",
         "imageName": "HorizontalFence"
       },
@@ -1507,7 +1494,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 119,
+        "zIndex": 118,
         "layerName": "fences vertical",
         "imageName": "HorizontalFence"
       },
@@ -1520,7 +1507,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 120,
+        "zIndex": 119,
         "layerName": "fences vertical",
         "imageName": "HorizontalFence"
       },
@@ -1533,7 +1520,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 121,
+        "zIndex": 120,
         "layerName": "fences vertical",
         "imageName": "HorizontalFence"
       },
@@ -1546,7 +1533,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 122,
+        "zIndex": 121,
         "layerName": "fences vertical",
         "imageName": "HorizontalFence"
       },
@@ -1559,7 +1546,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 123,
+        "zIndex": 122,
         "layerName": "fences vertical",
         "imageName": "HorizontalFence"
       },
@@ -1572,7 +1559,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 124,
+        "zIndex": 123,
         "layerName": "fences vertical",
         "imageName": "HorizontalFence"
       },
@@ -1585,7 +1572,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 125,
+        "zIndex": 124,
         "layerName": "fences vertical",
         "imageName": "HorizontalFence"
       },
@@ -1598,7 +1585,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 126,
+        "zIndex": 125,
         "layerName": "fencesHorizontl",
         "imageName": "HorizontalFence"
       },
@@ -1611,7 +1598,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 127,
+        "zIndex": 126,
         "layerName": "fencesHorizontl",
         "imageName": "HorizontalFence"
       },
@@ -1624,7 +1611,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 128,
+        "zIndex": 127,
         "layerName": "fencesHorizontl",
         "imageName": "HorizontalFence"
       },
@@ -1637,7 +1624,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 129,
+        "zIndex": 128,
         "layerName": "fencesHorizontl",
         "imageName": "HorizontalFence"
       },
@@ -1650,7 +1637,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 130,
+        "zIndex": 129,
         "layerName": "fencesHorizontl",
         "imageName": "HorizontalFence"
       },
@@ -1663,7 +1650,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 131,
+        "zIndex": 130,
         "layerName": "fencesHorizontl",
         "imageName": "HorizontalFence"
       },
@@ -1676,7 +1663,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 132,
+        "zIndex": 131,
         "layerName": "fencesHorizontl",
         "imageName": "HorizontalFence"
       },
@@ -1689,7 +1676,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 133,
+        "zIndex": 132,
         "layerName": "fencesHorizontl",
         "imageName": "HorizontalFence"
       },
@@ -1702,7 +1689,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 134,
+        "zIndex": 133,
         "layerName": "fencesHorizontl",
         "imageName": "HorizontalFence"
       },
@@ -1715,7 +1702,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 135,
+        "zIndex": 134,
         "layerName": "fencesHorizontl",
         "imageName": "HorizontalFence"
       },
@@ -1728,7 +1715,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 136,
+        "zIndex": 135,
         "layerName": "fencesHorizontl",
         "imageName": "HorizontalFence"
       },
@@ -1741,7 +1728,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 137,
+        "zIndex": 136,
         "layerName": "fencesHorizontl",
         "imageName": "HorizontalFence"
       },
@@ -1754,7 +1741,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 138,
+        "zIndex": 137,
         "layerName": "fencesHorizontl",
         "imageName": "HorizontalFence"
       },
@@ -1767,7 +1754,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 139,
+        "zIndex": 138,
         "layerName": "fencesHorizontl",
         "imageName": "HorizontalFence"
       },
@@ -1780,7 +1767,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 140,
+        "zIndex": 139,
         "layerName": "fencesHorizontl",
         "imageName": "HorizontalFence"
       },
@@ -1793,7 +1780,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 141,
+        "zIndex": 140,
         "layerName": "fencesHorizontl",
         "imageName": "HorizontalFence"
       },
@@ -1806,7 +1793,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 142,
+        "zIndex": 141,
         "layerName": "fencesHorizontl",
         "imageName": "HorizontalFence"
       },
@@ -1819,7 +1806,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 143,
+        "zIndex": 142,
         "layerName": "fencesHorizontl",
         "imageName": "HorizontalFence"
       },
@@ -1832,7 +1819,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 144,
+        "zIndex": 143,
         "layerName": "fencesHorizontl",
         "imageName": "HorizontalFence"
       },
@@ -1845,7 +1832,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 145,
+        "zIndex": 144,
         "layerName": "fencesHorizontl",
         "imageName": "HorizontalFence"
       },
@@ -1858,7 +1845,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 146,
+        "zIndex": 145,
         "layerName": "fencesHorizontl",
         "imageName": "HorizontalFence"
       },
@@ -1871,7 +1858,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 147,
+        "zIndex": 146,
         "layerName": "fencesHorizontl",
         "imageName": "HorizontalFence"
       },
@@ -1884,7 +1871,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 148,
+        "zIndex": 147,
         "layerName": "fencesHorizontl",
         "imageName": "HorizontalFence"
       },
@@ -1897,7 +1884,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 149,
+        "zIndex": 148,
         "layerName": "fencesHorizontl",
         "imageName": "HorizontalFence"
       },
@@ -1910,7 +1897,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 150,
+        "zIndex": 149,
         "layerName": "fencesHorizontl",
         "imageName": "HorizontalFence"
       },
@@ -1923,7 +1910,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 151,
+        "zIndex": 150,
         "layerName": "fencesHorizontl",
         "imageName": "HorizontalFence"
       },
@@ -1936,7 +1923,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 152,
+        "zIndex": 151,
         "layerName": "fencesHorizontl",
         "imageName": "HorizontalFence"
       },
@@ -1949,7 +1936,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 153,
+        "zIndex": 152,
         "layerName": "fencesHorizontl",
         "imageName": "HorizontalFence"
       },
@@ -1962,7 +1949,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 154,
+        "zIndex": 153,
         "layerName": "fencesHorizontl",
         "imageName": "HorizontalFence"
       },
@@ -1975,7 +1962,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 155,
+        "zIndex": 154,
         "layerName": "fencesHorizontl",
         "imageName": "HorizontalFence"
       },
@@ -1988,7 +1975,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 156,
+        "zIndex": 155,
         "layerName": "fencesHorizontl",
         "imageName": "HorizontalFence"
       },
@@ -2001,7 +1988,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 157,
+        "zIndex": 156,
         "layerName": "fencesHorizontl",
         "imageName": "HorizontalFence"
       },
@@ -2014,7 +2001,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 158,
+        "zIndex": 157,
         "layerName": "fencesHorizontl",
         "imageName": "HorizontalFence"
       },
@@ -2027,7 +2014,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 159,
+        "zIndex": 158,
         "layerName": "fencesHorizontl",
         "imageName": "HorizontalFence"
       },
@@ -2040,7 +2027,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 160,
+        "zIndex": 159,
         "layerName": "fencesHorizontl",
         "imageName": "HorizontalFence"
       },
@@ -2053,7 +2040,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 161,
+        "zIndex": 160,
         "layerName": "fencesHorizontl",
         "imageName": "HorizontalFence"
       },
@@ -2066,7 +2053,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 162,
+        "zIndex": 161,
         "layerName": "fencesHorizontl",
         "imageName": "HorizontalFence"
       },
@@ -2079,7 +2066,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 163,
+        "zIndex": 162,
         "layerName": "fencesHorizontl",
         "imageName": "HorizontalFence"
       },
@@ -2092,7 +2079,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 164,
+        "zIndex": 163,
         "layerName": "fencesHorizontl",
         "imageName": "HorizontalFence"
       },
@@ -2105,7 +2092,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 165,
+        "zIndex": 164,
         "layerName": "fencesHorizontl",
         "imageName": "HorizontalFence"
       },
@@ -2118,7 +2105,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 166,
+        "zIndex": 165,
         "layerName": "fencesHorizontl",
         "imageName": "HorizontalFence"
       },
@@ -2131,7 +2118,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 167,
+        "zIndex": 166,
         "layerName": "fencesHorizontl",
         "imageName": "HorizontalFence"
       },
@@ -2144,7 +2131,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 168,
+        "zIndex": 167,
         "layerName": "fencesHorizontl",
         "imageName": "HorizontalFence"
       },
@@ -2157,7 +2144,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 169,
+        "zIndex": 168,
         "layerName": "fencesHorizontl",
         "imageName": "HorizontalFence"
       },
@@ -2170,7 +2157,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 170,
+        "zIndex": 169,
         "layerName": "fencesHorizontl",
         "imageName": "HorizontalFence"
       },
@@ -2183,7 +2170,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 171,
+        "zIndex": 170,
         "layerName": "fencesHorizontl",
         "imageName": "HorizontalFence"
       },
@@ -2196,7 +2183,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 172,
+        "zIndex": 171,
         "layerName": "fencesHorizontl",
         "imageName": "HorizontalFence"
       },
@@ -2209,7 +2196,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 173,
+        "zIndex": 172,
         "layerName": "fencesHorizontl",
         "imageName": "HorizontalFence"
       },
@@ -2222,7 +2209,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 174,
+        "zIndex": 173,
         "layerName": "fencesHorizontl",
         "imageName": "HorizontalFence"
       },
@@ -2235,7 +2222,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 175,
+        "zIndex": 174,
         "layerName": "fencesHorizontl",
         "imageName": "HorizontalFence"
       },
@@ -2248,7 +2235,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 176,
+        "zIndex": 175,
         "layerName": "fencesHorizontl",
         "imageName": "HorizontalFence"
       },
@@ -2261,7 +2248,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 177,
+        "zIndex": 176,
         "layerName": "fencesHorizontl",
         "imageName": "HorizontalFence"
       },
@@ -2274,7 +2261,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 178,
+        "zIndex": 177,
         "layerName": "fencesHorizontl",
         "imageName": "HorizontalFence"
       },
@@ -2287,7 +2274,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 179,
+        "zIndex": 178,
         "layerName": "fencesHorizontl",
         "imageName": "HorizontalFence"
       },
@@ -2300,7 +2287,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 180,
+        "zIndex": 179,
         "layerName": "fencesHorizontl",
         "imageName": "HorizontalFence"
       },
@@ -2313,7 +2300,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 181,
+        "zIndex": 180,
         "layerName": "fencesHorizontl",
         "imageName": "HorizontalFence"
       },
@@ -2326,7 +2313,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 182,
+        "zIndex": 181,
         "layerName": "fencesHorizontl",
         "imageName": "HorizontalFence"
       },
@@ -2339,7 +2326,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 183,
+        "zIndex": 182,
         "layerName": "fencesHorizontl",
         "imageName": "HorizontalFence"
       },
@@ -2352,7 +2339,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 184,
+        "zIndex": 183,
         "layerName": "fencesHorizontl",
         "imageName": "HorizontalFence"
       },
@@ -2365,7 +2352,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 185,
+        "zIndex": 184,
         "layerName": "fencesHorizontl",
         "imageName": "HorizontalFence"
       },
@@ -2378,7 +2365,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 186,
+        "zIndex": 185,
         "layerName": "fencesHorizontl",
         "imageName": "HorizontalFence"
       },
@@ -2391,7 +2378,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 187,
+        "zIndex": 186,
         "layerName": "fencesHorizontl",
         "imageName": "HorizontalFence"
       },
@@ -2404,7 +2391,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 188,
+        "zIndex": 187,
         "layerName": "fencesHorizontl",
         "imageName": "HorizontalFence"
       },
@@ -2417,7 +2404,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 189,
+        "zIndex": 188,
         "layerName": "fencesHorizontl",
         "imageName": "HorizontalFence"
       },
@@ -2430,7 +2417,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 190,
+        "zIndex": 189,
         "layerName": "fencesHorizontl",
         "imageName": "HorizontalFence"
       },
@@ -2443,7 +2430,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 191,
+        "zIndex": 190,
         "layerName": "fencesHorizontl",
         "imageName": "HorizontalFence"
       },
@@ -2456,7 +2443,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 192,
+        "zIndex": 191,
         "layerName": "fencesHorizontl",
         "imageName": "HorizontalFence"
       },
@@ -2469,7 +2456,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 193,
+        "zIndex": 192,
         "layerName": "fencesHorizontl",
         "imageName": "HorizontalFence"
       },
@@ -2482,7 +2469,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 194,
+        "zIndex": 193,
         "layerName": "fencesHorizontl",
         "imageName": "HorizontalFence"
       },
@@ -2495,7 +2482,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 195,
+        "zIndex": 194,
         "layerName": "fencesHorizontl",
         "imageName": "HorizontalFence"
       },
@@ -2508,7 +2495,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 196,
+        "zIndex": 195,
         "layerName": "fencesHorizontl",
         "imageName": "HorizontalFence"
       },
@@ -2521,7 +2508,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 197,
+        "zIndex": 196,
         "layerName": "fencesHorizontl",
         "imageName": "HorizontalFence"
       },
@@ -2534,7 +2521,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 198,
+        "zIndex": 197,
         "layerName": "fencesHorizontl",
         "imageName": "HorizontalFence"
       },
@@ -2547,7 +2534,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 199,
+        "zIndex": 198,
         "layerName": "fencesHorizontl",
         "imageName": "HorizontalFence"
       },
@@ -2560,7 +2547,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 200,
+        "zIndex": 199,
         "layerName": "fencesHorizontl",
         "imageName": "HorizontalFence"
       },
@@ -2573,7 +2560,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 201,
+        "zIndex": 200,
         "layerName": "fencesHorizontl",
         "imageName": "HorizontalFence"
       },
@@ -2586,7 +2573,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 202,
+        "zIndex": 201,
         "layerName": "fencesHorizontl",
         "imageName": "HorizontalFence"
       },
@@ -2599,7 +2586,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 203,
+        "zIndex": 202,
         "layerName": "fencesHorizontl",
         "imageName": "HorizontalFence"
       },
@@ -2612,7 +2599,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 204,
+        "zIndex": 203,
         "layerName": "fencesHorizontl",
         "imageName": "HorizontalFence"
       },
@@ -2625,7 +2612,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 205,
+        "zIndex": 204,
         "layerName": "fencesHorizontl",
         "imageName": "HorizontalFence"
       },
@@ -2638,7 +2625,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 206,
+        "zIndex": 205,
         "layerName": "fencesHorizontl",
         "imageName": "HorizontalFence"
       },
@@ -2651,7 +2638,7 @@
         "scaleY": 1.6435543,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 207,
+        "zIndex": 206,
         "layerName": "Default",
         "imageName": "Tree"
       },
@@ -2662,7 +2649,7 @@
         "y": -0.4375,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 208,
+        "zIndex": 207,
         "layerName": "Default",
         "imageName": "DarkOakTree"
       },
@@ -2673,7 +2660,7 @@
         "y": 2.5249999,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 209,
+        "zIndex": 208,
         "layerName": "Default",
         "imageName": "DarkOakTree"
       },
@@ -2684,7 +2671,7 @@
         "y": 0.21250004,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 210,
+        "zIndex": 209,
         "layerName": "Default",
         "imageName": "DarkOakTree"
       },
@@ -2695,7 +2682,7 @@
         "y": -0.16250002,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 211,
+        "zIndex": 210,
         "layerName": "Default",
         "imageName": "DarkOakTree"
       },
@@ -2708,7 +2695,7 @@
         "scaleY": 1.3574283,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 212,
+        "zIndex": 211,
         "layerName": "Default",
         "imageName": "Tree"
       },
@@ -2721,7 +2708,7 @@
         "scaleY": 1.4995776,
         "originX": 0.29375,
         "originY": 0.3625,
-        "zIndex": 213,
+        "zIndex": 212,
         "layerName": "Default",
         "imageName": "BigTree"
       },
@@ -2734,7 +2721,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 214,
+        "zIndex": 213,
         "layerName": "Default",
         "imageName": "HorizontalFence"
       },
@@ -2747,7 +2734,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 215,
+        "zIndex": 214,
         "layerName": "scene 2",
         "imageName": "verticalFence"
       },
@@ -2760,7 +2747,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 216,
+        "zIndex": 215,
         "layerName": "scene 2",
         "imageName": "verticalFence"
       },
@@ -2773,7 +2760,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 217,
+        "zIndex": 216,
         "layerName": "scene 2",
         "imageName": "verticalFence"
       },
@@ -2786,7 +2773,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 218,
+        "zIndex": 217,
         "layerName": "scene 2",
         "imageName": "verticalFence"
       },
@@ -2799,7 +2786,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 219,
+        "zIndex": 218,
         "layerName": "scene 2",
         "imageName": "verticalFence"
       },
@@ -2812,7 +2799,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 220,
+        "zIndex": 219,
         "layerName": "scene 2",
         "imageName": "verticalFence"
       },
@@ -2825,7 +2812,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 221,
+        "zIndex": 220,
         "layerName": "scene 2",
         "imageName": "verticalFence"
       },
@@ -2838,7 +2825,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 222,
+        "zIndex": 221,
         "layerName": "scene 2",
         "imageName": "verticalFence"
       },
@@ -2851,7 +2838,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 223,
+        "zIndex": 222,
         "layerName": "scene 2",
         "imageName": "verticalFence"
       },
@@ -2864,7 +2851,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 224,
+        "zIndex": 223,
         "layerName": "scene 2",
         "imageName": "verticalFence"
       },
@@ -2877,7 +2864,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 225,
+        "zIndex": 224,
         "layerName": "scene 2",
         "imageName": "verticalFence"
       },
@@ -2890,7 +2877,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 226,
+        "zIndex": 225,
         "layerName": "scene 2",
         "imageName": "verticalFence"
       },
@@ -2903,7 +2890,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 227,
+        "zIndex": 226,
         "layerName": "scene 2",
         "imageName": "verticalFence"
       },
@@ -2916,7 +2903,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 228,
+        "zIndex": 227,
         "layerName": "scene 2",
         "imageName": "verticalFence"
       },
@@ -2929,7 +2916,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 229,
+        "zIndex": 228,
         "layerName": "scene 2",
         "imageName": "verticalFence"
       },
@@ -2942,7 +2929,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 230,
+        "zIndex": 229,
         "layerName": "scene 2",
         "imageName": "verticalFence"
       },
@@ -2955,7 +2942,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 231,
+        "zIndex": 230,
         "layerName": "scene 2",
         "imageName": "verticalFence"
       },
@@ -2968,7 +2955,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 232,
+        "zIndex": 231,
         "layerName": "scene 2",
         "imageName": "verticalFence"
       },
@@ -2981,7 +2968,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 233,
+        "zIndex": 232,
         "layerName": "scene 2",
         "imageName": "verticalFence"
       },
@@ -2994,7 +2981,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 234,
+        "zIndex": 233,
         "layerName": "scene 2",
         "imageName": "verticalFence"
       },
@@ -3007,7 +2994,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 235,
+        "zIndex": 234,
         "layerName": "scene 2",
         "imageName": "verticalFence"
       },
@@ -3020,7 +3007,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 236,
+        "zIndex": 235,
         "layerName": "scene 2",
         "imageName": "verticalFence"
       },
@@ -3033,7 +3020,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 237,
+        "zIndex": 236,
         "layerName": "scene 2",
         "imageName": "verticalFence"
       },
@@ -3046,7 +3033,7 @@
         "scaleY": 1.6435543,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 238,
+        "zIndex": 237,
         "layerName": "scene 2",
         "imageName": "Tree"
       },
@@ -3059,7 +3046,7 @@
         "scaleY": 1.3574283,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 239,
+        "zIndex": 238,
         "layerName": "scene 2",
         "imageName": "Tree"
       },
@@ -3072,7 +3059,7 @@
         "scaleY": 1.4995776,
         "originX": 0.29375,
         "originY": 0.3625,
-        "zIndex": 240,
+        "zIndex": 239,
         "layerName": "scene 2",
         "imageName": "BigTree"
       },
@@ -3085,7 +3072,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 241,
+        "zIndex": 240,
         "layerName": "scene 2",
         "imageName": "HorizontalFence"
       },
@@ -3098,7 +3085,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 242,
+        "zIndex": 241,
         "layerName": "scene 2",
         "imageName": "HorizontalFence"
       },
@@ -3111,7 +3098,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 243,
+        "zIndex": 242,
         "layerName": "scene 2",
         "imageName": "HorizontalFence"
       },
@@ -3124,7 +3111,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 244,
+        "zIndex": 243,
         "layerName": "scene 2",
         "imageName": "HorizontalFence"
       },
@@ -3137,7 +3124,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 245,
+        "zIndex": 244,
         "layerName": "scene 2",
         "imageName": "HorizontalFence"
       },
@@ -3150,7 +3137,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 246,
+        "zIndex": 245,
         "layerName": "scene 2",
         "imageName": "HorizontalFence"
       },
@@ -3163,7 +3150,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 247,
+        "zIndex": 246,
         "layerName": "scene 2",
         "imageName": "HorizontalFence"
       },
@@ -3176,7 +3163,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 248,
+        "zIndex": 247,
         "layerName": "scene 2",
         "imageName": "HorizontalFence"
       },
@@ -3189,7 +3176,7 @@
         "scaleY": 1.6435543,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 249,
+        "zIndex": 248,
         "layerName": "scene 2",
         "imageName": "Tree"
       },
@@ -3202,7 +3189,7 @@
         "scaleY": 1.3574283,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 250,
+        "zIndex": 249,
         "layerName": "scene 2",
         "imageName": "Tree"
       },
@@ -3215,7 +3202,7 @@
         "scaleY": 1.3574283,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 251,
+        "zIndex": 250,
         "layerName": "scene 2",
         "imageName": "Tree"
       },
@@ -3228,7 +3215,7 @@
         "scaleY": 1.3574283,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 252,
+        "zIndex": 251,
         "layerName": "scene 2",
         "imageName": "Tree"
       },
@@ -3241,7 +3228,7 @@
         "scaleY": 1.4995776,
         "originX": 0.29375,
         "originY": 0.3625,
-        "zIndex": 253,
+        "zIndex": 252,
         "layerName": "scene 2",
         "imageName": "BigTree"
       },
@@ -3254,7 +3241,7 @@
         "scaleY": 1.4995776,
         "originX": 0.29375,
         "originY": 0.3625,
-        "zIndex": 254,
+        "zIndex": 253,
         "layerName": "scene 2",
         "imageName": "BigTree"
       },
@@ -3267,7 +3254,7 @@
         "scaleY": 1.4995776,
         "originX": 0.29375,
         "originY": 0.3625,
-        "zIndex": 255,
+        "zIndex": 254,
         "layerName": "scene 2",
         "imageName": "BigTree"
       },
@@ -3280,7 +3267,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 256,
+        "zIndex": 255,
         "layerName": "scene 2",
         "imageName": "HorizontalFence"
       },
@@ -3291,7 +3278,7 @@
         "y": 4.525,
         "originX": 0.29375,
         "originY": 0.3625,
-        "zIndex": 257,
+        "zIndex": 256,
         "layerName": "scene 2",
         "imageName": "OrangeTree"
       },
@@ -3302,7 +3289,7 @@
         "y": 4.525,
         "originX": 0.29375,
         "originY": 0.3625,
-        "zIndex": 258,
+        "zIndex": 257,
         "layerName": "scene 2",
         "imageName": "OrangeTree"
       },
@@ -3313,7 +3300,7 @@
         "y": 4.5375004,
         "originX": 0.29375,
         "originY": 0.3625,
-        "zIndex": 259,
+        "zIndex": 258,
         "layerName": "scene 2",
         "imageName": "OrangeTree"
       },
@@ -3324,7 +3311,7 @@
         "y": 4.525,
         "originX": 0.29375,
         "originY": 0.3625,
-        "zIndex": 260,
+        "zIndex": 259,
         "layerName": "scene 2",
         "imageName": "OrangeTree"
       },
@@ -3335,7 +3322,7 @@
         "y": 0.3625002,
         "originX": 0.3,
         "originY": 0.3,
-        "zIndex": 261,
+        "zIndex": 260,
         "layerName": "scne 3",
         "imageName": "GRass"
       },
@@ -3346,7 +3333,7 @@
         "y": 3.9375,
         "originX": 0.3,
         "originY": 0.3,
-        "zIndex": 262,
+        "zIndex": 261,
         "layerName": "scne 3",
         "imageName": "GRass"
       },
@@ -3357,7 +3344,7 @@
         "y": -1.6125,
         "originX": 0.3,
         "originY": 0.3,
-        "zIndex": 263,
+        "zIndex": 262,
         "layerName": "scne 3",
         "imageName": "GRass"
       },
@@ -3368,7 +3355,7 @@
         "y": -0.4875002,
         "originX": 0.3,
         "originY": 0.3,
-        "zIndex": 264,
+        "zIndex": 263,
         "layerName": "scne 3",
         "imageName": "GRass"
       },
@@ -3379,7 +3366,7 @@
         "y": 2.2625,
         "originX": 0.3,
         "originY": 0.3,
-        "zIndex": 265,
+        "zIndex": 264,
         "layerName": "scne 3",
         "imageName": "GRass"
       },
@@ -3390,7 +3377,7 @@
         "y": 3,
         "originX": 0.3,
         "originY": 0.3,
-        "zIndex": 266,
+        "zIndex": 265,
         "layerName": "scne 3",
         "imageName": "GRass"
       },
@@ -3403,7 +3390,7 @@
         "scaleY": 1.1363267,
         "originX": 0.275,
         "originY": 0.275,
-        "zIndex": 267,
+        "zIndex": 266,
         "layerName": "scne 3",
         "imageName": "Fullgrass"
       },
@@ -3414,7 +3401,7 @@
         "y": 2.825,
         "originX": 0.3,
         "originY": 0.3,
-        "zIndex": 268,
+        "zIndex": 267,
         "layerName": "scne 3",
         "imageName": "GRass"
       },
@@ -3428,7 +3415,7 @@
         "originX": 0.1875,
         "originY": 0.10625,
         "rotation": 90,
-        "zIndex": 269,
+        "zIndex": 268,
         "layerName": "scne 3",
         "imageName": "TreeTrunk"
       },
@@ -3442,7 +3429,7 @@
         "originX": 0.1875,
         "originY": 0.10625,
         "rotation": 90,
-        "zIndex": 270,
+        "zIndex": 269,
         "layerName": "scne 3",
         "imageName": "TreeTrunk"
       },
@@ -3456,7 +3443,7 @@
         "originX": 0.1875,
         "originY": 0.10625,
         "rotation": 90,
-        "zIndex": 271,
+        "zIndex": 270,
         "layerName": "scne 3",
         "imageName": "TreeTrunk"
       },
@@ -3470,7 +3457,7 @@
         "originX": 0.1875,
         "originY": 0.10625,
         "rotation": 90,
-        "zIndex": 272,
+        "zIndex": 271,
         "layerName": "scne 3",
         "imageName": "TreeTrunk"
       },
@@ -3483,7 +3470,7 @@
         "scaleY": 1.4836048,
         "originX": 0.29375,
         "originY": 0.3625,
-        "zIndex": 273,
+        "zIndex": 272,
         "layerName": "scne 3",
         "imageName": "OrangeTree"
       },
@@ -3496,7 +3483,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 274,
+        "zIndex": 273,
         "layerName": "scne 3",
         "imageName": "verticalFence"
       },
@@ -3509,7 +3496,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 275,
+        "zIndex": 274,
         "layerName": "scne 3",
         "imageName": "verticalFence"
       },
@@ -3522,7 +3509,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 276,
+        "zIndex": 275,
         "layerName": "scne 3",
         "imageName": "verticalFence"
       },
@@ -3535,7 +3522,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 277,
+        "zIndex": 276,
         "layerName": "scne 3",
         "imageName": "verticalFence"
       },
@@ -3548,7 +3535,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 278,
+        "zIndex": 277,
         "layerName": "scne 3",
         "imageName": "verticalFence"
       },
@@ -3561,7 +3548,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 279,
+        "zIndex": 278,
         "layerName": "scne 3",
         "imageName": "verticalFence"
       },
@@ -3574,7 +3561,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 280,
+        "zIndex": 279,
         "layerName": "scne 3",
         "imageName": "verticalFence"
       },
@@ -3587,7 +3574,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 281,
+        "zIndex": 280,
         "layerName": "scne 3",
         "imageName": "verticalFence"
       },
@@ -3600,7 +3587,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 282,
+        "zIndex": 281,
         "layerName": "scne 3",
         "imageName": "verticalFence"
       },
@@ -3613,7 +3600,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 283,
+        "zIndex": 282,
         "layerName": "scne 3",
         "imageName": "verticalFence"
       },
@@ -3626,7 +3613,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 284,
+        "zIndex": 283,
         "layerName": "scne 3",
         "imageName": "verticalFence"
       },
@@ -3639,7 +3626,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 285,
+        "zIndex": 284,
         "layerName": "scne 3",
         "imageName": "verticalFence"
       },
@@ -3652,7 +3639,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 286,
+        "zIndex": 285,
         "layerName": "scne 3",
         "imageName": "verticalFence"
       },
@@ -3665,7 +3652,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 287,
+        "zIndex": 286,
         "layerName": "scne 3",
         "imageName": "verticalFence"
       },
@@ -3678,7 +3665,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 288,
+        "zIndex": 287,
         "layerName": "scne 3",
         "imageName": "verticalFence"
       },
@@ -3691,7 +3678,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 289,
+        "zIndex": 288,
         "layerName": "scne 3",
         "imageName": "verticalFence"
       },
@@ -3704,7 +3691,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 290,
+        "zIndex": 289,
         "layerName": "scne 3",
         "imageName": "verticalFence"
       },
@@ -3717,7 +3704,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 291,
+        "zIndex": 290,
         "layerName": "scne 3",
         "imageName": "verticalFence"
       },
@@ -3730,7 +3717,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 292,
+        "zIndex": 291,
         "layerName": "scne 3",
         "imageName": "verticalFence"
       },
@@ -3743,7 +3730,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 293,
+        "zIndex": 292,
         "layerName": "scne 3",
         "imageName": "verticalFence"
       },
@@ -3756,7 +3743,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 294,
+        "zIndex": 293,
         "layerName": "scne 3",
         "imageName": "verticalFence"
       },
@@ -3769,7 +3756,7 @@
         "scaleY": 1.6435543,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 295,
+        "zIndex": 294,
         "layerName": "scne 3",
         "imageName": "Tree"
       },
@@ -3780,7 +3767,7 @@
         "y": 3.7875,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 296,
+        "zIndex": 295,
         "layerName": "scne 3",
         "imageName": "DarkOakTree"
       },
@@ -3793,7 +3780,7 @@
         "scaleY": 1.4995776,
         "originX": 0.29375,
         "originY": 0.3625,
-        "zIndex": 297,
+        "zIndex": 296,
         "layerName": "scne 3",
         "imageName": "BigTree"
       },
@@ -3806,7 +3793,7 @@
         "scaleY": 1.6435543,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 298,
+        "zIndex": 297,
         "layerName": "scne 3",
         "imageName": "Tree"
       },
@@ -3819,7 +3806,7 @@
         "scaleY": 1.6435543,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 299,
+        "zIndex": 298,
         "layerName": "scne 3",
         "imageName": "Tree"
       },
@@ -3832,7 +3819,7 @@
         "scaleY": 1.6435543,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 300,
+        "zIndex": 299,
         "layerName": "scne 3",
         "imageName": "Tree"
       },
@@ -3845,7 +3832,7 @@
         "scaleY": 1.6435543,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 301,
+        "zIndex": 300,
         "layerName": "scne 3",
         "imageName": "Tree"
       },
@@ -3856,7 +3843,7 @@
         "y": 3.7875,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 302,
+        "zIndex": 301,
         "layerName": "scne 3",
         "imageName": "DarkOakTree"
       },
@@ -3867,7 +3854,7 @@
         "y": -0.65000004,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 303,
+        "zIndex": 302,
         "layerName": "scne 3",
         "imageName": "DarkOakTree"
       },
@@ -3880,7 +3867,7 @@
         "scaleY": 1.4995776,
         "originX": 0.29375,
         "originY": 0.3625,
-        "zIndex": 304,
+        "zIndex": 303,
         "layerName": "scne 3",
         "imageName": "BigTree"
       },
@@ -3893,7 +3880,7 @@
         "scaleY": 1.6435543,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 305,
+        "zIndex": 304,
         "layerName": "scne 3",
         "imageName": "Tree"
       },
@@ -3906,7 +3893,7 @@
         "scaleY": 1.3574283,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 306,
+        "zIndex": 305,
         "layerName": "scne 3",
         "imageName": "Tree"
       },
@@ -3919,7 +3906,7 @@
         "scaleY": 1.4995776,
         "originX": 0.29375,
         "originY": 0.3625,
-        "zIndex": 307,
+        "zIndex": 306,
         "layerName": "scne 3",
         "imageName": "BigTree"
       },
@@ -3932,7 +3919,7 @@
         "scaleY": 1.6435543,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 308,
+        "zIndex": 307,
         "layerName": "scne 3",
         "imageName": "Tree"
       },
@@ -3945,7 +3932,7 @@
         "scaleY": 1.3574283,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 309,
+        "zIndex": 308,
         "layerName": "scne 3",
         "imageName": "Tree"
       },
@@ -3958,7 +3945,7 @@
         "scaleY": 1.3574283,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 310,
+        "zIndex": 309,
         "layerName": "scne 3",
         "imageName": "Tree"
       },
@@ -3971,7 +3958,7 @@
         "scaleY": 1.3574283,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 311,
+        "zIndex": 310,
         "layerName": "scne 3",
         "imageName": "Tree"
       },
@@ -3984,7 +3971,7 @@
         "scaleY": 1.3574283,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 312,
+        "zIndex": 311,
         "layerName": "scne 3",
         "imageName": "Tree"
       },
@@ -3997,7 +3984,7 @@
         "scaleY": 1.4995776,
         "originX": 0.29375,
         "originY": 0.3625,
-        "zIndex": 313,
+        "zIndex": 312,
         "layerName": "scne 3",
         "imageName": "BigTree"
       },
@@ -4010,7 +3997,7 @@
         "scaleY": 1.4995776,
         "originX": 0.29375,
         "originY": 0.3625,
-        "zIndex": 314,
+        "zIndex": 313,
         "layerName": "scne 3",
         "imageName": "BigTree"
       },
@@ -4023,7 +4010,7 @@
         "scaleY": 1.4995776,
         "originX": 0.29375,
         "originY": 0.3625,
-        "zIndex": 315,
+        "zIndex": 314,
         "layerName": "scne 3",
         "imageName": "BigTree"
       },
@@ -4036,7 +4023,7 @@
         "scaleY": 1.3574283,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 316,
+        "zIndex": 315,
         "layerName": "scne 3",
         "imageName": "Tree"
       },
@@ -4047,7 +4034,7 @@
         "y": 3.9,
         "originX": 0.19375,
         "originY": 0.18125,
-        "zIndex": 317,
+        "zIndex": 316,
         "layerName": "scne 3",
         "imageName": "grave"
       },
@@ -4061,7 +4048,7 @@
         "originX": 0.1875,
         "originY": 0.10625,
         "rotation": 90,
-        "zIndex": 318,
+        "zIndex": 317,
         "layerName": "scne 3",
         "imageName": "TreeTrunk"
       },
@@ -4072,7 +4059,7 @@
         "y": 2.5875,
         "originX": 0.6125,
         "originY": 0.73125,
-        "zIndex": 319,
+        "zIndex": 318,
         "layerName": "scne 3",
         "imageName": "BigHouseG"
       },
@@ -4083,7 +4070,7 @@
         "y": -0.4,
         "originX": 0.3,
         "originY": 0.3,
-        "zIndex": 320,
+        "zIndex": 319,
         "layerName": "scne 3",
         "imageName": "ZGuyD0"
       },
@@ -4094,7 +4081,7 @@
         "y": 2.7250001,
         "originX": 0.3,
         "originY": 0.3,
-        "zIndex": 321,
+        "zIndex": 320,
         "layerName": "scne 3",
         "imageName": "ZGuyD0"
       },
@@ -4107,7 +4094,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 322,
+        "zIndex": 321,
         "layerName": "scne 3",
         "imageName": "verticalFence"
       },
@@ -4120,7 +4107,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 323,
+        "zIndex": 322,
         "layerName": "scne 3",
         "imageName": "verticalFence"
       },
@@ -4133,7 +4120,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 324,
+        "zIndex": 323,
         "layerName": "scne 3",
         "imageName": "verticalFence"
       },
@@ -4146,7 +4133,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 325,
+        "zIndex": 324,
         "layerName": "scne 3",
         "imageName": "verticalFence"
       },
@@ -4159,7 +4146,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 326,
+        "zIndex": 325,
         "layerName": "scne 3",
         "imageName": "verticalFence"
       },
@@ -4172,7 +4159,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 327,
+        "zIndex": 326,
         "layerName": "scne 3",
         "imageName": "verticalFence"
       },
@@ -4185,7 +4172,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 328,
+        "zIndex": 327,
         "layerName": "scne 3",
         "imageName": "verticalFence"
       },
@@ -4198,7 +4185,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 329,
+        "zIndex": 328,
         "layerName": "scne 3",
         "imageName": "verticalFence"
       },
@@ -4211,7 +4198,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 330,
+        "zIndex": 329,
         "layerName": "scne 3",
         "imageName": "verticalFence"
       },
@@ -4224,7 +4211,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 331,
+        "zIndex": 330,
         "layerName": "scne 3",
         "imageName": "verticalFence"
       },
@@ -4237,7 +4224,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 332,
+        "zIndex": 331,
         "layerName": "scne 3",
         "imageName": "verticalFence"
       },
@@ -4250,7 +4237,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 333,
+        "zIndex": 332,
         "layerName": "scne 3",
         "imageName": "verticalFence"
       },
@@ -4263,7 +4250,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 334,
+        "zIndex": 333,
         "layerName": "scne 3",
         "imageName": "verticalFence"
       },
@@ -4276,7 +4263,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 335,
+        "zIndex": 334,
         "layerName": "scne 3",
         "imageName": "verticalFence"
       },
@@ -4289,7 +4276,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 336,
+        "zIndex": 335,
         "layerName": "scne 3",
         "imageName": "verticalFence"
       },
@@ -4302,7 +4289,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 337,
+        "zIndex": 336,
         "layerName": "scne 3",
         "imageName": "verticalFence"
       },
@@ -4315,7 +4302,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 338,
+        "zIndex": 337,
         "layerName": "scne 3",
         "imageName": "verticalFence"
       },
@@ -4328,7 +4315,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 339,
+        "zIndex": 338,
         "layerName": "scne 3",
         "imageName": "verticalFence"
       },
@@ -4342,7 +4329,7 @@
         "originX": 0.04375,
         "originY": 0.16875,
         "rotation": 180,
-        "zIndex": 340,
+        "zIndex": 339,
         "layerName": "scne 3",
         "imageName": "verticalFence"
       },
@@ -4356,7 +4343,7 @@
         "originX": 0.04375,
         "originY": 0.16875,
         "rotation": 180,
-        "zIndex": 341,
+        "zIndex": 340,
         "layerName": "scne 3",
         "imageName": "verticalFence"
       },
@@ -4369,7 +4356,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 342,
+        "zIndex": 341,
         "layerName": "scne 3",
         "imageName": "verticalFence"
       },
@@ -4382,7 +4369,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 343,
+        "zIndex": 342,
         "layerName": "scne 3",
         "imageName": "verticalFence"
       },
@@ -4395,7 +4382,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 344,
+        "zIndex": 343,
         "layerName": "scne 3",
         "imageName": "verticalFence"
       },
@@ -4408,7 +4395,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 345,
+        "zIndex": 344,
         "layerName": "scne 3",
         "imageName": "verticalFence"
       },
@@ -4421,7 +4408,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 346,
+        "zIndex": 345,
         "layerName": "scne 3",
         "imageName": "verticalFence"
       },
@@ -4434,7 +4421,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 347,
+        "zIndex": 346,
         "layerName": "scne 3",
         "imageName": "HorizontalFence"
       },
@@ -4447,7 +4434,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 348,
+        "zIndex": 347,
         "layerName": "scne 3",
         "imageName": "HorizontalFence"
       },
@@ -4460,7 +4447,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 349,
+        "zIndex": 348,
         "layerName": "scne 3",
         "imageName": "HorizontalFence"
       },
@@ -4473,7 +4460,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 350,
+        "zIndex": 349,
         "layerName": "scne 3",
         "imageName": "HorizontalFence"
       },
@@ -4486,7 +4473,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 351,
+        "zIndex": 350,
         "layerName": "scne 3",
         "imageName": "HorizontalFence"
       },
@@ -4499,7 +4486,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 352,
+        "zIndex": 351,
         "layerName": "scne 3",
         "imageName": "HorizontalFence"
       },
@@ -4512,7 +4499,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 353,
+        "zIndex": 352,
         "layerName": "scne 3",
         "imageName": "HorizontalFence"
       },
@@ -4525,7 +4512,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 354,
+        "zIndex": 353,
         "layerName": "scne 3",
         "imageName": "HorizontalFence"
       },
@@ -4538,7 +4525,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 355,
+        "zIndex": 354,
         "layerName": "scne 3",
         "imageName": "HorizontalFence"
       },
@@ -4551,7 +4538,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 356,
+        "zIndex": 355,
         "layerName": "scne 3",
         "imageName": "HorizontalFence"
       },
@@ -4564,7 +4551,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 357,
+        "zIndex": 356,
         "layerName": "scne 3",
         "imageName": "HorizontalFence"
       },
@@ -4577,7 +4564,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 358,
+        "zIndex": 357,
         "layerName": "scne 3",
         "imageName": "HorizontalFence"
       },
@@ -4590,7 +4577,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 359,
+        "zIndex": 358,
         "layerName": "scne 3",
         "imageName": "HorizontalFence"
       },
@@ -4603,7 +4590,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 360,
+        "zIndex": 359,
         "layerName": "scne 3",
         "imageName": "HorizontalFence"
       },
@@ -4616,7 +4603,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 361,
+        "zIndex": 360,
         "layerName": "scne 3",
         "imageName": "HorizontalFence"
       },
@@ -4627,7 +4614,7 @@
         "y": 5.3250003,
         "originX": 0.3,
         "originY": 0.3,
-        "zIndex": 362,
+        "zIndex": 361,
         "layerName": "scne 3",
         "imageName": "ZGuyD0"
       },
@@ -4638,7 +4625,7 @@
         "y": 9.425,
         "originX": 0.3,
         "originY": 0.3,
-        "zIndex": 363,
+        "zIndex": 362,
         "layerName": "scne 3",
         "imageName": "ZGuyD0"
       },
@@ -4649,7 +4636,7 @@
         "y": 6.925,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 364,
+        "zIndex": 363,
         "layerName": "scne 3",
         "imageName": "DarkOakTree"
       },
@@ -4660,7 +4647,7 @@
         "y": 6.4,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 365,
+        "zIndex": 364,
         "layerName": "scne 3",
         "imageName": "DarkOakTree"
       },
@@ -4671,7 +4658,7 @@
         "y": 6.3875003,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 366,
+        "zIndex": 365,
         "layerName": "scne 3",
         "imageName": "DarkOakTree"
       },
@@ -4682,7 +4669,7 @@
         "y": 6.925,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 367,
+        "zIndex": 366,
         "layerName": "scne 3",
         "imageName": "DarkOakTree"
       },
@@ -4693,7 +4680,7 @@
         "y": 6.9250007,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 368,
+        "zIndex": 367,
         "layerName": "scne 3",
         "imageName": "DarkOakTree"
       },
@@ -4704,7 +4691,7 @@
         "y": 9.025,
         "originX": 0.65625,
         "originY": 0.66875,
-        "zIndex": 369,
+        "zIndex": 368,
         "layerName": "scne 3",
         "imageName": "BigHouseR"
       },
@@ -4715,7 +4702,7 @@
         "y": 8.7125,
         "originX": 0.29375,
         "originY": 0.3625,
-        "zIndex": 370,
+        "zIndex": 369,
         "layerName": "scne 3",
         "imageName": "OrangeTree"
       },
@@ -4726,7 +4713,7 @@
         "y": 9.5625,
         "originX": 0.29375,
         "originY": 0.3625,
-        "zIndex": 371,
+        "zIndex": 370,
         "layerName": "scne 3",
         "imageName": "OrangeTree"
       },
@@ -4737,7 +4724,7 @@
         "y": 9.8125,
         "originX": 0.3,
         "originY": 0.3,
-        "zIndex": 372,
+        "zIndex": 371,
         "layerName": "scne 3",
         "imageName": "ZGlassBoyD0"
       },
@@ -4748,7 +4735,7 @@
         "y": 6.7375,
         "originX": 0.3,
         "originY": 0.3,
-        "zIndex": 373,
+        "zIndex": 372,
         "layerName": "scne 3",
         "imageName": "ZGlassBoyD0"
       },
@@ -4759,7 +4746,7 @@
         "y": 0.1,
         "originX": 1.73125,
         "originY": 1.61875,
-        "zIndex": 374,
+        "zIndex": 373,
         "layerName": "scne 3",
         "imageName": "pinkB"
       },
@@ -4770,7 +4757,7 @@
         "y": -13.0375,
         "originX": 1.73125,
         "originY": 1.61875,
-        "zIndex": 375,
+        "zIndex": 374,
         "layerName": "scne 3",
         "imageName": "pinkB"
       },
@@ -4781,7 +4768,7 @@
         "y": -2.7250001,
         "originX": 0.3,
         "originY": 0.3,
-        "zIndex": 376,
+        "zIndex": 375,
         "layerName": "scne 3",
         "imageName": "ZGirlD0"
       },
@@ -4792,7 +4779,7 @@
         "y": -6.9125,
         "originX": 0.3,
         "originY": 0.3,
-        "zIndex": 377,
+        "zIndex": 376,
         "layerName": "scne 3",
         "imageName": "ZGirlD0"
       },
@@ -4803,7 +4790,7 @@
         "y": 7.9125004,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 378,
+        "zIndex": 377,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -4814,7 +4801,7 @@
         "y": 6.3625,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 379,
+        "zIndex": 378,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -4825,7 +4812,7 @@
         "y": 7.3875003,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 380,
+        "zIndex": 379,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -4836,7 +4823,7 @@
         "y": 5.8375,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 381,
+        "zIndex": 380,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -4847,7 +4834,7 @@
         "y": 7.375,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 382,
+        "zIndex": 381,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -4858,7 +4845,7 @@
         "y": 5.825,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 383,
+        "zIndex": 382,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -4869,7 +4856,7 @@
         "y": 7.9125004,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 384,
+        "zIndex": 383,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -4880,7 +4867,7 @@
         "y": 6.3625,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 385,
+        "zIndex": 384,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -4891,7 +4878,7 @@
         "y": 7.9125004,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 386,
+        "zIndex": 385,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -4902,7 +4889,7 @@
         "y": 6.3625,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 387,
+        "zIndex": 386,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -4915,7 +4902,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 388,
+        "zIndex": 387,
         "layerName": "3",
         "imageName": "HorizontalFence"
       },
@@ -4928,7 +4915,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 389,
+        "zIndex": 388,
         "layerName": "3",
         "imageName": "HorizontalFence"
       },
@@ -4941,7 +4928,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 390,
+        "zIndex": 389,
         "layerName": "3",
         "imageName": "HorizontalFence"
       },
@@ -4954,7 +4941,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 391,
+        "zIndex": 390,
         "layerName": "3",
         "imageName": "HorizontalFence"
       },
@@ -4967,7 +4954,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 392,
+        "zIndex": 391,
         "layerName": "3",
         "imageName": "HorizontalFence"
       },
@@ -4980,7 +4967,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 393,
+        "zIndex": 392,
         "layerName": "3",
         "imageName": "HorizontalFence"
       },
@@ -4993,7 +4980,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 394,
+        "zIndex": 393,
         "layerName": "3",
         "imageName": "HorizontalFence"
       },
@@ -5006,7 +4993,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 395,
+        "zIndex": 394,
         "layerName": "3",
         "imageName": "HorizontalFence"
       },
@@ -5019,7 +5006,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 396,
+        "zIndex": 395,
         "layerName": "3",
         "imageName": "HorizontalFence"
       },
@@ -5032,7 +5019,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 397,
+        "zIndex": 396,
         "layerName": "3",
         "imageName": "HorizontalFence"
       },
@@ -5045,7 +5032,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 398,
+        "zIndex": 397,
         "layerName": "3",
         "imageName": "HorizontalFence"
       },
@@ -5058,7 +5045,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 399,
+        "zIndex": 398,
         "layerName": "3",
         "imageName": "HorizontalFence"
       },
@@ -5071,7 +5058,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 400,
+        "zIndex": 399,
         "layerName": "3",
         "imageName": "HorizontalFence"
       },
@@ -5084,7 +5071,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 401,
+        "zIndex": 400,
         "layerName": "3",
         "imageName": "HorizontalFence"
       },
@@ -5097,7 +5084,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 402,
+        "zIndex": 401,
         "layerName": "3",
         "imageName": "HorizontalFence"
       },
@@ -5110,7 +5097,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 403,
+        "zIndex": 402,
         "layerName": "3",
         "imageName": "HorizontalFence"
       },
@@ -5123,7 +5110,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 404,
+        "zIndex": 403,
         "layerName": "3",
         "imageName": "HorizontalFence"
       },
@@ -5136,7 +5123,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 405,
+        "zIndex": 404,
         "layerName": "3",
         "imageName": "HorizontalFence"
       },
@@ -5149,7 +5136,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 406,
+        "zIndex": 405,
         "layerName": "3",
         "imageName": "HorizontalFence"
       },
@@ -5162,7 +5149,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 407,
+        "zIndex": 406,
         "layerName": "3",
         "imageName": "HorizontalFence"
       },
@@ -5175,7 +5162,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 408,
+        "zIndex": 407,
         "layerName": "3",
         "imageName": "HorizontalFence"
       },
@@ -5188,7 +5175,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 409,
+        "zIndex": 408,
         "layerName": "3",
         "imageName": "HorizontalFence"
       },
@@ -5201,7 +5188,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 410,
+        "zIndex": 409,
         "layerName": "3",
         "imageName": "HorizontalFence"
       },
@@ -5214,7 +5201,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 411,
+        "zIndex": 410,
         "layerName": "3",
         "imageName": "HorizontalFence"
       },
@@ -5227,7 +5214,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 412,
+        "zIndex": 411,
         "layerName": "3",
         "imageName": "HorizontalFence"
       },
@@ -5240,7 +5227,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 413,
+        "zIndex": 412,
         "layerName": "3",
         "imageName": "HorizontalFence"
       },
@@ -5253,7 +5240,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 414,
+        "zIndex": 413,
         "layerName": "3",
         "imageName": "HorizontalFence"
       },
@@ -5266,7 +5253,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 415,
+        "zIndex": 414,
         "layerName": "3",
         "imageName": "verticalFence"
       },
@@ -5279,7 +5266,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 416,
+        "zIndex": 415,
         "layerName": "3",
         "imageName": "verticalFence"
       },
@@ -5292,7 +5279,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 417,
+        "zIndex": 416,
         "layerName": "3",
         "imageName": "verticalFence"
       },
@@ -5305,7 +5292,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 418,
+        "zIndex": 417,
         "layerName": "3",
         "imageName": "verticalFence"
       },
@@ -5318,7 +5305,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 419,
+        "zIndex": 418,
         "layerName": "3",
         "imageName": "verticalFence"
       },
@@ -5331,7 +5318,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 420,
+        "zIndex": 419,
         "layerName": "3",
         "imageName": "verticalFence"
       },
@@ -5344,7 +5331,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 421,
+        "zIndex": 420,
         "layerName": "3",
         "imageName": "verticalFence"
       },
@@ -5357,7 +5344,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 422,
+        "zIndex": 421,
         "layerName": "3",
         "imageName": "verticalFence"
       },
@@ -5370,7 +5357,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 423,
+        "zIndex": 422,
         "layerName": "3",
         "imageName": "verticalFence"
       },
@@ -5383,7 +5370,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 424,
+        "zIndex": 423,
         "layerName": "3",
         "imageName": "verticalFence"
       },
@@ -5396,7 +5383,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 425,
+        "zIndex": 424,
         "layerName": "3",
         "imageName": "verticalFence"
       },
@@ -5409,7 +5396,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 426,
+        "zIndex": 425,
         "layerName": "3",
         "imageName": "verticalFence"
       },
@@ -5422,7 +5409,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 427,
+        "zIndex": 426,
         "layerName": "3",
         "imageName": "verticalFence"
       },
@@ -5435,7 +5422,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 428,
+        "zIndex": 427,
         "layerName": "3",
         "imageName": "verticalFence"
       },
@@ -5448,7 +5435,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 429,
+        "zIndex": 428,
         "layerName": "3",
         "imageName": "verticalFence"
       },
@@ -5461,7 +5448,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 430,
+        "zIndex": 429,
         "layerName": "3",
         "imageName": "verticalFence"
       },
@@ -5474,7 +5461,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 431,
+        "zIndex": 430,
         "layerName": "3",
         "imageName": "verticalFence"
       },
@@ -5487,7 +5474,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 432,
+        "zIndex": 431,
         "layerName": "3",
         "imageName": "verticalFence"
       },
@@ -5500,7 +5487,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 433,
+        "zIndex": 432,
         "layerName": "3",
         "imageName": "verticalFence"
       },
@@ -5513,7 +5500,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 434,
+        "zIndex": 433,
         "layerName": "3",
         "imageName": "verticalFence"
       },
@@ -5526,7 +5513,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 435,
+        "zIndex": 434,
         "layerName": "3",
         "imageName": "verticalFence"
       },
@@ -5539,7 +5526,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 436,
+        "zIndex": 435,
         "layerName": "3",
         "imageName": "verticalFence"
       },
@@ -5552,7 +5539,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 437,
+        "zIndex": 436,
         "layerName": "3",
         "imageName": "verticalFence"
       },
@@ -5565,7 +5552,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 438,
+        "zIndex": 437,
         "layerName": "3",
         "imageName": "verticalFence"
       },
@@ -5578,7 +5565,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 439,
+        "zIndex": 438,
         "layerName": "3",
         "imageName": "verticalFence"
       },
@@ -5591,7 +5578,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 440,
+        "zIndex": 439,
         "layerName": "3",
         "imageName": "verticalFence"
       },
@@ -5604,7 +5591,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 441,
+        "zIndex": 440,
         "layerName": "3",
         "imageName": "verticalFence"
       },
@@ -5617,7 +5604,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 442,
+        "zIndex": 441,
         "layerName": "3",
         "imageName": "verticalFence"
       },
@@ -5630,7 +5617,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 443,
+        "zIndex": 442,
         "layerName": "3",
         "imageName": "verticalFence"
       },
@@ -5643,7 +5630,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 444,
+        "zIndex": 443,
         "layerName": "3",
         "imageName": "verticalFence"
       },
@@ -5656,7 +5643,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 445,
+        "zIndex": 444,
         "layerName": "3",
         "imageName": "verticalFence"
       },
@@ -5669,7 +5656,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 446,
+        "zIndex": 445,
         "layerName": "3",
         "imageName": "verticalFence"
       },
@@ -5682,7 +5669,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 447,
+        "zIndex": 446,
         "layerName": "3",
         "imageName": "verticalFence"
       },
@@ -5695,7 +5682,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 448,
+        "zIndex": 447,
         "layerName": "3",
         "imageName": "verticalFence"
       },
@@ -5708,7 +5695,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 449,
+        "zIndex": 448,
         "layerName": "3",
         "imageName": "verticalFence"
       },
@@ -5721,7 +5708,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 450,
+        "zIndex": 449,
         "layerName": "3",
         "imageName": "verticalFence"
       },
@@ -5734,7 +5721,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 451,
+        "zIndex": 450,
         "layerName": "3",
         "imageName": "verticalFence"
       },
@@ -5747,7 +5734,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 452,
+        "zIndex": 451,
         "layerName": "3",
         "imageName": "verticalFence"
       },
@@ -5760,7 +5747,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 453,
+        "zIndex": 452,
         "layerName": "3",
         "imageName": "verticalFence"
       },
@@ -5773,7 +5760,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 454,
+        "zIndex": 453,
         "layerName": "3",
         "imageName": "verticalFence"
       },
@@ -5786,7 +5773,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 455,
+        "zIndex": 454,
         "layerName": "3",
         "imageName": "verticalFence"
       },
@@ -5799,7 +5786,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 456,
+        "zIndex": 455,
         "layerName": "3",
         "imageName": "verticalFence"
       },
@@ -5812,7 +5799,7 @@
         "scaleY": 1.6435543,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 457,
+        "zIndex": 456,
         "layerName": "3",
         "imageName": "Tree"
       },
@@ -5825,7 +5812,7 @@
         "scaleY": 1.6435543,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 458,
+        "zIndex": 457,
         "layerName": "3",
         "imageName": "Tree"
       },
@@ -5836,7 +5823,7 @@
         "y": 10.462515,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 459,
+        "zIndex": 458,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -5847,7 +5834,7 @@
         "y": 5.275,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 460,
+        "zIndex": 459,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -5860,7 +5847,7 @@
         "scaleY": 1.3574283,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 461,
+        "zIndex": 460,
         "layerName": "3",
         "imageName": "Tree"
       },
@@ -5873,7 +5860,7 @@
         "scaleY": 1.4995776,
         "originX": 0.29375,
         "originY": 0.3625,
-        "zIndex": 462,
+        "zIndex": 461,
         "layerName": "3",
         "imageName": "BigTree"
       },
@@ -5886,7 +5873,7 @@
         "scaleY": 1.6435543,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 463,
+        "zIndex": 462,
         "layerName": "3",
         "imageName": "Tree"
       },
@@ -5899,7 +5886,7 @@
         "scaleY": 1.6435543,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 464,
+        "zIndex": 463,
         "layerName": "3",
         "imageName": "Tree"
       },
@@ -5912,7 +5899,7 @@
         "scaleY": 1.6435543,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 465,
+        "zIndex": 464,
         "layerName": "3",
         "imageName": "Tree"
       },
@@ -5925,7 +5912,7 @@
         "scaleY": 1.6435543,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 466,
+        "zIndex": 465,
         "layerName": "3",
         "imageName": "Tree"
       },
@@ -5938,7 +5925,7 @@
         "scaleY": 1.6435543,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 467,
+        "zIndex": 466,
         "layerName": "3",
         "imageName": "Tree"
       },
@@ -5951,7 +5938,7 @@
         "scaleY": 1.6435543,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 468,
+        "zIndex": 467,
         "layerName": "3",
         "imageName": "Tree"
       },
@@ -5962,7 +5949,7 @@
         "y": 10.462515,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 469,
+        "zIndex": 468,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -5973,7 +5960,7 @@
         "y": 8.525,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 470,
+        "zIndex": 469,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -5984,7 +5971,7 @@
         "y": 9.900001,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 471,
+        "zIndex": 470,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -5995,7 +5982,7 @@
         "y": 10.700001,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 472,
+        "zIndex": 471,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -6006,7 +5993,7 @@
         "y": 5.275,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 473,
+        "zIndex": 472,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -6019,7 +6006,7 @@
         "scaleY": 1.3574283,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 474,
+        "zIndex": 473,
         "layerName": "3",
         "imageName": "Tree"
       },
@@ -6032,7 +6019,7 @@
         "scaleY": 1.3574283,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 475,
+        "zIndex": 474,
         "layerName": "3",
         "imageName": "Tree"
       },
@@ -6045,7 +6032,7 @@
         "scaleY": 1.4995776,
         "originX": 0.29375,
         "originY": 0.3625,
-        "zIndex": 476,
+        "zIndex": 475,
         "layerName": "3",
         "imageName": "BigTree"
       },
@@ -6058,7 +6045,7 @@
         "scaleY": 1.4995776,
         "originX": 0.29375,
         "originY": 0.3625,
-        "zIndex": 477,
+        "zIndex": 476,
         "layerName": "3",
         "imageName": "BigTree"
       },
@@ -6071,7 +6058,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 478,
+        "zIndex": 477,
         "layerName": "3",
         "imageName": "verticalFence"
       },
@@ -6084,7 +6071,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 479,
+        "zIndex": 478,
         "layerName": "3",
         "imageName": "verticalFence"
       },
@@ -6097,7 +6084,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 480,
+        "zIndex": 479,
         "layerName": "3",
         "imageName": "verticalFence"
       },
@@ -6110,7 +6097,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 481,
+        "zIndex": 480,
         "layerName": "3",
         "imageName": "verticalFence"
       },
@@ -6123,7 +6110,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 482,
+        "zIndex": 481,
         "layerName": "3",
         "imageName": "verticalFence"
       },
@@ -6136,7 +6123,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 483,
+        "zIndex": 482,
         "layerName": "3",
         "imageName": "verticalFence"
       },
@@ -6149,7 +6136,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 484,
+        "zIndex": 483,
         "layerName": "3",
         "imageName": "verticalFence"
       },
@@ -6162,7 +6149,7 @@
         "scaleY": 1.6435543,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 485,
+        "zIndex": 484,
         "layerName": "3",
         "imageName": "Tree"
       },
@@ -6175,7 +6162,7 @@
         "scaleY": 1.3574283,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 486,
+        "zIndex": 485,
         "layerName": "3",
         "imageName": "Tree"
       },
@@ -6188,7 +6175,7 @@
         "scaleY": 1.4995776,
         "originX": 0.29375,
         "originY": 0.3625,
-        "zIndex": 487,
+        "zIndex": 486,
         "layerName": "3",
         "imageName": "BigTree"
       },
@@ -6201,7 +6188,7 @@
         "scaleY": 1.6435543,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 488,
+        "zIndex": 487,
         "layerName": "3",
         "imageName": "Tree"
       },
@@ -6214,7 +6201,7 @@
         "scaleY": 1.3574283,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 489,
+        "zIndex": 488,
         "layerName": "3",
         "imageName": "Tree"
       },
@@ -6227,7 +6214,7 @@
         "scaleY": 1.3574283,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 490,
+        "zIndex": 489,
         "layerName": "3",
         "imageName": "Tree"
       },
@@ -6240,7 +6227,7 @@
         "scaleY": 1.3574283,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 491,
+        "zIndex": 490,
         "layerName": "3",
         "imageName": "Tree"
       },
@@ -6253,7 +6240,7 @@
         "scaleY": 1.4995776,
         "originX": 0.29375,
         "originY": 0.3625,
-        "zIndex": 492,
+        "zIndex": 491,
         "layerName": "3",
         "imageName": "BigTree"
       },
@@ -6266,7 +6253,7 @@
         "scaleY": 1.4995776,
         "originX": 0.29375,
         "originY": 0.3625,
-        "zIndex": 493,
+        "zIndex": 492,
         "layerName": "3",
         "imageName": "BigTree"
       },
@@ -6279,7 +6266,7 @@
         "scaleY": 1.4995776,
         "originX": 0.29375,
         "originY": 0.3625,
-        "zIndex": 494,
+        "zIndex": 493,
         "layerName": "3",
         "imageName": "BigTree"
       },
@@ -6290,7 +6277,7 @@
         "y": 7.075015,
         "originX": 0.3,
         "originY": 0.3,
-        "zIndex": 495,
+        "zIndex": 494,
         "layerName": "3",
         "imageName": "GRass"
       },
@@ -6301,7 +6288,7 @@
         "y": 5.3125005,
         "originX": 0.3,
         "originY": 0.3,
-        "zIndex": 496,
+        "zIndex": 495,
         "layerName": "3",
         "imageName": "GRass"
       },
@@ -6314,7 +6301,7 @@
         "scaleY": 1.1363267,
         "originX": 0.275,
         "originY": 0.275,
-        "zIndex": 497,
+        "zIndex": 496,
         "layerName": "3",
         "imageName": "Fullgrass"
       },
@@ -6325,7 +6312,7 @@
         "y": 9.537515,
         "originX": 0.3,
         "originY": 0.3,
-        "zIndex": 498,
+        "zIndex": 497,
         "layerName": "3",
         "imageName": "GRass"
       },
@@ -6338,7 +6325,7 @@
         "scaleY": 1.4836048,
         "originX": 0.29375,
         "originY": 0.3625,
-        "zIndex": 499,
+        "zIndex": 498,
         "layerName": "3",
         "imageName": "OrangeTree"
       },
@@ -6351,7 +6338,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 500,
+        "zIndex": 499,
         "layerName": "3",
         "imageName": "verticalFence"
       },
@@ -6364,7 +6351,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 501,
+        "zIndex": 500,
         "layerName": "3",
         "imageName": "verticalFence"
       },
@@ -6377,7 +6364,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 502,
+        "zIndex": 501,
         "layerName": "3",
         "imageName": "verticalFence"
       },
@@ -6390,7 +6377,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 503,
+        "zIndex": 502,
         "layerName": "3",
         "imageName": "verticalFence"
       },
@@ -6403,7 +6390,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 504,
+        "zIndex": 503,
         "layerName": "3",
         "imageName": "verticalFence"
       },
@@ -6416,7 +6403,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 505,
+        "zIndex": 504,
         "layerName": "3",
         "imageName": "verticalFence"
       },
@@ -6429,7 +6416,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 506,
+        "zIndex": 505,
         "layerName": "3",
         "imageName": "verticalFence"
       },
@@ -6442,7 +6429,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 507,
+        "zIndex": 506,
         "layerName": "3",
         "imageName": "verticalFence"
       },
@@ -6455,7 +6442,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 508,
+        "zIndex": 507,
         "layerName": "3",
         "imageName": "verticalFence"
       },
@@ -6468,7 +6455,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 509,
+        "zIndex": 508,
         "layerName": "3",
         "imageName": "verticalFence"
       },
@@ -6481,7 +6468,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 510,
+        "zIndex": 509,
         "layerName": "3",
         "imageName": "verticalFence"
       },
@@ -6494,7 +6481,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 511,
+        "zIndex": 510,
         "layerName": "3",
         "imageName": "verticalFence"
       },
@@ -6507,7 +6494,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 512,
+        "zIndex": 511,
         "layerName": "3",
         "imageName": "verticalFence"
       },
@@ -6520,7 +6507,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 513,
+        "zIndex": 512,
         "layerName": "3",
         "imageName": "verticalFence"
       },
@@ -6533,7 +6520,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 514,
+        "zIndex": 513,
         "layerName": "3",
         "imageName": "verticalFence"
       },
@@ -6546,7 +6533,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 515,
+        "zIndex": 514,
         "layerName": "3",
         "imageName": "verticalFence"
       },
@@ -6559,7 +6546,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 516,
+        "zIndex": 515,
         "layerName": "3",
         "imageName": "verticalFence"
       },
@@ -6572,7 +6559,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 517,
+        "zIndex": 516,
         "layerName": "3",
         "imageName": "verticalFence"
       },
@@ -6585,7 +6572,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 518,
+        "zIndex": 517,
         "layerName": "3",
         "imageName": "verticalFence"
       },
@@ -6598,7 +6585,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 519,
+        "zIndex": 518,
         "layerName": "3",
         "imageName": "verticalFence"
       },
@@ -6611,7 +6598,7 @@
         "scaleY": 1.6435543,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 520,
+        "zIndex": 519,
         "layerName": "3",
         "imageName": "Tree"
       },
@@ -6622,7 +6609,7 @@
         "y": 10.500015,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 521,
+        "zIndex": 520,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -6635,7 +6622,7 @@
         "scaleY": 1.3574283,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 522,
+        "zIndex": 521,
         "layerName": "3",
         "imageName": "Tree"
       },
@@ -6648,7 +6635,7 @@
         "scaleY": 1.3574283,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 523,
+        "zIndex": 522,
         "layerName": "3",
         "imageName": "Tree"
       },
@@ -6661,7 +6648,7 @@
         "scaleY": 1.3574283,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 524,
+        "zIndex": 523,
         "layerName": "3",
         "imageName": "Tree"
       },
@@ -6674,7 +6661,7 @@
         "scaleY": 1.3574283,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 525,
+        "zIndex": 524,
         "layerName": "3",
         "imageName": "Tree"
       },
@@ -6687,7 +6674,7 @@
         "scaleY": 1.3574283,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 526,
+        "zIndex": 525,
         "layerName": "3",
         "imageName": "Tree"
       },
@@ -6700,7 +6687,7 @@
         "scaleY": 1.3574283,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 527,
+        "zIndex": 526,
         "layerName": "3",
         "imageName": "Tree"
       },
@@ -6713,7 +6700,7 @@
         "scaleY": 1.3574283,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 528,
+        "zIndex": 527,
         "layerName": "3",
         "imageName": "Tree"
       },
@@ -6726,7 +6713,7 @@
         "scaleY": 1.3574283,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 529,
+        "zIndex": 528,
         "layerName": "3",
         "imageName": "Tree"
       },
@@ -6739,7 +6726,7 @@
         "scaleY": 1.4995776,
         "originX": 0.29375,
         "originY": 0.3625,
-        "zIndex": 530,
+        "zIndex": 529,
         "layerName": "3",
         "imageName": "BigTree"
       },
@@ -6752,7 +6739,7 @@
         "scaleY": 1.6435543,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 531,
+        "zIndex": 530,
         "layerName": "3",
         "imageName": "Tree"
       },
@@ -6765,7 +6752,7 @@
         "scaleY": 1.6435543,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 532,
+        "zIndex": 531,
         "layerName": "3",
         "imageName": "Tree"
       },
@@ -6778,7 +6765,7 @@
         "scaleY": 1.6435543,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 533,
+        "zIndex": 532,
         "layerName": "3",
         "imageName": "Tree"
       },
@@ -6791,7 +6778,7 @@
         "scaleY": 1.6435543,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 534,
+        "zIndex": 533,
         "layerName": "3",
         "imageName": "Tree"
       },
@@ -6802,7 +6789,7 @@
         "y": 10.500015,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 535,
+        "zIndex": 534,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -6813,7 +6800,7 @@
         "y": 6.0625153,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 536,
+        "zIndex": 535,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -6826,7 +6813,7 @@
         "scaleY": 1.3574283,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 537,
+        "zIndex": 536,
         "layerName": "3",
         "imageName": "Tree"
       },
@@ -6839,7 +6826,7 @@
         "scaleY": 1.4995776,
         "originX": 0.29375,
         "originY": 0.3625,
-        "zIndex": 538,
+        "zIndex": 537,
         "layerName": "3",
         "imageName": "BigTree"
       },
@@ -6852,7 +6839,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 539,
+        "zIndex": 538,
         "layerName": "3",
         "imageName": "verticalFence"
       },
@@ -6865,7 +6852,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 540,
+        "zIndex": 539,
         "layerName": "3",
         "imageName": "verticalFence"
       },
@@ -6878,7 +6865,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 541,
+        "zIndex": 540,
         "layerName": "3",
         "imageName": "verticalFence"
       },
@@ -6891,7 +6878,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 542,
+        "zIndex": 541,
         "layerName": "3",
         "imageName": "verticalFence"
       },
@@ -6904,7 +6891,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 543,
+        "zIndex": 542,
         "layerName": "3",
         "imageName": "verticalFence"
       },
@@ -6917,7 +6904,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 544,
+        "zIndex": 543,
         "layerName": "3",
         "imageName": "verticalFence"
       },
@@ -6930,7 +6917,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 545,
+        "zIndex": 544,
         "layerName": "3",
         "imageName": "verticalFence"
       },
@@ -6943,7 +6930,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 546,
+        "zIndex": 545,
         "layerName": "3",
         "imageName": "verticalFence"
       },
@@ -6956,7 +6943,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 547,
+        "zIndex": 546,
         "layerName": "3",
         "imageName": "verticalFence"
       },
@@ -6969,7 +6956,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 548,
+        "zIndex": 547,
         "layerName": "3",
         "imageName": "verticalFence"
       },
@@ -6982,7 +6969,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 549,
+        "zIndex": 548,
         "layerName": "3",
         "imageName": "verticalFence"
       },
@@ -6995,7 +6982,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 550,
+        "zIndex": 549,
         "layerName": "3",
         "imageName": "verticalFence"
       },
@@ -7008,7 +6995,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 551,
+        "zIndex": 550,
         "layerName": "3",
         "imageName": "verticalFence"
       },
@@ -7021,7 +7008,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 552,
+        "zIndex": 551,
         "layerName": "3",
         "imageName": "verticalFence"
       },
@@ -7034,7 +7021,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 553,
+        "zIndex": 552,
         "layerName": "3",
         "imageName": "verticalFence"
       },
@@ -7047,7 +7034,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 554,
+        "zIndex": 553,
         "layerName": "3",
         "imageName": "verticalFence"
       },
@@ -7060,7 +7047,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 555,
+        "zIndex": 554,
         "layerName": "3",
         "imageName": "verticalFence"
       },
@@ -7073,7 +7060,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 556,
+        "zIndex": 555,
         "layerName": "3",
         "imageName": "verticalFence"
       },
@@ -7086,7 +7073,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 557,
+        "zIndex": 556,
         "layerName": "3",
         "imageName": "verticalFence"
       },
@@ -7099,7 +7086,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 558,
+        "zIndex": 557,
         "layerName": "3",
         "imageName": "verticalFence"
       },
@@ -7112,7 +7099,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 559,
+        "zIndex": 558,
         "layerName": "3",
         "imageName": "verticalFence"
       },
@@ -7125,7 +7112,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 560,
+        "zIndex": 559,
         "layerName": "3",
         "imageName": "verticalFence"
       },
@@ -7138,7 +7125,7 @@
         "scaleY": 1.6435543,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 561,
+        "zIndex": 560,
         "layerName": "3",
         "imageName": "Tree"
       },
@@ -7151,7 +7138,7 @@
         "scaleY": 1.3574283,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 562,
+        "zIndex": 561,
         "layerName": "3",
         "imageName": "Tree"
       },
@@ -7164,7 +7151,7 @@
         "scaleY": 1.4995776,
         "originX": 0.29375,
         "originY": 0.3625,
-        "zIndex": 563,
+        "zIndex": 562,
         "layerName": "3",
         "imageName": "BigTree"
       },
@@ -7177,7 +7164,7 @@
         "scaleY": 1.6435543,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 564,
+        "zIndex": 563,
         "layerName": "3",
         "imageName": "Tree"
       },
@@ -7190,7 +7177,7 @@
         "scaleY": 1.3574283,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 565,
+        "zIndex": 564,
         "layerName": "3",
         "imageName": "Tree"
       },
@@ -7203,7 +7190,7 @@
         "scaleY": 1.3574283,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 566,
+        "zIndex": 565,
         "layerName": "3",
         "imageName": "Tree"
       },
@@ -7216,7 +7203,7 @@
         "scaleY": 1.3574283,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 567,
+        "zIndex": 566,
         "layerName": "3",
         "imageName": "Tree"
       },
@@ -7229,7 +7216,7 @@
         "scaleY": 1.4995776,
         "originX": 0.29375,
         "originY": 0.3625,
-        "zIndex": 568,
+        "zIndex": 567,
         "layerName": "3",
         "imageName": "BigTree"
       },
@@ -7242,7 +7229,7 @@
         "scaleY": 1.4995776,
         "originX": 0.29375,
         "originY": 0.3625,
-        "zIndex": 569,
+        "zIndex": 568,
         "layerName": "3",
         "imageName": "BigTree"
       },
@@ -7255,7 +7242,7 @@
         "scaleY": 1.4995776,
         "originX": 0.29375,
         "originY": 0.3625,
-        "zIndex": 570,
+        "zIndex": 569,
         "layerName": "3",
         "imageName": "BigTree"
       },
@@ -7268,7 +7255,7 @@
         "scaleY": 1.4995776,
         "originX": 0.29375,
         "originY": 0.3625,
-        "zIndex": 571,
+        "zIndex": 570,
         "layerName": "3",
         "imageName": "BigTree"
       },
@@ -7281,7 +7268,7 @@
         "scaleY": 1.4995776,
         "originX": 0.29375,
         "originY": 0.3625,
-        "zIndex": 572,
+        "zIndex": 571,
         "layerName": "3",
         "imageName": "BigTree"
       },
@@ -7292,7 +7279,7 @@
         "y": 10.875001,
         "originX": 0.19375,
         "originY": 0.18125,
-        "zIndex": 573,
+        "zIndex": 572,
         "layerName": "3",
         "imageName": "grave"
       },
@@ -7306,7 +7293,7 @@
         "originX": 0.1875,
         "originY": 0.10625,
         "rotation": 90,
-        "zIndex": 574,
+        "zIndex": 573,
         "layerName": "3",
         "imageName": "TreeTrunk"
       },
@@ -7317,7 +7304,7 @@
         "y": 6.9625,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 575,
+        "zIndex": 574,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -7328,7 +7315,7 @@
         "y": 7.9500003,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 576,
+        "zIndex": 575,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -7339,7 +7326,7 @@
         "y": 6.775,
         "originX": 0.66875,
         "originY": 2.09375,
-        "zIndex": 577,
+        "zIndex": 576,
         "layerName": "3",
         "imageName": "Building1"
       },
@@ -7350,7 +7337,7 @@
         "y": 3.2125,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 578,
+        "zIndex": 577,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -7361,7 +7348,7 @@
         "y": 4,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 579,
+        "zIndex": 578,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -7372,7 +7359,7 @@
         "y": 4.4125004,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 580,
+        "zIndex": 579,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -7383,7 +7370,7 @@
         "y": 7.9625006,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 581,
+        "zIndex": 580,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -7394,7 +7381,7 @@
         "y": 8.95,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 582,
+        "zIndex": 581,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -7405,7 +7392,7 @@
         "y": 7.975,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 583,
+        "zIndex": 582,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -7416,7 +7403,7 @@
         "y": 8.962501,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 584,
+        "zIndex": 583,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -7427,7 +7414,7 @@
         "y": 9.012501,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 585,
+        "zIndex": 584,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -7438,7 +7425,7 @@
         "y": 10,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 586,
+        "zIndex": 585,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -7449,7 +7436,7 @@
         "y": 7.9750004,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 587,
+        "zIndex": 586,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -7460,7 +7447,7 @@
         "y": 8.962501,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 588,
+        "zIndex": 587,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -7471,7 +7458,7 @@
         "y": 6.4375005,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 589,
+        "zIndex": 588,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -7482,7 +7469,7 @@
         "y": 7.425,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 590,
+        "zIndex": 589,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -7493,7 +7480,7 @@
         "y": 10.0125,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 591,
+        "zIndex": 590,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -7504,7 +7491,7 @@
         "y": 9.012501,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 592,
+        "zIndex": 591,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -7515,7 +7502,7 @@
         "y": 10,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 593,
+        "zIndex": 592,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -7526,7 +7513,7 @@
         "y": 9.025,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 594,
+        "zIndex": 593,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -7537,7 +7524,7 @@
         "y": 10.0125,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 595,
+        "zIndex": 594,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -7548,7 +7535,7 @@
         "y": 10.0125,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 596,
+        "zIndex": 595,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -7559,7 +7546,7 @@
         "y": 7.45,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 597,
+        "zIndex": 596,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -7570,7 +7557,7 @@
         "y": 8.4375,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 598,
+        "zIndex": 597,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -7581,7 +7568,7 @@
         "y": 6.8875,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 599,
+        "zIndex": 598,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -7592,7 +7579,7 @@
         "y": 5.8625,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 600,
+        "zIndex": 599,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -7603,7 +7590,7 @@
         "y": 6.975,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 601,
+        "zIndex": 600,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -7614,7 +7601,7 @@
         "y": 7.9625,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 602,
+        "zIndex": 601,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -7625,7 +7612,7 @@
         "y": 6.3875003,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 603,
+        "zIndex": 602,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -7636,7 +7623,7 @@
         "y": 8.4875,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 604,
+        "zIndex": 603,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -7647,7 +7634,7 @@
         "y": 9.475,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 605,
+        "zIndex": 604,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -7658,7 +7645,7 @@
         "y": 10.025,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 606,
+        "zIndex": 605,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -7669,7 +7656,7 @@
         "y": 5.8625,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 607,
+        "zIndex": 606,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -7680,7 +7667,7 @@
         "y": 7.4500003,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 608,
+        "zIndex": 607,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -7691,7 +7678,7 @@
         "y": 8.4375,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 609,
+        "zIndex": 608,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -7702,7 +7689,7 @@
         "y": 6.8875,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 610,
+        "zIndex": 609,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -7713,7 +7700,7 @@
         "y": 8.4875,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 611,
+        "zIndex": 610,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -7724,7 +7711,7 @@
         "y": 9.475,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 612,
+        "zIndex": 611,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -7735,7 +7722,7 @@
         "y": 8.5,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 613,
+        "zIndex": 612,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -7746,7 +7733,7 @@
         "y": 9.4875,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 614,
+        "zIndex": 613,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -7757,7 +7744,7 @@
         "y": 9.5375,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 615,
+        "zIndex": 614,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -7768,7 +7755,7 @@
         "y": 10.525001,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 616,
+        "zIndex": 615,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -7779,7 +7766,7 @@
         "y": 5.8500004,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 617,
+        "zIndex": 616,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -7790,7 +7777,7 @@
         "y": 7.4375,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 618,
+        "zIndex": 617,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -7801,7 +7788,7 @@
         "y": 8.425,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 619,
+        "zIndex": 618,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -7812,7 +7799,7 @@
         "y": 6.8500004,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 620,
+        "zIndex": 619,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -7823,7 +7810,7 @@
         "y": 6.9625,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 621,
+        "zIndex": 620,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -7834,7 +7821,7 @@
         "y": 7.9500003,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 622,
+        "zIndex": 621,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -7845,7 +7832,7 @@
         "y": 8.475,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 623,
+        "zIndex": 622,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -7856,7 +7843,7 @@
         "y": 9.462501,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 624,
+        "zIndex": 623,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -7867,7 +7854,7 @@
         "y": 7.9625006,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 625,
+        "zIndex": 624,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -7878,7 +7865,7 @@
         "y": 8.95,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 626,
+        "zIndex": 625,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -7889,7 +7876,7 @@
         "y": 7.975,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 627,
+        "zIndex": 626,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -7900,7 +7887,7 @@
         "y": 8.962501,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 628,
+        "zIndex": 627,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -7911,7 +7898,7 @@
         "y": 5.3250003,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 629,
+        "zIndex": 628,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -7922,7 +7909,7 @@
         "y": 9.012501,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 630,
+        "zIndex": 629,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -7933,7 +7920,7 @@
         "y": 10,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 631,
+        "zIndex": 630,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -7944,7 +7931,7 @@
         "y": 6.9125004,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 632,
+        "zIndex": 631,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -7955,7 +7942,7 @@
         "y": 7.9,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 633,
+        "zIndex": 632,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -7966,7 +7953,7 @@
         "y": 6.35,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 634,
+        "zIndex": 633,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -7977,7 +7964,7 @@
         "y": 6.4375,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 635,
+        "zIndex": 634,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -7988,7 +7975,7 @@
         "y": 7.425,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 636,
+        "zIndex": 635,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -7999,7 +7986,7 @@
         "y": 5.8500004,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 637,
+        "zIndex": 636,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -8010,7 +7997,7 @@
         "y": 7.950001,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 638,
+        "zIndex": 637,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -8021,7 +8008,7 @@
         "y": 8.9375,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 639,
+        "zIndex": 638,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -8032,7 +8019,7 @@
         "y": 7.3875,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 640,
+        "zIndex": 639,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -8043,7 +8030,7 @@
         "y": 7.9625,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 641,
+        "zIndex": 640,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -8054,7 +8041,7 @@
         "y": 8.95,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 642,
+        "zIndex": 641,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -8065,7 +8052,7 @@
         "y": 9.000001,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 643,
+        "zIndex": 642,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -8076,7 +8063,7 @@
         "y": 9.9875,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 644,
+        "zIndex": 643,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -8087,7 +8074,7 @@
         "y": 10.0125,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 645,
+        "zIndex": 644,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -8098,7 +8085,7 @@
         "y": 6.9625,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 646,
+        "zIndex": 645,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -8109,7 +8096,7 @@
         "y": 7.9500003,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 647,
+        "zIndex": 646,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -8120,7 +8107,7 @@
         "y": 7.9625006,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 648,
+        "zIndex": 647,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -8131,7 +8118,7 @@
         "y": 8.95,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 649,
+        "zIndex": 648,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -8142,7 +8129,7 @@
         "y": 7.975,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 650,
+        "zIndex": 649,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -8153,7 +8140,7 @@
         "y": 8.962501,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 651,
+        "zIndex": 650,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -8164,7 +8151,7 @@
         "y": 9.012501,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 652,
+        "zIndex": 651,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -8175,7 +8162,7 @@
         "y": 10,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 653,
+        "zIndex": 652,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -8186,7 +8173,7 @@
         "y": 5.8875003,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 654,
+        "zIndex": 653,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -8197,7 +8184,7 @@
         "y": 10,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 655,
+        "zIndex": 654,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -8208,7 +8195,7 @@
         "y": 7.4375005,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 656,
+        "zIndex": 655,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -8219,7 +8206,7 @@
         "y": 8.425,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 657,
+        "zIndex": 656,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -8230,7 +8217,7 @@
         "y": 6.875,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 658,
+        "zIndex": 657,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -8241,7 +8228,7 @@
         "y": 6.9625,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 659,
+        "zIndex": 658,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -8252,7 +8239,7 @@
         "y": 7.9500003,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 660,
+        "zIndex": 659,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -8263,7 +8250,7 @@
         "y": 6.375,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 661,
+        "zIndex": 660,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -8274,7 +8261,7 @@
         "y": 8.475,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 662,
+        "zIndex": 661,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -8285,7 +8272,7 @@
         "y": 9.462501,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 663,
+        "zIndex": 662,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -8296,7 +8283,7 @@
         "y": 8.4875,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 664,
+        "zIndex": 663,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -8307,7 +8294,7 @@
         "y": 9.475,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 665,
+        "zIndex": 664,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -8318,7 +8305,7 @@
         "y": 9.525001,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 666,
+        "zIndex": 665,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -8329,7 +8316,7 @@
         "y": 10.5125,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 667,
+        "zIndex": 666,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -8340,7 +8327,7 @@
         "y": 7.9750004,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 668,
+        "zIndex": 667,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -8351,7 +8338,7 @@
         "y": 8.962501,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 669,
+        "zIndex": 668,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -8362,7 +8349,7 @@
         "y": 10.0125,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 670,
+        "zIndex": 669,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -8373,7 +8360,7 @@
         "y": 9.012501,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 671,
+        "zIndex": 670,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -8384,7 +8371,7 @@
         "y": 10,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 672,
+        "zIndex": 671,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -8395,7 +8382,7 @@
         "y": 9.025,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 673,
+        "zIndex": 672,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -8406,7 +8393,7 @@
         "y": 10.0125,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 674,
+        "zIndex": 673,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -8417,7 +8404,7 @@
         "y": 7.9750004,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 675,
+        "zIndex": 674,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -8428,7 +8415,7 @@
         "y": 8.962501,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 676,
+        "zIndex": 675,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -8439,7 +8426,7 @@
         "y": 9.012501,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 677,
+        "zIndex": 676,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -8450,7 +8437,7 @@
         "y": 10,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 678,
+        "zIndex": 677,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -8461,7 +8448,7 @@
         "y": 9.025,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 679,
+        "zIndex": 678,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -8472,7 +8459,7 @@
         "y": 10.0125,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 680,
+        "zIndex": 679,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -8483,7 +8470,7 @@
         "y": 6.9375005,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 681,
+        "zIndex": 680,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -8494,7 +8481,7 @@
         "y": 7.925,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 682,
+        "zIndex": 681,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -8505,7 +8492,7 @@
         "y": 6.375,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 683,
+        "zIndex": 682,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -8516,7 +8503,7 @@
         "y": 7.9750004,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 684,
+        "zIndex": 683,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -8527,7 +8514,7 @@
         "y": 8.962501,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 685,
+        "zIndex": 684,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -8538,7 +8525,7 @@
         "y": 7.9875,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 686,
+        "zIndex": 685,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -8549,7 +8536,7 @@
         "y": 8.975,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 687,
+        "zIndex": 686,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -8560,7 +8547,7 @@
         "y": 9.025001,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 688,
+        "zIndex": 687,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -8571,7 +8558,7 @@
         "y": 10.0125,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 689,
+        "zIndex": 688,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -8582,7 +8569,7 @@
         "y": 3.9624999,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 690,
+        "zIndex": 689,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -8593,7 +8580,7 @@
         "y": 10.025,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 691,
+        "zIndex": 690,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -8604,7 +8591,7 @@
         "y": 4.425,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 692,
+        "zIndex": 691,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -8615,7 +8602,7 @@
         "y": 4.3,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 693,
+        "zIndex": 692,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -8626,7 +8613,7 @@
         "y": 2.9375,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 694,
+        "zIndex": 693,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -8637,7 +8624,7 @@
         "y": 4.125,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 695,
+        "zIndex": 694,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -8648,7 +8635,7 @@
         "y": 3.6375,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 696,
+        "zIndex": 695,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -8659,7 +8646,7 @@
         "y": 10.025,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 697,
+        "zIndex": 696,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -8670,7 +8657,7 @@
         "y": 3.175,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 698,
+        "zIndex": 697,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -8681,7 +8668,7 @@
         "y": 10.025,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 699,
+        "zIndex": 698,
         "layerName": "3",
         "imageName": "DarkOakTree"
       },
@@ -8692,9 +8679,20 @@
         "y": 8.3625,
         "originX": 0.29375,
         "originY": 0.3,
-        "zIndex": 700,
+        "zIndex": 699,
         "layerName": "3",
         "imageName": "catD0"
+      },
+      {
+        "uniqueId": 15,
+        "tags": [],
+        "x": -3.4875014,
+        "y": 6.4375,
+        "originX": 0.6,
+        "originY": 0.6,
+        "zIndex": 700,
+        "layerName": "3",
+        "imageName": "DragonFront"
       },
       {
         "uniqueId": 83,
@@ -12771,24 +12769,13 @@
         "imageName": "BigTree"
       },
       {
-        "uniqueId": 294,
-        "tags": [],
-        "x": 17.925,
-        "y": -6.100015,
-        "originX": 0.3,
-        "originY": 0.3,
-        "zIndex": 1017,
-        "layerName": "down scene",
-        "imageName": "GRass"
-      },
-      {
         "uniqueId": 999,
         "tags": [],
         "x": 13.750001,
         "y": -2.7124999,
         "originX": 0.3,
         "originY": 0.3,
-        "zIndex": 1018,
+        "zIndex": 1017,
         "layerName": "down scene",
         "imageName": "GRass"
       },
@@ -12799,7 +12786,7 @@
         "y": -6.950015,
         "originX": 0.3,
         "originY": 0.3,
-        "zIndex": 1019,
+        "zIndex": 1018,
         "layerName": "down scene",
         "imageName": "GRass"
       },
@@ -12810,7 +12797,7 @@
         "y": -4.200015,
         "originX": 0.3,
         "originY": 0.3,
-        "zIndex": 1020,
+        "zIndex": 1019,
         "layerName": "down scene",
         "imageName": "GRass"
       },
@@ -12821,7 +12808,7 @@
         "y": -3.462505,
         "originX": 0.3,
         "originY": 0.3,
-        "zIndex": 1021,
+        "zIndex": 1020,
         "layerName": "down scene",
         "imageName": "GRass"
       },
@@ -12834,20 +12821,9 @@
         "scaleY": 1.1363267,
         "originX": 0.275,
         "originY": 0.275,
-        "zIndex": 1022,
+        "zIndex": 1021,
         "layerName": "down scene",
         "imageName": "Fullgrass"
-      },
-      {
-        "uniqueId": 364,
-        "tags": [],
-        "x": 17.937498,
-        "y": -3.6375082,
-        "originX": 0.3,
-        "originY": 0.3,
-        "zIndex": 1023,
-        "layerName": "down scene",
-        "imageName": "GRass"
       },
       {
         "uniqueId": 702,
@@ -12858,7 +12834,7 @@
         "scaleY": 1.4995776,
         "originX": 0.29375,
         "originY": 0.3625,
-        "zIndex": 1024,
+        "zIndex": 1022,
         "layerName": "down scene",
         "imageName": "BigTree"
       },
@@ -12872,7 +12848,7 @@
         "originX": 0.1875,
         "originY": 0.10625,
         "rotation": 90,
-        "zIndex": 1025,
+        "zIndex": 1023,
         "layerName": "down scene",
         "imageName": "TreeTrunk"
       },
@@ -12885,7 +12861,7 @@
         "scaleY": 1.4995776,
         "originX": 0.29375,
         "originY": 0.3625,
-        "zIndex": 1026,
+        "zIndex": 1024,
         "layerName": "down scene",
         "imageName": "BigTree"
       },
@@ -12899,7 +12875,7 @@
         "originX": 0.1875,
         "originY": 0.10625,
         "rotation": 90,
-        "zIndex": 1027,
+        "zIndex": 1025,
         "layerName": "down scene",
         "imageName": "TreeTrunk"
       },
@@ -12913,7 +12889,7 @@
         "originX": 0.1875,
         "originY": 0.10625,
         "rotation": 90,
-        "zIndex": 1028,
+        "zIndex": 1026,
         "layerName": "down scene",
         "imageName": "TreeTrunk"
       },
@@ -12927,7 +12903,7 @@
         "originX": 0.1875,
         "originY": 0.10625,
         "rotation": 90,
-        "zIndex": 1029,
+        "zIndex": 1027,
         "layerName": "down scene",
         "imageName": "TreeTrunk"
       },
@@ -12940,7 +12916,7 @@
         "scaleY": 1.4836048,
         "originX": 0.29375,
         "originY": 0.3625,
-        "zIndex": 1030,
+        "zIndex": 1028,
         "layerName": "down scene",
         "imageName": "OrangeTree"
       },
@@ -12953,7 +12929,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 1031,
+        "zIndex": 1029,
         "layerName": "down scene",
         "imageName": "verticalFence"
       },
@@ -12966,7 +12942,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 1032,
+        "zIndex": 1030,
         "layerName": "down scene",
         "imageName": "verticalFence"
       },
@@ -12979,7 +12955,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 1033,
+        "zIndex": 1031,
         "layerName": "down scene",
         "imageName": "verticalFence"
       },
@@ -12992,7 +12968,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 1034,
+        "zIndex": 1032,
         "layerName": "down scene",
         "imageName": "verticalFence"
       },
@@ -13005,7 +12981,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 1035,
+        "zIndex": 1033,
         "layerName": "down scene",
         "imageName": "verticalFence"
       },
@@ -13018,7 +12994,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 1036,
+        "zIndex": 1034,
         "layerName": "down scene",
         "imageName": "verticalFence"
       },
@@ -13031,7 +13007,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 1037,
+        "zIndex": 1035,
         "layerName": "down scene",
         "imageName": "verticalFence"
       },
@@ -13044,7 +13020,7 @@
         "scaleY": 1.6435543,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 1038,
+        "zIndex": 1036,
         "layerName": "down scene",
         "imageName": "Tree"
       },
@@ -13057,7 +13033,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 1039,
+        "zIndex": 1037,
         "layerName": "down scene",
         "imageName": "verticalFence"
       },
@@ -13070,7 +13046,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 1040,
+        "zIndex": 1038,
         "layerName": "down scene",
         "imageName": "verticalFence"
       },
@@ -13083,7 +13059,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 1041,
+        "zIndex": 1039,
         "layerName": "down scene",
         "imageName": "verticalFence"
       },
@@ -13096,7 +13072,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 1042,
+        "zIndex": 1040,
         "layerName": "down scene",
         "imageName": "verticalFence"
       },
@@ -13109,7 +13085,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 1043,
+        "zIndex": 1041,
         "layerName": "down scene",
         "imageName": "verticalFence"
       },
@@ -13122,7 +13098,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 1044,
+        "zIndex": 1042,
         "layerName": "down scene",
         "imageName": "verticalFence"
       },
@@ -13135,7 +13111,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 1045,
+        "zIndex": 1043,
         "layerName": "down scene",
         "imageName": "verticalFence"
       },
@@ -13148,7 +13124,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 1046,
+        "zIndex": 1044,
         "layerName": "down scene",
         "imageName": "verticalFence"
       },
@@ -13161,7 +13137,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 1047,
+        "zIndex": 1045,
         "layerName": "down scene",
         "imageName": "verticalFence"
       },
@@ -13174,7 +13150,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 1048,
+        "zIndex": 1046,
         "layerName": "down scene",
         "imageName": "verticalFence"
       },
@@ -13187,7 +13163,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 1049,
+        "zIndex": 1047,
         "layerName": "down scene",
         "imageName": "verticalFence"
       },
@@ -13198,7 +13174,7 @@
         "y": -2.6749964,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 1050,
+        "zIndex": 1048,
         "layerName": "down scene",
         "imageName": "DarkOakTree"
       },
@@ -13211,7 +13187,7 @@
         "scaleY": 1.3574283,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 1051,
+        "zIndex": 1049,
         "layerName": "down scene",
         "imageName": "Tree"
       },
@@ -13224,7 +13200,7 @@
         "scaleY": 1.4995776,
         "originX": 0.29375,
         "originY": 0.3625,
-        "zIndex": 1052,
+        "zIndex": 1050,
         "layerName": "down scene",
         "imageName": "BigTree"
       },
@@ -13237,7 +13213,7 @@
         "scaleY": 1.6435543,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 1053,
+        "zIndex": 1051,
         "layerName": "down scene",
         "imageName": "Tree"
       },
@@ -13250,7 +13226,7 @@
         "scaleY": 1.6435543,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 1054,
+        "zIndex": 1052,
         "layerName": "down scene",
         "imageName": "Tree"
       },
@@ -13263,7 +13239,7 @@
         "scaleY": 1.6435543,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 1055,
+        "zIndex": 1053,
         "layerName": "down scene",
         "imageName": "Tree"
       },
@@ -13276,7 +13252,7 @@
         "scaleY": 1.6435543,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 1056,
+        "zIndex": 1054,
         "layerName": "down scene",
         "imageName": "Tree"
       },
@@ -13287,7 +13263,7 @@
         "y": -2.6749964,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 1057,
+        "zIndex": 1055,
         "layerName": "down scene",
         "imageName": "DarkOakTree"
       },
@@ -13298,7 +13274,7 @@
         "y": -7.1125154,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 1058,
+        "zIndex": 1056,
         "layerName": "down scene",
         "imageName": "DarkOakTree"
       },
@@ -13311,7 +13287,7 @@
         "scaleY": 1.3574283,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 1059,
+        "zIndex": 1057,
         "layerName": "down scene",
         "imageName": "Tree"
       },
@@ -13324,7 +13300,7 @@
         "scaleY": 1.4995776,
         "originX": 0.29375,
         "originY": 0.3625,
-        "zIndex": 1060,
+        "zIndex": 1058,
         "layerName": "down scene",
         "imageName": "BigTree"
       },
@@ -13337,7 +13313,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 1061,
+        "zIndex": 1059,
         "layerName": "down scene",
         "imageName": "verticalFence"
       },
@@ -13350,7 +13326,7 @@
         "scaleY": 1.7391965,
         "originX": 0.04375,
         "originY": 0.16875,
-        "zIndex": 1062,
+        "zIndex": 1060,
         "layerName": "down scene",
         "imageName": "verticalFence"
       },
@@ -13363,7 +13339,7 @@
         "scaleY": 1.3574283,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 1063,
+        "zIndex": 1061,
         "layerName": "down scene",
         "imageName": "Tree"
       },
@@ -13376,7 +13352,7 @@
         "scaleY": 1.4995776,
         "originX": 0.29375,
         "originY": 0.3625,
-        "zIndex": 1064,
+        "zIndex": 1062,
         "layerName": "down scene",
         "imageName": "BigTree"
       },
@@ -13389,7 +13365,7 @@
         "scaleY": 1.3574283,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 1065,
+        "zIndex": 1063,
         "layerName": "down scene",
         "imageName": "Tree"
       },
@@ -13402,7 +13378,7 @@
         "scaleY": 1.3574283,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 1066,
+        "zIndex": 1064,
         "layerName": "down scene",
         "imageName": "Tree"
       },
@@ -13415,7 +13391,7 @@
         "scaleY": 1.3574283,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 1067,
+        "zIndex": 1065,
         "layerName": "down scene",
         "imageName": "Tree"
       },
@@ -13428,7 +13404,7 @@
         "scaleY": 1.4995776,
         "originX": 0.29375,
         "originY": 0.3625,
-        "zIndex": 1068,
+        "zIndex": 1066,
         "layerName": "down scene",
         "imageName": "BigTree"
       },
@@ -13441,7 +13417,7 @@
         "scaleY": 1.4995776,
         "originX": 0.29375,
         "originY": 0.3625,
-        "zIndex": 1069,
+        "zIndex": 1067,
         "layerName": "down scene",
         "imageName": "BigTree"
       },
@@ -13454,31 +13430,9 @@
         "scaleY": 1.4995776,
         "originX": 0.29375,
         "originY": 0.3625,
-        "zIndex": 1070,
+        "zIndex": 1068,
         "layerName": "down scene",
         "imageName": "BigTree"
-      },
-      {
-        "uniqueId": 1278,
-        "tags": [],
-        "x": 19.425,
-        "y": -2.75,
-        "originX": 0.19375,
-        "originY": 0.18125,
-        "zIndex": 1071,
-        "layerName": "down scene",
-        "imageName": "grave"
-      },
-      {
-        "uniqueId": 1495,
-        "tags": [],
-        "x": 19.425001,
-        "y": -9.2,
-        "originX": 0.19375,
-        "originY": 0.18125,
-        "zIndex": 1072,
-        "layerName": "down scene",
-        "imageName": "grave"
       },
       {
         "uniqueId": 603,
@@ -13490,7 +13444,7 @@
         "originX": 0.1875,
         "originY": 0.10625,
         "rotation": 90,
-        "zIndex": 1073,
+        "zIndex": 1069,
         "layerName": "down scene",
         "imageName": "TreeTrunk"
       },
@@ -13504,7 +13458,7 @@
         "originX": 0.1875,
         "originY": 0.10625,
         "rotation": 90,
-        "zIndex": 1074,
+        "zIndex": 1070,
         "layerName": "down scene",
         "imageName": "TreeTrunk"
       },
@@ -13518,7 +13472,7 @@
         "originX": 0.1875,
         "originY": 0.10625,
         "rotation": 90,
-        "zIndex": 1075,
+        "zIndex": 1071,
         "layerName": "down scene",
         "imageName": "TreeTrunk"
       },
@@ -13529,7 +13483,7 @@
         "y": -9.962516,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 1076,
+        "zIndex": 1072,
         "layerName": "down scene",
         "imageName": "DarkOakTree"
       },
@@ -13540,7 +13494,7 @@
         "y": -9.175015,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 1077,
+        "zIndex": 1073,
         "layerName": "down scene",
         "imageName": "DarkOakTree"
       },
@@ -13551,7 +13505,7 @@
         "y": -9.212516,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 1078,
+        "zIndex": 1074,
         "layerName": "down scene",
         "imageName": "DarkOakTree"
       },
@@ -13562,7 +13516,7 @@
         "y": -8.875015,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 1079,
+        "zIndex": 1075,
         "layerName": "down scene",
         "imageName": "DarkOakTree"
       },
@@ -13573,7 +13527,7 @@
         "y": -10.237515,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 1080,
+        "zIndex": 1076,
         "layerName": "down scene",
         "imageName": "DarkOakTree"
       },
@@ -13584,7 +13538,7 @@
         "y": -9.537515,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 1081,
+        "zIndex": 1077,
         "layerName": "down scene",
         "imageName": "DarkOakTree"
       },
@@ -13595,7 +13549,7 @@
         "y": -10.000016,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 1082,
+        "zIndex": 1078,
         "layerName": "down scene",
         "imageName": "DarkOakTree"
       },
@@ -13608,7 +13562,7 @@
         "scaleY": 1.3574283,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 1083,
+        "zIndex": 1079,
         "layerName": "down scene",
         "imageName": "Tree"
       },
@@ -13621,7 +13575,7 @@
         "scaleY": 1.3574283,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 1084,
+        "zIndex": 1080,
         "layerName": "down scene",
         "imageName": "Tree"
       },
@@ -13634,7 +13588,7 @@
         "scaleY": 1.3574283,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 1085,
+        "zIndex": 1081,
         "layerName": "down scene",
         "imageName": "Tree"
       },
@@ -13647,7 +13601,7 @@
         "scaleY": 1.3574283,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 1086,
+        "zIndex": 1082,
         "layerName": "down scene",
         "imageName": "Tree"
       },
@@ -13660,7 +13614,7 @@
         "scaleY": 1.3574283,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 1087,
+        "zIndex": 1083,
         "layerName": "down scene",
         "imageName": "Tree"
       },
@@ -13673,7 +13627,7 @@
         "scaleY": 1.6435543,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 1088,
+        "zIndex": 1084,
         "layerName": "down scene",
         "imageName": "Tree"
       },
@@ -13686,7 +13640,7 @@
         "scaleY": 1.6435543,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 1089,
+        "zIndex": 1085,
         "layerName": "down scene",
         "imageName": "Tree"
       },
@@ -13699,7 +13653,7 @@
         "scaleY": 1.6435543,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 1090,
+        "zIndex": 1086,
         "layerName": "down scene",
         "imageName": "Tree"
       },
@@ -13710,7 +13664,7 @@
         "y": -8.762515,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 1091,
+        "zIndex": 1087,
         "layerName": "down scene",
         "imageName": "DarkOakTree"
       },
@@ -13721,7 +13675,7 @@
         "y": -8.750015,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 1092,
+        "zIndex": 1088,
         "layerName": "down scene",
         "imageName": "DarkOakTree"
       },
@@ -13734,20 +13688,9 @@
         "scaleY": 1.3574283,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 1093,
+        "zIndex": 1089,
         "layerName": "down scene",
         "imageName": "Tree"
-      },
-      {
-        "uniqueId": 13,
-        "tags": [],
-        "x": -3.4875014,
-        "y": 6.4375,
-        "originX": 0.6,
-        "originY": 0.6,
-        "zIndex": 1094,
-        "layerName": "boat",
-        "imageName": "DragonFront"
       }
     ],
     "layers": [
@@ -13802,10 +13745,6 @@
       {
         "layerName": "down scene",
         "isVisible": true
-      },
-      {
-        "layerName": "boat",
-        "isVisible": true
       }
     ]
   },
@@ -13813,5 +13752,5 @@
     "enabled": true
   },
   "verticalGuides": [ 26.834528, 18.33445 ],
-  "horizontalGuides": [ 9.121844, 11.5, -15.109369, -2, 4.840593 ]
+  "horizontalGuides": [ 11.834361, 11.5, -15.109369, -2, 4.840593 ]
 }

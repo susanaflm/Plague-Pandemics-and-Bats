@@ -43,7 +43,7 @@ namespace PlaguePandemicsBats
 
                 Sprite sprite = new Sprite(_game, imgName, scale: scale);
                 sprite.SetPosition(new Vector2(x, y));
-                sprite.SetRotation(- rotation);
+                sprite.SetRotation(rotation);
 
                 _sprites.Add(sprite);
             }
