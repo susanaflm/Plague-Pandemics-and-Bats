@@ -37,7 +37,7 @@ namespace PlaguePandemicsBats
     {
         #region  private variables
         private GraphicsDeviceManager _graphics;
-        private SoundEffect _playSound;
+        private SoundEffect _playSound, _menuSound;
         private SpriteBatch _spriteBatch;
         private SpriteFont _spriteFont;
         private Texture2D _pausedTexture;
@@ -153,6 +153,7 @@ namespace PlaguePandemicsBats
             _spriteFont = Content.Load<SpriteFont>("minecraft");
             _collisionManager = new CollisionManager();
             _playSound = Content.Load<SoundEffect>("playsound");
+            _menuSound = Content.Load<SoundEffect>("menusong");
 
             SpriteManager.AddSpriteSheet("texture");
             SpriteManager.AddSpriteSheet("Fullgrass");
@@ -213,6 +214,8 @@ namespace PlaguePandemicsBats
             switch (_gameState)
             {
                 case GameState.MainMenu:
+                    _menuSound.Play();
+
                     if (_buttonPlay.isClicked || KeyboardManager.IsKeyGoingDown(Keys.Enter))
                     {
                         _gameState = GameState.Playing;

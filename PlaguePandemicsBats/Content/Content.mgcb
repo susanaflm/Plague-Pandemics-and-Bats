@@ -80,6 +80,12 @@
 /processorParam:TextureFormat=Color
 /build:mainmenu.png
 
+#begin menusong.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:menusong.wav
+
 #begin minecraft.spritefont
 /importer:FontDescriptionImporter
 /processor:FontDescriptionProcessor
