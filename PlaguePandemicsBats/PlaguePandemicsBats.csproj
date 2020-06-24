@@ -62,6 +62,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Projectile.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Scene.cs" />
     <Compile Include="ShooterZombie.cs" />
     <Compile Include="SpawnerZombie.cs" />
     <Compile Include="Sprite.cs" />
@@ -141,7 +142,9 @@
     <None Include="Content\pandemics\export\scenes\MainScene.dt" />
     <None Include="Content\pandemics\project.dt" />
     <None Include="Content\pandemics\project.pit" />
-    <None Include="Content\pandemics\scenes\MainScene.dt" />
+    <None Include="Content\pandemics\scenes\MainScene.dt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="Content\texture.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

@@ -46,7 +46,8 @@ namespace PlaguePandemicsBats
         private Player _player;
         private Bat _bat;
         private Cat _cat;
-        private Button _buttonPlay, _buttonQuit, _guyButton, _girlButton;
+        private Scene _scene;
+        private Button _buttonPlay, _buttonQuit, _guyButton, _girlButton, _optnButton;
         private UI _ui;
         private List<Projectile> _projectiles;
         private List<Enemy> _enemies;
@@ -136,7 +137,7 @@ namespace PlaguePandemicsBats
 
             _spriteManager = new SpriteManager(this);
 
-            _camera = new Camera(this, worldWidth: 8f);
+            _camera = new Camera(this, worldWidth: 8.3f);
 
             base.Initialize();
         }
@@ -153,7 +154,8 @@ namespace PlaguePandemicsBats
 
             SpriteManager.AddSpriteSheet("texture");
             SpriteManager.AddSpriteSheet("Fullgrass");
-
+            _scene = new Scene(this, "MainScene");
+            
             /*PAUSE STUFF*/
             _pausedTexture = Content.Load<Texture2D>("pause");
             _pausedRect = new Rectangle(-1, 0, _pausedTexture.Width / 2, _pausedTexture.Height / 2);
@@ -163,7 +165,8 @@ namespace PlaguePandemicsBats
             _buttonQuit = new Button(this, Content.Load<Texture2D>("quit"), new Vector2(GraphicsDevice.Viewport.Width / 2, GraphicsDevice.Viewport.Height / 1.5f));
             _guyButton = new Button(this, Content.Load<Texture2D>("guybutton"), new Vector2(3, 0));
             _girlButton = new Button(this, Content.Load<Texture2D>("girlbutton"), new Vector2(-1, 0));
-         
+            _optnButton = new Button(this, Content.Load<Texture2D>("play"), new Vector2(GraphicsDevice.Viewport.Width / 2, GraphicsDevice.Viewport.Height / 2));
+
             _ui = new UI(this);
             _player = new Player(this, 1);
             _bat = new Bat(this);
@@ -208,7 +211,7 @@ namespace PlaguePandemicsBats
             switch (_gameState)
             {
                 case GameState.MainMenu:
-                    if (_buttonPlay.isClicked)
+                    if (_buttonPlay.isClicked || KeyboardManager.IsKeyGoingDown(Keys.Enter))
                         _gameState = GameState.Playing;
 
                     _buttonPlay.Update(gameTime);
@@ -279,9 +282,13 @@ namespace PlaguePandemicsBats
 
             if (_gameState == GameState.Playing)
             {
+                background.Draw(gameTime);
+                
+                _scene.Draw(gameTime);
+
                 _ui.Draw(_spriteBatch, gameTime);
 
-                background.Draw(gameTime);
+                
 
                 _player.Draw(_spriteBatch);
 
@@ -290,10 +297,10 @@ namespace PlaguePandemicsBats
                     p.Draw(_spriteBatch);
                 }
 
-                foreach (Enemy e in Enemies.ToArray())
-                {
-                    e.Draw(_spriteBatch);
-                }
+                //foreach (Enemy e in Enemies.ToArray())
+                //{
+                //    e.Draw(_spriteBatch);
+                //}
 
                 foreach (Cat c in Friendlies.ToArray())
                 {
@@ -313,11 +320,14 @@ namespace PlaguePandemicsBats
 
             if (_gameState == GameState.MainMenu)
             {
-                //main menu ratio screen size
-                float widthRatio = GraphicsDevice.Viewport.Width / 900;
-                float heightRatio = GraphicsDevice.Viewport.Height / 620;
+                Texture2D texture = Content.Load<Texture2D>("mainmenu");
+                //fullscreen
+                Rectangle rec = new Rectangle(0, 0, GraphicsDevice.Viewport.Width, GraphicsDevice.Viewport.Height);
+                Color color = Color.White;
 
-                _spriteBatch.Draw(Content.Load<Texture2D>("mainmenu"), new Rectangle(0, 0, GraphicsDevice.Viewport.Width, GraphicsDevice.Viewport.Height), Color.White);
+                _optnButton.Draw(_spriteBatch);
+                _spriteBatch.Draw(texture , rec , color);
+                                
             }
 
             if (_gameState == GameState.Options)

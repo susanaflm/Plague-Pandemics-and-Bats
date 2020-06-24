@@ -21,17 +21,22 @@ namespace PlaguePandemicsBats
 
     public class SpriteManager
     {
+        #region Private variables
         private Game _game;
         private Dictionary<string, Texture2D> _textures;
         private Dictionary<string, SpriteInfo> _infos;
+        #endregion
 
+        #region Constructor
         public SpriteManager(Game game)
         {
             _game = game;
             _textures = new Dictionary<string, Texture2D>();
             _infos = new Dictionary<string, SpriteInfo>();
         }
+        #endregion
 
+        #region Methods
         public void AddSpriteSheet(string name)
         {
             if (_textures.ContainsKey(name)) { throw new Exception($"Loading duplicated sprite sheet '{name}'"); }
@@ -77,5 +82,6 @@ namespace PlaguePandemicsBats
 
             return info.bounds;
         }
+        #endregion
     }
 }
