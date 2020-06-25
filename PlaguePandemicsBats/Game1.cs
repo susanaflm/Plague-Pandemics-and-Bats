@@ -223,7 +223,6 @@ namespace PlaguePandemicsBats
                         _playSound.Play();
                     }
                         
-
                     _buttonPlay.Update(mouseState);
                     _highScoreButton.Update(mouseState);
                     _buttonQuit.Update(mouseState);
