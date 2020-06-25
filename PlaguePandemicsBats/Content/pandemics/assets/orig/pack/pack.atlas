@@ -356,9 +356,9 @@ HollowFence
   index: -1
 HorizontalFence
   rotate: false
-  xy: 1631, 279
-  size: 31, 14
-  orig: 31, 14
+  xy: 260, 5
+  size: 33, 14
+  orig: 33, 14
   offset: 0, 0
   index: -1
 Needle
@@ -839,9 +839,9 @@ vaccinePoc
   index: -1
 verticalFence
   rotate: false
-  xy: 2031, 481
-  size: 7, 27
-  orig: 7, 27
+  xy: 252, 5
+  size: 6, 46
+  orig: 6, 46
   offset: 0, 0
   index: -1
 waterPoddle
