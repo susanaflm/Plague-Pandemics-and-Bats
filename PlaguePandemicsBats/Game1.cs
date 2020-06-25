@@ -49,7 +49,7 @@ namespace PlaguePandemicsBats
         private SpawnerZombie _spZ;
         private Cat _cat;
         private Scene _scene;
-        private Button _buttonPlay, _buttonQuit, _guyButton, _girlButton, _optnButton;
+        private Button _buttonPlay, _buttonQuit, _guyButton, _girlButton, _highScoreButton;
         private UI _ui;
         private List<Projectile> _projectiles;
         private List<Enemy> _enemies;
@@ -171,11 +171,12 @@ namespace PlaguePandemicsBats
             _pausedRect = new Rectangle(-1, 0, _pausedTexture.Width / 2, _pausedTexture.Height / 2);
 
             //buttons 
-            _buttonPlay = new Button(this, Content.Load<Texture2D>("play"), new Vector2(GraphicsDevice.Viewport.Width / 2, GraphicsDevice.Viewport.Height / 2));
-            _buttonQuit = new Button(this, Content.Load<Texture2D>("quit"), new Vector2(GraphicsDevice.Viewport.Width / 2, GraphicsDevice.Viewport.Height / 1.5f));
+            _buttonPlay = new Button(this, Content.Load<Texture2D>("play"), new Vector2(GraphicsDevice.Viewport.Width / 2, GraphicsDevice.Viewport.Height / 2)); 
+            _highScoreButton = new Button(this, Content.Load<Texture2D>("button"), new Vector2(GraphicsDevice.Viewport.Width / 2, GraphicsDevice.Viewport.Height / 1.5f));
+            _buttonQuit = new Button(this, Content.Load<Texture2D>("quit"), new Vector2(GraphicsDevice.Viewport.Width / 2, GraphicsDevice.Viewport.Height / 1.2f));
             _guyButton = new Button(this, Content.Load<Texture2D>("guybutton"), new Vector2(3, 0));
             _girlButton = new Button(this, Content.Load<Texture2D>("girlbutton"), new Vector2(-1, 0));
-            _optnButton = new Button(this, Content.Load<Texture2D>("play"), new Vector2(GraphicsDevice.Viewport.Width / 2, GraphicsDevice.Viewport.Height / 2));
+           
 
             _ui = new UI(this);
             //_player = new Player(this, 1);
@@ -186,7 +187,7 @@ namespace PlaguePandemicsBats
             _friendlies.Add(_cat);
             _buttons.Add(_buttonPlay);
             _buttons.Add(_buttonQuit);
-
+            _buttons.Add(_highScoreButton);
             background = new TilingBackground(this, "Fullgrass", new Vector2(4, 3)); ;
         }
 
@@ -224,6 +225,7 @@ namespace PlaguePandemicsBats
                         
 
                     _buttonPlay.Update(mouseState);
+                    _highScoreButton.Update(mouseState);
                     _buttonQuit.Update(mouseState);
 
                     break;

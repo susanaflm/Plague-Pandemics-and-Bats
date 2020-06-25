@@ -1025,10 +1025,10 @@
         "imageName": "verticalFence"
       },
       {
-        "uniqueId": 1294,
+        "uniqueId": 1388,
         "tags": [ "collider" ],
-        "x": 26.974989,
-        "y": -6.1250043,
+        "x": 18.250004,
+        "y": -6.125,
         "scaleX": 2.5815496,
         "scaleY": 1.7391965,
         "originX": 0.04375,
@@ -1038,10 +1038,10 @@
         "imageName": "verticalFence"
       },
       {
-        "uniqueId": 1388,
+        "uniqueId": 1294,
         "tags": [ "collider" ],
-        "x": 18.250004,
-        "y": -6.125,
+        "x": 26.974989,
+        "y": -6.1250043,
         "scaleX": 2.5815496,
         "scaleY": 1.7391965,
         "originX": 0.04375,
@@ -1129,10 +1129,10 @@
         "imageName": "verticalFence"
       },
       {
-        "uniqueId": 1432,
+        "uniqueId": 1418,
         "tags": [ "collider" ],
-        "x": -7.0875,
-        "y": 5.0500007,
+        "x": 26.98749,
+        "y": 5.0374956,
         "scaleX": 2.5815496,
         "scaleY": 1.7391965,
         "originX": 0.04375,
@@ -1142,10 +1142,10 @@
         "imageName": "verticalFence"
       },
       {
-        "uniqueId": 1418,
+        "uniqueId": 1432,
         "tags": [ "collider" ],
-        "x": 26.98749,
-        "y": 5.0374956,
+        "x": -7.0875,
+        "y": 5.0500007,
         "scaleX": 2.5815496,
         "scaleY": 1.7391965,
         "originX": 0.04375,
@@ -1558,10 +1558,10 @@
         "imageName": "verticalFence"
       },
       {
-        "uniqueId": 1293,
+        "uniqueId": 1490,
         "tags": [ "collider" ],
-        "x": -7.0875,
-        "y": 9.1,
+        "x": 26.98749,
+        "y": 9.087496,
         "scaleX": 2.5815496,
         "scaleY": 1.7391965,
         "originX": 0.04375,
@@ -1571,10 +1571,10 @@
         "imageName": "verticalFence"
       },
       {
-        "uniqueId": 1490,
+        "uniqueId": 1293,
         "tags": [ "collider" ],
-        "x": 26.98749,
-        "y": 9.087496,
+        "x": -7.0875,
+        "y": 9.1,
         "scaleX": 2.5815496,
         "scaleY": 1.7391965,
         "originX": 0.04375,
@@ -2299,708 +2299,6 @@
         "imageName": "verticalFence"
       },
       {
-        "uniqueId": 1236,
-        "tags": [ "collider" ],
-        "x": 18.250004,
-        "y": -9.175,
-        "scaleX": 2.5815496,
-        "scaleY": 1.7391965,
-        "originX": 0.04375,
-        "originY": 0.16875,
-        "zIndex": 180,
-        "layerName": "stuff",
-        "imageName": "verticalFence"
-      },
-      {
-        "uniqueId": 1227,
-        "tags": [ "collider" ],
-        "x": 18.250004,
-        "y": -12.2125,
-        "scaleX": 2.5815496,
-        "scaleY": 1.7391965,
-        "originX": 0.04375,
-        "originY": 0.16875,
-        "zIndex": 181,
-        "layerName": "stuff",
-        "imageName": "verticalFence"
-      },
-      {
-        "uniqueId": 1360,
-        "tags": [ "collider" ],
-        "x": 18.262503,
-        "y": 8.075001,
-        "scaleX": 2.5815496,
-        "scaleY": 1.7391965,
-        "originX": 0.04375,
-        "originY": 0.16875,
-        "zIndex": 182,
-        "layerName": "stuff",
-        "imageName": "verticalFence"
-      },
-      {
-        "uniqueId": 1382,
-        "tags": [ "collider" ],
-        "x": 18.250004,
-        "y": -6.125,
-        "scaleX": 2.5815496,
-        "scaleY": 1.7391965,
-        "originX": 0.04375,
-        "originY": 0.16875,
-        "zIndex": 183,
-        "layerName": "stuff",
-        "imageName": "verticalFence"
-      },
-      {
-        "uniqueId": 1389,
-        "tags": [ "collider" ],
-        "x": 18.262503,
-        "y": 0.97499996,
-        "scaleX": 2.5815496,
-        "scaleY": 1.7391965,
-        "originX": 0.04375,
-        "originY": 0.16875,
-        "zIndex": 184,
-        "layerName": "stuff",
-        "imageName": "verticalFence"
-      },
-      {
-        "uniqueId": 1380,
-        "tags": [ "collider" ],
-        "x": 18.250004,
-        "y": -8.162499,
-        "scaleX": 2.5815496,
-        "scaleY": 1.7391965,
-        "originX": 0.04375,
-        "originY": 0.16875,
-        "zIndex": 185,
-        "layerName": "stuff",
-        "imageName": "verticalFence"
-      },
-      {
-        "uniqueId": 1282,
-        "tags": [ "collider" ],
-        "x": 18.262503,
-        "y": 5.0375004,
-        "scaleX": 2.5815496,
-        "scaleY": 1.7391965,
-        "originX": 0.04375,
-        "originY": 0.16875,
-        "zIndex": 186,
-        "layerName": "stuff",
-        "imageName": "verticalFence"
-      },
-      {
-        "uniqueId": 1427,
-        "tags": [ "collider" ],
-        "x": 18.250004,
-        "y": -2.0625,
-        "scaleX": 2.5815496,
-        "scaleY": 1.7391965,
-        "originX": 0.04375,
-        "originY": 0.16875,
-        "zIndex": 187,
-        "layerName": "stuff",
-        "imageName": "verticalFence"
-      },
-      {
-        "uniqueId": 1284,
-        "tags": [ "collider" ],
-        "x": 18.250004,
-        "y": -13.225,
-        "scaleX": 2.5815496,
-        "scaleY": 1.7391965,
-        "originX": 0.04375,
-        "originY": 0.16875,
-        "zIndex": 188,
-        "layerName": "stuff",
-        "imageName": "verticalFence"
-      },
-      {
-        "uniqueId": 1373,
-        "tags": [ "collider" ],
-        "x": 18.250004,
-        "y": -4.0874996,
-        "scaleX": 2.5815496,
-        "scaleY": 1.7391965,
-        "originX": 0.04375,
-        "originY": 0.16875,
-        "zIndex": 189,
-        "layerName": "stuff",
-        "imageName": "verticalFence"
-      },
-      {
-        "uniqueId": 1205,
-        "tags": [ "collider" ],
-        "x": 18.250004,
-        "y": -14.2375,
-        "scaleX": 2.5815496,
-        "scaleY": 1.7391965,
-        "originX": 0.04375,
-        "originY": 0.16875,
-        "zIndex": 190,
-        "layerName": "stuff",
-        "imageName": "verticalFence"
-      },
-      {
-        "uniqueId": 1204,
-        "tags": [ "collider" ],
-        "x": 18.250004,
-        "y": -15.1,
-        "scaleX": 2.5815496,
-        "scaleY": 1.3571086,
-        "originX": 0.04375,
-        "originY": 0.16875,
-        "zIndex": 191,
-        "layerName": "stuff",
-        "imageName": "verticalFence"
-      },
-      {
-        "uniqueId": 1437,
-        "tags": [ "collider" ],
-        "x": 18.262503,
-        "y": 6.05,
-        "scaleX": 2.5815496,
-        "scaleY": 1.7391965,
-        "originX": 0.04375,
-        "originY": 0.16875,
-        "zIndex": 192,
-        "layerName": "stuff",
-        "imageName": "verticalFence"
-      },
-      {
-        "uniqueId": 1376,
-        "tags": [ "collider" ],
-        "x": 18.250004,
-        "y": -1.0500001,
-        "scaleX": 2.5815496,
-        "scaleY": 1.7391965,
-        "originX": 0.04375,
-        "originY": 0.16875,
-        "zIndex": 193,
-        "layerName": "stuff",
-        "imageName": "verticalFence"
-      },
-      {
-        "uniqueId": 1436,
-        "tags": [ "collider" ],
-        "x": 18.250004,
-        "y": -11.2,
-        "scaleX": 2.5815496,
-        "scaleY": 1.7391965,
-        "originX": 0.04375,
-        "originY": 0.16875,
-        "zIndex": 194,
-        "layerName": "stuff",
-        "imageName": "verticalFence"
-      },
-      {
-        "uniqueId": 1290,
-        "tags": [ "collider" ],
-        "x": 18.262503,
-        "y": 3.0125,
-        "scaleX": 2.5815496,
-        "scaleY": 1.7391965,
-        "originX": 0.04375,
-        "originY": 0.16875,
-        "zIndex": 195,
-        "layerName": "stuff",
-        "imageName": "verticalFence"
-      },
-      {
-        "uniqueId": 1295,
-        "tags": [ "collider" ],
-        "x": 18.250004,
-        "y": -7.1375,
-        "scaleX": 2.5815496,
-        "scaleY": 1.7391965,
-        "originX": 0.04375,
-        "originY": 0.16875,
-        "zIndex": 196,
-        "layerName": "stuff",
-        "imageName": "verticalFence"
-      },
-      {
-        "uniqueId": 1428,
-        "tags": [ "collider" ],
-        "x": 18.262503,
-        "y": 9.087501,
-        "scaleX": 2.5815496,
-        "scaleY": 1.7391965,
-        "originX": 0.04375,
-        "originY": 0.16875,
-        "zIndex": 197,
-        "layerName": "stuff",
-        "imageName": "verticalFence"
-      },
-      {
-        "uniqueId": 1430,
-        "tags": [ "collider" ],
-        "x": 18.250004,
-        "y": -10.1875,
-        "scaleX": 2.5815496,
-        "scaleY": 1.7391965,
-        "originX": 0.04375,
-        "originY": 0.16875,
-        "zIndex": 198,
-        "layerName": "stuff",
-        "imageName": "verticalFence"
-      },
-      {
-        "uniqueId": 1399,
-        "tags": [ "collider" ],
-        "x": 18.250004,
-        "y": -5.1,
-        "scaleX": 2.5815496,
-        "scaleY": 1.7391965,
-        "originX": 0.04375,
-        "originY": 0.16875,
-        "zIndex": 199,
-        "layerName": "stuff",
-        "imageName": "verticalFence"
-      },
-      {
-        "uniqueId": 1379,
-        "tags": [ "collider" ],
-        "x": 18.262503,
-        "y": 1.9875,
-        "scaleX": 2.5815496,
-        "scaleY": 1.7391965,
-        "originX": 0.04375,
-        "originY": 0.16875,
-        "zIndex": 200,
-        "layerName": "stuff",
-        "imageName": "verticalFence"
-      },
-      {
-        "uniqueId": 1250,
-        "tags": [ "collider" ],
-        "x": 18.250004,
-        "y": -3.075,
-        "scaleX": 2.5815496,
-        "scaleY": 1.7391965,
-        "originX": 0.04375,
-        "originY": 0.16875,
-        "zIndex": 201,
-        "layerName": "stuff",
-        "imageName": "verticalFence"
-      },
-      {
-        "uniqueId": 1394,
-        "tags": [ "collider" ],
-        "x": 18.250004,
-        "y": 11.05,
-        "scaleX": 2.5815496,
-        "scaleY": 1.2433494,
-        "originX": 0.0375,
-        "originY": 0.2875,
-        "zIndex": 202,
-        "layerName": "stuff",
-        "imageName": "verticalFence"
-      },
-      {
-        "uniqueId": 1354,
-        "tags": [ "collider" ],
-        "x": 18.262503,
-        "y": 4.025,
-        "scaleX": 2.5815496,
-        "scaleY": 1.7391965,
-        "originX": 0.04375,
-        "originY": 0.16875,
-        "zIndex": 203,
-        "layerName": "stuff",
-        "imageName": "verticalFence"
-      },
-      {
-        "uniqueId": 1304,
-        "tags": [ "collider" ],
-        "x": 18.262503,
-        "y": 7.0625,
-        "scaleX": 2.5815496,
-        "scaleY": 1.7391965,
-        "originX": 0.04375,
-        "originY": 0.16875,
-        "zIndex": 204,
-        "layerName": "stuff",
-        "imageName": "verticalFence"
-      },
-      {
-        "uniqueId": 1234,
-        "tags": [ "collider" ],
-        "x": 18.250004,
-        "y": -0.037499856,
-        "scaleX": 2.5815496,
-        "scaleY": 1.7391965,
-        "originX": 0.04375,
-        "originY": 0.16875,
-        "zIndex": 205,
-        "layerName": "stuff",
-        "imageName": "verticalFence"
-      },
-      {
-        "uniqueId": 1451,
-        "tags": [ "collider" ],
-        "x": 18.262503,
-        "y": 10.1,
-        "scaleX": 2.5815496,
-        "scaleY": 1.7391965,
-        "originX": 0.04375,
-        "originY": 0.16875,
-        "zIndex": 206,
-        "layerName": "stuff",
-        "imageName": "verticalFence"
-      },
-      {
-        "uniqueId": 1400,
-        "tags": [ "collider" ],
-        "x": 26.974989,
-        "y": -9.175004,
-        "scaleX": 2.5815496,
-        "scaleY": 1.7391965,
-        "originX": 0.04375,
-        "originY": 0.16875,
-        "zIndex": 207,
-        "layerName": "stuff",
-        "imageName": "verticalFence"
-      },
-      {
-        "uniqueId": 1467,
-        "tags": [ "collider" ],
-        "x": 26.974989,
-        "y": -12.212504,
-        "scaleX": 2.5815496,
-        "scaleY": 1.7391965,
-        "originX": 0.04375,
-        "originY": 0.16875,
-        "zIndex": 208,
-        "layerName": "stuff",
-        "imageName": "verticalFence"
-      },
-      {
-        "uniqueId": 1230,
-        "tags": [ "collider" ],
-        "x": 26.98749,
-        "y": 8.074996,
-        "scaleX": 2.5815496,
-        "scaleY": 1.7391965,
-        "originX": 0.04375,
-        "originY": 0.16875,
-        "zIndex": 209,
-        "layerName": "stuff",
-        "imageName": "verticalFence"
-      },
-      {
-        "uniqueId": 1391,
-        "tags": [ "collider" ],
-        "x": 26.974989,
-        "y": -6.1250043,
-        "scaleX": 2.5815496,
-        "scaleY": 1.7391965,
-        "originX": 0.04375,
-        "originY": 0.16875,
-        "zIndex": 210,
-        "layerName": "stuff",
-        "imageName": "verticalFence"
-      },
-      {
-        "uniqueId": 1426,
-        "tags": [ "collider" ],
-        "x": 26.98749,
-        "y": 0.9749997,
-        "scaleX": 2.5815496,
-        "scaleY": 1.7391965,
-        "originX": 0.04375,
-        "originY": 0.16875,
-        "zIndex": 211,
-        "layerName": "stuff",
-        "imageName": "verticalFence"
-      },
-      {
-        "uniqueId": 1353,
-        "tags": [ "collider" ],
-        "x": 26.974989,
-        "y": -8.162504,
-        "scaleX": 2.5815496,
-        "scaleY": 1.7391965,
-        "originX": 0.04375,
-        "originY": 0.16875,
-        "zIndex": 212,
-        "layerName": "stuff",
-        "imageName": "verticalFence"
-      },
-      {
-        "uniqueId": 1479,
-        "tags": [ "collider" ],
-        "x": 26.98749,
-        "y": 5.0374956,
-        "scaleX": 2.5815496,
-        "scaleY": 1.7391965,
-        "originX": 0.04375,
-        "originY": 0.16875,
-        "zIndex": 213,
-        "layerName": "stuff",
-        "imageName": "verticalFence"
-      },
-      {
-        "uniqueId": 1465,
-        "tags": [ "collider" ],
-        "x": 26.974989,
-        "y": -2.062499,
-        "scaleX": 2.5815496,
-        "scaleY": 1.7391965,
-        "originX": 0.04375,
-        "originY": 0.16875,
-        "zIndex": 214,
-        "layerName": "stuff",
-        "imageName": "verticalFence"
-      },
-      {
-        "uniqueId": 1349,
-        "tags": [ "collider" ],
-        "x": 26.974989,
-        "y": -13.225004,
-        "scaleX": 2.5815496,
-        "scaleY": 1.7391965,
-        "originX": 0.04375,
-        "originY": 0.16875,
-        "zIndex": 215,
-        "layerName": "stuff",
-        "imageName": "verticalFence"
-      },
-      {
-        "uniqueId": 1481,
-        "tags": [ "collider" ],
-        "x": 26.974989,
-        "y": -4.0875044,
-        "scaleX": 2.5815496,
-        "scaleY": 1.7391965,
-        "originX": 0.04375,
-        "originY": 0.16875,
-        "zIndex": 216,
-        "layerName": "stuff",
-        "imageName": "verticalFence"
-      },
-      {
-        "uniqueId": 1220,
-        "tags": [ "collider" ],
-        "x": 26.974989,
-        "y": -14.237504,
-        "scaleX": 2.5815496,
-        "scaleY": 1.7391965,
-        "originX": 0.04375,
-        "originY": 0.16875,
-        "zIndex": 217,
-        "layerName": "stuff",
-        "imageName": "verticalFence"
-      },
-      {
-        "uniqueId": 1395,
-        "tags": [ "collider" ],
-        "x": 26.974989,
-        "y": -15.100004,
-        "scaleX": 2.5815496,
-        "scaleY": 1.3571086,
-        "originX": 0.04375,
-        "originY": 0.16875,
-        "zIndex": 218,
-        "layerName": "stuff",
-        "imageName": "verticalFence"
-      },
-      {
-        "uniqueId": 1278,
-        "tags": [ "collider" ],
-        "x": 26.98749,
-        "y": 6.049996,
-        "scaleX": 2.5815496,
-        "scaleY": 1.7391965,
-        "originX": 0.04375,
-        "originY": 0.16875,
-        "zIndex": 219,
-        "layerName": "stuff",
-        "imageName": "verticalFence"
-      },
-      {
-        "uniqueId": 1276,
-        "tags": [ "collider" ],
-        "x": 26.974989,
-        "y": -1.049999,
-        "scaleX": 2.5815496,
-        "scaleY": 1.7391965,
-        "originX": 0.04375,
-        "originY": 0.16875,
-        "zIndex": 220,
-        "layerName": "stuff",
-        "imageName": "verticalFence"
-      },
-      {
-        "uniqueId": 1398,
-        "tags": [ "collider" ],
-        "x": 26.974989,
-        "y": -11.200005,
-        "scaleX": 2.5815496,
-        "scaleY": 1.7391965,
-        "originX": 0.04375,
-        "originY": 0.16875,
-        "zIndex": 221,
-        "layerName": "stuff",
-        "imageName": "verticalFence"
-      },
-      {
-        "uniqueId": 1493,
-        "tags": [ "collider" ],
-        "x": 26.98749,
-        "y": 3.0125012,
-        "scaleX": 2.5815496,
-        "scaleY": 1.7391965,
-        "originX": 0.04375,
-        "originY": 0.16875,
-        "zIndex": 222,
-        "layerName": "stuff",
-        "imageName": "verticalFence"
-      },
-      {
-        "uniqueId": 1468,
-        "tags": [ "collider" ],
-        "x": 26.974989,
-        "y": -7.1375046,
-        "scaleX": 2.5815496,
-        "scaleY": 1.7391965,
-        "originX": 0.04375,
-        "originY": 0.16875,
-        "zIndex": 223,
-        "layerName": "stuff",
-        "imageName": "verticalFence"
-      },
-      {
-        "uniqueId": 1259,
-        "tags": [ "collider" ],
-        "x": 26.98749,
-        "y": 9.087496,
-        "scaleX": 2.5815496,
-        "scaleY": 1.7391965,
-        "originX": 0.04375,
-        "originY": 0.16875,
-        "zIndex": 224,
-        "layerName": "stuff",
-        "imageName": "verticalFence"
-      },
-      {
-        "uniqueId": 1452,
-        "tags": [ "collider" ],
-        "x": 26.974989,
-        "y": -10.187505,
-        "scaleX": 2.5815496,
-        "scaleY": 1.7391965,
-        "originX": 0.04375,
-        "originY": 0.16875,
-        "zIndex": 225,
-        "layerName": "stuff",
-        "imageName": "verticalFence"
-      },
-      {
-        "uniqueId": 1266,
-        "tags": [ "collider" ],
-        "x": 26.974989,
-        "y": -5.100004,
-        "scaleX": 2.5815496,
-        "scaleY": 1.7391965,
-        "originX": 0.04375,
-        "originY": 0.16875,
-        "zIndex": 226,
-        "layerName": "stuff",
-        "imageName": "verticalFence"
-      },
-      {
-        "uniqueId": 1365,
-        "tags": [ "collider" ],
-        "x": 26.98749,
-        "y": 1.9875009,
-        "scaleX": 2.5815496,
-        "scaleY": 1.7391965,
-        "originX": 0.04375,
-        "originY": 0.16875,
-        "zIndex": 227,
-        "layerName": "stuff",
-        "imageName": "verticalFence"
-      },
-      {
-        "uniqueId": 1472,
-        "tags": [ "collider" ],
-        "x": 26.974989,
-        "y": -3.0749989,
-        "scaleX": 2.5815496,
-        "scaleY": 1.7391965,
-        "originX": 0.04375,
-        "originY": 0.16875,
-        "zIndex": 228,
-        "layerName": "stuff",
-        "imageName": "verticalFence"
-      },
-      {
-        "uniqueId": 1363,
-        "tags": [ "collider" ],
-        "x": 26.974989,
-        "y": 11.062496,
-        "scaleX": 2.5815496,
-        "scaleY": 1.2433494,
-        "originX": 0.0375,
-        "originY": 0.2875,
-        "zIndex": 229,
-        "layerName": "stuff",
-        "imageName": "verticalFence"
-      },
-      {
-        "uniqueId": 1212,
-        "tags": [ "collider" ],
-        "x": 26.98749,
-        "y": 4.0250006,
-        "scaleX": 2.5815496,
-        "scaleY": 1.7391965,
-        "originX": 0.04375,
-        "originY": 0.16875,
-        "zIndex": 230,
-        "layerName": "stuff",
-        "imageName": "verticalFence"
-      },
-      {
-        "uniqueId": 1232,
-        "tags": [ "collider" ],
-        "x": 26.98749,
-        "y": 7.0624957,
-        "scaleX": 2.5815496,
-        "scaleY": 1.7391965,
-        "originX": 0.04375,
-        "originY": 0.16875,
-        "zIndex": 231,
-        "layerName": "stuff",
-        "imageName": "verticalFence"
-      },
-      {
-        "uniqueId": 1466,
-        "tags": [ "collider" ],
-        "x": 26.974989,
-        "y": -0.037500016,
-        "scaleX": 2.5815496,
-        "scaleY": 1.7391965,
-        "originX": 0.04375,
-        "originY": 0.16875,
-        "zIndex": 232,
-        "layerName": "stuff",
-        "imageName": "verticalFence"
-      },
-      {
-        "uniqueId": 1487,
-        "tags": [ "collider" ],
-        "x": 26.98749,
-        "y": 10.099996,
-        "scaleX": 2.5815496,
-        "scaleY": 1.7391965,
-        "originX": 0.04375,
-        "originY": 0.16875,
-        "zIndex": 233,
-        "layerName": "stuff",
-        "imageName": "verticalFence"
-      },
-      {
         "uniqueId": 1494,
         "tags": [ "collider" ],
         "x": -5.8625,
@@ -3009,7 +2307,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 234,
+        "zIndex": 180,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -3022,7 +2320,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 235,
+        "zIndex": 181,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -3035,7 +2333,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 236,
+        "zIndex": 182,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -3048,7 +2346,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 237,
+        "zIndex": 183,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -3061,7 +2359,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 238,
+        "zIndex": 184,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -3074,7 +2372,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 239,
+        "zIndex": 185,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -3087,7 +2385,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 240,
+        "zIndex": 186,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -3100,7 +2398,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 241,
+        "zIndex": 187,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -3113,7 +2411,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 242,
+        "zIndex": 188,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -3126,7 +2424,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 243,
+        "zIndex": 189,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -3139,7 +2437,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 244,
+        "zIndex": 190,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -3152,7 +2450,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 245,
+        "zIndex": 191,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -3165,7 +2463,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 246,
+        "zIndex": 192,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -3178,7 +2476,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 247,
+        "zIndex": 193,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -3191,7 +2489,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 248,
+        "zIndex": 194,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -3204,7 +2502,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 249,
+        "zIndex": 195,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -3217,7 +2515,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 250,
+        "zIndex": 196,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -3230,7 +2528,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 251,
+        "zIndex": 197,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -3243,7 +2541,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 252,
+        "zIndex": 198,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -3256,7 +2554,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 253,
+        "zIndex": 199,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -3269,7 +2567,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 254,
+        "zIndex": 200,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -3282,7 +2580,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 255,
+        "zIndex": 201,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -3295,7 +2593,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 256,
+        "zIndex": 202,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -3308,7 +2606,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 257,
+        "zIndex": 203,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -3321,7 +2619,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 258,
+        "zIndex": 204,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -3334,7 +2632,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 259,
+        "zIndex": 205,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -3347,7 +2645,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 260,
+        "zIndex": 206,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -3360,7 +2658,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 261,
+        "zIndex": 207,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -3373,7 +2671,7 @@
         "scaleY": 1.6435543,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 262,
+        "zIndex": 208,
         "layerName": "stuff",
         "imageName": "Tree"
       },
@@ -3384,7 +2682,7 @@
         "y": -0.4375,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 263,
+        "zIndex": 209,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -3395,7 +2693,7 @@
         "y": 3,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 264,
+        "zIndex": 210,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -3406,7 +2704,7 @@
         "y": 0.21250004,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 265,
+        "zIndex": 211,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -3417,7 +2715,7 @@
         "y": -0.16250002,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 266,
+        "zIndex": 212,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -3430,7 +2728,7 @@
         "scaleY": 1.3574283,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 267,
+        "zIndex": 213,
         "layerName": "stuff",
         "imageName": "Tree"
       },
@@ -3443,7 +2741,7 @@
         "scaleY": 1.4995776,
         "originX": 0.29375,
         "originY": 0.3625,
-        "zIndex": 268,
+        "zIndex": 214,
         "layerName": "stuff",
         "imageName": "BigTree"
       },
@@ -3456,7 +2754,7 @@
         "scaleY": 1.6435543,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 269,
+        "zIndex": 215,
         "layerName": "stuff",
         "imageName": "Tree"
       },
@@ -3469,7 +2767,7 @@
         "scaleY": 1.3574283,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 270,
+        "zIndex": 216,
         "layerName": "stuff",
         "imageName": "Tree"
       },
@@ -3482,7 +2780,7 @@
         "scaleY": 1.4995776,
         "originX": 0.29375,
         "originY": 0.3625,
-        "zIndex": 271,
+        "zIndex": 217,
         "layerName": "stuff",
         "imageName": "BigTree"
       },
@@ -3495,7 +2793,7 @@
         "scaleY": 1.6435543,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 272,
+        "zIndex": 218,
         "layerName": "stuff",
         "imageName": "Tree"
       },
@@ -3508,7 +2806,7 @@
         "scaleY": 1.3574283,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 273,
+        "zIndex": 219,
         "layerName": "stuff",
         "imageName": "Tree"
       },
@@ -3521,7 +2819,7 @@
         "scaleY": 1.3574283,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 274,
+        "zIndex": 220,
         "layerName": "stuff",
         "imageName": "Tree"
       },
@@ -3534,7 +2832,7 @@
         "scaleY": 1.3574283,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 275,
+        "zIndex": 221,
         "layerName": "stuff",
         "imageName": "Tree"
       },
@@ -3547,7 +2845,7 @@
         "scaleY": 1.4995776,
         "originX": 0.29375,
         "originY": 0.3625,
-        "zIndex": 276,
+        "zIndex": 222,
         "layerName": "stuff",
         "imageName": "BigTree"
       },
@@ -3560,7 +2858,7 @@
         "scaleY": 1.4995776,
         "originX": 0.29375,
         "originY": 0.3625,
-        "zIndex": 277,
+        "zIndex": 223,
         "layerName": "stuff",
         "imageName": "BigTree"
       },
@@ -3571,7 +2869,7 @@
         "y": 4.525,
         "originX": 0.29375,
         "originY": 0.3625,
-        "zIndex": 278,
+        "zIndex": 224,
         "layerName": "stuff",
         "imageName": "OrangeTree"
       },
@@ -3582,7 +2880,7 @@
         "y": 4.525,
         "originX": 0.29375,
         "originY": 0.3625,
-        "zIndex": 279,
+        "zIndex": 225,
         "layerName": "stuff",
         "imageName": "OrangeTree"
       },
@@ -3593,7 +2891,7 @@
         "y": 4.5375004,
         "originX": 0.29375,
         "originY": 0.3625,
-        "zIndex": 280,
+        "zIndex": 226,
         "layerName": "stuff",
         "imageName": "OrangeTree"
       },
@@ -3604,7 +2902,7 @@
         "y": 4.525,
         "originX": 0.29375,
         "originY": 0.3625,
-        "zIndex": 281,
+        "zIndex": 227,
         "layerName": "stuff",
         "imageName": "OrangeTree"
       },
@@ -3615,7 +2913,7 @@
         "y": 3.125,
         "originX": 0.3,
         "originY": 0.3,
-        "zIndex": 282,
+        "zIndex": 228,
         "layerName": "stuff",
         "imageName": "GRass"
       },
@@ -3626,7 +2924,7 @@
         "y": -1.6125,
         "originX": 0.3,
         "originY": 0.3,
-        "zIndex": 283,
+        "zIndex": 229,
         "layerName": "stuff",
         "imageName": "GRass"
       },
@@ -3637,7 +2935,7 @@
         "y": -0.4875002,
         "originX": 0.3,
         "originY": 0.3,
-        "zIndex": 284,
+        "zIndex": 230,
         "layerName": "stuff",
         "imageName": "GRass"
       },
@@ -3648,7 +2946,7 @@
         "y": 1.2875,
         "originX": 0.3,
         "originY": 0.3,
-        "zIndex": 285,
+        "zIndex": 231,
         "layerName": "stuff",
         "imageName": "GRass"
       },
@@ -3659,7 +2957,7 @@
         "y": 2.4625,
         "originX": 0.3,
         "originY": 0.3,
-        "zIndex": 286,
+        "zIndex": 232,
         "layerName": "stuff",
         "imageName": "GRass"
       },
@@ -3673,7 +2971,7 @@
         "originX": 0.1875,
         "originY": 0.10625,
         "rotation": 90,
-        "zIndex": 287,
+        "zIndex": 233,
         "layerName": "stuff",
         "imageName": "TreeTrunk"
       },
@@ -3687,7 +2985,7 @@
         "originX": 0.1875,
         "originY": 0.10625,
         "rotation": 90,
-        "zIndex": 288,
+        "zIndex": 234,
         "layerName": "stuff",
         "imageName": "TreeTrunk"
       },
@@ -3701,7 +2999,7 @@
         "originX": 0.1875,
         "originY": 0.10625,
         "rotation": 90,
-        "zIndex": 289,
+        "zIndex": 235,
         "layerName": "stuff",
         "imageName": "TreeTrunk"
       },
@@ -3715,7 +3013,7 @@
         "originX": 0.1875,
         "originY": 0.10625,
         "rotation": 90,
-        "zIndex": 290,
+        "zIndex": 236,
         "layerName": "stuff",
         "imageName": "TreeTrunk"
       },
@@ -3728,7 +3026,7 @@
         "scaleY": 1.4836048,
         "originX": 0.29375,
         "originY": 0.3625,
-        "zIndex": 291,
+        "zIndex": 237,
         "layerName": "stuff",
         "imageName": "OrangeTree"
       },
@@ -3741,7 +3039,7 @@
         "scaleY": 1.6435543,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 292,
+        "zIndex": 238,
         "layerName": "stuff",
         "imageName": "Tree"
       },
@@ -3752,7 +3050,7 @@
         "y": 3.7875,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 293,
+        "zIndex": 239,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -3765,7 +3063,7 @@
         "scaleY": 1.4995776,
         "originX": 0.29375,
         "originY": 0.3625,
-        "zIndex": 294,
+        "zIndex": 240,
         "layerName": "stuff",
         "imageName": "BigTree"
       },
@@ -3778,7 +3076,7 @@
         "scaleY": 1.6435543,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 295,
+        "zIndex": 241,
         "layerName": "stuff",
         "imageName": "Tree"
       },
@@ -3791,7 +3089,7 @@
         "scaleY": 1.6435543,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 296,
+        "zIndex": 242,
         "layerName": "stuff",
         "imageName": "Tree"
       },
@@ -3802,7 +3100,7 @@
         "y": -0.5625,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 297,
+        "zIndex": 243,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -3815,7 +3113,7 @@
         "scaleY": 1.4995776,
         "originX": 0.29375,
         "originY": 0.3625,
-        "zIndex": 298,
+        "zIndex": 244,
         "layerName": "stuff",
         "imageName": "BigTree"
       },
@@ -3828,7 +3126,7 @@
         "scaleY": 1.6435543,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 299,
+        "zIndex": 245,
         "layerName": "stuff",
         "imageName": "Tree"
       },
@@ -3841,7 +3139,7 @@
         "scaleY": 1.3574283,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 300,
+        "zIndex": 246,
         "layerName": "stuff",
         "imageName": "Tree"
       },
@@ -3854,7 +3152,7 @@
         "scaleY": 1.4995776,
         "originX": 0.29375,
         "originY": 0.3625,
-        "zIndex": 301,
+        "zIndex": 247,
         "layerName": "stuff",
         "imageName": "BigTree"
       },
@@ -3867,7 +3165,7 @@
         "scaleY": 1.3574283,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 302,
+        "zIndex": 248,
         "layerName": "stuff",
         "imageName": "Tree"
       },
@@ -3880,7 +3178,7 @@
         "scaleY": 1.3574283,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 303,
+        "zIndex": 249,
         "layerName": "stuff",
         "imageName": "Tree"
       },
@@ -3893,7 +3191,7 @@
         "scaleY": 1.3574283,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 304,
+        "zIndex": 250,
         "layerName": "stuff",
         "imageName": "Tree"
       },
@@ -3906,7 +3204,7 @@
         "scaleY": 1.4995776,
         "originX": 0.29375,
         "originY": 0.3625,
-        "zIndex": 305,
+        "zIndex": 251,
         "layerName": "stuff",
         "imageName": "BigTree"
       },
@@ -3919,7 +3217,7 @@
         "scaleY": 1.4995776,
         "originX": 0.29375,
         "originY": 0.3625,
-        "zIndex": 306,
+        "zIndex": 252,
         "layerName": "stuff",
         "imageName": "BigTree"
       },
@@ -3932,7 +3230,7 @@
         "scaleY": 1.4995776,
         "originX": 0.29375,
         "originY": 0.3625,
-        "zIndex": 307,
+        "zIndex": 253,
         "layerName": "stuff",
         "imageName": "BigTree"
       },
@@ -3943,7 +3241,7 @@
         "y": 3.9,
         "originX": 0.19375,
         "originY": 0.18125,
-        "zIndex": 308,
+        "zIndex": 254,
         "layerName": "stuff",
         "imageName": "grave"
       },
@@ -3957,7 +3255,7 @@
         "originX": 0.1875,
         "originY": 0.10625,
         "rotation": 90,
-        "zIndex": 309,
+        "zIndex": 255,
         "layerName": "stuff",
         "imageName": "TreeTrunk"
       },
@@ -3968,7 +3266,7 @@
         "y": 2.6,
         "originX": 0.6125,
         "originY": 0.73125,
-        "zIndex": 310,
+        "zIndex": 256,
         "layerName": "stuff",
         "imageName": "BigHouseG"
       },
@@ -3979,7 +3277,7 @@
         "y": -0.4,
         "originX": 0.3,
         "originY": 0.3,
-        "zIndex": 311,
+        "zIndex": 257,
         "layerName": "stuff",
         "imageName": "ZGuyD0"
       },
@@ -3990,7 +3288,7 @@
         "y": 1.9750001,
         "originX": 0.3,
         "originY": 0.3,
-        "zIndex": 312,
+        "zIndex": 258,
         "layerName": "stuff",
         "imageName": "ZGuyD0"
       },
@@ -4001,7 +3299,7 @@
         "y": 5.3250003,
         "originX": 0.3,
         "originY": 0.3,
-        "zIndex": 313,
+        "zIndex": 259,
         "layerName": "stuff",
         "imageName": "ZGuyD0"
       },
@@ -4012,7 +3310,7 @@
         "y": 9.0125,
         "originX": 0.3,
         "originY": 0.3,
-        "zIndex": 314,
+        "zIndex": 260,
         "layerName": "stuff",
         "imageName": "ZGuyD0"
       },
@@ -4023,7 +3321,7 @@
         "y": 6.925,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 315,
+        "zIndex": 261,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -4034,7 +3332,7 @@
         "y": 6.4,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 316,
+        "zIndex": 262,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -4045,7 +3343,7 @@
         "y": 6.3875003,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 317,
+        "zIndex": 263,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -4056,7 +3354,7 @@
         "y": 6.925,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 318,
+        "zIndex": 264,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -4067,7 +3365,7 @@
         "y": 6.9250007,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 319,
+        "zIndex": 265,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -4078,7 +3376,7 @@
         "y": 9,
         "originX": 0.65625,
         "originY": 0.66875,
-        "zIndex": 320,
+        "zIndex": 266,
         "layerName": "stuff",
         "imageName": "BigHouseR"
       },
@@ -4089,7 +3387,7 @@
         "y": 8.712501,
         "originX": 0.29375,
         "originY": 0.3625,
-        "zIndex": 321,
+        "zIndex": 267,
         "layerName": "stuff",
         "imageName": "OrangeTree"
       },
@@ -4100,7 +3398,7 @@
         "y": 9.5375,
         "originX": 0.29375,
         "originY": 0.3625,
-        "zIndex": 322,
+        "zIndex": 268,
         "layerName": "stuff",
         "imageName": "OrangeTree"
       },
@@ -4111,7 +3409,7 @@
         "y": 9.550001,
         "originX": 0.3,
         "originY": 0.3,
-        "zIndex": 323,
+        "zIndex": 269,
         "layerName": "stuff",
         "imageName": "ZGlassBoyD0"
       },
@@ -4122,7 +3420,7 @@
         "y": 6.7375,
         "originX": 0.3,
         "originY": 0.3,
-        "zIndex": 324,
+        "zIndex": 270,
         "layerName": "stuff",
         "imageName": "ZGlassBoyD0"
       },
@@ -4133,7 +3431,7 @@
         "y": 0.1,
         "originX": 1.73125,
         "originY": 1.61875,
-        "zIndex": 325,
+        "zIndex": 271,
         "layerName": "stuff",
         "imageName": "pinkB"
       },
@@ -4144,7 +3442,7 @@
         "y": -13.0375,
         "originX": 1.73125,
         "originY": 1.61875,
-        "zIndex": 326,
+        "zIndex": 272,
         "layerName": "stuff",
         "imageName": "pinkB"
       },
@@ -4155,7 +3453,7 @@
         "y": -2.7250001,
         "originX": 0.3,
         "originY": 0.3,
-        "zIndex": 327,
+        "zIndex": 273,
         "layerName": "stuff",
         "imageName": "ZGirlD0"
       },
@@ -4166,7 +3464,7 @@
         "y": -6.9125,
         "originX": 0.3,
         "originY": 0.3,
-        "zIndex": 328,
+        "zIndex": 274,
         "layerName": "stuff",
         "imageName": "ZGirlD0"
       },
@@ -4179,7 +3477,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 329,
+        "zIndex": 275,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -4192,7 +3490,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 330,
+        "zIndex": 276,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -4205,7 +3503,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 331,
+        "zIndex": 277,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -4218,7 +3516,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 332,
+        "zIndex": 278,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -4231,7 +3529,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 333,
+        "zIndex": 279,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -4244,7 +3542,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 334,
+        "zIndex": 280,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -4257,7 +3555,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 335,
+        "zIndex": 281,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -4270,7 +3568,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 336,
+        "zIndex": 282,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -4283,7 +3581,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 337,
+        "zIndex": 283,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -4296,7 +3594,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 338,
+        "zIndex": 284,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -4309,7 +3607,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 339,
+        "zIndex": 285,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -4322,7 +3620,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 340,
+        "zIndex": 286,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -4335,7 +3633,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 341,
+        "zIndex": 287,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -4348,7 +3646,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 342,
+        "zIndex": 288,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -4361,7 +3659,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 343,
+        "zIndex": 289,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -4374,7 +3672,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 344,
+        "zIndex": 290,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -4387,7 +3685,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 345,
+        "zIndex": 291,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -4400,7 +3698,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 346,
+        "zIndex": 292,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -4413,7 +3711,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 347,
+        "zIndex": 293,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -4426,7 +3724,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 348,
+        "zIndex": 294,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -4439,7 +3737,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 349,
+        "zIndex": 295,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -4452,7 +3750,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 350,
+        "zIndex": 296,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -4465,7 +3763,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 351,
+        "zIndex": 297,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -4478,7 +3776,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 352,
+        "zIndex": 298,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -4491,7 +3789,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 353,
+        "zIndex": 299,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -4504,7 +3802,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 354,
+        "zIndex": 300,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -4517,7 +3815,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 355,
+        "zIndex": 301,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -4530,7 +3828,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 356,
+        "zIndex": 302,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -4543,7 +3841,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 357,
+        "zIndex": 303,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -4556,7 +3854,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 358,
+        "zIndex": 304,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -4569,7 +3867,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 359,
+        "zIndex": 305,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -4582,7 +3880,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 360,
+        "zIndex": 306,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -4595,7 +3893,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 361,
+        "zIndex": 307,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -4608,7 +3906,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 362,
+        "zIndex": 308,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -4621,7 +3919,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 363,
+        "zIndex": 309,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -4634,22 +3932,9 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 364,
+        "zIndex": 310,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
-      },
-      {
-        "uniqueId": 1844,
-        "tags": [ "collider" ],
-        "x": -7.1000004,
-        "y": -9.162496,
-        "scaleX": 2.5815496,
-        "scaleY": 1.7391965,
-        "originX": 0.04375,
-        "originY": 0.16875,
-        "zIndex": 365,
-        "layerName": "stuff",
-        "imageName": "verticalFence"
       },
       {
         "uniqueId": 1769,
@@ -4660,7 +3945,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 366,
+        "zIndex": 311,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -4673,7 +3958,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 367,
+        "zIndex": 312,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -4686,7 +3971,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 368,
+        "zIndex": 313,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -4697,7 +3982,7 @@
         "y": 7.9125004,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 369,
+        "zIndex": 314,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -4710,7 +3995,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 370,
+        "zIndex": 315,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -4723,7 +4008,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 371,
+        "zIndex": 316,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -4736,7 +4021,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 372,
+        "zIndex": 317,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -4749,7 +4034,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 373,
+        "zIndex": 318,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -4760,7 +4045,7 @@
         "y": 6.3625,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 374,
+        "zIndex": 319,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -4773,7 +4058,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 375,
+        "zIndex": 320,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -4786,7 +4071,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 376,
+        "zIndex": 321,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -4799,7 +4084,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 377,
+        "zIndex": 322,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -4812,7 +4097,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 378,
+        "zIndex": 323,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -4825,7 +4110,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 379,
+        "zIndex": 324,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -4836,7 +4121,7 @@
         "y": 7.3875003,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 380,
+        "zIndex": 325,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -4849,7 +4134,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 381,
+        "zIndex": 326,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -4860,7 +4145,7 @@
         "y": 5.8375,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 382,
+        "zIndex": 327,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -4873,7 +4158,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 383,
+        "zIndex": 328,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -4884,7 +4169,7 @@
         "y": 7.375,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 384,
+        "zIndex": 329,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -4897,7 +4182,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 385,
+        "zIndex": 330,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -4908,7 +4193,7 @@
         "y": 5.825,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 386,
+        "zIndex": 331,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -4921,7 +4206,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 387,
+        "zIndex": 332,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -4932,7 +4217,7 @@
         "y": 7.9125004,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 388,
+        "zIndex": 333,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -4943,7 +4228,7 @@
         "y": 6.3625,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 389,
+        "zIndex": 334,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -4954,7 +4239,7 @@
         "y": 7.9125004,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 390,
+        "zIndex": 335,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -4965,347 +4250,9 @@
         "y": 6.3625,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 391,
+        "zIndex": 336,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
-      },
-      {
-        "uniqueId": 1658,
-        "tags": [ "collider" ],
-        "x": -7.1000004,
-        "y": -12.199999,
-        "scaleX": 2.5815496,
-        "scaleY": 1.7391965,
-        "originX": 0.04375,
-        "originY": 0.16875,
-        "zIndex": 392,
-        "layerName": "stuff",
-        "imageName": "verticalFence"
-      },
-      {
-        "uniqueId": 1853,
-        "tags": [ "collider" ],
-        "x": -7.0875,
-        "y": 8.087501,
-        "scaleX": 2.5815496,
-        "scaleY": 1.7391965,
-        "originX": 0.04375,
-        "originY": 0.16875,
-        "zIndex": 393,
-        "layerName": "stuff",
-        "imageName": "verticalFence"
-      },
-      {
-        "uniqueId": 1655,
-        "tags": [ "collider" ],
-        "x": -7.1,
-        "y": -6.1124997,
-        "scaleX": 2.5815496,
-        "scaleY": 1.7391965,
-        "originX": 0.04375,
-        "originY": 0.16875,
-        "zIndex": 394,
-        "layerName": "stuff",
-        "imageName": "verticalFence"
-      },
-      {
-        "uniqueId": 1833,
-        "tags": [ "collider" ],
-        "x": -7.0875006,
-        "y": 0.98749924,
-        "scaleX": 2.5815496,
-        "scaleY": 1.7391965,
-        "originX": 0.04375,
-        "originY": 0.16875,
-        "zIndex": 395,
-        "layerName": "stuff",
-        "imageName": "verticalFence"
-      },
-      {
-        "uniqueId": 1880,
-        "tags": [ "collider" ],
-        "x": -7.1000004,
-        "y": -8.150002,
-        "scaleX": 2.5815496,
-        "scaleY": 1.7391965,
-        "originX": 0.04375,
-        "originY": 0.16875,
-        "zIndex": 396,
-        "layerName": "stuff",
-        "imageName": "verticalFence"
-      },
-      {
-        "uniqueId": 1716,
-        "tags": [ "collider" ],
-        "x": -7.0875,
-        "y": 5.0500007,
-        "scaleX": 2.5815496,
-        "scaleY": 1.7391965,
-        "originX": 0.04375,
-        "originY": 0.16875,
-        "zIndex": 397,
-        "layerName": "stuff",
-        "imageName": "verticalFence"
-      },
-      {
-        "uniqueId": 1664,
-        "tags": [ "collider" ],
-        "x": -7.1000004,
-        "y": -2.0500014,
-        "scaleX": 2.5815496,
-        "scaleY": 1.7391965,
-        "originX": 0.04375,
-        "originY": 0.16875,
-        "zIndex": 398,
-        "layerName": "stuff",
-        "imageName": "verticalFence"
-      },
-      {
-        "uniqueId": 1709,
-        "tags": [ "collider" ],
-        "x": -7.0999994,
-        "y": -13.2125,
-        "scaleX": 2.5815496,
-        "scaleY": 1.7391965,
-        "originX": 0.04375,
-        "originY": 0.16875,
-        "zIndex": 399,
-        "layerName": "stuff",
-        "imageName": "verticalFence"
-      },
-      {
-        "uniqueId": 1721,
-        "tags": [ "collider" ],
-        "x": -7.1,
-        "y": -4.0750003,
-        "scaleX": 2.5815496,
-        "scaleY": 1.7391965,
-        "originX": 0.04375,
-        "originY": 0.16875,
-        "zIndex": 400,
-        "layerName": "stuff",
-        "imageName": "verticalFence"
-      },
-      {
-        "uniqueId": 1778,
-        "tags": [ "collider" ],
-        "x": -7.1,
-        "y": -14.225,
-        "scaleX": 2.5815496,
-        "scaleY": 1.7391965,
-        "originX": 0.04375,
-        "originY": 0.16875,
-        "zIndex": 401,
-        "layerName": "stuff",
-        "imageName": "verticalFence"
-      },
-      {
-        "uniqueId": 1739,
-        "tags": [ "collider" ],
-        "x": -7.1,
-        "y": -15.0875,
-        "scaleX": 2.5815496,
-        "scaleY": 1.3571086,
-        "originX": 0.04375,
-        "originY": 0.16875,
-        "zIndex": 402,
-        "layerName": "stuff",
-        "imageName": "verticalFence"
-      },
-      {
-        "uniqueId": 1733,
-        "tags": [ "collider" ],
-        "x": -7.0875,
-        "y": 6.0625005,
-        "scaleX": 2.5815496,
-        "scaleY": 1.7391965,
-        "originX": 0.04375,
-        "originY": 0.16875,
-        "zIndex": 403,
-        "layerName": "stuff",
-        "imageName": "verticalFence"
-      },
-      {
-        "uniqueId": 1683,
-        "tags": [ "collider" ],
-        "x": -7.1,
-        "y": -1.0375001,
-        "scaleX": 2.5815496,
-        "scaleY": 1.7391965,
-        "originX": 0.04375,
-        "originY": 0.16875,
-        "zIndex": 404,
-        "layerName": "stuff",
-        "imageName": "verticalFence"
-      },
-      {
-        "uniqueId": 1753,
-        "tags": [ "collider" ],
-        "x": -7.1,
-        "y": -11.1875,
-        "scaleX": 2.5815496,
-        "scaleY": 1.7391965,
-        "originX": 0.04375,
-        "originY": 0.16875,
-        "zIndex": 405,
-        "layerName": "stuff",
-        "imageName": "verticalFence"
-      },
-      {
-        "uniqueId": 1638,
-        "tags": [ "collider" ],
-        "x": -7.0875,
-        "y": 3.025,
-        "scaleX": 2.5815496,
-        "scaleY": 1.7391965,
-        "originX": 0.04375,
-        "originY": 0.16875,
-        "zIndex": 406,
-        "layerName": "stuff",
-        "imageName": "verticalFence"
-      },
-      {
-        "uniqueId": 1798,
-        "tags": [ "collider" ],
-        "x": -7.1,
-        "y": -7.125,
-        "scaleX": 2.5815496,
-        "scaleY": 1.7391965,
-        "originX": 0.04375,
-        "originY": 0.16875,
-        "zIndex": 407,
-        "layerName": "stuff",
-        "imageName": "verticalFence"
-      },
-      {
-        "uniqueId": 1643,
-        "tags": [ "collider" ],
-        "x": -7.0875,
-        "y": 9.1,
-        "scaleX": 2.5815496,
-        "scaleY": 1.7391965,
-        "originX": 0.04375,
-        "originY": 0.16875,
-        "zIndex": 408,
-        "layerName": "stuff",
-        "imageName": "verticalFence"
-      },
-      {
-        "uniqueId": 1823,
-        "tags": [ "collider" ],
-        "x": -7.1,
-        "y": -10.1749935,
-        "scaleX": 2.5815496,
-        "scaleY": 1.7391965,
-        "originX": 0.04375,
-        "originY": 0.16875,
-        "zIndex": 409,
-        "layerName": "stuff",
-        "imageName": "verticalFence"
-      },
-      {
-        "uniqueId": 1819,
-        "tags": [ "collider" ],
-        "x": -7.1000004,
-        "y": -5.0874944,
-        "scaleX": 2.5815496,
-        "scaleY": 1.7391965,
-        "originX": 0.04375,
-        "originY": 0.16875,
-        "zIndex": 410,
-        "layerName": "stuff",
-        "imageName": "verticalFence"
-      },
-      {
-        "uniqueId": 1713,
-        "tags": [ "collider" ],
-        "x": -7.0875,
-        "y": 2,
-        "scaleX": 2.5815496,
-        "scaleY": 1.7391965,
-        "originX": 0.04375,
-        "originY": 0.16875,
-        "zIndex": 411,
-        "layerName": "stuff",
-        "imageName": "verticalFence"
-      },
-      {
-        "uniqueId": 1617,
-        "tags": [ "collider" ],
-        "x": -7.1000004,
-        "y": -3.0625029,
-        "scaleX": 2.5815496,
-        "scaleY": 1.7391965,
-        "originX": 0.04375,
-        "originY": 0.16875,
-        "zIndex": 412,
-        "layerName": "stuff",
-        "imageName": "verticalFence"
-      },
-      {
-        "uniqueId": 1702,
-        "tags": [ "collider" ],
-        "x": -7.1,
-        "y": 11.06603,
-        "scaleX": 2.5815496,
-        "scaleY": 1.2433494,
-        "originX": 0.0375,
-        "originY": 0.2875,
-        "zIndex": 413,
-        "layerName": "stuff",
-        "imageName": "verticalFence"
-      },
-      {
-        "uniqueId": 1770,
-        "tags": [ "collider" ],
-        "x": -7.0875006,
-        "y": 4.0375023,
-        "scaleX": 2.5815496,
-        "scaleY": 1.7391965,
-        "originX": 0.04375,
-        "originY": 0.16875,
-        "zIndex": 414,
-        "layerName": "stuff",
-        "imageName": "verticalFence"
-      },
-      {
-        "uniqueId": 1656,
-        "tags": [ "collider" ],
-        "x": -7.0875,
-        "y": 7.075,
-        "scaleX": 2.5815496,
-        "scaleY": 1.7391965,
-        "originX": 0.04375,
-        "originY": 0.16875,
-        "zIndex": 415,
-        "layerName": "stuff",
-        "imageName": "verticalFence"
-      },
-      {
-        "uniqueId": 1630,
-        "tags": [ "collider" ],
-        "x": -7.1000004,
-        "y": -0.02500001,
-        "scaleX": 2.5815496,
-        "scaleY": 1.7391965,
-        "originX": 0.04375,
-        "originY": 0.16875,
-        "zIndex": 416,
-        "layerName": "stuff",
-        "imageName": "verticalFence"
-      },
-      {
-        "uniqueId": 1732,
-        "tags": [ "collider" ],
-        "x": -7.0875,
-        "y": 10.1125,
-        "scaleX": 2.5815496,
-        "scaleY": 1.7391965,
-        "originX": 0.04375,
-        "originY": 0.16875,
-        "zIndex": 417,
-        "layerName": "stuff",
-        "imageName": "verticalFence"
       },
       {
         "uniqueId": 1631,
@@ -5316,7 +4263,7 @@
         "scaleY": 1.6435543,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 418,
+        "zIndex": 337,
         "layerName": "stuff",
         "imageName": "Tree"
       },
@@ -5329,7 +4276,7 @@
         "scaleY": 1.6435543,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 419,
+        "zIndex": 338,
         "layerName": "stuff",
         "imageName": "Tree"
       },
@@ -5340,7 +4287,7 @@
         "y": 10.625001,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 420,
+        "zIndex": 339,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -5351,7 +4298,7 @@
         "y": 5.275,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 421,
+        "zIndex": 340,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -5364,7 +4311,7 @@
         "scaleY": 1.3574283,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 422,
+        "zIndex": 341,
         "layerName": "stuff",
         "imageName": "Tree"
       },
@@ -5377,7 +4324,7 @@
         "scaleY": 1.4995776,
         "originX": 0.29375,
         "originY": 0.3625,
-        "zIndex": 423,
+        "zIndex": 342,
         "layerName": "stuff",
         "imageName": "BigTree"
       },
@@ -5390,7 +4337,7 @@
         "scaleY": 1.6435543,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 424,
+        "zIndex": 343,
         "layerName": "stuff",
         "imageName": "Tree"
       },
@@ -5403,7 +4350,7 @@
         "scaleY": 1.6435543,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 425,
+        "zIndex": 344,
         "layerName": "stuff",
         "imageName": "Tree"
       },
@@ -5416,7 +4363,7 @@
         "scaleY": 1.6435543,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 426,
+        "zIndex": 345,
         "layerName": "stuff",
         "imageName": "Tree"
       },
@@ -5429,7 +4376,7 @@
         "scaleY": 1.6435543,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 427,
+        "zIndex": 346,
         "layerName": "stuff",
         "imageName": "Tree"
       },
@@ -5440,7 +4387,7 @@
         "y": 8.2875,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 428,
+        "zIndex": 347,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -5451,7 +4398,7 @@
         "y": 9.65,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 429,
+        "zIndex": 348,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -5462,7 +4409,7 @@
         "y": 10.55,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 430,
+        "zIndex": 349,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -5475,7 +4422,7 @@
         "scaleY": 1.3574283,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 431,
+        "zIndex": 350,
         "layerName": "stuff",
         "imageName": "Tree"
       },
@@ -5488,7 +4435,7 @@
         "scaleY": 1.3574283,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 432,
+        "zIndex": 351,
         "layerName": "stuff",
         "imageName": "Tree"
       },
@@ -5501,7 +4448,7 @@
         "scaleY": 1.4995776,
         "originX": 0.29375,
         "originY": 0.3625,
-        "zIndex": 433,
+        "zIndex": 352,
         "layerName": "stuff",
         "imageName": "BigTree"
       },
@@ -5514,7 +4461,7 @@
         "scaleY": 1.4995776,
         "originX": 0.29375,
         "originY": 0.3625,
-        "zIndex": 434,
+        "zIndex": 353,
         "layerName": "stuff",
         "imageName": "BigTree"
       },
@@ -5527,7 +4474,7 @@
         "scaleY": 0.8457363,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 435,
+        "zIndex": 354,
         "layerName": "stuff",
         "imageName": "Tree"
       },
@@ -5540,7 +4487,7 @@
         "scaleY": 0.9254798,
         "originX": 0.29375,
         "originY": 0.3625,
-        "zIndex": 436,
+        "zIndex": 355,
         "layerName": "stuff",
         "imageName": "BigTree"
       },
@@ -5553,7 +4500,7 @@
         "scaleY": 1.4390756,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 437,
+        "zIndex": 356,
         "layerName": "stuff",
         "imageName": "Tree"
       },
@@ -5566,7 +4513,7 @@
         "scaleY": 1.3574283,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 438,
+        "zIndex": 357,
         "layerName": "stuff",
         "imageName": "Tree"
       },
@@ -5579,7 +4526,7 @@
         "scaleY": 1.3574283,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 439,
+        "zIndex": 358,
         "layerName": "stuff",
         "imageName": "Tree"
       },
@@ -5592,7 +4539,7 @@
         "scaleY": 1.3574283,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 440,
+        "zIndex": 359,
         "layerName": "stuff",
         "imageName": "Tree"
       },
@@ -5605,7 +4552,7 @@
         "scaleY": 1.4995776,
         "originX": 0.29375,
         "originY": 0.3625,
-        "zIndex": 441,
+        "zIndex": 360,
         "layerName": "stuff",
         "imageName": "BigTree"
       },
@@ -5618,7 +4565,7 @@
         "scaleY": 1.4995776,
         "originX": 0.29375,
         "originY": 0.3625,
-        "zIndex": 442,
+        "zIndex": 361,
         "layerName": "stuff",
         "imageName": "BigTree"
       },
@@ -5631,7 +4578,7 @@
         "scaleY": 1.4995776,
         "originX": 0.29375,
         "originY": 0.3625,
-        "zIndex": 443,
+        "zIndex": 362,
         "layerName": "stuff",
         "imageName": "BigTree"
       },
@@ -5642,7 +4589,7 @@
         "y": 5.2125,
         "originX": 0.3,
         "originY": 0.3,
-        "zIndex": 444,
+        "zIndex": 363,
         "layerName": "stuff",
         "imageName": "GRass"
       },
@@ -5655,7 +4602,7 @@
         "scaleY": 1.4836048,
         "originX": 0.29375,
         "originY": 0.3625,
-        "zIndex": 445,
+        "zIndex": 364,
         "layerName": "stuff",
         "imageName": "OrangeTree"
       },
@@ -5668,7 +4615,7 @@
         "scaleY": 1.031425,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 446,
+        "zIndex": 365,
         "layerName": "stuff",
         "imageName": "Tree"
       },
@@ -5679,7 +4626,7 @@
         "y": 10.500015,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 447,
+        "zIndex": 366,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -5692,7 +4639,7 @@
         "scaleY": 1.3574283,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 448,
+        "zIndex": 367,
         "layerName": "stuff",
         "imageName": "Tree"
       },
@@ -5705,7 +4652,7 @@
         "scaleY": 1.3574283,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 449,
+        "zIndex": 368,
         "layerName": "stuff",
         "imageName": "Tree"
       },
@@ -5718,7 +4665,7 @@
         "scaleY": 1.3574283,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 450,
+        "zIndex": 369,
         "layerName": "stuff",
         "imageName": "Tree"
       },
@@ -5731,7 +4678,7 @@
         "scaleY": 1.3574283,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 451,
+        "zIndex": 370,
         "layerName": "stuff",
         "imageName": "Tree"
       },
@@ -5744,7 +4691,7 @@
         "scaleY": 1.3574283,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 452,
+        "zIndex": 371,
         "layerName": "stuff",
         "imageName": "Tree"
       },
@@ -5757,7 +4704,7 @@
         "scaleY": 1.3574283,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 453,
+        "zIndex": 372,
         "layerName": "stuff",
         "imageName": "Tree"
       },
@@ -5770,7 +4717,7 @@
         "scaleY": 1.3574283,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 454,
+        "zIndex": 373,
         "layerName": "stuff",
         "imageName": "Tree"
       },
@@ -5783,7 +4730,7 @@
         "scaleY": 1.3574283,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 455,
+        "zIndex": 374,
         "layerName": "stuff",
         "imageName": "Tree"
       },
@@ -5796,7 +4743,7 @@
         "scaleY": 1.4995776,
         "originX": 0.29375,
         "originY": 0.3625,
-        "zIndex": 456,
+        "zIndex": 375,
         "layerName": "stuff",
         "imageName": "BigTree"
       },
@@ -5809,7 +4756,7 @@
         "scaleY": 1.0997083,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 457,
+        "zIndex": 376,
         "layerName": "stuff",
         "imageName": "Tree"
       },
@@ -5822,7 +4769,7 @@
         "scaleY": 1.6435543,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 458,
+        "zIndex": 377,
         "layerName": "stuff",
         "imageName": "Tree"
       },
@@ -5835,7 +4782,7 @@
         "scaleY": 1.6435543,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 459,
+        "zIndex": 378,
         "layerName": "stuff",
         "imageName": "Tree"
       },
@@ -5848,7 +4795,7 @@
         "scaleY": 1.6435543,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 460,
+        "zIndex": 379,
         "layerName": "stuff",
         "imageName": "Tree"
       },
@@ -5859,7 +4806,7 @@
         "y": 10.500015,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 461,
+        "zIndex": 380,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -5870,7 +4817,7 @@
         "y": 6.0625153,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 462,
+        "zIndex": 381,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -5883,7 +4830,7 @@
         "scaleY": 1.3574283,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 463,
+        "zIndex": 382,
         "layerName": "stuff",
         "imageName": "Tree"
       },
@@ -5896,7 +4843,7 @@
         "scaleY": 1.6435543,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 464,
+        "zIndex": 383,
         "layerName": "stuff",
         "imageName": "Tree"
       },
@@ -5909,7 +4856,7 @@
         "scaleY": 1.3574283,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 465,
+        "zIndex": 384,
         "layerName": "stuff",
         "imageName": "Tree"
       },
@@ -5922,7 +4869,7 @@
         "scaleY": 1.4995776,
         "originX": 0.29375,
         "originY": 0.3625,
-        "zIndex": 466,
+        "zIndex": 385,
         "layerName": "stuff",
         "imageName": "BigTree"
       },
@@ -5935,7 +4882,7 @@
         "scaleY": 1.3574283,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 467,
+        "zIndex": 386,
         "layerName": "stuff",
         "imageName": "Tree"
       },
@@ -5948,7 +4895,7 @@
         "scaleY": 1.3574283,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 468,
+        "zIndex": 387,
         "layerName": "stuff",
         "imageName": "Tree"
       },
@@ -5961,7 +4908,7 @@
         "scaleY": 1.4995776,
         "originX": 0.29375,
         "originY": 0.3625,
-        "zIndex": 469,
+        "zIndex": 388,
         "layerName": "stuff",
         "imageName": "BigTree"
       },
@@ -5974,7 +4921,7 @@
         "scaleY": 1.4995776,
         "originX": 0.29375,
         "originY": 0.3625,
-        "zIndex": 470,
+        "zIndex": 389,
         "layerName": "stuff",
         "imageName": "BigTree"
       },
@@ -5987,7 +4934,7 @@
         "scaleY": 1.4995776,
         "originX": 0.29375,
         "originY": 0.3625,
-        "zIndex": 471,
+        "zIndex": 390,
         "layerName": "stuff",
         "imageName": "BigTree"
       },
@@ -6000,7 +4947,7 @@
         "scaleY": 1.4995776,
         "originX": 0.29375,
         "originY": 0.3625,
-        "zIndex": 472,
+        "zIndex": 391,
         "layerName": "stuff",
         "imageName": "BigTree"
       },
@@ -6013,7 +4960,7 @@
         "scaleY": 1.4995776,
         "originX": 0.29375,
         "originY": 0.3625,
-        "zIndex": 473,
+        "zIndex": 392,
         "layerName": "stuff",
         "imageName": "BigTree"
       },
@@ -6024,7 +4971,7 @@
         "y": 10.850001,
         "originX": 0.19375,
         "originY": 0.18125,
-        "zIndex": 474,
+        "zIndex": 393,
         "layerName": "stuff",
         "imageName": "grave"
       },
@@ -6038,7 +4985,7 @@
         "originX": 0.1875,
         "originY": 0.10625,
         "rotation": 90,
-        "zIndex": 475,
+        "zIndex": 394,
         "layerName": "stuff",
         "imageName": "TreeTrunk"
       },
@@ -6049,7 +4996,7 @@
         "y": 6.9625,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 476,
+        "zIndex": 395,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -6060,7 +5007,7 @@
         "y": 7.9500003,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 477,
+        "zIndex": 396,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -6071,7 +5018,7 @@
         "y": 4.15,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 478,
+        "zIndex": 397,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -6082,7 +5029,7 @@
         "y": 6.9249983,
         "originX": 0.66875,
         "originY": 2.09375,
-        "zIndex": 479,
+        "zIndex": 398,
         "layerName": "stuff",
         "imageName": "Building1"
       },
@@ -6093,7 +5040,7 @@
         "y": 3.9375002,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 480,
+        "zIndex": 399,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -6104,7 +5051,7 @@
         "y": 4.0750003,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 481,
+        "zIndex": 400,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -6115,7 +5062,7 @@
         "y": 7.9625006,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 482,
+        "zIndex": 401,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -6126,7 +5073,7 @@
         "y": 8.95,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 483,
+        "zIndex": 402,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -6137,7 +5084,7 @@
         "y": 7.975,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 484,
+        "zIndex": 403,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -6148,7 +5095,7 @@
         "y": 8.962501,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 485,
+        "zIndex": 404,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -6159,7 +5106,7 @@
         "y": 9.012501,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 486,
+        "zIndex": 405,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -6170,7 +5117,7 @@
         "y": 10,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 487,
+        "zIndex": 406,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -6181,7 +5128,7 @@
         "y": 7.9750004,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 488,
+        "zIndex": 407,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -6192,7 +5139,7 @@
         "y": 8.962501,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 489,
+        "zIndex": 408,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -6203,7 +5150,7 @@
         "y": 6.4375005,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 490,
+        "zIndex": 409,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -6214,7 +5161,7 @@
         "y": 7.4000006,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 491,
+        "zIndex": 410,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -6225,7 +5172,7 @@
         "y": 10.0125,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 492,
+        "zIndex": 411,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -6236,7 +5183,7 @@
         "y": 9.012501,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 493,
+        "zIndex": 412,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -6247,7 +5194,7 @@
         "y": 10,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 494,
+        "zIndex": 413,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -6258,7 +5205,7 @@
         "y": 9.025,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 495,
+        "zIndex": 414,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -6269,7 +5216,7 @@
         "y": 10.0125,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 496,
+        "zIndex": 415,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -6280,7 +5227,7 @@
         "y": 9.875,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 497,
+        "zIndex": 416,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -6291,7 +5238,7 @@
         "y": 7.45,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 498,
+        "zIndex": 417,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -6302,7 +5249,7 @@
         "y": 8.4375,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 499,
+        "zIndex": 418,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -6313,7 +5260,7 @@
         "y": 6.8875,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 500,
+        "zIndex": 419,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -6324,7 +5271,7 @@
         "y": 5.8625,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 501,
+        "zIndex": 420,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -6335,7 +5282,7 @@
         "y": 6.975,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 502,
+        "zIndex": 421,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -6346,7 +5293,7 @@
         "y": 7.9625,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 503,
+        "zIndex": 422,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -6357,7 +5304,7 @@
         "y": 6.3875003,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 504,
+        "zIndex": 423,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -6368,7 +5315,7 @@
         "y": 8.4875,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 505,
+        "zIndex": 424,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -6379,7 +5326,7 @@
         "y": 9.475,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 506,
+        "zIndex": 425,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -6390,7 +5337,7 @@
         "y": 10.025,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 507,
+        "zIndex": 426,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -6401,7 +5348,7 @@
         "y": 5.8625,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 508,
+        "zIndex": 427,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -6412,7 +5359,7 @@
         "y": 7.4500003,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 509,
+        "zIndex": 428,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -6423,7 +5370,7 @@
         "y": 8.4375,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 510,
+        "zIndex": 429,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -6434,7 +5381,7 @@
         "y": 6.8875,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 511,
+        "zIndex": 430,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -6445,7 +5392,7 @@
         "y": 8.4875,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 512,
+        "zIndex": 431,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -6456,7 +5403,7 @@
         "y": 9.475,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 513,
+        "zIndex": 432,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -6467,7 +5414,7 @@
         "y": 8.5,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 514,
+        "zIndex": 433,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -6478,7 +5425,7 @@
         "y": 9.4875,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 515,
+        "zIndex": 434,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -6489,7 +5436,7 @@
         "y": 9.5375,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 516,
+        "zIndex": 435,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -6500,7 +5447,7 @@
         "y": 10.525001,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 517,
+        "zIndex": 436,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -6511,7 +5458,7 @@
         "y": 5.8500004,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 518,
+        "zIndex": 437,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -6522,7 +5469,7 @@
         "y": 7.4375,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 519,
+        "zIndex": 438,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -6533,7 +5480,7 @@
         "y": 8.425,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 520,
+        "zIndex": 439,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -6544,7 +5491,7 @@
         "y": 6.8500004,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 521,
+        "zIndex": 440,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -6555,7 +5502,7 @@
         "y": 6.9625,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 522,
+        "zIndex": 441,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -6566,7 +5513,7 @@
         "y": 7.9500003,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 523,
+        "zIndex": 442,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -6577,7 +5524,7 @@
         "y": 8.475,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 524,
+        "zIndex": 443,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -6588,7 +5535,7 @@
         "y": 9.462501,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 525,
+        "zIndex": 444,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -6599,7 +5546,7 @@
         "y": 7.9625006,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 526,
+        "zIndex": 445,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -6610,7 +5557,7 @@
         "y": 8.95,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 527,
+        "zIndex": 446,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -6621,7 +5568,7 @@
         "y": 7.975,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 528,
+        "zIndex": 447,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -6632,7 +5579,7 @@
         "y": 8.962501,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 529,
+        "zIndex": 448,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -6643,7 +5590,7 @@
         "y": 5.3250003,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 530,
+        "zIndex": 449,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -6654,7 +5601,7 @@
         "y": 9.012501,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 531,
+        "zIndex": 450,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -6665,7 +5612,7 @@
         "y": 10,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 532,
+        "zIndex": 451,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -6676,7 +5623,7 @@
         "y": 6.9125004,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 533,
+        "zIndex": 452,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -6687,7 +5634,7 @@
         "y": 7.9,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 534,
+        "zIndex": 453,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -6698,7 +5645,7 @@
         "y": 6.35,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 535,
+        "zIndex": 454,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -6709,7 +5656,7 @@
         "y": 6.4375,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 536,
+        "zIndex": 455,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -6720,7 +5667,7 @@
         "y": 7.425,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 537,
+        "zIndex": 456,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -6731,7 +5678,7 @@
         "y": 5.8500004,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 538,
+        "zIndex": 457,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -6742,7 +5689,7 @@
         "y": 7.950001,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 539,
+        "zIndex": 458,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -6753,7 +5700,7 @@
         "y": 8.9375,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 540,
+        "zIndex": 459,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -6764,7 +5711,7 @@
         "y": 7.3875,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 541,
+        "zIndex": 460,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -6775,7 +5722,7 @@
         "y": 7.9625,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 542,
+        "zIndex": 461,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -6786,7 +5733,7 @@
         "y": 8.95,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 543,
+        "zIndex": 462,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -6797,7 +5744,7 @@
         "y": 9.000001,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 544,
+        "zIndex": 463,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -6808,7 +5755,7 @@
         "y": 9.9875,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 545,
+        "zIndex": 464,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -6819,7 +5766,7 @@
         "y": 10.0125,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 546,
+        "zIndex": 465,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -6830,7 +5777,7 @@
         "y": 6.9625,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 547,
+        "zIndex": 466,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -6841,7 +5788,7 @@
         "y": 7.9625006,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 548,
+        "zIndex": 467,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -6852,7 +5799,7 @@
         "y": 8.95,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 549,
+        "zIndex": 468,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -6863,7 +5810,7 @@
         "y": 7.975,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 550,
+        "zIndex": 469,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -6874,7 +5821,7 @@
         "y": 8.962501,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 551,
+        "zIndex": 470,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -6885,7 +5832,7 @@
         "y": 9.012501,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 552,
+        "zIndex": 471,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -6896,7 +5843,7 @@
         "y": 10,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 553,
+        "zIndex": 472,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -6907,7 +5854,7 @@
         "y": 5.8875003,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 554,
+        "zIndex": 473,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -6918,7 +5865,7 @@
         "y": 10,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 555,
+        "zIndex": 474,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -6929,7 +5876,7 @@
         "y": 7.4375005,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 556,
+        "zIndex": 475,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -6940,7 +5887,7 @@
         "y": 8.425,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 557,
+        "zIndex": 476,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -6951,7 +5898,7 @@
         "y": 6.875,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 558,
+        "zIndex": 477,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -6962,7 +5909,7 @@
         "y": 6.9625,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 559,
+        "zIndex": 478,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -6973,7 +5920,7 @@
         "y": 7.9500003,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 560,
+        "zIndex": 479,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -6984,7 +5931,7 @@
         "y": 6.375,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 561,
+        "zIndex": 480,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -6995,7 +5942,7 @@
         "y": 8.475,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 562,
+        "zIndex": 481,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -7006,7 +5953,7 @@
         "y": 9.462501,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 563,
+        "zIndex": 482,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -7017,7 +5964,7 @@
         "y": 8.4875,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 564,
+        "zIndex": 483,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -7028,7 +5975,7 @@
         "y": 9.475,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 565,
+        "zIndex": 484,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -7039,7 +5986,7 @@
         "y": 9.525001,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 566,
+        "zIndex": 485,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -7050,7 +5997,7 @@
         "y": 10.5125,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 567,
+        "zIndex": 486,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -7061,7 +6008,7 @@
         "y": 7.9750004,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 568,
+        "zIndex": 487,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -7072,7 +6019,7 @@
         "y": 8.962501,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 569,
+        "zIndex": 488,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -7083,7 +6030,7 @@
         "y": 10.0125,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 570,
+        "zIndex": 489,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -7094,7 +6041,7 @@
         "y": 9.012501,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 571,
+        "zIndex": 490,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -7105,7 +6052,7 @@
         "y": 10,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 572,
+        "zIndex": 491,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -7116,7 +6063,7 @@
         "y": 9.025,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 573,
+        "zIndex": 492,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -7127,7 +6074,7 @@
         "y": 10.0125,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 574,
+        "zIndex": 493,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -7138,7 +6085,7 @@
         "y": 7.9750004,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 575,
+        "zIndex": 494,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -7149,7 +6096,7 @@
         "y": 8.962501,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 576,
+        "zIndex": 495,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -7160,7 +6107,7 @@
         "y": 9.012501,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 577,
+        "zIndex": 496,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -7171,7 +6118,7 @@
         "y": 10,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 578,
+        "zIndex": 497,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -7182,7 +6129,7 @@
         "y": 9.025,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 579,
+        "zIndex": 498,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -7193,7 +6140,7 @@
         "y": 10.0125,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 580,
+        "zIndex": 499,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -7204,7 +6151,7 @@
         "y": 6.9375005,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 581,
+        "zIndex": 500,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -7215,7 +6162,7 @@
         "y": 7.925,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 582,
+        "zIndex": 501,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -7226,7 +6173,7 @@
         "y": 6.375,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 583,
+        "zIndex": 502,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -7237,7 +6184,7 @@
         "y": 7.9750004,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 584,
+        "zIndex": 503,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -7248,7 +6195,7 @@
         "y": 8.962501,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 585,
+        "zIndex": 504,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -7259,7 +6206,7 @@
         "y": 7.9875,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 586,
+        "zIndex": 505,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -7270,7 +6217,7 @@
         "y": 8.975,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 587,
+        "zIndex": 506,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -7281,7 +6228,7 @@
         "y": 9.025001,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 588,
+        "zIndex": 507,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -7292,7 +6239,7 @@
         "y": 10.0125,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 589,
+        "zIndex": 508,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -7303,7 +6250,7 @@
         "y": 10.049999,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 590,
+        "zIndex": 509,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -7314,7 +6261,7 @@
         "y": 4.0750003,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 591,
+        "zIndex": 510,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -7325,7 +6272,7 @@
         "y": 1.7875,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 592,
+        "zIndex": 511,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -7336,7 +6283,7 @@
         "y": 4.65,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 593,
+        "zIndex": 512,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -7347,7 +6294,7 @@
         "y": 4.0875,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 594,
+        "zIndex": 513,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -7358,7 +6305,7 @@
         "y": 3.8000002,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 595,
+        "zIndex": 514,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -7369,7 +6316,7 @@
         "y": 10.025,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 596,
+        "zIndex": 515,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -7380,7 +6327,7 @@
         "y": 2.95,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 597,
+        "zIndex": 516,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -7391,7 +6338,7 @@
         "y": 10.025,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 598,
+        "zIndex": 517,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -7402,7 +6349,7 @@
         "y": 8.3625,
         "originX": 0.29375,
         "originY": 0.3,
-        "zIndex": 599,
+        "zIndex": 518,
         "layerName": "stuff",
         "imageName": "catD0"
       },
@@ -7413,7 +6360,7 @@
         "y": 5.7,
         "originX": 0.6,
         "originY": 0.6,
-        "zIndex": 600,
+        "zIndex": 519,
         "layerName": "stuff",
         "imageName": "DragonFront"
       },
@@ -7426,7 +6373,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 601,
+        "zIndex": 520,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -7439,7 +6386,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 602,
+        "zIndex": 521,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -7452,7 +6399,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 603,
+        "zIndex": 522,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -7465,7 +6412,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 604,
+        "zIndex": 523,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -7478,7 +6425,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 605,
+        "zIndex": 524,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -7491,7 +6438,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 606,
+        "zIndex": 525,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -7504,7 +6451,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 607,
+        "zIndex": 526,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -7517,7 +6464,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 608,
+        "zIndex": 527,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -7530,7 +6477,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 609,
+        "zIndex": 528,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -7543,7 +6490,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 610,
+        "zIndex": 529,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -7556,7 +6503,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 611,
+        "zIndex": 530,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -7569,7 +6516,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 612,
+        "zIndex": 531,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -7582,7 +6529,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 613,
+        "zIndex": 532,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -7595,7 +6542,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 614,
+        "zIndex": 533,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -7608,7 +6555,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 615,
+        "zIndex": 534,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -7621,7 +6568,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 616,
+        "zIndex": 535,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -7634,7 +6581,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 617,
+        "zIndex": 536,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -7647,7 +6594,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 618,
+        "zIndex": 537,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -7660,7 +6607,7 @@
         "scaleY": 1.3574283,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 619,
+        "zIndex": 538,
         "layerName": "stuff",
         "imageName": "Tree"
       },
@@ -7673,7 +6620,7 @@
         "scaleY": 1.3574283,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 620,
+        "zIndex": 539,
         "layerName": "stuff",
         "imageName": "Tree"
       },
@@ -7686,7 +6633,7 @@
         "scaleY": 1.3574283,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 621,
+        "zIndex": 540,
         "layerName": "stuff",
         "imageName": "Tree"
       },
@@ -7699,7 +6646,7 @@
         "scaleY": 1.3574283,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 622,
+        "zIndex": 541,
         "layerName": "stuff",
         "imageName": "Tree"
       },
@@ -7712,7 +6659,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 623,
+        "zIndex": 542,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -7725,7 +6672,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 624,
+        "zIndex": 543,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -7738,7 +6685,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 625,
+        "zIndex": 544,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -7751,7 +6698,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 626,
+        "zIndex": 545,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -7764,7 +6711,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 627,
+        "zIndex": 546,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -7777,7 +6724,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 628,
+        "zIndex": 547,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -7790,7 +6737,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 629,
+        "zIndex": 548,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -7803,7 +6750,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 630,
+        "zIndex": 549,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -7816,7 +6763,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 631,
+        "zIndex": 550,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -7829,7 +6776,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 632,
+        "zIndex": 551,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -7842,7 +6789,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 633,
+        "zIndex": 552,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -7855,7 +6802,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 634,
+        "zIndex": 553,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -7868,7 +6815,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 635,
+        "zIndex": 554,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -7881,7 +6828,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 636,
+        "zIndex": 555,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -7894,7 +6841,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 637,
+        "zIndex": 556,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -7907,7 +6854,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 638,
+        "zIndex": 557,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -7920,7 +6867,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 639,
+        "zIndex": 558,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -7933,7 +6880,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 640,
+        "zIndex": 559,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -7946,7 +6893,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 641,
+        "zIndex": 560,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -7959,7 +6906,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 642,
+        "zIndex": 561,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -7972,7 +6919,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 643,
+        "zIndex": 562,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -7985,7 +6932,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 644,
+        "zIndex": 563,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -7998,7 +6945,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 645,
+        "zIndex": 564,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -8011,7 +6958,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 646,
+        "zIndex": 565,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -8024,7 +6971,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 647,
+        "zIndex": 566,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -8037,7 +6984,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 648,
+        "zIndex": 567,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -8050,7 +6997,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 649,
+        "zIndex": 568,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -8063,7 +7010,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 650,
+        "zIndex": 569,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -8076,7 +7023,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 651,
+        "zIndex": 570,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -8089,7 +7036,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 652,
+        "zIndex": 571,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -8102,7 +7049,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 653,
+        "zIndex": 572,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -8115,7 +7062,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 654,
+        "zIndex": 573,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -8128,7 +7075,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 655,
+        "zIndex": 574,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -8141,7 +7088,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 656,
+        "zIndex": 575,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -8154,7 +7101,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 657,
+        "zIndex": 576,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -8167,7 +7114,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 658,
+        "zIndex": 577,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -8180,7 +7127,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 659,
+        "zIndex": 578,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -8193,7 +7140,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 660,
+        "zIndex": 579,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -8206,7 +7153,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 661,
+        "zIndex": 580,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -8219,7 +7166,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 662,
+        "zIndex": 581,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -8232,7 +7179,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 663,
+        "zIndex": 582,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -8245,7 +7192,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 664,
+        "zIndex": 583,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -8258,7 +7205,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 665,
+        "zIndex": 584,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -8271,7 +7218,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 666,
+        "zIndex": 585,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -8284,7 +7231,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 667,
+        "zIndex": 586,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -8297,7 +7244,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 668,
+        "zIndex": 587,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -8310,7 +7257,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 669,
+        "zIndex": 588,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -8323,7 +7270,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 670,
+        "zIndex": 589,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -8336,7 +7283,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 671,
+        "zIndex": 590,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -8349,7 +7296,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 672,
+        "zIndex": 591,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -8362,7 +7309,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 673,
+        "zIndex": 592,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -8375,7 +7322,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 674,
+        "zIndex": 593,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -8388,7 +7335,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 675,
+        "zIndex": 594,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -8401,7 +7348,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 676,
+        "zIndex": 595,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -8414,7 +7361,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 677,
+        "zIndex": 596,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -8427,7 +7374,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 678,
+        "zIndex": 597,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -8440,7 +7387,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 679,
+        "zIndex": 598,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -8453,7 +7400,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 680,
+        "zIndex": 599,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -8466,7 +7413,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 681,
+        "zIndex": 600,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -8479,7 +7426,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 682,
+        "zIndex": 601,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -8492,7 +7439,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 683,
+        "zIndex": 602,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -8505,7 +7452,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 684,
+        "zIndex": 603,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -8518,7 +7465,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 685,
+        "zIndex": 604,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -8531,7 +7478,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 686,
+        "zIndex": 605,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -8544,7 +7491,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 687,
+        "zIndex": 606,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -8557,7 +7504,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 688,
+        "zIndex": 607,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -8570,7 +7517,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 689,
+        "zIndex": 608,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -8583,7 +7530,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 690,
+        "zIndex": 609,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -8596,7 +7543,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 691,
+        "zIndex": 610,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -8609,7 +7556,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 692,
+        "zIndex": 611,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -8622,7 +7569,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 693,
+        "zIndex": 612,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -8635,7 +7582,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 694,
+        "zIndex": 613,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -8648,7 +7595,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 695,
+        "zIndex": 614,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -8661,7 +7608,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 696,
+        "zIndex": 615,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -8674,7 +7621,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 697,
+        "zIndex": 616,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -8687,7 +7634,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 698,
+        "zIndex": 617,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -8700,7 +7647,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 699,
+        "zIndex": 618,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -8713,7 +7660,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 700,
+        "zIndex": 619,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -8726,7 +7673,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 701,
+        "zIndex": 620,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -8739,7 +7686,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 702,
+        "zIndex": 621,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -8752,7 +7699,7 @@
         "scaleY": 2.142801,
         "originX": 0.19375,
         "originY": 0.0875,
-        "zIndex": 703,
+        "zIndex": 622,
         "layerName": "stuff",
         "imageName": "HorizontalFence"
       },
@@ -8765,7 +7712,7 @@
         "scaleY": 1.4836048,
         "originX": 0.29375,
         "originY": 0.3625,
-        "zIndex": 704,
+        "zIndex": 623,
         "layerName": "stuff",
         "imageName": "OrangeTree"
       },
@@ -8778,7 +7725,7 @@
         "scaleY": 1.6435543,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 705,
+        "zIndex": 624,
         "layerName": "stuff",
         "imageName": "Tree"
       },
@@ -8789,7 +7736,7 @@
         "y": -9.425015,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 706,
+        "zIndex": 625,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -8802,7 +7749,7 @@
         "scaleY": 1.3574283,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 707,
+        "zIndex": 626,
         "layerName": "stuff",
         "imageName": "Tree"
       },
@@ -8815,33 +7762,9 @@
         "scaleY": 1.4995776,
         "originX": 0.29375,
         "originY": 0.3625,
-        "zIndex": 708,
+        "zIndex": 627,
         "layerName": "stuff",
         "imageName": "BigTree"
-      },
-      {
-        "uniqueId": 1936,
-        "tags": [ "collider" ],
-        "x": -6.125,
-        "y": -9.175015,
-        "scaleX": 1.6216947,
-        "scaleY": 1.6435543,
-        "originX": 0.23125,
-        "originY": 0.2625,
-        "zIndex": 709,
-        "layerName": "stuff",
-        "imageName": "Tree"
-      },
-      {
-        "uniqueId": 1984,
-        "tags": [ "collider" ],
-        "x": -6.75,
-        "y": -9.425015,
-        "originX": 0.23125,
-        "originY": 0.2625,
-        "zIndex": 710,
-        "layerName": "stuff",
-        "imageName": "DarkOakTree"
       },
       {
         "uniqueId": 1925,
@@ -8852,7 +7775,7 @@
         "scaleY": 1.3574283,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 711,
+        "zIndex": 628,
         "layerName": "stuff",
         "imageName": "Tree"
       },
@@ -8865,7 +7788,7 @@
         "scaleY": 1.4995776,
         "originX": 0.29375,
         "originY": 0.3625,
-        "zIndex": 712,
+        "zIndex": 629,
         "layerName": "stuff",
         "imageName": "BigTree"
       },
@@ -8878,7 +7801,7 @@
         "scaleY": 1.6435543,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 713,
+        "zIndex": 630,
         "layerName": "stuff",
         "imageName": "Tree"
       },
@@ -8891,7 +7814,7 @@
         "scaleY": 1.3574283,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 714,
+        "zIndex": 631,
         "layerName": "stuff",
         "imageName": "Tree"
       },
@@ -8904,7 +7827,7 @@
         "scaleY": 1.4995776,
         "originX": 0.29375,
         "originY": 0.3625,
-        "zIndex": 715,
+        "zIndex": 632,
         "layerName": "stuff",
         "imageName": "BigTree"
       },
@@ -8917,7 +7840,7 @@
         "scaleY": 1.3574283,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 716,
+        "zIndex": 633,
         "layerName": "stuff",
         "imageName": "Tree"
       },
@@ -8930,7 +7853,7 @@
         "scaleY": 1.3574283,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 717,
+        "zIndex": 634,
         "layerName": "stuff",
         "imageName": "Tree"
       },
@@ -8943,7 +7866,7 @@
         "scaleY": 1.3574283,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 718,
+        "zIndex": 635,
         "layerName": "stuff",
         "imageName": "Tree"
       },
@@ -8956,7 +7879,7 @@
         "scaleY": 1.4995776,
         "originX": 0.29375,
         "originY": 0.3625,
-        "zIndex": 719,
+        "zIndex": 636,
         "layerName": "stuff",
         "imageName": "BigTree"
       },
@@ -8969,7 +7892,7 @@
         "scaleY": 1.4995776,
         "originX": 0.29375,
         "originY": 0.3625,
-        "zIndex": 720,
+        "zIndex": 637,
         "layerName": "stuff",
         "imageName": "BigTree"
       },
@@ -8980,7 +7903,7 @@
         "y": -9.237515,
         "originX": 0.3,
         "originY": 0.3,
-        "zIndex": 721,
+        "zIndex": 638,
         "layerName": "stuff",
         "imageName": "GRass"
       },
@@ -8991,7 +7914,7 @@
         "y": -14.750015,
         "originX": 0.3,
         "originY": 0.3,
-        "zIndex": 722,
+        "zIndex": 639,
         "layerName": "stuff",
         "imageName": "GRass"
       },
@@ -9002,7 +7925,7 @@
         "y": -13.662515,
         "originX": 0.3,
         "originY": 0.3,
-        "zIndex": 723,
+        "zIndex": 640,
         "layerName": "stuff",
         "imageName": "GRass"
       },
@@ -9013,7 +7936,7 @@
         "y": -10.912515,
         "originX": 0.3,
         "originY": 0.3,
-        "zIndex": 724,
+        "zIndex": 641,
         "layerName": "stuff",
         "imageName": "GRass"
       },
@@ -9024,7 +7947,7 @@
         "y": -10.175015,
         "originX": 0.3,
         "originY": 0.3,
-        "zIndex": 725,
+        "zIndex": 642,
         "layerName": "stuff",
         "imageName": "GRass"
       },
@@ -9038,7 +7961,7 @@
         "originX": 0.1875,
         "originY": 0.10625,
         "rotation": 90,
-        "zIndex": 726,
+        "zIndex": 643,
         "layerName": "stuff",
         "imageName": "TreeTrunk"
       },
@@ -9052,7 +7975,7 @@
         "originX": 0.1875,
         "originY": 0.10625,
         "rotation": 90,
-        "zIndex": 727,
+        "zIndex": 644,
         "layerName": "stuff",
         "imageName": "TreeTrunk"
       },
@@ -9065,7 +7988,7 @@
         "scaleY": 1.4836048,
         "originX": 0.29375,
         "originY": 0.3625,
-        "zIndex": 728,
+        "zIndex": 645,
         "layerName": "stuff",
         "imageName": "OrangeTree"
       },
@@ -9078,7 +8001,7 @@
         "scaleY": 1.6435543,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 729,
+        "zIndex": 646,
         "layerName": "stuff",
         "imageName": "Tree"
       },
@@ -9089,7 +8012,7 @@
         "y": -9.4625,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 730,
+        "zIndex": 647,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -9102,7 +8025,7 @@
         "scaleY": 1.4995776,
         "originX": 0.29375,
         "originY": 0.3625,
-        "zIndex": 731,
+        "zIndex": 648,
         "layerName": "stuff",
         "imageName": "BigTree"
       },
@@ -9115,7 +8038,7 @@
         "scaleY": 1.6435543,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 732,
+        "zIndex": 649,
         "layerName": "stuff",
         "imageName": "Tree"
       },
@@ -9128,7 +8051,7 @@
         "scaleY": 1.6435543,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 733,
+        "zIndex": 650,
         "layerName": "stuff",
         "imageName": "Tree"
       },
@@ -9141,7 +8064,7 @@
         "scaleY": 1.6435543,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 734,
+        "zIndex": 651,
         "layerName": "stuff",
         "imageName": "Tree"
       },
@@ -9152,7 +8075,7 @@
         "y": -13.750016,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 735,
+        "zIndex": 652,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -9165,7 +8088,7 @@
         "scaleY": 1.4995776,
         "originX": 0.29375,
         "originY": 0.3625,
-        "zIndex": 736,
+        "zIndex": 653,
         "layerName": "stuff",
         "imageName": "BigTree"
       },
@@ -9178,7 +8101,7 @@
         "scaleY": 1.6435543,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 737,
+        "zIndex": 654,
         "layerName": "stuff",
         "imageName": "Tree"
       },
@@ -9191,7 +8114,7 @@
         "scaleY": 1.3574283,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 738,
+        "zIndex": 655,
         "layerName": "stuff",
         "imageName": "Tree"
       },
@@ -9204,7 +8127,7 @@
         "scaleY": 1.4995776,
         "originX": 0.29375,
         "originY": 0.3625,
-        "zIndex": 739,
+        "zIndex": 656,
         "layerName": "stuff",
         "imageName": "BigTree"
       },
@@ -9217,7 +8140,7 @@
         "scaleY": 1.3574283,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 740,
+        "zIndex": 657,
         "layerName": "stuff",
         "imageName": "Tree"
       },
@@ -9230,7 +8153,7 @@
         "scaleY": 1.3574283,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 741,
+        "zIndex": 658,
         "layerName": "stuff",
         "imageName": "Tree"
       },
@@ -9243,22 +8166,9 @@
         "scaleY": 1.3574283,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 742,
+        "zIndex": 659,
         "layerName": "stuff",
         "imageName": "Tree"
-      },
-      {
-        "uniqueId": 1905,
-        "tags": [ "collider" ],
-        "x": 19.7875,
-        "y": -14.45,
-        "scaleX": 1.4691645,
-        "scaleY": 1.4995776,
-        "originX": 0.29375,
-        "originY": 0.3625,
-        "zIndex": 743,
-        "layerName": "stuff",
-        "imageName": "BigTree"
       },
       {
         "uniqueId": 2054,
@@ -9269,7 +8179,7 @@
         "scaleY": 1.4995776,
         "originX": 0.29375,
         "originY": 0.3625,
-        "zIndex": 744,
+        "zIndex": 660,
         "layerName": "stuff",
         "imageName": "BigTree"
       },
@@ -9282,9 +8192,33 @@
         "scaleY": 1.4995776,
         "originX": 0.29375,
         "originY": 0.3625,
-        "zIndex": 745,
+        "zIndex": 661,
         "layerName": "stuff",
         "imageName": "BigTree"
+      },
+      {
+        "uniqueId": 1905,
+        "tags": [ "collider" ],
+        "x": 19.7875,
+        "y": -14.45,
+        "scaleX": 1.4691645,
+        "scaleY": 1.4995776,
+        "originX": 0.29375,
+        "originY": 0.3625,
+        "zIndex": 662,
+        "layerName": "stuff",
+        "imageName": "BigTree"
+      },
+      {
+        "uniqueId": 1927,
+        "tags": [ "collider" ],
+        "x": -6.65,
+        "y": -2.625,
+        "originX": 0.23125,
+        "originY": 0.2625,
+        "zIndex": 663,
+        "layerName": "stuff",
+        "imageName": "DarkOakTree"
       },
       {
         "uniqueId": 2035,
@@ -9295,31 +8229,9 @@
         "scaleY": 1.6435543,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 746,
+        "zIndex": 664,
         "layerName": "stuff",
         "imageName": "Tree"
-      },
-      {
-        "uniqueId": 1927,
-        "tags": [ "collider" ],
-        "x": -6.65,
-        "y": -2.625,
-        "originX": 0.23125,
-        "originY": 0.2625,
-        "zIndex": 747,
-        "layerName": "stuff",
-        "imageName": "DarkOakTree"
-      },
-      {
-        "uniqueId": 1959,
-        "tags": [ "collider" ],
-        "x": -6.5375004,
-        "y": -7.9,
-        "originX": 0.23125,
-        "originY": 0.2625,
-        "zIndex": 748,
-        "layerName": "stuff",
-        "imageName": "DarkOakTree"
       },
       {
         "uniqueId": 2053,
@@ -9330,9 +8242,20 @@
         "scaleY": 1.3574283,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 749,
+        "zIndex": 665,
         "layerName": "stuff",
         "imageName": "Tree"
+      },
+      {
+        "uniqueId": 1959,
+        "tags": [ "collider" ],
+        "x": -6.5375004,
+        "y": -7.9,
+        "originX": 0.23125,
+        "originY": 0.2625,
+        "zIndex": 666,
+        "layerName": "stuff",
+        "imageName": "DarkOakTree"
       },
       {
         "uniqueId": 2042,
@@ -9343,7 +8266,7 @@
         "scaleY": 1.6435543,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 750,
+        "zIndex": 667,
         "layerName": "stuff",
         "imageName": "Tree"
       },
@@ -9356,7 +8279,7 @@
         "scaleY": 1.4995776,
         "originX": 0.29375,
         "originY": 0.3625,
-        "zIndex": 751,
+        "zIndex": 668,
         "layerName": "stuff",
         "imageName": "BigTree"
       },
@@ -9369,7 +8292,7 @@
         "scaleY": 1.6435543,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 752,
+        "zIndex": 669,
         "layerName": "stuff",
         "imageName": "Tree"
       },
@@ -9382,7 +8305,7 @@
         "scaleY": 1.6435543,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 753,
+        "zIndex": 670,
         "layerName": "stuff",
         "imageName": "Tree"
       },
@@ -9395,20 +8318,7 @@
         "scaleY": 1.6435543,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 754,
-        "layerName": "stuff",
-        "imageName": "Tree"
-      },
-      {
-        "uniqueId": 1991,
-        "tags": [ "collider" ],
-        "x": -6.6875,
-        "y": -6.8625154,
-        "scaleX": 1.6216947,
-        "scaleY": 1.6435543,
-        "originX": 0.23125,
-        "originY": 0.2625,
-        "zIndex": 755,
+        "zIndex": 671,
         "layerName": "stuff",
         "imageName": "Tree"
       },
@@ -9419,9 +8329,22 @@
         "y": -2.6250002,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 756,
+        "zIndex": 672,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
+      },
+      {
+        "uniqueId": 1991,
+        "tags": [ "collider" ],
+        "x": -6.6875,
+        "y": -6.8625154,
+        "scaleX": 1.6216947,
+        "scaleY": 1.6435543,
+        "originX": 0.23125,
+        "originY": 0.2625,
+        "zIndex": 673,
+        "layerName": "stuff",
+        "imageName": "Tree"
       },
       {
         "uniqueId": 1892,
@@ -9432,7 +8355,7 @@
         "scaleY": 1.3574283,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 757,
+        "zIndex": 674,
         "layerName": "stuff",
         "imageName": "Tree"
       },
@@ -9445,7 +8368,7 @@
         "scaleY": 1.3574283,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 758,
+        "zIndex": 675,
         "layerName": "stuff",
         "imageName": "Tree"
       },
@@ -9458,7 +8381,7 @@
         "scaleY": 1.4995776,
         "originX": 0.29375,
         "originY": 0.3625,
-        "zIndex": 759,
+        "zIndex": 676,
         "layerName": "stuff",
         "imageName": "BigTree"
       },
@@ -9471,7 +8394,7 @@
         "scaleY": 1.4995776,
         "originX": 0.29375,
         "originY": 0.3625,
-        "zIndex": 760,
+        "zIndex": 677,
         "layerName": "stuff",
         "imageName": "BigTree"
       },
@@ -9484,7 +8407,7 @@
         "scaleY": 1.3574283,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 761,
+        "zIndex": 678,
         "layerName": "stuff",
         "imageName": "Tree"
       },
@@ -9497,7 +8420,7 @@
         "scaleY": 1.4995776,
         "originX": 0.29375,
         "originY": 0.3625,
-        "zIndex": 762,
+        "zIndex": 679,
         "layerName": "stuff",
         "imageName": "BigTree"
       },
@@ -9510,7 +8433,7 @@
         "scaleY": 1.3574283,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 763,
+        "zIndex": 680,
         "layerName": "stuff",
         "imageName": "Tree"
       },
@@ -9523,7 +8446,7 @@
         "scaleY": 1.3574283,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 764,
+        "zIndex": 681,
         "layerName": "stuff",
         "imageName": "Tree"
       },
@@ -9536,7 +8459,7 @@
         "scaleY": 1.3574283,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 765,
+        "zIndex": 682,
         "layerName": "stuff",
         "imageName": "Tree"
       },
@@ -9547,7 +8470,7 @@
         "y": -2.7124999,
         "originX": 0.3,
         "originY": 0.3,
-        "zIndex": 766,
+        "zIndex": 683,
         "layerName": "stuff",
         "imageName": "GRass"
       },
@@ -9558,7 +8481,7 @@
         "y": -6.950015,
         "originX": 0.3,
         "originY": 0.3,
-        "zIndex": 767,
+        "zIndex": 684,
         "layerName": "stuff",
         "imageName": "GRass"
       },
@@ -9569,7 +8492,7 @@
         "y": -4.200015,
         "originX": 0.3,
         "originY": 0.3,
-        "zIndex": 768,
+        "zIndex": 685,
         "layerName": "stuff",
         "imageName": "GRass"
       },
@@ -9580,7 +8503,7 @@
         "y": -3.462505,
         "originX": 0.3,
         "originY": 0.3,
-        "zIndex": 769,
+        "zIndex": 686,
         "layerName": "stuff",
         "imageName": "GRass"
       },
@@ -9593,7 +8516,7 @@
         "scaleY": 1.4995776,
         "originX": 0.29375,
         "originY": 0.3625,
-        "zIndex": 770,
+        "zIndex": 687,
         "layerName": "stuff",
         "imageName": "BigTree"
       },
@@ -9607,7 +8530,7 @@
         "originX": 0.1875,
         "originY": 0.10625,
         "rotation": 90,
-        "zIndex": 771,
+        "zIndex": 688,
         "layerName": "stuff",
         "imageName": "TreeTrunk"
       },
@@ -9620,7 +8543,7 @@
         "scaleY": 1.4995776,
         "originX": 0.29375,
         "originY": 0.3625,
-        "zIndex": 772,
+        "zIndex": 689,
         "layerName": "stuff",
         "imageName": "BigTree"
       },
@@ -9634,7 +8557,7 @@
         "originX": 0.1875,
         "originY": 0.10625,
         "rotation": 90,
-        "zIndex": 773,
+        "zIndex": 690,
         "layerName": "stuff",
         "imageName": "TreeTrunk"
       },
@@ -9648,7 +8571,7 @@
         "originX": 0.1875,
         "originY": 0.10625,
         "rotation": 90,
-        "zIndex": 774,
+        "zIndex": 691,
         "layerName": "stuff",
         "imageName": "TreeTrunk"
       },
@@ -9662,7 +8585,7 @@
         "originX": 0.1875,
         "originY": 0.10625,
         "rotation": 90,
-        "zIndex": 775,
+        "zIndex": 692,
         "layerName": "stuff",
         "imageName": "TreeTrunk"
       },
@@ -9675,7 +8598,7 @@
         "scaleY": 1.4836048,
         "originX": 0.29375,
         "originY": 0.3625,
-        "zIndex": 776,
+        "zIndex": 693,
         "layerName": "stuff",
         "imageName": "OrangeTree"
       },
@@ -9688,7 +8611,7 @@
         "scaleY": 1.6435543,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 777,
+        "zIndex": 694,
         "layerName": "stuff",
         "imageName": "Tree"
       },
@@ -9699,7 +8622,7 @@
         "y": -3.55,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 778,
+        "zIndex": 695,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -9712,7 +8635,7 @@
         "scaleY": 1.3574283,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 779,
+        "zIndex": 696,
         "layerName": "stuff",
         "imageName": "Tree"
       },
@@ -9725,7 +8648,7 @@
         "scaleY": 1.4995776,
         "originX": 0.29375,
         "originY": 0.3625,
-        "zIndex": 780,
+        "zIndex": 697,
         "layerName": "stuff",
         "imageName": "BigTree"
       },
@@ -9738,7 +8661,7 @@
         "scaleY": 1.6435543,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 781,
+        "zIndex": 698,
         "layerName": "stuff",
         "imageName": "Tree"
       },
@@ -9751,7 +8674,7 @@
         "scaleY": 1.6435543,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 782,
+        "zIndex": 699,
         "layerName": "stuff",
         "imageName": "Tree"
       },
@@ -9764,7 +8687,7 @@
         "scaleY": 1.6435543,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 783,
+        "zIndex": 700,
         "layerName": "stuff",
         "imageName": "Tree"
       },
@@ -9775,7 +8698,7 @@
         "y": -6.975,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 784,
+        "zIndex": 701,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -9788,7 +8711,7 @@
         "scaleY": 1.3574283,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 785,
+        "zIndex": 702,
         "layerName": "stuff",
         "imageName": "Tree"
       },
@@ -9801,7 +8724,7 @@
         "scaleY": 1.4995776,
         "originX": 0.29375,
         "originY": 0.3625,
-        "zIndex": 786,
+        "zIndex": 703,
         "layerName": "stuff",
         "imageName": "BigTree"
       },
@@ -9814,7 +8737,7 @@
         "scaleY": 1.3574283,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 787,
+        "zIndex": 704,
         "layerName": "stuff",
         "imageName": "Tree"
       },
@@ -9827,7 +8750,7 @@
         "scaleY": 1.4995776,
         "originX": 0.29375,
         "originY": 0.3625,
-        "zIndex": 788,
+        "zIndex": 705,
         "layerName": "stuff",
         "imageName": "BigTree"
       },
@@ -9840,7 +8763,7 @@
         "scaleY": 1.3574283,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 789,
+        "zIndex": 706,
         "layerName": "stuff",
         "imageName": "Tree"
       },
@@ -9853,7 +8776,7 @@
         "scaleY": 1.3574283,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 790,
+        "zIndex": 707,
         "layerName": "stuff",
         "imageName": "Tree"
       },
@@ -9866,7 +8789,7 @@
         "scaleY": 1.3574283,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 791,
+        "zIndex": 708,
         "layerName": "stuff",
         "imageName": "Tree"
       },
@@ -9879,7 +8802,7 @@
         "scaleY": 1.4995776,
         "originX": 0.29375,
         "originY": 0.3625,
-        "zIndex": 792,
+        "zIndex": 709,
         "layerName": "stuff",
         "imageName": "BigTree"
       },
@@ -9892,7 +8815,7 @@
         "scaleY": 1.4995776,
         "originX": 0.29375,
         "originY": 0.3625,
-        "zIndex": 793,
+        "zIndex": 710,
         "layerName": "stuff",
         "imageName": "BigTree"
       },
@@ -9905,7 +8828,7 @@
         "scaleY": 1.4995776,
         "originX": 0.29375,
         "originY": 0.3625,
-        "zIndex": 794,
+        "zIndex": 711,
         "layerName": "stuff",
         "imageName": "BigTree"
       },
@@ -9919,7 +8842,7 @@
         "originX": 0.1875,
         "originY": 0.10625,
         "rotation": 90,
-        "zIndex": 795,
+        "zIndex": 712,
         "layerName": "stuff",
         "imageName": "TreeTrunk"
       },
@@ -9933,7 +8856,7 @@
         "originX": 0.1875,
         "originY": 0.10625,
         "rotation": 90,
-        "zIndex": 796,
+        "zIndex": 713,
         "layerName": "stuff",
         "imageName": "TreeTrunk"
       },
@@ -9944,7 +8867,7 @@
         "y": -9.937501,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 797,
+        "zIndex": 714,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -9955,7 +8878,7 @@
         "y": -9.175,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 798,
+        "zIndex": 715,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -9966,7 +8889,7 @@
         "y": -9.175,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 799,
+        "zIndex": 716,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -9977,7 +8900,7 @@
         "y": -9.062501,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 800,
+        "zIndex": 717,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -9988,7 +8911,7 @@
         "y": -10.5,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 801,
+        "zIndex": 718,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -9999,7 +8922,7 @@
         "y": -9.9125,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 802,
+        "zIndex": 719,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -10012,7 +8935,7 @@
         "scaleY": 1.3574283,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 803,
+        "zIndex": 720,
         "layerName": "stuff",
         "imageName": "Tree"
       },
@@ -10025,7 +8948,7 @@
         "scaleY": 1.3574283,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 804,
+        "zIndex": 721,
         "layerName": "stuff",
         "imageName": "Tree"
       },
@@ -10038,7 +8961,7 @@
         "scaleY": 1.3574283,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 805,
+        "zIndex": 722,
         "layerName": "stuff",
         "imageName": "Tree"
       },
@@ -10051,7 +8974,7 @@
         "scaleY": 1.3574283,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 806,
+        "zIndex": 723,
         "layerName": "stuff",
         "imageName": "Tree"
       },
@@ -10064,7 +8987,7 @@
         "scaleY": 1.3574283,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 807,
+        "zIndex": 724,
         "layerName": "stuff",
         "imageName": "Tree"
       },
@@ -10077,7 +9000,7 @@
         "scaleY": 1.6435543,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 808,
+        "zIndex": 725,
         "layerName": "stuff",
         "imageName": "Tree"
       },
@@ -10088,7 +9011,7 @@
         "y": -9.2,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 809,
+        "zIndex": 726,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -10099,7 +9022,7 @@
         "y": -9.9125,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 810,
+        "zIndex": 727,
         "layerName": "stuff",
         "imageName": "DarkOakTree"
       },
@@ -10112,7 +9035,7 @@
         "scaleY": 1.3574283,
         "originX": 0.23125,
         "originY": 0.2625,
-        "zIndex": 811,
+        "zIndex": 728,
         "layerName": "stuff",
         "imageName": "Tree"
       }
@@ -10124,9 +9047,7 @@
       }
     ]
   },
-  "physicsPropertiesVO": {
-    "enabled": true
-  },
-  "verticalGuides": [ 26.834528, 18.347876, 24.106804, 17.25, 19.692535, 20.821089 ],
-  "horizontalGuides": [ 11.5, 11.5, -15.162173, -2, 4.797208, 5.087826, -14.362948, -13.347323, -12.331698, -11.323886, -10.312167, -9.296542, -8.292636, -7.25, -6.25, -5.206699, -2.3277922, -3.198886, -1.1793547, 0.81283265 ]
+  "physicsPropertiesVO": {},
+  "verticalGuides": [ 29.067541, 28.75, 29.067541, 17.25, 29.348791, 29 ],
+  "horizontalGuides": [ 13.562833, 13.75, -15.162173, -2, 13.453458, 13, -16.077793, -16.171543, -16, -16.187168, -15.624667, -16.937168, -8.292636, -7.25, -6.25, -5.206699, 3.5628326, -3.198886, -1.1793547, 0.81283265 ]
 }
