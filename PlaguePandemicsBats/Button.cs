@@ -44,7 +44,7 @@ namespace PlaguePandemicsBats
 
             mouse = Mouse.GetState();
             _rec = new Rectangle((int)_position.X - (_texture.Width / 2), (int)_position.Y - (_texture.Height / 2), _texture.Width, _texture.Height);
-        
+            
             if (mouseRec.Intersects(_rec))
             {
                 _color = new Color(180, 180, 180, 255);

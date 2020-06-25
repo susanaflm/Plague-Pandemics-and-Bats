@@ -152,11 +152,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\button.png" />
+    <Content Include="Content\creditsButton.png" />
+    <Content Include="Content\creditsButtonOnHover.png" />
     <Content Include="Content\Fullgrass.png" />
     <Content Include="Content\girlbutton.png" />
     <Content Include="Content\guybutton.png" />
     <Content Include="Content\mainmenu.png" />
     <Content Include="Content\menusong.wav" />
+    <Content Include="Content\optnButton.png" />
     <Content Include="Content\pandemics\assets\orig\images\BigHouseG.png" />
     <Content Include="Content\pandemics\assets\orig\images\BigHouseR.png" />
     <Content Include="Content\pandemics\assets\orig\images\BigTree.png" />
