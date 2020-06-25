@@ -55,7 +55,6 @@ namespace PlaguePandemicsBats
                 else if (image["imageName"].Value<string>() == "ZGirlD0")
                 {
                     PinkZombie pinkZombie = new PinkZombie(_game, new Vector2(x, y));
-                    _game.Enemies.Add(pinkZombie);
                 }
                 else
                 {

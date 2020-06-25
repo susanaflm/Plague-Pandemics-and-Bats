@@ -46,7 +46,7 @@ namespace PlaguePandemicsBats
         private SpriteManager _spriteManager;
         private CollisionManager _collisionManager;
         private Player _player;
-        private Bat _bat;
+        private SpawnerZombie _spZ;
         private Cat _cat;
         private Scene _scene;
         private Button _buttonPlay, _buttonQuit, _guyButton, _girlButton, _optnButton;
@@ -179,11 +179,10 @@ namespace PlaguePandemicsBats
 
             _ui = new UI(this);
             //_player = new Player(this, 1);
-            _bat = new Bat(this);
             _cat = new Cat(this);
+            _spZ = new SpawnerZombie(this, Vector2.One);
 
             /*ADDING TO LISTS*/
-            _enemies.Add(_bat);
             _friendlies.Add(_cat);
             _buttons.Add(_buttonPlay);
             _buttons.Add(_buttonQuit);

@@ -39,17 +39,15 @@ namespace PlaguePandemicsBats
             game.CollisionManager.Add(_enemyCollider);
         }
 
-        public override void Movement(GameTime gameTime)
+        internal override void Behaviour(GameTime gameTime)
         {
-            //TODO: Patrol Movement
-
             _position += _acceleration * gameTime.DeltaTime() * _enemyDirection[_direction];
 
-            float dist = Camera.PixelSize(Vector2.Distance(_originPosition, _position));
+            float dist = Math.Abs(Camera.PixelSize(Vector2.Distance(_originPosition, _position)));
 
             if (dist >= Camera.PixelSize(_patrolDistance))
                 _direction = Direction.Down;
-            else if (dist <= 0)
+            else if (dist <= 0.001)
                 _direction = Direction.Up;
         }
     }

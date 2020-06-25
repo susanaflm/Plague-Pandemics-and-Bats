@@ -23,9 +23,9 @@ namespace PlaguePandemicsBats
         internal Dictionary<Direction, Sprite[]> _spritesDirection;
         internal Sprite _currentSprite;
         internal Dictionary<Direction, Vector2> _enemyDirection;
+        internal bool isDead = false;
 
         private float _deltaTime = 0;
-
 
         public Enemy(Game1 game)
         {
@@ -38,13 +38,15 @@ namespace PlaguePandemicsBats
                 [Direction.Left] = -Vector2.UnitX,
                 [Direction.Right] = Vector2.UnitX
             };
+
+            _game.Enemies.Add(this);
         }
 
         /// <summary>
         /// This Function handles the movement of the enemy
         /// </summary>
         /// <param name="gameTime"></param>
-        public abstract void Movement(GameTime gameTime);
+        internal abstract void Behaviour(GameTime gameTime);
 
         internal void SetPosition(Vector2 position)
         {
@@ -65,8 +67,7 @@ namespace PlaguePandemicsBats
                     }
                     if (c.Tag == "Projectile")
                     {
-                        _game.CollisionManager.Remove(_enemyCollider);
-                        _game.Enemies.Remove(this);
+                        _health -= 10;
                     }
                 }
             }
@@ -78,7 +79,7 @@ namespace PlaguePandemicsBats
 
             _oldPosition = _position;
 
-            Movement(gameTime);
+            Behaviour(gameTime);
            
             _frame = (int)(_deltaTime * 6) % 3;
             if (_frame > 2)
@@ -87,6 +88,18 @@ namespace PlaguePandemicsBats
             _currentSprite = _spritesDirection[_direction][_frame];
             _currentSprite.SetPosition(_position);
             _enemyCollider.SetPosition(_position);
+
+            if (_health <= 0)
+            {
+                isDead = true;
+                Die();
+            }
+        }
+
+        internal void Die()
+        {
+            _game.CollisionManager.Remove(_enemyCollider);
+            _game.Enemies.Remove(this);
         }
 
         public void Draw(SpriteBatch sb)

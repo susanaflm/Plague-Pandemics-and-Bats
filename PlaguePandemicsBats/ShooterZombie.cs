@@ -13,9 +13,9 @@ namespace PlaguePandemicsBats
 
         private float range = 2.5f; //Range in Meters
 
-        public ShooterZombie(Game1 game) : base(game)
+        public ShooterZombie(Game1 game, Vector2 position) : base(game)
         {
-            _position = new Vector2(3, 0);
+            _position = position;
             _spritesDirection = new Dictionary<Direction, Sprite[]>
             {
                 [Direction.Up] = new[] { new Sprite(game, "ZGlassBoyU0", width: _zombieWidth), new Sprite(game, "ZGlassBoyU1", width: _zombieWidth), new Sprite(game, "ZGlassBoyU2", width: _zombieWidth) },
@@ -34,7 +34,7 @@ namespace PlaguePandemicsBats
             game.CollisionManager.Add(_enemyCollider);
         }
 
-        public override void Movement(GameTime gameTime)
+        internal override void Behaviour(GameTime gameTime)
         {
             //TODO: Shooting Range and Run Away movement
         }

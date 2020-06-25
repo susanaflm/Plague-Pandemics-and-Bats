@@ -15,9 +15,9 @@ namespace PlaguePandemicsBats
         private const float _batHeight = 0.3f;
 
         //private int _state = 0;
-        public Bat(Game1 game) : base(game)
+        public Bat(Game1 game, Vector2 position) : base(game)
         {
-            _position = new Vector2(3, 0);
+            _position = position;
             _spritesDirection = new Dictionary<Direction, Sprite[]>
             {
                 [Direction.Up] = new [] {new Sprite(game, "BatU", width: _batWidth, height: _batHeight), new Sprite(game, "BatUD", width: _batWidth, height: _batHeight), new Sprite(game, "BatUU", width: _batWidth, height: _batHeight) },
@@ -37,7 +37,7 @@ namespace PlaguePandemicsBats
             game.CollisionManager.Add(_enemyCollider);
         }
 
-        public override void Movement(GameTime gameTime)
+        internal override void Behaviour(GameTime gameTime)
         {
              Vector2 faceDir = _game.Player.Position - _position;
              float angle = (float)Math.Atan2(faceDir.Y, faceDir.X);
