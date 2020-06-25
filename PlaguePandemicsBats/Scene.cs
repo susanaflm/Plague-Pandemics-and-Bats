@@ -22,7 +22,6 @@ namespace PlaguePandemicsBats
         private List<Sprite> _sprites;
         #endregion
         public Player Player { get; }
-        public PinkZombie PinkZombie { get; }
         #region Constructor
         public Scene(Game1 game, string sceneFile)
         {
@@ -44,6 +43,8 @@ namespace PlaguePandemicsBats
                 float rotation = deg2Reg * (image ["rotation"]?.Value<float>() ?? 0f);
                 float scaleX = image ["scaleX"]?.Value<float>() ?? 1;
                 float scaleY = image ["scaleY"]?.Value<float>() ?? 1;
+                float originX = image["originX"].Value<float>();
+                float originY = image["originY"].Value<float>();
 
                 if (image ["itemIdentifier"]?.Value<string>() == "Player")
                 {
@@ -53,14 +54,15 @@ namespace PlaguePandemicsBats
                 }
                 else if (image["imageName"].Value<string>() == "ZGirlD0")
                 {
-                    PinkZombie = new PinkZombie(_game);
-                    PinkZombie.SetPosition(new Vector2(x, y));
+                    PinkZombie pinkZombie = new PinkZombie(_game, new Vector2(x, y));
+                    _game.Enemies.Add(pinkZombie);
                 }
                 else
                 {
                     Sprite sprite = new Sprite(_game, imgName, scale: new Vector2(scaleX, scaleY));
                     sprite.SetPosition(new Vector2(x, y));
                     sprite.SetRotation(rotation);
+                    sprite.ForceOrigin(new Vector2(originX, originY));
 
                     _sprites.Add(sprite);
 
@@ -77,7 +79,7 @@ namespace PlaguePandemicsBats
         #region Methods
         public void Draw(GameTime gameTime)
         {
-            _spriteBatch.Begin();
+            _spriteBatch.Begin(samplerState: SamplerState.PointClamp);
 
             foreach (Sprite s in Sprites.ToArray())
             {

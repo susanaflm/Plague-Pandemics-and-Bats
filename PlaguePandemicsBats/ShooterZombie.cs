@@ -36,7 +36,7 @@ namespace PlaguePandemicsBats
 
         public override void Movement(GameTime gameTime)
         {
-            throw new NotImplementedException();
+            //TODO: Shooting Range and Run Away movement
         }
     }
 }

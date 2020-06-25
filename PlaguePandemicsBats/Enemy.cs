@@ -22,9 +22,8 @@ namespace PlaguePandemicsBats
         internal int _frame = 0;
         internal Dictionary<Direction, Sprite[]> _spritesDirection;
         internal Sprite _currentSprite;
-     
+        internal Dictionary<Direction, Vector2> _enemyDirection;
 
-        private Dictionary<Direction, Vector2> _enemyDirection;
         private float _deltaTime = 0;
 
 

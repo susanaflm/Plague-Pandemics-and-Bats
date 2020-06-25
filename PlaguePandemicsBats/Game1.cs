@@ -46,7 +46,6 @@ namespace PlaguePandemicsBats
         private SpriteManager _spriteManager;
         private CollisionManager _collisionManager;
         private Player _player;
-        private PinkZombie _pinkZombie;
         private Bat _bat;
         private Cat _cat;
         private Scene _scene;
@@ -97,8 +96,6 @@ namespace PlaguePandemicsBats
         /// </summary>
         public Player Player => _player;
 
-        public PinkZombie PinkZombie => _pinkZombie;
-
         /// <summary>
         /// Get game's UI
         /// </summary>
@@ -143,6 +140,12 @@ namespace PlaguePandemicsBats
 
             _camera = new Camera(this, worldWidth: 10f);
 
+            /*LISTS*/
+            _enemies = new List<Enemy>();
+            _friendlies = new List<Cat>();
+            _buttons = new List<Button>();
+            _projectiles = new List<Projectile>();
+
             base.Initialize();
         }
 
@@ -162,7 +165,6 @@ namespace PlaguePandemicsBats
             SpriteManager.AddSpriteSheet("Fullgrass");
             _scene = new Scene(this, "MainScene");
             _player = _scene.Player;
-            _pinkZombie = _scene.PinkZombie;
 
             /*PAUSE STUFF*/
             _pausedTexture = Content.Load<Texture2D>("pause");
@@ -179,14 +181,9 @@ namespace PlaguePandemicsBats
             //_player = new Player(this, 1);
             _bat = new Bat(this);
             _cat = new Cat(this);
-            /*LISTS*/
-            _enemies = new List<Enemy>();
-            _friendlies = new List<Cat>();
-            _buttons = new List<Button>();
-            _projectiles = new List<Projectile>();
+
             /*ADDING TO LISTS*/
             _enemies.Add(_bat);
-            _enemies.Add(_pinkZombie);
             _friendlies.Add(_cat);
             _buttons.Add(_buttonPlay);
             _buttons.Add(_buttonQuit);

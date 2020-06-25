@@ -11,9 +11,14 @@ namespace PlaguePandemicsBats
     {
         private const float _zombieWidth = 0.4f;
 
-        public PinkZombie(Game1 game) : base(game)
+        private float _patrolDistance = 1f;
+        private Vector2 _originPosition;
+
+        public PinkZombie(Game1 game, Vector2 position) : base(game)
         {
-            _position = new Vector2(3, 0);
+            _position = position;
+            _originPosition = _position;
+
             _spritesDirection = new Dictionary<Direction, Sprite[]>
             {
                 [Direction.Up] = new[] { new Sprite(game, "ZGirlU0", width: _zombieWidth), new Sprite(game, "ZGirlU1", width: _zombieWidth), new Sprite(game, "ZGirlU2", width: _zombieWidth) },
@@ -22,9 +27,10 @@ namespace PlaguePandemicsBats
                 [Direction.Right] = new[] { new Sprite(game, "ZGirlR0", width: _zombieWidth), new Sprite(game, "ZGirlR1", width: _zombieWidth), new Sprite(game, "ZGirlR2", width: _zombieWidth) }
             };
 
-            _acceleration = 0.8f;
+            _acceleration = 0.5f;
             _health = 50;
             _damage = 20;
+            _direction = Direction.Up;
 
             _currentSprite = _spritesDirection[_direction][_frame];
 
@@ -37,7 +43,14 @@ namespace PlaguePandemicsBats
         {
             //TODO: Patrol Movement
 
+            _position += _acceleration * gameTime.DeltaTime() * _enemyDirection[_direction];
 
+            float dist = Camera.PixelSize(Vector2.Distance(_originPosition, _position));
+
+            if (dist >= Camera.PixelSize(_patrolDistance))
+                _direction = Direction.Down;
+            else if (dist <= 0)
+                _direction = Direction.Up;
         }
     }
 }
