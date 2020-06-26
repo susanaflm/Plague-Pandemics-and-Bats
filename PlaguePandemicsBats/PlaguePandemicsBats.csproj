@@ -154,6 +154,7 @@
     <Content Include="Content\button.png" />
     <Content Include="Content\creditsButton.png" />
     <Content Include="Content\creditsButtonOnHover.png" />
+    <Content Include="Content\die.wav" />
     <Content Include="Content\Fullgrass.png" />
     <Content Include="Content\girlbutton.png" />
     <Content Include="Content\guybutton.png" />

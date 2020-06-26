@@ -1,4 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Graphics;
 using System;
 using System.Collections.Generic;
@@ -11,7 +12,7 @@ namespace PlaguePandemicsBats
     public abstract class Enemy 
     {
         protected Game1 _game;
-
+        private SoundEffect _dieSound;
         internal Vector2 _position;
         internal Vector2 _oldPosition;
         internal Direction _direction = Direction.Down;
@@ -39,6 +40,7 @@ namespace PlaguePandemicsBats
                 [Direction.Right] = Vector2.UnitX
             };
 
+            _dieSound = _game.Content.Load<SoundEffect>("die");
             _game.Enemies.Add(this);
         }
 
@@ -98,6 +100,7 @@ namespace PlaguePandemicsBats
 
         internal void Die()
         {
+            _dieSound.Play();
             _game.CollisionManager.Remove(_enemyCollider);
             _game.Enemies.Remove(this);
         }

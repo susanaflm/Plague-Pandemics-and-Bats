@@ -49,6 +49,12 @@
 /processorParam:TextureFormat=Color
 /build:creditsButtonOnHover.png
 
+#begin die.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:die.wav
+
 #begin font.spritefont
 /importer:FontDescriptionImporter
 /processor:FontDescriptionProcessor

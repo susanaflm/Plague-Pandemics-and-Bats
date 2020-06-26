@@ -171,7 +171,7 @@ namespace PlaguePandemicsBats
             _pausedRect = new Rectangle(-1, 0, _pausedTexture.Width / 2, _pausedTexture.Height / 2);
 
             #region calculation top right
-            Vector2 _realSize = new Vector2(4, 3);
+            Vector2 _realSize = new Vector2(4, 3);            
             Vector2 camBottomRight = Camera.Target() + Camera.Size() / 2f;
 
             Vector2 topright = new Vector2(x: ((int)(camBottomRight.X / _realSize.X) + 1) * _realSize.X,
@@ -179,10 +179,10 @@ namespace PlaguePandemicsBats
             #endregion
 
             //buttons 
-            _buttonPlay = new Button(this, Content.Load<Texture2D>("play"), new Vector2(GraphicsDevice.Viewport.Width / 2, GraphicsDevice.Viewport.Height / 2)); 
+            _buttonPlay = new Button(this, Content.Load<Texture2D>("play"), new Vector2(GraphicsDevice.Viewport.Width / 2, GraphicsDevice.Viewport.Height / 1.8f)); 
             _highScoreButton = new Button(this, Content.Load<Texture2D>("button"), new Vector2(GraphicsDevice.Viewport.Width / 2, GraphicsDevice.Viewport.Height / 1.5f));
-            _buttonQuit = new Button(this, Content.Load<Texture2D>("quit"), new Vector2(GraphicsDevice.Viewport.Width / 2, GraphicsDevice.Viewport.Height / 1.2f));
-            _optnButton = new Button(this, Content.Load<Texture2D>("optnButton"), new Vector2(topright.X, topright.Y));
+            _buttonQuit = new Button(this, Content.Load<Texture2D>("quit"), new Vector2(GraphicsDevice.Viewport.Width / 2, GraphicsDevice.Viewport.Height / 1.3f));
+            _optnButton = new Button(this, Content.Load<Texture2D>("optnButton"),new Vector2(GraphicsDevice.Viewport.Width / 1.05f, GraphicsDevice.Viewport.Height / 5.7f));
             _guyButton = new Button(this, Content.Load<Texture2D>("guybutton"), new Vector2(3, 0));
             _girlButton = new Button(this, Content.Load<Texture2D>("girlbutton"), new Vector2(-1, 0));
            
@@ -196,6 +196,7 @@ namespace PlaguePandemicsBats
             _buttons.Add(_buttonPlay);
             _buttons.Add(_buttonQuit);
             _buttons.Add(_highScoreButton);
+            _buttons.Add(_optnButton);
             background = new TilingBackground(this, "Fullgrass", _realSize); ;
         }
 
@@ -227,8 +228,9 @@ namespace PlaguePandemicsBats
                 case GameState.MainMenu:
                     if (_buttonPlay.isClicked || KeyboardManager.IsKeyGoingDown(Keys.Enter))
                     {
-                        _gameState = GameState.Playing;
                         _playSound.Play();
+                        _gameState = GameState.Playing;
+                        
                     }
                         
                     _buttonPlay.Update(mouseState);
@@ -355,10 +357,8 @@ namespace PlaguePandemicsBats
 
                 _spriteBatch.Draw(_pausedTexture, _pausedRect, Color.White);
 
-                foreach (Button b in Buttons.ToArray())
-                {
-                    b.Draw(_spriteBatch);
-                }
+                _buttonPlay.Draw(_spriteBatch);
+                _buttonQuit.Draw(_spriteBatch);
             }
 
             if (_gameState == GameState.MainMenu)
