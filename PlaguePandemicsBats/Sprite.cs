@@ -10,6 +10,7 @@ namespace PlaguePandemicsBats
         private Texture2D texture; // Texture da SpriteSheet
         internal Rectangle bounds; // Posição na SpriteSheet
         private Vector2 origin;
+        //private Vector2 _scale = Vector2.One;
 
         internal string _spriteName;
         internal Vector2 size; // Tamanho em unidades "reais"
@@ -21,7 +22,7 @@ namespace PlaguePandemicsBats
         internal CircleCollider cCollider;
         internal AABBCollider aabbCollider;
 
-        public Sprite(Game1 game, string name, ColliderType colliderType = ColliderType.Circle, float width = 0, float height = 0, Vector2? scale = null, bool collides = false)
+        public Sprite(Game1 game, string name, ColliderType colliderType = ColliderType.OBB, float width = 0, float height = 0, Vector2? scale = null, bool collides = false)
         {
             _game = game;
             _spriteName = name;
@@ -38,7 +39,6 @@ namespace PlaguePandemicsBats
             }
 
             origin = bounds.Size.ToVector2() / 2f;
-
             
             // Se nao indicaram largura nem altura, dar erro
             if (!scale.HasValue && width == 0f && height == 0f)
@@ -46,6 +46,9 @@ namespace PlaguePandemicsBats
 
             if (scale.HasValue)
             {
+                //_scale = (Vector2)scale;
+                //width = bounds.Width / 80f;
+                //height = bounds.Height / 80f;
                 width = scale.Value.X * bounds.Width / 80f;
                 height = scale.Value.Y * bounds.Height / 80f;
             }
@@ -70,7 +73,7 @@ namespace PlaguePandemicsBats
                 if (colliderType == ColliderType.OBB)
                 {
                     obbCollider = new OBBCollider(game, name, position, size, rotation);
-                    obbCollider.SetDebug(false);
+                    obbCollider.SetDebug(true);
                     game.CollisionManager.Add(obbCollider);
                 }
                 else if (colliderType == ColliderType.AABB)
@@ -114,6 +117,17 @@ namespace PlaguePandemicsBats
 
         public void Draw(SpriteBatch spriteBatch)
         {
+            //spriteBatch.Draw(
+            //        texture,
+            //    new Rectangle(Camera.ToPixel(position + size * _scale / 2f).ToPoint(),
+            //        (Camera.ToLength(size * _scale)).ToPoint()),
+            //    bounds,
+            //    _color,
+            //    rotation,
+            //        origin,
+            //SpriteEffects.None,
+            //    0);
+
             spriteBatch.Draw(
                 texture,
                 new Rectangle(Camera.ToPixel(position).ToPoint(), Camera.ToLength(size).ToPoint()),

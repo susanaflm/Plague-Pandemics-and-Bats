@@ -136,6 +136,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="Content\minecraft.spritefont" />
+    <None Include="Content\NonTrimmed.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="Content\pandemics\assets\orig\pack\pack.atlas" />
     <None Include="Content\pandemics\export\orig\pack.atlas" />
     <None Include="Content\pandemics\export\project.dt" />
@@ -160,6 +163,7 @@
     <Content Include="Content\guybutton.png" />
     <Content Include="Content\mainmenu.png" />
     <Content Include="Content\menusong.wav" />
+    <Content Include="Content\NonTrimmed.png" />
     <Content Include="Content\optnButton.png" />
     <Content Include="Content\pandemics\assets\orig\images\BigHouseG.png" />
     <Content Include="Content\pandemics\assets\orig\images\BigHouseR.png" />

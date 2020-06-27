@@ -16,7 +16,6 @@ namespace PlaguePandemicsBats
         #region Private variables
         private const float deg2Reg = (float)Math.PI / 180f;
         private string _sceneName;
-        private int gender;
         private Game1 _game;
         private SpriteBatch _spriteBatch;        
         private List<Sprite> _sprites;
@@ -44,38 +43,30 @@ namespace PlaguePandemicsBats
                 float scaleX = image ["scaleX"]?.Value<float>() ?? 1;
                 float scaleY = image ["scaleY"]?.Value<float>() ?? 1;
                 float originX = image["originX"].Value<float>();
-                float originY = image["originY"].Value<float>();
-                string _collider = "collider";
+                float originY = image["originY"].Value<float>();;
 
                 if (image ["itemIdentifier"]?.Value<string>() == "Player")
                 {
                     Player = new Player(_game, 1);
                     Player.SetPosition(new Vector2(x, y));
-               
                 }
                 else if (image ["imageName"]?.Value<string>() == "ZGirlD0")
                 {
-                    PinkZombie pinkZombie = new PinkZombie(_game, new Vector2(x, y));
+                    new PinkZombie(_game, new Vector2(x, y));
                 }
-                else if (image["tags"].Value<JArray>().Equals(_collider))
+                else if (image ["tags"]?.Value<JArray>().ToString() == "collider")
                 {                
                     Sprite sprite = new Sprite(_game, imgName, scale: new Vector2(scaleX, scaleY), collides: true);
-                    sprite.SetPosition(new Vector2(x, y));
+                    sprite.SetPosition(new Vector2(x + sprite.size.X / 2, y + sprite.size.Y / 2));
                     sprite.SetRotation(rotation);
-                    sprite.ForceOrigin(new Vector2(originX, originY));
-
                     _sprites.Add(sprite);
-
                 }
                 else
                 {
                     Sprite sprite = new Sprite(_game, imgName, scale: new Vector2(scaleX, scaleY));
-                    sprite.SetPosition(new Vector2(x, y));
+                    sprite.SetPosition(new Vector2(x + sprite.size.X / 2, y + sprite.size.Y / 2));
                     sprite.SetRotation(rotation);
-                    sprite.ForceOrigin(new Vector2(originX, originY));
-
                     _sprites.Add(sprite);
-
                 }
 
             }

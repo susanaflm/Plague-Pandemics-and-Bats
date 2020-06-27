@@ -8,7 +8,7 @@ namespace PlaguePandemicsBats
     public class Projectile : DrawableGameComponent
     {
         private const float _projectileSpeed = 3f;
-        private const float _projectileWidth = 0.07f;
+        private const float _projectileWidth = 0.5f;
         private const float _maxDistance = 4f;
 
         private Game1 _game;
@@ -47,7 +47,7 @@ namespace PlaguePandemicsBats
                 [Direction.Right] = Vector2.UnitX
             };
 
-            _projectileCollider = new OBBCollider(game, "Projectile", _position, _sprite.size, _rotation);
+            _projectileCollider = new OBBCollider(game, "Projectile", _position, _sprite.size / 2f, _rotation);
             _projectileCollider.SetDebug(true);
             game.CollisionManager.Add(_projectileCollider);
         }

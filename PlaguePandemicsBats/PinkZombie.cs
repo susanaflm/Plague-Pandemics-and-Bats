@@ -9,7 +9,7 @@ namespace PlaguePandemicsBats
 {
     public class PinkZombie : Enemy
     {
-        private const float _zombieWidth = 0.4f;
+        private const float _zombieWidth = 0.5f;
 
         private float _patrolDistance = 1f;
         private Vector2 _originPosition;

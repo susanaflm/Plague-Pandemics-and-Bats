@@ -156,19 +156,26 @@ namespace PlaguePandemicsBats
         protected override void LoadContent()
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
+
             _spriteFont = Content.Load<SpriteFont>("minecraft");
-            _collisionManager = new CollisionManager();
             _playSound = Content.Load<SoundEffect>("playsound");
             _menuSound = Content.Load<SoundEffect>("menusong");
 
-            SpriteManager.AddSpriteSheet("texture");
-            SpriteManager.AddSpriteSheet("Fullgrass");
-            _scene = new Scene(this, "MainScene");
-            _player = _scene.Player;
-
-            /*PAUSE STUFF*/
+            //Pause Stuff
             _pausedTexture = Content.Load<Texture2D>("pause");
             _pausedRect = new Rectangle(-1, 0, _pausedTexture.Width / 2, _pausedTexture.Height / 2);
+
+            _collisionManager = new CollisionManager();
+
+            SpriteManager.AddSpriteSheet("NonTrimmed");
+            SpriteManager.AddSpriteSheet("Fullgrass");
+
+            _scene = new Scene(this, "MainScene");
+            _player = _scene.Player;
+            _ui = new UI(this);
+            _cat = new Cat(this);
+            _spZ = new SpawnerZombie(this, Vector2.One);
+            background = new TilingBackground(this, "Fullgrass", new Vector2(4));
 
             #region calculation top right
             Vector2 _realSize = new Vector2(4, 3);            
@@ -187,17 +194,12 @@ namespace PlaguePandemicsBats
             _girlButton = new Button(this, Content.Load<Texture2D>("girlbutton"), new Vector2(-1, 0));
            
 
-            _ui = new UI(this);
-            _cat = new Cat(this);
-            _spZ = new SpawnerZombie(this, Vector2.One);
-
-            /*ADDING TO LISTS*/
+            //Temporary List Adding
             _friendlies.Add(_cat);
             _buttons.Add(_buttonPlay);
             _buttons.Add(_buttonQuit);
             _buttons.Add(_highScoreButton);
             _buttons.Add(_optnButton);
-            background = new TilingBackground(this, "Fullgrass", _realSize); ;
         }
 
         /// <summary>

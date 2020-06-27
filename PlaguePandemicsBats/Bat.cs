@@ -11,7 +11,7 @@ namespace PlaguePandemicsBats
     class Bat : Enemy
     {
 
-        private const float _batWidth = 0.2f;
+        private const float _batWidth = 0.3f;
         private const float _batHeight = 0.3f;
 
         //private int _state = 0;

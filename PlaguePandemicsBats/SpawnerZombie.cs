@@ -9,7 +9,7 @@ namespace PlaguePandemicsBats
 {
     class SpawnerZombie : Enemy
     {
-        private const float _zombieWidth = 0.4f;
+        private const float _zombieWidth = 0.5f;
 
         private int _spawnQuantity = 3;
         private float _spawnRange = 3;

@@ -1,853 +1,860 @@
 
 pack.png
-size: 1024,256
+size: 2048,512
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
 BigHouseG
   rotate: false
-  xy: 354, 207
-  size: 39, 47
-  orig: 39, 47
+  xy: 1153, 262
+  size: 98, 117
+  orig: 98, 117
   offset: 0, 0
   index: -1
 BigHouseR
   rotate: false
-  xy: 292, 161
-  size: 42, 43
-  orig: 42, 43
+  xy: 1254, 403
+  size: 105, 107
+  orig: 105, 107
   offset: 0, 0
   index: -1
 BigTree
   rotate: false
-  xy: 982, 231
-  size: 19, 23
-  orig: 19, 23
+  xy: 1386, 337
+  size: 47, 58
+  orig: 47, 58
   offset: 0, 0
   index: -1
 BlueHouse
   rotate: false
-  xy: 949, 213
-  size: 31, 41
-  orig: 31, 41
+  xy: 260, 73
+  size: 78, 103
+  orig: 78, 103
   offset: 0, 0
   index: -1
 Building1
   rotate: false
-  xy: 176, 14
-  size: 43, 134
-  orig: 43, 134
+  xy: 936, 175
+  size: 107, 335
+  orig: 107, 335
   offset: 0, 0
   index: -1
 DarkOakTree
   rotate: false
-  xy: 931, 197
-  size: 15, 17
-  orig: 15, 17
+  xy: 897, 207
+  size: 37, 42
+  orig: 37, 42
   offset: 0, 0
   index: -1
 DragonBack
   rotate: false
-  xy: 469, 216
-  size: 38, 38
-  orig: 38, 38
+  xy: 1541, 414
+  size: 96, 96
+  orig: 96, 96
   offset: 0, 0
   index: -1
 DragonBackD
   rotate: false
-  xy: 509, 216
-  size: 38, 38
-  orig: 38, 38
+  xy: 1639, 414
+  size: 96, 96
+  orig: 96, 96
   offset: 0, 0
   index: -1
 DragonBackU
   rotate: false
-  xy: 549, 216
-  size: 38, 38
-  orig: 38, 38
+  xy: 1737, 414
+  size: 96, 96
+  orig: 96, 96
   offset: 0, 0
   index: -1
 DragonFront
   rotate: false
-  xy: 589, 216
-  size: 38, 38
-  orig: 38, 38
+  xy: 1835, 414
+  size: 96, 96
+  orig: 96, 96
   offset: 0, 0
   index: -1
 DragonFrontD
   rotate: false
-  xy: 629, 216
-  size: 38, 38
-  orig: 38, 38
+  xy: 1933, 414
+  size: 96, 96
+  orig: 96, 96
   offset: 0, 0
   index: -1
 DragonFrontU
   rotate: false
-  xy: 669, 216
-  size: 38, 38
-  orig: 38, 38
+  xy: 340, 89
+  size: 96, 96
+  orig: 96, 96
   offset: 0, 0
   index: -1
 DragonL
   rotate: false
-  xy: 709, 216
-  size: 38, 38
-  orig: 38, 38
+  xy: 438, 89
+  size: 96, 96
+  orig: 96, 96
   offset: 0, 0
   index: -1
 DragonLD
   rotate: false
-  xy: 749, 216
-  size: 38, 38
-  orig: 38, 38
+  xy: 536, 89
+  size: 96, 96
+  orig: 96, 96
   offset: 0, 0
   index: -1
 DragonLU
   rotate: false
-  xy: 789, 216
-  size: 38, 38
-  orig: 38, 38
+  xy: 1045, 126
+  size: 96, 96
+  orig: 96, 96
   offset: 0, 0
   index: -1
 DragonR
   rotate: false
-  xy: 829, 216
-  size: 38, 38
-  orig: 38, 38
+  xy: 1153, 164
+  size: 96, 96
+  orig: 96, 96
   offset: 0, 0
   index: -1
 DragonRD
   rotate: false
-  xy: 869, 216
-  size: 38, 38
-  orig: 38, 38
+  xy: 1143, 66
+  size: 96, 96
+  orig: 96, 96
   offset: 0, 0
   index: -1
 DragonRU
   rotate: false
-  xy: 909, 216
-  size: 38, 38
-  orig: 38, 38
+  xy: 1254, 305
+  size: 96, 96
+  orig: 96, 96
   offset: 0, 0
   index: -1
 Fullgrass
   rotate: false
-  xy: 351, 172
-  size: 18, 18
-  orig: 18, 18
+  xy: 843, 155
+  size: 44, 44
+  orig: 44, 44
   offset: 0, 0
   index: -1
 grassSquare
   rotate: false
-  xy: 351, 172
-  size: 18, 18
-  orig: 18, 18
+  xy: 843, 155
+  size: 44, 44
+  orig: 44, 44
   offset: 0, 0
   index: -1
 GD0
   rotate: false
-  xy: 250, 130
-  size: 19, 20
-  orig: 19, 20
+  xy: 1484, 346
+  size: 48, 49
+  orig: 48, 49
   offset: 0, 0
   index: -1
 GD1
   rotate: false
-  xy: 229, 106
-  size: 19, 20
-  orig: 19, 20
+  xy: 52, 4
+  size: 48, 49
+  orig: 48, 49
   offset: 0, 0
   index: -1
 GD2
   rotate: false
-  xy: 250, 108
-  size: 19, 20
-  orig: 19, 20
+  xy: 102, 4
+  size: 48, 49
+  orig: 48, 49
   offset: 0, 0
   index: -1
 GRass
   rotate: false
-  xy: 313, 56
-  size: 19, 19
-  orig: 19, 19
+  xy: 1241, 105
+  size: 48, 48
+  orig: 48, 48
   offset: 0, 0
   index: -1
 GirlD0
   rotate: false
-  xy: 229, 85
-  size: 19, 19
-  orig: 19, 19
+  xy: 152, 5
+  size: 48, 48
+  orig: 48, 48
   offset: 0, 0
   index: -1
 GirlD1
   rotate: false
-  xy: 221, 64
-  size: 19, 19
-  orig: 19, 19
+  xy: 202, 5
+  size: 48, 48
+  orig: 48, 48
   offset: 0, 0
   index: -1
 GirlD2
   rotate: false
-  xy: 221, 43
-  size: 19, 19
-  orig: 19, 19
+  xy: 1253, 255
+  size: 48, 48
+  orig: 48, 48
   offset: 0, 0
   index: -1
 GirlL0
   rotate: false
-  xy: 221, 22
-  size: 19, 19
-  orig: 19, 19
+  xy: 1251, 205
+  size: 48, 48
+  orig: 48, 48
   offset: 0, 0
   index: -1
 GirlL1
   rotate: false
-  xy: 292, 77
-  size: 19, 19
-  orig: 19, 19
+  xy: 1301, 205
+  size: 48, 48
+  orig: 48, 48
   offset: 0, 0
   index: -1
 GirlL2
   rotate: false
-  xy: 313, 77
-  size: 19, 19
-  orig: 19, 19
+  xy: 1251, 155
+  size: 48, 48
+  orig: 48, 48
   offset: 0, 0
   index: -1
 GirlR0
   rotate: false
-  xy: 271, 68
-  size: 19, 19
-  orig: 19, 19
+  xy: 1301, 155
+  size: 48, 48
+  orig: 48, 48
   offset: 0, 0
   index: -1
 GirlR1
   rotate: false
-  xy: 250, 66
-  size: 19, 19
-  orig: 19, 19
+  xy: 647, 201
+  size: 48, 48
+  orig: 48, 48
   offset: 0, 0
   index: -1
 GirlR2
   rotate: false
-  xy: 242, 45
-  size: 19, 19
-  orig: 19, 19
+  xy: 697, 201
+  size: 48, 48
+  orig: 48, 48
   offset: 0, 0
   index: -1
 GirlU0
   rotate: false
-  xy: 242, 24
-  size: 19, 19
-  orig: 19, 19
+  xy: 747, 201
+  size: 48, 48
+  orig: 48, 48
   offset: 0, 0
   index: -1
 GirlU1
   rotate: false
-  xy: 242, 3
-  size: 19, 19
-  orig: 19, 19
+  xy: 797, 201
+  size: 48, 48
+  orig: 48, 48
   offset: 0, 0
   index: -1
 GirlU2
   rotate: false
-  xy: 292, 56
-  size: 19, 19
-  orig: 19, 19
+  xy: 847, 201
+  size: 48, 48
+  orig: 48, 48
   offset: 0, 0
   index: -1
 Grasscomparison
   rotate: false
-  xy: 2, 18
-  size: 128, 101
-  orig: 128, 101
+  xy: 336, 257
+  size: 319, 253
+  orig: 319, 253
   offset: 0, 0
   index: -1
 GuyD0
   rotate: false
-  xy: 271, 47
-  size: 19, 19
-  orig: 19, 19
+  xy: 1291, 105
+  size: 48, 48
+  orig: 48, 48
   offset: 0, 0
   index: -1
 GuyD1
   rotate: false
-  xy: 263, 26
-  size: 19, 19
-  orig: 19, 19
+  xy: 1241, 55
+  size: 48, 48
+  orig: 48, 48
   offset: 0, 0
   index: -1
 GuyD2
   rotate: false
-  xy: 263, 5
-  size: 19, 19
-  orig: 19, 19
+  xy: 1291, 55
+  size: 48, 48
+  orig: 48, 48
   offset: 0, 0
   index: -1
 GuyL0
   rotate: false
-  xy: 292, 35
-  size: 19, 19
-  orig: 19, 19
+  xy: 1341, 96
+  size: 48, 48
+  orig: 48, 48
   offset: 0, 0
   index: -1
 GuyL1
   rotate: false
-  xy: 313, 35
-  size: 19, 19
-  orig: 19, 19
+  xy: 1341, 46
+  size: 48, 48
+  orig: 48, 48
   offset: 0, 0
   index: -1
 GuyL2
   rotate: false
-  xy: 284, 14
-  size: 19, 19
-  orig: 19, 19
+  xy: 1386, 287
+  size: 48, 48
+  orig: 48, 48
   offset: 0, 0
   index: -1
 GuyR0
   rotate: false
-  xy: 305, 14
-  size: 19, 19
-  orig: 19, 19
+  xy: 1541, 364
+  size: 48, 48
+  orig: 48, 48
   offset: 0, 0
   index: -1
 GuyR1
   rotate: false
-  xy: 326, 14
-  size: 19, 19
-  orig: 19, 19
+  xy: 1591, 364
+  size: 48, 48
+  orig: 48, 48
   offset: 0, 0
   index: -1
 GuyR2
   rotate: false
-  xy: 469, 195
-  size: 19, 19
-  orig: 19, 19
+  xy: 1641, 364
+  size: 48, 48
+  orig: 48, 48
   offset: 0, 0
   index: -1
 GuyU0
   rotate: false
-  xy: 490, 195
-  size: 19, 19
-  orig: 19, 19
+  xy: 1691, 364
+  size: 48, 48
+  orig: 48, 48
   offset: 0, 0
   index: -1
 GuyU1
   rotate: false
-  xy: 511, 195
-  size: 19, 19
-  orig: 19, 19
+  xy: 1741, 364
+  size: 48, 48
+  orig: 48, 48
   offset: 0, 0
   index: -1
 GuyU2
   rotate: false
-  xy: 532, 195
-  size: 19, 19
-  orig: 19, 19
+  xy: 1791, 364
+  size: 48, 48
+  orig: 48, 48
   offset: 0, 0
   index: -1
 HollowFence
   rotate: false
-  xy: 30, 10
-  size: 12, 6
-  orig: 12, 6
+  xy: 768, 135
+  size: 31, 14
+  orig: 31, 14
   offset: 0, 0
   index: -1
 HorizontalFence
   rotate: false
-  xy: 176, 6
-  size: 13, 6
-  orig: 13, 6
+  xy: 260, 57
+  size: 33, 14
+  orig: 33, 14
   offset: 0, 0
   index: -1
 Needle
   rotate: false
-  xy: 2, 121
-  size: 133, 133
-  orig: 133, 133
+  xy: 2, 178
+  size: 332, 332
+  orig: 332, 332
   offset: 0, 0
   index: -1
 OrangeTree
   rotate: false
-  xy: 1003, 231
-  size: 19, 23
-  orig: 19, 23
+  xy: 1435, 337
+  size: 47, 58
+  orig: 47, 58
   offset: 0, 0
   index: -1
 RedH
   rotate: false
-  xy: 250, 152
-  size: 40, 52
-  orig: 40, 52
+  xy: 1153, 381
+  size: 99, 129
+  orig: 99, 129
   offset: 0, 0
   index: -1
 SnowTree
   rotate: false
-  xy: 931, 178
-  size: 15, 17
-  orig: 15, 17
+  xy: 252, 2
+  size: 37, 42
+  orig: 37, 42
   offset: 0, 0
   index: -1
 StairRIGHT
   rotate: false
-  xy: 150, 121
-  size: 11, 27
-  orig: 11, 27
+  xy: 1352, 246
+  size: 27, 67
+  orig: 27, 67
   offset: 0, 0
   index: -1
 Tree
   rotate: false
-  xy: 413, 190
-  size: 15, 17
-  orig: 15, 17
+  xy: 291, 2
+  size: 37, 42
+  orig: 37, 42
   offset: 0, 0
   index: -1
 TreeTrunk
   rotate: false
-  xy: 284, 5
-  size: 12, 7
-  orig: 12, 7
+  xy: 634, 90
+  size: 30, 17
+  orig: 30, 17
   offset: 0, 0
   index: -1
 VerticalWAll
   rotate: false
-  xy: 336, 172
-  size: 13, 32
-  orig: 13, 32
+  xy: 1352, 315
+  size: 32, 80
+  orig: 32, 80
   offset: 0, 0
   index: -1
 Water
   rotate: false
-  xy: 553, 195
-  size: 19, 19
-  orig: 19, 19
+  xy: 1841, 364
+  size: 48, 48
+  orig: 48, 48
   offset: 0, 0
   index: -1
 WhiteBridge
   rotate: false
-  xy: 250, 206
-  size: 102, 48
-  orig: 102, 48
+  xy: 2, 55
+  size: 256, 121
+  orig: 256, 121
   offset: 0, 0
   index: -1
 ZGirlD0
   rotate: false
-  xy: 574, 195
-  size: 19, 19
-  orig: 19, 19
+  xy: 1891, 364
+  size: 48, 48
+  orig: 48, 48
   offset: 0, 0
   index: -1
 ZGirlD1
   rotate: false
-  xy: 595, 195
-  size: 19, 19
-  orig: 19, 19
+  xy: 1941, 364
+  size: 48, 48
+  orig: 48, 48
   offset: 0, 0
   index: -1
 ZGirlD2
   rotate: false
-  xy: 616, 195
-  size: 19, 19
-  orig: 19, 19
+  xy: 1534, 314
+  size: 48, 48
+  orig: 48, 48
   offset: 0, 0
   index: -1
 ZGirlL0
   rotate: false
-  xy: 637, 195
-  size: 19, 19
-  orig: 19, 19
+  xy: 1584, 314
+  size: 48, 48
+  orig: 48, 48
   offset: 0, 0
   index: -1
 ZGirlL1
   rotate: false
-  xy: 658, 195
-  size: 19, 19
-  orig: 19, 19
+  xy: 1634, 314
+  size: 48, 48
+  orig: 48, 48
   offset: 0, 0
   index: -1
 ZGirlL2
   rotate: false
-  xy: 679, 195
-  size: 19, 19
-  orig: 19, 19
+  xy: 1684, 314
+  size: 48, 48
+  orig: 48, 48
   offset: 0, 0
   index: -1
 ZGirlR0
   rotate: false
-  xy: 700, 195
-  size: 19, 19
-  orig: 19, 19
+  xy: 1734, 314
+  size: 48, 48
+  orig: 48, 48
   offset: 0, 0
   index: -1
 ZGirlR1
   rotate: false
-  xy: 721, 195
-  size: 19, 19
-  orig: 19, 19
+  xy: 1784, 314
+  size: 48, 48
+  orig: 48, 48
   offset: 0, 0
   index: -1
 ZGirlR2
   rotate: false
-  xy: 742, 195
-  size: 19, 19
-  orig: 19, 19
+  xy: 1834, 314
+  size: 48, 48
+  orig: 48, 48
   offset: 0, 0
   index: -1
 ZGirlU0
   rotate: false
-  xy: 763, 195
-  size: 19, 19
-  orig: 19, 19
+  xy: 1884, 314
+  size: 48, 48
+  orig: 48, 48
   offset: 0, 0
   index: -1
 ZGirlU1
   rotate: false
-  xy: 784, 195
-  size: 19, 19
-  orig: 19, 19
+  xy: 1934, 314
+  size: 48, 48
+  orig: 48, 48
   offset: 0, 0
   index: -1
 ZGirlU2
   rotate: false
-  xy: 805, 195
-  size: 19, 19
-  orig: 19, 19
+  xy: 1984, 314
+  size: 48, 48
+  orig: 48, 48
   offset: 0, 0
   index: -1
 ZGlassBoyD0
   rotate: false
-  xy: 826, 195
-  size: 19, 19
-  orig: 19, 19
+  xy: 1584, 264
+  size: 48, 48
+  orig: 48, 48
   offset: 0, 0
   index: -1
 ZGlassBoyD1
   rotate: false
-  xy: 847, 195
-  size: 19, 19
-  orig: 19, 19
+  xy: 1634, 264
+  size: 48, 48
+  orig: 48, 48
   offset: 0, 0
   index: -1
 ZGlassBoyD2
   rotate: false
-  xy: 868, 195
-  size: 19, 19
-  orig: 19, 19
+  xy: 1684, 264
+  size: 48, 48
+  orig: 48, 48
   offset: 0, 0
   index: -1
 ZGlassBoyL0
   rotate: false
-  xy: 889, 195
-  size: 19, 19
-  orig: 19, 19
+  xy: 1734, 264
+  size: 48, 48
+  orig: 48, 48
   offset: 0, 0
   index: -1
 ZGlassBoyL1
   rotate: false
-  xy: 910, 195
-  size: 19, 19
-  orig: 19, 19
+  xy: 1784, 264
+  size: 48, 48
+  orig: 48, 48
   offset: 0, 0
   index: -1
 ZGlassBoyL2
   rotate: false
-  xy: 948, 192
-  size: 19, 19
-  orig: 19, 19
+  xy: 1834, 264
+  size: 48, 48
+  orig: 48, 48
   offset: 0, 0
   index: -1
 ZGlassBoyR0
   rotate: false
-  xy: 334, 133
-  size: 19, 19
-  orig: 19, 19
+  xy: 1884, 264
+  size: 48, 48
+  orig: 48, 48
   offset: 0, 0
   index: -1
 ZGlassBoyR1
   rotate: false
-  xy: 334, 112
-  size: 19, 19
-  orig: 19, 19
+  xy: 1934, 264
+  size: 48, 48
+  orig: 48, 48
   offset: 0, 0
   index: -1
 ZGlassBoyR2
   rotate: false
-  xy: 334, 91
-  size: 19, 19
-  orig: 19, 19
+  xy: 1984, 264
+  size: 48, 48
+  orig: 48, 48
   offset: 0, 0
   index: -1
 ZGlassBoyU0
   rotate: false
-  xy: 334, 70
-  size: 19, 19
-  orig: 19, 19
+  xy: 1534, 216
+  size: 48, 48
+  orig: 48, 48
   offset: 0, 0
   index: -1
 ZGlassBoyU1
   rotate: false
-  xy: 334, 49
-  size: 19, 19
-  orig: 19, 19
+  xy: 1584, 214
+  size: 48, 48
+  orig: 48, 48
   offset: 0, 0
   index: -1
 ZGlassBoyU2
   rotate: false
-  xy: 969, 189
-  size: 19, 19
-  orig: 19, 19
+  xy: 1634, 214
+  size: 48, 48
+  orig: 48, 48
   offset: 0, 0
   index: -1
 ZGuyD0
   rotate: false
-  xy: 990, 189
-  size: 19, 19
-  orig: 19, 19
+  xy: 1684, 214
+  size: 48, 48
+  orig: 48, 48
   offset: 0, 0
   index: -1
 ZGuyD1
   rotate: false
-  xy: 355, 151
-  size: 19, 19
-  orig: 19, 19
+  xy: 1734, 214
+  size: 48, 48
+  orig: 48, 48
   offset: 0, 0
   index: -1
 ZGuyD2
   rotate: false
-  xy: 355, 130
-  size: 19, 19
-  orig: 19, 19
+  xy: 1784, 214
+  size: 48, 48
+  orig: 48, 48
   offset: 0, 0
   index: -1
 ZGuyL0
   rotate: false
-  xy: 355, 109
-  size: 19, 19
-  orig: 19, 19
+  xy: 1834, 214
+  size: 48, 48
+  orig: 48, 48
   offset: 0, 0
   index: -1
 ZGuyL1
   rotate: false
-  xy: 355, 88
-  size: 19, 19
-  orig: 19, 19
+  xy: 1884, 214
+  size: 48, 48
+  orig: 48, 48
   offset: 0, 0
   index: -1
 ZGuyL2
   rotate: false
-  xy: 355, 67
-  size: 19, 19
-  orig: 19, 19
+  xy: 1934, 214
+  size: 48, 48
+  orig: 48, 48
   offset: 0, 0
   index: -1
 ZGuyR0
   rotate: false
-  xy: 355, 46
-  size: 19, 19
-  orig: 19, 19
+  xy: 1984, 214
+  size: 48, 48
+  orig: 48, 48
   offset: 0, 0
   index: -1
 ZGuyR1
   rotate: false
-  xy: 371, 186
-  size: 19, 19
-  orig: 19, 19
+  xy: 340, 39
+  size: 48, 48
+  orig: 48, 48
   offset: 0, 0
   index: -1
 ZGuyR2
   rotate: false
-  xy: 948, 171
-  size: 19, 19
-  orig: 19, 19
+  xy: 390, 39
+  size: 48, 48
+  orig: 48, 48
   offset: 0, 0
   index: -1
 ZGuyU0
   rotate: false
-  xy: 969, 168
-  size: 19, 19
-  orig: 19, 19
+  xy: 440, 39
+  size: 48, 48
+  orig: 48, 48
   offset: 0, 0
   index: -1
 ZGuyU1
   rotate: false
-  xy: 990, 168
-  size: 19, 19
-  orig: 19, 19
+  xy: 490, 39
+  size: 48, 48
+  orig: 48, 48
   offset: 0, 0
   index: -1
 ZGuyU2
   rotate: false
-  xy: 392, 186
-  size: 19, 19
-  orig: 19, 19
+  xy: 540, 39
+  size: 48, 48
+  orig: 48, 48
+  offset: 0, 0
+  index: -1
+button
+  rotate: false
+  xy: 336, 187
+  size: 279, 68
+  orig: 279, 68
   offset: 0, 0
   index: -1
 catD0
   rotate: false
-  xy: 271, 131
-  size: 19, 19
-  orig: 19, 19
+  xy: 1303, 255
+  size: 47, 48
+  orig: 47, 48
   offset: 0, 0
   index: -1
 catD1
   rotate: false
-  xy: 292, 140
-  size: 19, 19
-  orig: 19, 19
+  xy: 1351, 196
+  size: 47, 48
+  orig: 47, 48
   offset: 0, 0
   index: -1
 catD2
   rotate: false
-  xy: 271, 110
-  size: 19, 19
-  orig: 19, 19
+  xy: 1351, 146
+  size: 47, 48
+  orig: 47, 48
   offset: 0, 0
   index: -1
 catL0
   rotate: false
-  xy: 292, 119
-  size: 19, 19
-  orig: 19, 19
+  xy: 1436, 287
+  size: 47, 48
+  orig: 47, 48
   offset: 0, 0
   index: -1
 catL1
   rotate: false
-  xy: 313, 140
-  size: 19, 19
-  orig: 19, 19
+  xy: 1485, 296
+  size: 47, 48
+  orig: 47, 48
   offset: 0, 0
   index: -1
 catL2
   rotate: false
-  xy: 313, 119
-  size: 19, 19
-  orig: 19, 19
+  xy: 1991, 364
+  size: 47, 48
+  orig: 47, 48
   offset: 0, 0
   index: -1
 catR0
   rotate: false
-  xy: 982, 210
-  size: 19, 19
-  orig: 19, 19
+  xy: 1485, 246
+  size: 47, 48
+  orig: 47, 48
   offset: 0, 0
   index: -1
 catR1
   rotate: false
-  xy: 1003, 210
-  size: 19, 19
-  orig: 19, 19
+  xy: 590, 39
+  size: 47, 48
+  orig: 47, 48
   offset: 0, 0
   index: -1
 catR2
   rotate: false
-  xy: 292, 98
-  size: 19, 19
-  orig: 19, 19
+  xy: 647, 151
+  size: 47, 48
+  orig: 47, 48
   offset: 0, 0
   index: -1
 catU0
   rotate: false
-  xy: 313, 98
-  size: 19, 19
-  orig: 19, 19
+  xy: 696, 151
+  size: 47, 48
+  orig: 47, 48
   offset: 0, 0
   index: -1
 catU1
   rotate: false
-  xy: 271, 89
-  size: 19, 19
-  orig: 19, 19
+  xy: 745, 151
+  size: 47, 48
+  orig: 47, 48
   offset: 0, 0
   index: -1
 catU2
   rotate: false
-  xy: 250, 87
-  size: 19, 19
-  orig: 19, 19
+  xy: 794, 151
+  size: 47, 48
+  orig: 47, 48
   offset: 0, 0
   index: -1
 cure
   rotate: false
-  xy: 229, 128
-  size: 19, 20
-  orig: 19, 20
+  xy: 2, 4
+  size: 48, 49
+  orig: 48, 49
   offset: 0, 0
   index: -1
 floor
   rotate: false
-  xy: 336, 154
-  size: 17, 16
-  orig: 17, 16
+  xy: 634, 109
+  size: 42, 40
+  orig: 42, 40
   offset: 0, 0
   index: -1
 garlic
   rotate: false
-  xy: 2, 4
-  size: 12, 12
-  orig: 12, 12
+  xy: 711, 120
+  size: 29, 29
+  orig: 29, 29
   offset: 0, 0
   index: -1
 grave
   rotate: false
-  xy: 16, 4
-  size: 12, 12
-  orig: 12, 12
+  xy: 678, 120
+  size: 31, 29
+  orig: 31, 29
   offset: 0, 0
   index: -1
 houseG
   rotate: false
-  xy: 433, 209
-  size: 34, 45
-  orig: 34, 45
+  xy: 1453, 397
+  size: 86, 113
+  orig: 86, 113
   offset: 0, 0
   index: -1
 houseR
   rotate: false
-  xy: 395, 209
-  size: 36, 45
-  orig: 36, 45
+  xy: 1361, 397
+  size: 90, 113
+  orig: 90, 113
   offset: 0, 0
   index: -1
 pinkB
   rotate: false
-  xy: 137, 150
-  size: 111, 104
-  orig: 111, 104
+  xy: 657, 251
+  size: 277, 259
+  orig: 277, 259
   offset: 0, 0
   index: -1
 sTAIRlEFT
   rotate: false
-  xy: 137, 121
-  size: 11, 27
-  orig: 11, 27
+  xy: 617, 188
+  size: 28, 67
+  orig: 28, 67
   offset: 0, 0
   index: -1
 tallB
   rotate: false
-  xy: 132, 5
-  size: 42, 114
-  orig: 42, 114
+  xy: 1045, 224
+  size: 106, 286
+  orig: 106, 286
   offset: 0, 0
   index: -1
 vaccinePoc
   rotate: false
-  xy: 334, 35
-  size: 10, 12
-  orig: 10, 12
+  xy: 742, 120
+  size: 24, 29
+  orig: 24, 29
   offset: 0, 0
   index: -1
 verticalFence
   rotate: false
-  xy: 221, 102
+  xy: 1143, 176
   size: 6, 46
   orig: 6, 46
   offset: 0, 0
   index: -1
 waterPoddle
   rotate: false
-  xy: 221, 2
-  size: 19, 18
-  orig: 19, 18
+  xy: 1534, 266
+  size: 48, 46
+  orig: 48, 46
   offset: 0, 0
   index: -1

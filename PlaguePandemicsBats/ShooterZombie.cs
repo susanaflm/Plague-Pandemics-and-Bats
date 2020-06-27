@@ -9,7 +9,7 @@ namespace PlaguePandemicsBats
 {
     class ShooterZombie : Enemy
     {
-        private const float _zombieWidth = 0.4f;
+        private const float _zombieWidth = 0.5f;
 
         private float range = 2.5f; //Range in Meters
 
