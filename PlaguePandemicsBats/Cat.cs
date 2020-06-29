@@ -12,8 +12,8 @@ namespace PlaguePandemicsBats
     public class Cat
     {
         #region Private variables
-        private const float _catWidth = 0.5f;
-        private const float _catHeight = 0.5f;
+        private const float _catWidth = 0.4f;
+        private const float _catHeight = 0.3f;
        
         private Game1 _game;
         private Vector2 _position;
@@ -36,8 +36,8 @@ namespace PlaguePandemicsBats
             _position = new Vector2(-3, 0);
             _spritesDirection = new Dictionary<Direction, Sprite []>
             {
-                [Direction.Up] = new [] { new Sprite(game, "catU0", width: 0.5f, height: _catHeight), new Sprite(game, "catU1", width: 0.5f, height: _catHeight), new Sprite(game, "catU2", width: 0.5f, height: _catHeight) },
-                [Direction.Down] = new [] { new Sprite(game, "catD0", width: 0.5f, height: _catHeight), new Sprite(game, "catD1", width: 0.5f, height: _catHeight), new Sprite(game, "catD2", width: 0.5f, height: _catHeight) },
+                [Direction.Up] = new [] { new Sprite(game, "catU0", width: 0.2f, height: _catHeight), new Sprite(game, "catU1", width: 0.2f, height: _catHeight), new Sprite(game, "catU2", width: 0.2f, height: _catHeight) },
+                [Direction.Down] = new [] { new Sprite(game, "catD0", width: 0.2f, height: _catHeight), new Sprite(game, "catD1", width: 0.2f, height: _catHeight), new Sprite(game, "catD2", width: 0.2f, height: _catHeight) },
                 [Direction.Left] = new [] { new Sprite(game, "catL0", width: _catWidth, height: _catHeight), new Sprite(game, "catL1", width: _catWidth, height: _catHeight), new Sprite(game, "catL2", width: _catWidth, height: _catHeight) },
                 [Direction.Right] = new [] { new Sprite(game, "catR0", width: _catWidth, height: _catHeight), new Sprite(game, "catR1", width: _catWidth, height: _catHeight), new Sprite(game, "catR2", width: _catWidth, height: _catHeight) }
             };

@@ -12,7 +12,7 @@ namespace PlaguePandemicsBats
     public abstract class Enemy 
     {
         protected Game1 _game;
-        private SoundEffect _dieSound;
+
         internal Vector2 _position;
         internal Vector2 _oldPosition;
         internal Direction _direction = Direction.Down;
@@ -27,6 +27,7 @@ namespace PlaguePandemicsBats
         internal bool isDead = false;
 
         private float _deltaTime = 0;
+        private SoundEffect _dieSound;
 
         public Enemy(Game1 game)
         {
@@ -50,12 +51,20 @@ namespace PlaguePandemicsBats
         /// <param name="gameTime"></param>
         internal abstract void Behaviour(GameTime gameTime);
 
+        /// <summary>
+        /// Function to be used when setting the enemy's position
+        /// </summary>
+        /// <param name="position"></param>
         internal void SetPosition(Vector2 position)
         {
             _position = position;
             _enemyCollider.SetPosition(position);
         }
 
+        /// <summary>
+        /// Update that occurs after the collider check
+        /// </summary>
+        /// <param name="gameTime"></param>
         public virtual void LateUpdate(GameTime gameTime)
         {
             if (_enemyCollider._inCollision)
@@ -75,18 +84,26 @@ namespace PlaguePandemicsBats
             }
         }
 
+        /// <summary>
+        /// Update Function
+        /// </summary>
+        /// <param name="gameTime"></param>
         public void Update(GameTime gameTime)
         {
             _deltaTime += gameTime.DeltaTime();
 
             _oldPosition = _position;
 
-            Behaviour(gameTime);
-           
-            _frame = (int)(_deltaTime * 6) % 3;
-            if (_frame > 2)
-                _frame = 0;
+            if (Vector2.DistanceSquared(_position, _game.Player.Position) <= 36f)
+                Behaviour(gameTime);
 
+            if (_position != _oldPosition)
+            {
+                _frame = (int)(_deltaTime * 6) % 3;
+                if (_frame > 2)
+                    _frame = 0;
+            }
+            
             _currentSprite = _spritesDirection[_direction][_frame];
             _currentSprite.SetPosition(_position);
             _enemyCollider.SetPosition(_position);
@@ -98,6 +115,9 @@ namespace PlaguePandemicsBats
             }
         }
 
+        /// <summary>
+        /// Handles the enemy dying sequence
+        /// </summary>
         internal void Die()
         {
             _dieSound.Play();
@@ -105,6 +125,10 @@ namespace PlaguePandemicsBats
             _game.Enemies.Remove(this);
         }
 
+        /// <summary>
+        /// Draws the sprite
+        /// </summary>
+        /// <param name="sb"></param>
         public void Draw(SpriteBatch sb)
         {
             _currentSprite.Draw(sb);

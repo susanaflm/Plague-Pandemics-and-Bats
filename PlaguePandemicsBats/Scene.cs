@@ -42,8 +42,8 @@ namespace PlaguePandemicsBats
                 float rotation = deg2Reg * (image ["rotation"]?.Value<float>() ?? 0f);
                 float scaleX = image ["scaleX"]?.Value<float>() ?? 1;
                 float scaleY = image ["scaleY"]?.Value<float>() ?? 1;
-                float originX = image["originX"].Value<float>();
-                float originY = image["originY"].Value<float>();;
+                //float width = image["width"].Value<float>();
+                //float height = image["height"].Value<float>();;
 
                 if (image ["itemIdentifier"]?.Value<string>() == "Player")
                 {
@@ -63,8 +63,8 @@ namespace PlaguePandemicsBats
                 }
                 else
                 {
-                    Sprite sprite = new Sprite(_game, imgName, scale: new Vector2(scaleX, scaleY), collides: true);
-                    sprite.SetPosition(new Vector2(x + sprite.size.X, y + sprite.size.Y / 2));
+                    Sprite sprite = new Sprite(_game, imgName, scale: new Vector2(scaleX, scaleY), collides: false);
+                    sprite.SetPosition(new Vector2(x + sprite.size.X / 2, y + sprite.size.Y / 2));
                     sprite.SetRotation(rotation);
                     _sprites.Add(sprite);
                 }

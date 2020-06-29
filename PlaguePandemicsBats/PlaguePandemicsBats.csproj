@@ -136,7 +136,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="Content\minecraft.spritefont" />
-    <None Include="Content\NonTrimmed.json">
+    <None Include="Content\NonTrimmedSheet.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="Content\pandemics\assets\orig\pack\pack.atlas" />
@@ -148,7 +148,7 @@
     <None Include="Content\pandemics\scenes\MainScene.dt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Content\texture.json">
+    <None Include="Content\TrimmedSheet.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="packages.config" />
@@ -163,7 +163,7 @@
     <Content Include="Content\guybutton.png" />
     <Content Include="Content\mainmenu.png" />
     <Content Include="Content\menusong.wav" />
-    <Content Include="Content\NonTrimmed.png" />
+    <Content Include="Content\NonTrimmedSheet.png" />
     <Content Include="Content\optnButton.png" />
     <Content Include="Content\pandemics\assets\orig\images\BigHouseG.png" />
     <Content Include="Content\pandemics\assets\orig\images\BigHouseR.png" />
@@ -292,7 +292,7 @@
     <Content Include="Content\play.png" />
     <Content Include="Content\playsound.wav" />
     <Content Include="Content\quit.png" />
-    <Content Include="Content\texture.png" />
+    <Content Include="Content\TrimmedSheet.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Content\pandemics\assets\orig\animations\" />

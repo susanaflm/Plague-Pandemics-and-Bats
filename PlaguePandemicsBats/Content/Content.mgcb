@@ -123,7 +123,7 @@
 /processorParam:TextureFormat=Compressed
 /build:minecraft.spritefont
 
-#begin NonTrimmed.png
+#begin NonTrimmedSheet.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -133,7 +133,7 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:NonTrimmed.png
+/build:NonTrimmedSheet.png
 
 #begin optnButton.png
 /importer:TextureImporter
@@ -189,7 +189,7 @@
 /processorParam:TextureFormat=Color
 /build:quit.png
 
-#begin texture.png
+#begin TrimmedSheet.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -199,5 +199,5 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:texture.png
+/build:TrimmedSheet.png
 

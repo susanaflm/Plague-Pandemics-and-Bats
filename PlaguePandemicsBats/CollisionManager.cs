@@ -37,7 +37,7 @@ namespace PlaguePandemicsBats
                 collider.EmptyCollisions();
             }
 
-            inRangeColliders = colliders.Where(c => Vector2.Distance(c._position, _game.Player.Position) <= 7f).ToList();
+            inRangeColliders = colliders.Where(c => Vector2.Distance(c._position, _game.Player.Position) <= 6.2f).ToList();
 
             // Check collisions for each collider combination
             for (int i = 0; i < inRangeColliders.Count - 1; i++)

@@ -5,10 +5,10 @@ using System.Collections.Generic;
 
 namespace PlaguePandemicsBats
 {
-    public class Projectile : DrawableGameComponent
+    public class Projectile
     {
         private const float _projectileSpeed = 3f;
-        private const float _projectileWidth = 0.5f;
+        private const float _projectileWidth = 0.12f;
         private const float _maxDistance = 4f;
 
         private Game1 _game;
@@ -21,7 +21,7 @@ namespace PlaguePandemicsBats
 
         private Dictionary<Direction, Vector2> _projectileDirection;
 
-        public Projectile(Game1 game) : base(game)
+        public Projectile(Game1 game)
         {
             _game = game;
 
@@ -57,7 +57,7 @@ namespace PlaguePandemicsBats
             _origin = _position;
         }
 
-        public override void Update(GameTime gameTime)
+        public void Update(GameTime gameTime)
         {
             if (_projectileCollider._inCollision)
             {

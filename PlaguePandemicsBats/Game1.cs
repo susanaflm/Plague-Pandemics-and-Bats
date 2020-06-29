@@ -2,8 +2,10 @@
 using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using Microsoft.Xna.Framework.Media;
 using Newtonsoft.Json.Serialization;
 using System.Collections.Generic;
+using System.IO;
 
 namespace PlaguePandemicsBats
 {
@@ -56,6 +58,7 @@ namespace PlaguePandemicsBats
         private List<Cat> _friendlies;
         private List<Button> _buttons;
         private GameState _gameState = GameState.MainMenu;
+        private int _highScore;
         #endregion
 
         #region Public variables
@@ -167,7 +170,8 @@ namespace PlaguePandemicsBats
 
             _collisionManager = new CollisionManager(this);
 
-            SpriteManager.AddSpriteSheet("NonTrimmed");
+            SpriteManager.AddSpriteSheet("NonTrimmedSheet");
+            SpriteManager.AddSpriteSheet("TrimmedSheet");
             SpriteManager.AddSpriteSheet("Fullgrass");
 
             _scene = new Scene(this, "MainScene");
@@ -200,6 +204,11 @@ namespace PlaguePandemicsBats
             _buttons.Add(_buttonQuit);
             _buttons.Add(_highScoreButton);
             _buttons.Add(_optnButton);
+
+            if (_gameState == GameState.MainMenu)
+            {
+                _menuSound.Play();
+            }
         }
 
         /// <summary>
@@ -302,8 +311,6 @@ namespace PlaguePandemicsBats
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Draw(GameTime gameTime)
         {
-            int soundCount = 0;
-
             GraphicsDevice.Clear(Color.White);
 
             _spriteBatch.Begin(samplerState: SamplerState.PointClamp);
@@ -367,11 +374,6 @@ namespace PlaguePandemicsBats
 
             if (_gameState == GameState.MainMenu)
             {
-                soundCount++;
-
-                //if(soundCount <= 1)
-                    //_menuSound.Play();
-               
                 Texture2D texture = Content.Load<Texture2D>("mainmenu");
                 //fullscreen
                 Rectangle rec = new Rectangle(0, 0, GraphicsDevice.Viewport.Width, GraphicsDevice.Viewport.Height);
@@ -395,6 +397,36 @@ namespace PlaguePandemicsBats
             _spriteBatch.End();
 
             base.Draw(gameTime);
+        }
+
+        /// <summary>
+        /// Read high Scores from the file
+        /// If file is not available HighScore is set to 0
+        /// </summary>
+        public void LoadHighScores()
+        {
+            try
+            {
+                string[] file = File.ReadAllLines($@"{Content.RootDirectory}\highscore.txt");
+
+                if (file.Length != 0 && !int.TryParse(file[0], out _highScore))
+                {
+                    _highScore = 0;
+                }
+            }
+            catch (FileNotFoundException)
+            {
+                _highScore = 0;
+            }
+        }
+
+        /// <summary>
+        /// Saves the New HighScore
+        /// </summary>
+        /// <param name="newHighScore">The new High Score to save</param>
+        private void SaveHighScore(int newHighScore)
+        {
+            File.WriteAllText($@"{Content.RootDirectory}\highscore.txt", newHighScore.ToString());
         }
     }
 }

@@ -12,7 +12,7 @@ namespace PlaguePandemicsBats
     public class Player
     {
         #region Private variables
-        private const float playerWidth = 0.5f;
+        private const float playerWidth = 0.3f;
 
         private Game1 _game;
         private int _playerGender;
