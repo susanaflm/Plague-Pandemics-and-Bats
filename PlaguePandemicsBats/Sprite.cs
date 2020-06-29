@@ -129,14 +129,15 @@ namespace PlaguePandemicsBats
             //    0);
 
             spriteBatch.Draw(
-                texture,
-                new Rectangle(Camera.ToPixel(position).ToPoint(), Camera.ToLength(size).ToPoint()),
-                bounds,
-                _color,
-                rotation,
-                origin,
-                SpriteEffects.None,
-                0);
+               texture,
+               new Rectangle(Camera.ToPixel(position).ToPoint(), Camera.ToLength(size).ToPoint()),
+               bounds,
+               _color,
+               rotation,
+               origin,
+               SpriteEffects.None,
+               0);
+
 
             obbCollider?.Draw(null);
             aabbCollider?.Draw(null);

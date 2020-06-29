@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using Microsoft.Xna.Framework;
 
 namespace PlaguePandemicsBats
@@ -7,10 +8,15 @@ namespace PlaguePandemicsBats
     public class CollisionManager
     {
         private List<Collider> colliders;
+        private List<Collider> inRangeColliders;
+        private Game1 _game;
 
-        public CollisionManager()
+        public CollisionManager(Game1 game)
         {
+            _game = game;
+
             colliders = new List<Collider>();
+            inRangeColliders = new List<Collider>();
         }
 
         public void Add(Collider c)
@@ -30,53 +36,55 @@ namespace PlaguePandemicsBats
             {
                 collider.EmptyCollisions();
             }
-            
+
+            inRangeColliders = colliders.Where(c => Vector2.Distance(c._position, _game.Player.Position) <= 7f).ToList();
+
             // Check collisions for each collider combination
-            for (int i = 0; i < colliders.Count - 1; i++)
+            for (int i = 0; i < inRangeColliders.Count - 1; i++)
             {
-                for (int j = i + 1; j < colliders.Count; j++)
+                for (int j = i + 1; j < inRangeColliders.Count; j++)
                 {
                     bool areColliding = false;
-                    if (colliders[i] is CircleCollider c1 && colliders[j] is CircleCollider c2)
+                    if (inRangeColliders[i] is CircleCollider c1 && inRangeColliders[j] is CircleCollider c2)
                     {
                         areColliding = CircleVsCircle(c1, c2);
                     } 
-                    else if (colliders[i] is AABBCollider a1 && colliders[j] is AABBCollider a2)
+                    else if (inRangeColliders[i] is AABBCollider a1 && inRangeColliders[j] is AABBCollider a2)
                     {
                         areColliding = AabbVsAabb(a1, a2);
                     }
-                    else if (colliders[i] is AABBCollider a3 && colliders[j] is CircleCollider c3)
+                    else if (inRangeColliders[i] is AABBCollider a3 && inRangeColliders[j] is CircleCollider c3)
                     {
                         areColliding = CircleVsAabb(c3, a3);
                     }
-                    else if (colliders[i] is CircleCollider c4 && colliders[j] is AABBCollider a4)
+                    else if (inRangeColliders[i] is CircleCollider c4 && inRangeColliders[j] is AABBCollider a4)
                     {
                         areColliding = CircleVsAabb(c4, a4);
                     }
-                    else if (colliders[i] is OBBCollider o1 && colliders[j] is OBBCollider o2)
+                    else if (inRangeColliders[i] is OBBCollider o1 && inRangeColliders[j] is OBBCollider o2)
                     {
                         areColliding = ObbVsObb(o1, o2);
                     }
-                    else if (colliders[i] is OBBCollider o3 && colliders[j] is CircleCollider c5)
+                    else if (inRangeColliders[i] is OBBCollider o3 && inRangeColliders[j] is CircleCollider c5)
                     {
                         areColliding = ObbVsCircle(o3, c5);
                     }
-                    else if (colliders[i] is CircleCollider c6 && colliders[j] is OBBCollider o4)
+                    else if (inRangeColliders[i] is CircleCollider c6 && inRangeColliders[j] is OBBCollider o4)
                     {
                         areColliding = ObbVsCircle(o4, c6);
                     }
-                    else if (colliders[i] is OBBCollider o5 && colliders[j] is AABBCollider a5)
+                    else if (inRangeColliders[i] is OBBCollider o5 && inRangeColliders[j] is AABBCollider a5)
                     {
                         areColliding = ObbVsAabb(o5, a5);
                     }
-                    else if (colliders[i] is AABBCollider a6 && colliders[j] is OBBCollider o6)
+                    else if (inRangeColliders[i] is AABBCollider a6 && inRangeColliders[j] is OBBCollider o6)
                     {
                         areColliding = ObbVsAabb(o6, a6);
                     }
                     else
                     {
-                        Type t1 = colliders[i].GetType();
-                        Type t2 = colliders[j].GetType();
+                        Type t1 = inRangeColliders[i].GetType();
+                        Type t2 = inRangeColliders[j].GetType();
                         throw new Exception($"No collision function defined for types {t1} and {t2}");
                     }
 
@@ -84,8 +92,8 @@ namespace PlaguePandemicsBats
                     {
                         // colliders[i]._inCollision = true;
                         // colliders[j]._inCollision = true;
-                        colliders[i].SetCollision(colliders[j]);
-                        colliders[j].SetCollision(colliders[i]);
+                        inRangeColliders[i].SetCollision(inRangeColliders[j]);
+                        inRangeColliders[j].SetCollision(inRangeColliders[i]);
                     }
                 }
             }

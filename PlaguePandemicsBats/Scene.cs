@@ -63,8 +63,8 @@ namespace PlaguePandemicsBats
                 }
                 else
                 {
-                    Sprite sprite = new Sprite(_game, imgName, scale: new Vector2(scaleX, scaleY));
-                    sprite.SetPosition(new Vector2(x + sprite.size.X / 2, y + sprite.size.Y / 2));
+                    Sprite sprite = new Sprite(_game, imgName, scale: new Vector2(scaleX, scaleY), collides: true);
+                    sprite.SetPosition(new Vector2(x + sprite.size.X, y + sprite.size.Y / 2));
                     sprite.SetRotation(rotation);
                     _sprites.Add(sprite);
                 }
@@ -84,7 +84,10 @@ namespace PlaguePandemicsBats
 
             foreach (Sprite s in Sprites.ToArray())
             {
-                s.Draw(_spriteBatch);
+                if (Vector2.Distance(s.position,_game.Player.Position) <= 7f)
+                {
+                    s.Draw(_spriteBatch);
+                }
             }
             _spriteBatch.End();
         }

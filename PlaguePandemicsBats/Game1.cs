@@ -165,7 +165,7 @@ namespace PlaguePandemicsBats
             _pausedTexture = Content.Load<Texture2D>("pause");
             _pausedRect = new Rectangle(-1, 0, _pausedTexture.Width / 2, _pausedTexture.Height / 2);
 
-            _collisionManager = new CollisionManager();
+            _collisionManager = new CollisionManager(this);
 
             SpriteManager.AddSpriteSheet("NonTrimmed");
             SpriteManager.AddSpriteSheet("Fullgrass");
@@ -218,8 +218,6 @@ namespace PlaguePandemicsBats
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Update(GameTime gameTime)
         {
-            IsMouseVisible = true;
-
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.F1))
                 Exit();
 
@@ -228,6 +226,7 @@ namespace PlaguePandemicsBats
             switch (_gameState)
             {
                 case GameState.MainMenu:
+                    IsMouseVisible = true;
                     if (_buttonPlay.isClicked || KeyboardManager.IsKeyGoingDown(Keys.Enter))
                     {
                         _playSound.Play();
@@ -242,10 +241,13 @@ namespace PlaguePandemicsBats
 
                     break;
                 case GameState.Highscores:
+                    IsMouseVisible = true;
                     break;
                 case GameState.Options:
+                    IsMouseVisible = true;
                     break;
                 case GameState.Playing:
+                    IsMouseVisible = false;
                     if (KeyboardManager.IsKeyGoingDown(Keys.Escape))
                     {
                         _gameState = GameState.Paused;
@@ -277,7 +279,7 @@ namespace PlaguePandemicsBats
                     break;
 
                 case GameState.Paused:
-
+                    IsMouseVisible = true;
                     if (KeyboardManager.IsKeyGoingDown(Keys.Escape))
                         _gameState = GameState.Playing;
                     if (_buttonPlay.isClicked)

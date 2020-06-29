@@ -64,14 +64,14 @@ namespace PlaguePandemicsBats
         public void Draw(SpriteBatch spriteBatch)
         {
             spriteBatch.Draw(
-                _texture,
-                new Rectangle(_position.ToPoint(), _texture.Bounds.Size),
-                null,
-                _color,
-                rotation: 0,
-                _origin,
-                SpriteEffects.None,
-                0);
+            _texture,
+            new Rectangle(_position.ToPoint(), _texture.Bounds.Size),
+            null,
+            _color,
+            rotation: 0,
+            _origin,
+            SpriteEffects.None,
+            0);
         }
         #endregion
     }
