@@ -49,6 +49,7 @@ namespace PlaguePandemicsBats
         private CollisionManager _collisionManager;
         private Player _player;
         private SpawnerZombie _spZ;
+        private ShooterZombie _shZ;
         private Cat _cat;
         private Scene _scene;
         private Button _buttonPlay, _buttonQuit, _guyButton, _girlButton, _highScoreButton, _optnButton, _creditsButton;
@@ -57,6 +58,7 @@ namespace PlaguePandemicsBats
         private List<Enemy> _enemies;
         private List<Cat> _friendlies;
         private List<Button> _buttons;
+        private List<EnemyProjectile> _enemyProjectiles;
         private GameState _gameState = GameState.MainMenu;
         private int _highScore;
         #endregion
@@ -123,6 +125,11 @@ namespace PlaguePandemicsBats
         /// Get Game's Button
         /// </summary>
         public List<Button> Buttons => _buttons;
+
+        /// <summary>
+        /// Get Game's Enemy Projectiles
+        /// </summary>
+        public List<EnemyProjectile> EnemyProjectiles => _enemyProjectiles;
         #endregion
 
         /// <summary>
@@ -148,6 +155,7 @@ namespace PlaguePandemicsBats
             _friendlies = new List<Cat>();
             _buttons = new List<Button>();
             _projectiles = new List<Projectile>();
+            _enemyProjectiles = new List<EnemyProjectile>();
 
             base.Initialize();
         }
@@ -179,6 +187,8 @@ namespace PlaguePandemicsBats
             _ui = new UI(this);
             _cat = new Cat(this);
             _spZ = new SpawnerZombie(this, Vector2.One);
+            _shZ = new ShooterZombie(this, new Vector2(3, 1));
+
             background = new TilingBackground(this, "Fullgrass", new Vector2(4));
 
             #region calculation top right
@@ -274,6 +284,11 @@ namespace PlaguePandemicsBats
                         p.Update(gameTime);
                     }
 
+                    foreach (EnemyProjectile eP in EnemyProjectiles.ToArray())
+                    {
+                        eP.Update(gameTime);
+                    }
+
                     foreach (Enemy e in Enemies.ToArray())
                     {
                         e.Update(gameTime);
@@ -328,6 +343,11 @@ namespace PlaguePandemicsBats
                     p.Draw(_spriteBatch);
                 }
 
+                foreach (EnemyProjectile eP in EnemyProjectiles.ToArray())
+                {
+                    eP.Draw(_spriteBatch);
+                }
+
                 foreach (Enemy e in Enemies.ToArray())
                 {
                     e.Draw(_spriteBatch);
@@ -350,6 +370,11 @@ namespace PlaguePandemicsBats
                 foreach (Projectile p in Projectiles.ToArray())
                 {
                     p.Draw(_spriteBatch);
+                }
+
+                foreach (EnemyProjectile eP in EnemyProjectiles.ToArray())
+                {
+                    eP.Draw(_spriteBatch);
                 }
 
                 foreach (Enemy e in Enemies.ToArray())
@@ -385,7 +410,6 @@ namespace PlaguePandemicsBats
                 {
                     b.Draw(_spriteBatch);
                 }
-
             }
 
             if (_gameState == GameState.Options)

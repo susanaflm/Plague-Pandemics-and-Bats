@@ -84,7 +84,7 @@ namespace PlaguePandemicsBats
 
             foreach (Sprite s in Sprites.ToArray())
             {
-                if (Vector2.Distance(s.position,_game.Player.Position) <= 7f)
+                if (Vector2.DistanceSquared(s.position,_game.Player.Position) <= 7f * 7f)
                 {
                     s.Draw(_spriteBatch);
                 }

@@ -48,7 +48,7 @@ namespace PlaguePandemicsBats
             };
 
             _projectileCollider = new OBBCollider(game, "Projectile", _position, _sprite.size / 2f, _rotation);
-            _projectileCollider.SetDebug(true);
+            _projectileCollider.SetDebug(false);
             game.CollisionManager.Add(_projectileCollider);
         }
 
@@ -61,8 +61,7 @@ namespace PlaguePandemicsBats
         {
             if (_projectileCollider._inCollision)
             {
-                //TODO: Colliders Correction
-                if (_projectileCollider.collisions[0].Tag != _game.Player.Collider.Tag || _projectileCollider.collisions.Count != 1)
+                if (_projectileCollider.collisions[0].Tag == "Enemy" || _projectileCollider.collisions[0].Tag == "Obstacle")
                 {
                     _game.Projectiles.Remove(this);
                     _game.CollisionManager.Remove(_projectileCollider);

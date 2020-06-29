@@ -12,9 +12,11 @@ namespace PlaguePandemicsBats
         private const float _zombieWidth = 0.4f;
         private const float _projWidth = 0.2f;
 
-        private float range = 4f; //Range in Meters
-        private Dictionary<int, Sprite> _projFrames;
+        private float _range = 4f; //Range in Meters
+        private float _shootTimer = 2;
+        private float _timer;
         private bool isRunningAway = false;
+        private bool isShootingAvailable = false;
 
         public ShooterZombie(Game1 game, Vector2 position) : base(game)
         {
@@ -28,28 +30,9 @@ namespace PlaguePandemicsBats
                 [Direction.Right] = new[] { new Sprite(game, "ZGuyR0", width: _zombieWidth), new Sprite(game, "ZGuyR1", width: _zombieWidth), new Sprite(game, "ZGuyR2", width: _zombieWidth) }
             };
 
-            _projFrames = new Dictionary<int, Sprite>
-            {
-                [0]  = new Sprite(game, "ZProj1",  width: _projWidth),
-                [1]  = new Sprite(game, "ZProj2",  width: _projWidth),
-                [2]  = new Sprite(game, "ZProj3",  width: _projWidth),
-                [3]  = new Sprite(game, "ZProj4",  width: _projWidth),
-                [4]  = new Sprite(game, "ZProj5",  width: _projWidth),
-                [5]  = new Sprite(game, "ZProj6",  width: _projWidth),
-                [6]  = new Sprite(game, "ZProj7",  width: _projWidth),
-                [7]  = new Sprite(game, "ZProj8",  width: _projWidth),
-                [8]  = new Sprite(game, "ZProj9",  width: _projWidth),
-                [9]  = new Sprite(game, "ZProj10", width: _projWidth),
-                [10] = new Sprite(game, "ZProj11", width: _projWidth),
-                [11] = new Sprite(game, "ZProj12", width: _projWidth),
-                [12] = new Sprite(game, "ZProj13", width: _projWidth),
-                [13] = new Sprite(game, "ZProj14", width: _projWidth),
-                [14] = new Sprite(game, "ZProj15", width: _projWidth),
-                [15] = new Sprite(game, "ZProj16", width: _projWidth),
-            };
-
             _health = 20;
             _damage = 0;
+            _acceleration = 1f;
 
             _currentSprite = _spritesDirection[_direction][_frame];
 
@@ -60,8 +43,39 @@ namespace PlaguePandemicsBats
 
         internal override void Behaviour(GameTime gameTime)
         {
-            //TODO: Shooting Range and Run Away movement
-            //TODO: New Class for the enemy projectile
+            if (Vector2.DistanceSquared(_position, _game.Player.Position) <= 1.5 * 1.5)
+            {
+                isRunningAway = true;
+
+                Vector2 runDirection = _position - _game.Player.Position;
+                runDirection.Normalize();
+
+                _position += runDirection * gameTime.DeltaTime() * _acceleration;
+            }
+            else
+            {
+                isRunningAway = false;
+            }
+
+            if (!isRunningAway && Vector2.DistanceSquared(_position, _game.Player.Position) <= _range * _range)
+            {
+                _timer += gameTime.DeltaTime();
+
+                Vector2 projOrientation = _game.Player.Position - _position;
+                projOrientation.Normalize();
+
+                if (_shootTimer - _timer <= 0)
+                {
+                    isShootingAvailable = true;
+                    _timer = 0;
+                }
+
+                if (isShootingAvailable)
+                {
+                    new EnemyProjectile(_game, projOrientation, _position);
+                    isShootingAvailable = false;
+                }
+            }
         }
     }
 }

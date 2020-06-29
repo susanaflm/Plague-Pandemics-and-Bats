@@ -72,7 +72,7 @@ namespace PlaguePandemicsBats
             {
                 if (colliderType == ColliderType.OBB)
                 {
-                    obbCollider = new OBBCollider(game, name, position, size, rotation);
+                    obbCollider = new OBBCollider(game, "Obstacle", position, size, rotation);
                     obbCollider.SetDebug(true);
                     game.CollisionManager.Add(obbCollider);
                 }
