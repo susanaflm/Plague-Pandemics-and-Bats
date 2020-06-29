@@ -10,7 +10,7 @@ namespace PlaguePandemicsBats
     class SpawnerZombie : Enemy
     {
         private const float _zombieWidth = 0.4f;
-        private const float _zombieheight = 0.5f;
+        private const float _zombieheight = 0.55f;
 
         private int _spawnQuantity = 3;
         private float _spawnRange = 3;
@@ -24,10 +24,10 @@ namespace PlaguePandemicsBats
             _position = position;
             _spritesDirection = new Dictionary<Direction, Sprite[]>
             {
-                [Direction.Up] = new[] { new Sprite(game, "ZGlassBoyU0", width: _zombieWidth, height: _zombieheight), new Sprite(game, "ZGlassBoyU1", width: _zombieWidth, height: _zombieheight), new Sprite(game, "ZGlassBoyU2", width: _zombieWidth, height: _zombieheight) },
-                [Direction.Down] = new[] { new Sprite(game, "ZGlassBoyD0", width: _zombieWidth, height: _zombieheight), new Sprite(game, "ZGlassBoyD1", width: _zombieWidth, height: _zombieheight), new Sprite(game, "ZGlassBoyD2", width: _zombieWidth, height: _zombieheight) },
-                [Direction.Left] = new[] { new Sprite(game, "ZGlassBoyL0", width: _zombieWidth, height: _zombieheight), new Sprite(game, "ZGlassBoyL1", width: _zombieWidth, height: _zombieheight), new Sprite(game, "ZGlassBoyL2", width: _zombieWidth, height: _zombieheight) },
-                [Direction.Right] = new[] { new Sprite(game, "ZGlassBoyR0", width: _zombieWidth, height: _zombieheight), new Sprite(game, "ZGlassBoyR1", width: _zombieWidth, height: _zombieheight), new Sprite(game, "ZGlassBoyR2", width: _zombieWidth, height: _zombieheight) }
+                [Direction.Up] = new[] { new Sprite(game, "ZGlassBoyU0", height: _zombieheight), new Sprite(game, "ZGlassBoyU1", height: _zombieheight), new Sprite(game, "ZGlassBoyU2", height: _zombieheight) },
+                [Direction.Down] = new[] { new Sprite(game, "ZGlassBoyD0", height: _zombieheight), new Sprite(game, "ZGlassBoyD1", height: _zombieheight), new Sprite(game, "ZGlassBoyD2", height: _zombieheight) },
+                [Direction.Left] = new[] { new Sprite(game, "ZGlassBoyL0", height: _zombieheight), new Sprite(game, "ZGlassBoyL1", height: _zombieheight), new Sprite(game, "ZGlassBoyL2", height: _zombieheight) },
+                [Direction.Right] = new[] { new Sprite(game, "ZGlassBoyR0", height: _zombieheight), new Sprite(game, "ZGlassBoyR1", height: _zombieheight), new Sprite(game, "ZGlassBoyR2", height: _zombieheight) }
             };
 
             _spawnedBats = new List<Bat>();
