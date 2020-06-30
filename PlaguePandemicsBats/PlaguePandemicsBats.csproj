@@ -156,14 +156,17 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\button.png" />
+    <Content Include="Content\characterPickMenu.png" />
     <Content Include="Content\creditsButton.png" />
     <Content Include="Content\creditsButtonOnHover.png" />
     <Content Include="Content\die.wav" />
     <Content Include="Content\Fullgrass.png" />
     <Content Include="Content\girlbutton.png" />
     <Content Include="Content\guybutton.png" />
+    <Content Include="Content\highscoreMenu.png" />
     <Content Include="Content\mainmenu.png" />
-    <Content Include="Content\menusong.wav" />
+    <Content Include="Content\menusong.mp3" />
+    <Content Include="Content\mmButton.png" />
     <Content Include="Content\NonTrimmedSheet.png" />
     <Content Include="Content\optnButton.png" />
     <Content Include="Content\pandemics\assets\orig\images\BigHouseG.png" />

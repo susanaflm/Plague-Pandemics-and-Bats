@@ -13,11 +13,12 @@ namespace PlaguePandemicsBats
         private const float _zombieheight = 0.55f;
 
         private int _spawnQuantity = 3;
-        private float _spawnRange = 3;
-        private List<Bat> _spawnedBats;
-        private bool _isSpawnAvailable = false;
+        private float _spawnRange = 3;        
         private float _spawnTimer = 1;
         private float _timer;
+        private List<Bat> _spawnedBats;
+        private bool _isSpawnAvailable = false;
+
 
         public SpawnerZombie(Game1 game, Vector2 position) : base(game)
         {
@@ -32,6 +33,7 @@ namespace PlaguePandemicsBats
 
             _spawnedBats = new List<Bat>();
 
+            _score = 400;
             _acceleration = 0.8f;
             _health = 20;
             _damage = 0;

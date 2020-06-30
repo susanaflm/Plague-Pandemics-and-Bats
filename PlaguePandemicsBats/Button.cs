@@ -2,6 +2,7 @@
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using System;
+using System.Security.Cryptography.X509Certificates;
 
 namespace PlaguePandemicsBats
 {
@@ -61,11 +62,22 @@ namespace PlaguePandemicsBats
         /// Draws the sprites
         /// </summary>
         /// <param name="spriteBatch"></param>
-        public void Draw(SpriteBatch spriteBatch)
+        public void Draw(SpriteBatch spriteBatch, int x)
         {
+            Point size = _texture.Bounds.Size;
+            Point _size = size;
+
+            if (x == 0) size = _size;
+
+            else if (x == 1) size = new Point(50, 40);
+
+            else if (x == 2) size = new Point(50);
+
+            else if (x == 3) size = new Point(100);
+
             spriteBatch.Draw(
             _texture,
-            new Rectangle(_position.ToPoint(), _texture.Bounds.Size),
+            new Rectangle(_position.ToPoint(), size),
             null,
             _color,
             rotation: 0,

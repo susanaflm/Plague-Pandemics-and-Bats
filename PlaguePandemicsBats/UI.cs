@@ -60,7 +60,7 @@ namespace PlaguePandemicsBats
         {
             Vector2 inputSize = _spriteFont.MeasureString(_input);
             Vector2 position = new Vector2(20, 50);
-                       
+
             spriteBatch.DrawString(_spriteFont, _input, position, color: Color.Black);
 
             position.X = inputSize.X;

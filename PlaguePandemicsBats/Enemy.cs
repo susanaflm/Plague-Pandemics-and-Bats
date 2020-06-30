@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace PlaguePandemicsBats
@@ -19,8 +20,10 @@ namespace PlaguePandemicsBats
         internal float _acceleration;
         internal OBBCollider _enemyCollider;
         internal int _health;
+        internal int _score;
         internal int _damage;   
         internal int _frame = 0;
+        
         internal Dictionary<Direction, Sprite[]> _spritesDirection;
         internal Sprite _currentSprite;
         internal Dictionary<Direction, Vector2> _enemyDirection;
@@ -120,6 +123,7 @@ namespace PlaguePandemicsBats
         /// </summary>
         internal void Die()
         {
+            _game.Player.UpdateScore(_score);
             _dieSound.Play();
             _game.CollisionManager.Remove(_enemyCollider);
             _game.Enemies.Remove(this);

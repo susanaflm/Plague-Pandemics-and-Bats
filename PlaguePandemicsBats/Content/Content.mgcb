@@ -25,6 +25,18 @@
 /processorParam:TextureFormat=Color
 /build:button.png
 
+#begin characterPickMenu.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:characterPickMenu.png
+
 #begin creditsButton.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -98,6 +110,30 @@
 /processorParam:TextureFormat=Color
 /build:guybutton.png
 
+#begin healthbar.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:healthbar.png
+
+#begin highscoreMenu.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:highscoreMenu.png
+
 #begin mainmenu.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -110,11 +146,11 @@
 /processorParam:TextureFormat=Color
 /build:mainmenu.png
 
-#begin menusong.wav
-/importer:WavImporter
-/processor:SoundEffectProcessor
+#begin menusong.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
 /processorParam:Quality=Best
-/build:menusong.wav
+/build:menusong.mp3
 
 #begin minecraft.spritefont
 /importer:FontDescriptionImporter
@@ -122,6 +158,18 @@
 /processorParam:PremultiplyAlpha=True
 /processorParam:TextureFormat=Compressed
 /build:minecraft.spritefont
+
+#begin mmButton.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:mmButton.png
 
 #begin NonTrimmedSheet.png
 /importer:TextureImporter

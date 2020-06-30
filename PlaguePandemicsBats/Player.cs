@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.IO;
 using System.Threading.Tasks;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
@@ -11,11 +12,12 @@ namespace PlaguePandemicsBats
 {
     public class Player
     {
-        #region Private variables
+        #region Private variables 
         private const float playerWidth = 0.3f;
 
         private Game1 _game;
         private int _playerGender;
+        private Texture2D _healthbar;
         private Dictionary<Direction, Vector2> _playerDirection;
         private Dictionary<Direction, Sprite[]> _spriteDirectionMale;
         private Dictionary<Direction, Sprite[]> _spriteDirectionFemale;
@@ -28,9 +30,11 @@ namespace PlaguePandemicsBats
         private int _frame = 0; 
         private int _health = 100;
         private int lives = 3;
+       
         private Sprite _currentSprite;
         #endregion
 
+        public string filePath;
         #region Constructor
         /// <summary>
         /// Player Constructor
@@ -42,7 +46,9 @@ namespace PlaguePandemicsBats
             _playerGender = playerGender;
             _game = game;
             _position = new Vector2(0, 0);
+            _healthbar = _game.Content.Load<Texture2D>("healthbar");
 
+            filePath = _game.Content.RootDirectory + "/highscore.txt";
             #region Dictionaries
             _playerDirection = new Dictionary<Direction, Vector2>
             {
@@ -85,6 +91,12 @@ namespace PlaguePandemicsBats
         #endregion
 
         #region Properties
+
+        /// <summary>
+        /// Get's the players name
+        /// </summary>
+        public string Name { get; set; }
+
         /// <summary>
         /// Get the Player's Position
         /// </summary>
@@ -104,6 +116,18 @@ namespace PlaguePandemicsBats
         /// Get the Player's Collider
         /// </summary>
         public Collider Collider => _playerCollider;
+
+        /// <summary>
+        /// Gets the Player's current Score
+        /// </summary>
+        public int Score { get; set; }
+
+        /// <summary>
+        /// Gets the Player's Highscore
+        /// </summary>
+        public int Highscore { get; set; }
+
+        public int Gender { get; set; }
         #endregion
 
         #region Methods
@@ -123,8 +147,15 @@ namespace PlaguePandemicsBats
 
         public void Update(GameTime gameTime)
         {
+            if (Score > Highscore)
+            {
+                Highscore = Score;
+            }
+
             float deltaTime = gameTime.DeltaTime();
             float totalTime = gameTime.TotalTime();
+
+            _playerGender = Gender;
 
             if (_playerGender == 0)
             {
@@ -158,6 +189,37 @@ namespace PlaguePandemicsBats
                 Die();
 
             Camera.LookAt(_position);
+        }
+
+        public void UpdateScore(int x)
+        {
+            Score += x;
+        }
+
+        public void SetHighScore()
+        {
+            //new line to insert on the text file
+            string line;
+            int currentScore, highScore;
+
+            //setting the variables to their current state
+            currentScore = Score;
+            highScore = Highscore;
+
+            line = highScore.ToString();
+
+            //comparing to get the highest score
+            if (currentScore >= highScore)
+            {
+                highScore = currentScore;
+                Highscore = highScore;
+
+                var newHighScore = File.Create(filePath);
+                newHighScore.Close();
+                File.WriteAllText(filePath, line);
+                newHighScore.Close();
+            }
+            else Highscore = highScore;
         }
 
         public void HandleInput()
@@ -210,6 +272,7 @@ namespace PlaguePandemicsBats
         public void Die()
         {
             lives--;
+            Score = 0;
 
             //TODO: Go Back To checkpoint
         }

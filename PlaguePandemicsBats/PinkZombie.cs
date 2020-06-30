@@ -27,6 +27,7 @@ namespace PlaguePandemicsBats
                 [Direction.Right] = new[] { new Sprite(game, "ZGirlR0", width: _zombieWidth), new Sprite(game, "ZGirlR1", width: _zombieWidth), new Sprite(game, "ZGirlR2", width: _zombieWidth) }
             };
 
+            _score = 200;
             _acceleration = 0.5f;
             _health = 50;
             _damage = 20;

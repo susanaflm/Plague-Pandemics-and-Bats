@@ -4,6 +4,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
 using Newtonsoft.Json.Serialization;
+using System;
 using System.Collections.Generic;
 using System.IO;
 
@@ -31,7 +32,7 @@ namespace PlaguePandemicsBats
     /// </summary>
     public enum GameState
     {
-        MainMenu, Options, Highscores, Playing, Paused
+        MainMenu, Options, Highscores, Playing, Paused, ChooseName, ChooseCharacter
     }
     #endregion
 
@@ -39,7 +40,8 @@ namespace PlaguePandemicsBats
     {
         #region  private variables
         private GraphicsDeviceManager _graphics;
-        private SoundEffect _playSound, _menuSound;
+        private SoundEffect _playSound;
+        private Song _menuSong;
         private SpriteBatch _spriteBatch;
         private SpriteFont _spriteFont;
         private Texture2D _pausedTexture;
@@ -52,7 +54,7 @@ namespace PlaguePandemicsBats
         private ShooterZombie _shZ;
         private Cat _cat;
         private Scene _scene;
-        private Button _buttonPlay, _buttonQuit, _guyButton, _girlButton, _highScoreButton, _optnButton, _creditsButton;
+        private Button _buttonPlay, _buttonQuit, _guyButton, _girlButton, _highScoreButton, _optnButton, _creditsButton, _back2menuButton;
         private UI _ui;
         private List<Projectile> _projectiles;
         private List<Enemy> _enemies;
@@ -140,6 +142,9 @@ namespace PlaguePandemicsBats
         /// </summary>
         protected override void Initialize()
         {
+            //string file = File.ReadAllText(Player.filePath);
+            //Player.Highscore = Int32.Parse(file);
+
             _graphics.PreferredBackBufferHeight = GraphicsDevice.DisplayMode.Height / 2;
             _graphics.PreferredBackBufferWidth = GraphicsDevice.DisplayMode.Width / 2;
             _graphics.ApplyChanges();
@@ -148,7 +153,7 @@ namespace PlaguePandemicsBats
 
             _spriteManager = new SpriteManager(this);
 
-            _camera = new Camera(this, worldWidth: 10f);
+            _camera = new Camera(this, worldWidth: 9f);
 
             /*LISTS*/
             _enemies = new List<Enemy>();
@@ -170,7 +175,7 @@ namespace PlaguePandemicsBats
 
             _spriteFont = Content.Load<SpriteFont>("minecraft");
             _playSound = Content.Load<SoundEffect>("playsound");
-            _menuSound = Content.Load<SoundEffect>("menusong");
+            _menuSong = Content.Load<Song>("menusong");
 
             //Pause Stuff
             _pausedTexture = Content.Load<Texture2D>("pause");
@@ -191,21 +196,15 @@ namespace PlaguePandemicsBats
 
             background = new TilingBackground(this, "Fullgrass", new Vector2(4));
 
-            #region calculation top right
-            Vector2 _realSize = new Vector2(4, 3);            
-            Vector2 camBottomRight = Camera.Target() + Camera.Size() / 2f;
-
-            Vector2 topright = new Vector2(x: ((int)(camBottomRight.X / _realSize.X) + 1) * _realSize.X,
-                                           y: ((int)(camBottomRight.Y / _realSize.Y) + 1) * _realSize.Y);
-            #endregion
-
             //buttons 
             _buttonPlay = new Button(this, Content.Load<Texture2D>("play"), new Vector2(GraphicsDevice.Viewport.Width / 2, GraphicsDevice.Viewport.Height / 1.8f)); 
-            _highScoreButton = new Button(this, Content.Load<Texture2D>("button"), new Vector2(GraphicsDevice.Viewport.Width / 2, GraphicsDevice.Viewport.Height / 1.5f));
-            _buttonQuit = new Button(this, Content.Load<Texture2D>("quit"), new Vector2(GraphicsDevice.Viewport.Width / 2, GraphicsDevice.Viewport.Height / 1.3f));
+            _highScoreButton = new Button(this, Content.Load<Texture2D>("button"), new Vector2(GraphicsDevice.Viewport.Width / 2, GraphicsDevice.Viewport.Height / 1.46f));
+            _buttonQuit = new Button(this, Content.Load<Texture2D>("quit"), new Vector2(GraphicsDevice.Viewport.Width / 2, GraphicsDevice.Viewport.Height / 1.23f));
             _optnButton = new Button(this, Content.Load<Texture2D>("optnButton"),new Vector2(GraphicsDevice.Viewport.Width / 1.05f, GraphicsDevice.Viewport.Height / 5.7f));
-            _guyButton = new Button(this, Content.Load<Texture2D>("guybutton"), new Vector2(3, 0));
-            _girlButton = new Button(this, Content.Load<Texture2D>("girlbutton"), new Vector2(-1, 0));
+            _creditsButton = new Button(this, Content.Load<Texture2D>("creditsButton"), new Vector2(GraphicsDevice.Viewport.Width / 1.05f, GraphicsDevice.Viewport.Height / 3.3f));
+            _back2menuButton = new Button(this, Content.Load<Texture2D>("mmButton"), new Vector2(GraphicsDevice.Viewport.Width / 2, GraphicsDevice.Viewport.Height / 1.46f));
+            _girlButton = new Button(this, Content.Load<Texture2D>("girlbutton"), new Vector2(190, 370));
+            _guyButton = new Button(this, Content.Load<Texture2D>("guybutton"), new Vector2(770, 360));
            
 
             //Temporary List Adding
@@ -214,11 +213,9 @@ namespace PlaguePandemicsBats
             _buttons.Add(_buttonQuit);
             _buttons.Add(_highScoreButton);
             _buttons.Add(_optnButton);
+            _buttons.Add(_creditsButton);
 
-            if (_gameState == GameState.MainMenu)
-            {
-                _menuSound.Play();
-            }
+            if (_gameState == GameState.MainMenu) MediaPlayer.Play(_menuSong);
         }
 
         /// <summary>
@@ -245,28 +242,63 @@ namespace PlaguePandemicsBats
             switch (_gameState)
             {
                 case GameState.MainMenu:
+                    MediaPlayer.Play(_menuSong);
                     IsMouseVisible = true;
+
                     if (_buttonPlay.isClicked || KeyboardManager.IsKeyGoingDown(Keys.Enter))
                     {
-                        _playSound.Play();
-                        _gameState = GameState.Playing;
-                        
+                        _gameState = GameState.ChooseCharacter;                   
                     }
-                        
+                    if (_highScoreButton.isClicked)
+                    {
+                        _gameState = GameState.Highscores;
+                    }
+
                     _buttonPlay.Update(mouseState);
                     _highScoreButton.Update(mouseState);
                     _buttonQuit.Update(mouseState);
                     _optnButton.Update(mouseState);
+                    _creditsButton.Update(mouseState);
+
+                    break;
+                case GameState.ChooseCharacter:
+                    IsMouseVisible = true;
+
+                    if (_girlButton.isClicked)
+                    {
+                        _player.Gender = 0;
+                        _playSound.Play();
+                        _gameState = GameState.Playing;
+                    }
+
+                    if (_guyButton.isClicked)
+                    {
+                        _player.Gender = 1;
+                        _playSound.Play();
+                        _gameState = GameState.Playing;
+                    }
+
+                    _girlButton.Update(mouseState);
+                    _guyButton.Update(mouseState);
 
                     break;
                 case GameState.Highscores:
                     IsMouseVisible = true;
+
+                    _back2menuButton = new Button(this, Content.Load<Texture2D>("mmButton"), new Vector2(830, 60));
+
+                    if (_back2menuButton.isClicked) _gameState = GameState.MainMenu;
+
+                    _back2menuButton.Update(mouseState);
+
                     break;
                 case GameState.Options:
                     IsMouseVisible = true;
                     break;
                 case GameState.Playing:
+                    MediaPlayer.Stop();
                     IsMouseVisible = false;
+
                     if (KeyboardManager.IsKeyGoingDown(Keys.Escape))
                     {
                         _gameState = GameState.Paused;
@@ -274,7 +306,6 @@ namespace PlaguePandemicsBats
                         _buttonPlay.isClicked = false;
                     }
 
-                    _ui.Update(gameTime);
                     _player.Update(gameTime);
                     _collisionManager.Update(gameTime);
                     _player.LateUpdate(gameTime);
@@ -310,9 +341,13 @@ namespace PlaguePandemicsBats
                         _gameState = GameState.Playing;
                     if (_buttonQuit.isClicked)
                         Exit();
+                    if (_back2menuButton.isClicked)
+                        _gameState = GameState.MainMenu;
 
                     _buttonPlay.Update(mouseState);
                     _buttonQuit.Update(mouseState);
+                    _back2menuButton.Update(mouseState);
+
                     break;
                 default:
                     break;
@@ -334,8 +369,7 @@ namespace PlaguePandemicsBats
             {
                 background.Draw(gameTime);
                 
-                _scene.Draw(gameTime);
-                _ui.Draw(_spriteBatch, gameTime);            
+                _scene.Draw(gameTime);     
                 _player.Draw(_spriteBatch);
 
                 foreach (Projectile p in Projectiles.ToArray())
@@ -357,6 +391,8 @@ namespace PlaguePandemicsBats
                 {
                     c.Draw(_spriteBatch);
                 }
+
+                _spriteBatch.DrawString(_spriteFont, $"SCORE {Player.Score}", new Vector2(10, 10), Color.Black);
             }
 
             if (_gameState == GameState.Paused)
@@ -393,8 +429,9 @@ namespace PlaguePandemicsBats
 
                 _spriteBatch.Draw(_pausedTexture, _pausedRect, Color.White);
 
-                _buttonPlay.Draw(_spriteBatch);
-                _buttonQuit.Draw(_spriteBatch);
+                _buttonPlay.Draw(_spriteBatch, 0);
+                _buttonQuit.Draw(_spriteBatch, 0);
+                _back2menuButton.Draw(_spriteBatch, 0);
             }
 
             if (_gameState == GameState.MainMenu)
@@ -406,16 +443,47 @@ namespace PlaguePandemicsBats
                 
                 _spriteBatch.Draw(texture , rec , color);
 
-                foreach (Button b in Buttons.ToArray())
-                {
-                    b.Draw(_spriteBatch);
-                }
+                _buttonPlay.Draw(_spriteBatch, 0);
+                _buttonQuit.Draw(_spriteBatch, 0);
+                _highScoreButton.Draw(_spriteBatch, 0);
+                _creditsButton.Draw(_spriteBatch, 1);
+                _optnButton.Draw(_spriteBatch, 2);
+            }
+
+            if(_gameState == GameState.ChooseCharacter)
+            {
+                Texture2D texture = Content.Load<Texture2D>("characterPickMenu");
+                //fullscreen
+                Rectangle rec = new Rectangle(0, 0, GraphicsDevice.Viewport.Width, GraphicsDevice.Viewport.Height);
+                Color color = Color.White;
+
+                _spriteBatch.Draw(texture, rec, color);
+
+                _girlButton.Draw(_spriteBatch, 0);
+                _guyButton.Draw(_spriteBatch, 0);
+
+                _spriteBatch.DrawString(_spriteFont, "MARIA SOTO", new Vector2(100, 150), Color.LightBlue);
+                _spriteBatch.DrawString(_spriteFont, "OLIVER BUCHANAN", new Vector2(630, 150), Color.LightBlue);
+            }
+
+            if( _gameState == GameState.Highscores)
+            {
+                Texture2D texture = Content.Load<Texture2D>("highscoreMenu");
+                //fullscreen
+                Rectangle rec = new Rectangle(0, 0, GraphicsDevice.Viewport.Width, GraphicsDevice.Viewport.Height);
+                Color color = Color.White;
+
+                _spriteBatch.Draw(texture, rec, color);
+
+                _highScoreButton = new Button(this, Content.Load<Texture2D>("button"), new Vector2(100, 60));
+                _back2menuButton = new Button(this, Content.Load<Texture2D>("mmButton"), new Vector2(830, 60));
+                _highScoreButton.Draw(_spriteBatch, 0);
+                _back2menuButton.Draw(_spriteBatch, 0);
             }
 
             if (_gameState == GameState.Options)
             {
-                _girlButton.Draw(gameTime);
-                _guyButton.Draw(gameTime);
+               
             }
 
             _spriteBatch.End();
