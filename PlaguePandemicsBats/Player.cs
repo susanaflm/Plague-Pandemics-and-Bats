@@ -16,7 +16,7 @@ namespace PlaguePandemicsBats
         private const float playerWidth = 0.3f;
 
         private Game1 _game;
-        private int _playerGender;
+
         private Texture2D _healthbar;
         private Dictionary<Direction, Vector2> _playerDirection;
         private Dictionary<Direction, Sprite[]> _spriteDirectionMale;
@@ -27,7 +27,8 @@ namespace PlaguePandemicsBats
         private Vector2 _oldPosition;
         private Vector2 _position;
         private float _acceleration;
-        private int _frame = 0; 
+        private int _frame = 0;         
+        private int _playerGender;
         private int _health = 100;
         private int lives = 3;
        
