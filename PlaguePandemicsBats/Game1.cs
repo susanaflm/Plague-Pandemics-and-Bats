@@ -200,6 +200,8 @@ namespace PlaguePandemicsBats
 
             LoadLevel();
 
+            MediaPlayer.Play(_menuSong);
+
             #region Buttons
             _buttonPlay = new Button(this, Content.Load<Texture2D>("play"), new Vector2(GraphicsDevice.Viewport.Width / 2, GraphicsDevice.Viewport.Height / 1.8f)); 
             _highScoreButton = new Button(this, Content.Load<Texture2D>("button"), new Vector2(GraphicsDevice.Viewport.Width / 2, GraphicsDevice.Viewport.Height / 1.46f));
@@ -243,7 +245,6 @@ namespace PlaguePandemicsBats
             {
                 #region Main Menu
                 case GameState.MainMenu:
-                    MediaPlayer.Play(_menuSong);
                     IsMouseVisible = true;
 
                     if (_buttonPlay.isClicked || KeyboardManager.IsKeyGoingDown(Keys.Enter))
@@ -354,7 +355,11 @@ namespace PlaguePandemicsBats
                     if (_buttonQuit.isClicked)
                         Exit();
                     if (_back2menuButton.isClicked)
+                    {
                         _gameState = GameState.MainMenu;
+                        MediaPlayer.Play(_menuSong);
+                    }
+                        
 
                     _buttonPlay.Update(mouseState, 0);
                     _buttonQuit.Update(mouseState, 0);
