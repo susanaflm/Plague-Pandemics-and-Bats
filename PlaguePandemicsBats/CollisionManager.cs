@@ -19,15 +19,32 @@ namespace PlaguePandemicsBats
             inRangeColliders = new List<Collider>();
         }
 
+        /// <summary>
+        /// Adds a collider to the collider list
+        /// </summary>
+        /// <param name="c"></param>
         public void Add(Collider c)
         {
             colliders.Add(c);
         }
 
+        /// <summary>
+        /// Remove a collider from the colliders list
+        /// </summary>
+        /// <param name="c"></param>
         public void Remove(Collider c)
         {
             colliders.Remove(c);
             inRangeColliders.Remove(c);
+        }
+
+        /// <summary>
+        /// Removes all Colliders from the lists
+        /// </summary>
+        public void Clear()
+        {
+            colliders.Clear();
+            inRangeColliders.Clear();
         }
 
         public void Update(GameTime gameTime)

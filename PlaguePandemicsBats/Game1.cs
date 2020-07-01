@@ -60,11 +60,10 @@ namespace PlaguePandemicsBats
         private List<Ammo> _ammoList;
         private List<Projectile> _projectiles;
         private List<Enemy> _enemies;
-        private List<Cat> _friendlies;
-        private List<Button> _buttons;
         private List<EnemyProjectile> _enemyProjectiles;
         private GameState _gameState = GameState.MainMenu;
         private int _highScore;
+        private bool _wasGameLoaded;
         #endregion
 
         #region Public variables
@@ -121,16 +120,6 @@ namespace PlaguePandemicsBats
         public List<Enemy> Enemies => _enemies;
 
         /// <summary>
-        /// Get game's player friendlies
-        /// </summary>
-        public List<Cat> Friendlies => _friendlies;
-
-        /// <summary>
-        /// Get Game's Button
-        /// </summary>
-        public List<Button> Buttons => _buttons;
-
-        /// <summary>
         /// Get Game's Enemy Projectiles
         /// </summary>
         public List<EnemyProjectile> EnemyProjectiles => _enemyProjectiles;
@@ -161,8 +150,6 @@ namespace PlaguePandemicsBats
 
             //LISTS
             _enemies = new List<Enemy>();
-            _friendlies = new List<Cat>();
-            _buttons = new List<Button>();
             _projectiles = new List<Projectile>();
             _enemyProjectiles = new List<EnemyProjectile>();
             _ammoList = new List<Ammo>();
@@ -198,8 +185,6 @@ namespace PlaguePandemicsBats
             SpriteManager.AddSpriteSheet("Fullgrass");
             #endregion
 
-            LoadLevel();
-
             MediaPlayer.Play(_menuSong);
 
             #region Buttons
@@ -212,9 +197,6 @@ namespace PlaguePandemicsBats
             _girlButton = new Button(this, Content.Load<Texture2D>("girlbutton"), new Vector2(190, 370));
             _guyButton = new Button(this, Content.Load<Texture2D>("guybutton"), new Vector2(770, 360));
             #endregion
-
-            //Temporary List Adding
-            _friendlies.Add(_cat);
 
             //FIRST GAME STATE
             if (_gameState == GameState.MainMenu) MediaPlayer.Play(_menuSong);
@@ -248,7 +230,17 @@ namespace PlaguePandemicsBats
                     IsMouseVisible = true;
 
                     if (_buttonPlay.isClicked || KeyboardManager.IsKeyGoingDown(Keys.Enter))
-                        _gameState = GameState.ChooseCharacter;                   
+                    {
+                        if (!_wasGameLoaded)
+                        {
+                            LoadLevel();
+                            _wasGameLoaded = true;
+                        }
+                        else
+                            ReloadLevel();
+
+                        _gameState = GameState.ChooseCharacter;
+                    }
                     if (_highScoreButton.isClicked)
                         _gameState = GameState.Highscores;
                     if (_buttonQuit.isClicked || KeyboardManager.IsKeyGoingDown(Keys.Escape))
@@ -313,9 +305,16 @@ namespace PlaguePandemicsBats
                         _buttonPlay.isClicked = false;
                     }
 
+                    foreach (Ammo a in Ammo.ToArray())
+                    {
+                        a.Update();
+                    }
+
                     _player.Update(gameTime);
+                    _cat.Update(gameTime);
                     _collisionManager.Update(gameTime);
                     _player.LateUpdate(gameTime);
+                    _cat.LateUpdate(gameTime);
 
                     foreach (Projectile p in Projectiles.ToArray())
                     {
@@ -333,15 +332,6 @@ namespace PlaguePandemicsBats
                         e.LateUpdate(gameTime);
                     }
 
-                    foreach (Cat c in Friendlies.ToArray())
-                    {
-                        c.Update(gameTime);
-                        c.LateUpdate(gameTime);
-                    }
-                    foreach (Ammo a in Ammo.ToArray())
-                    {
-                        a.Update();
-                    }
                     break;
                 #endregion
 
@@ -370,6 +360,7 @@ namespace PlaguePandemicsBats
                     break;
                     #endregion
             }
+
             base.Update(gameTime);
         }
 
@@ -390,6 +381,7 @@ namespace PlaguePandemicsBats
                 
                 _scene.Draw(gameTime);
                 _player.Draw(_spriteBatch);
+                _cat.Draw(_spriteBatch);
 
                 foreach (Ammo a in Ammo.ToArray())
                 {
@@ -411,11 +403,6 @@ namespace PlaguePandemicsBats
                     e.Draw(_spriteBatch);
                 }
 
-                foreach (Cat c in Friendlies.ToArray())
-                {
-                    c.Draw(_spriteBatch);
-                }
-
                 Pixel.DrawRectangle(new Rectangle(8, 8, 102, 22), Color.White* 0.5f);
                 _spriteBatch.DrawString(_spriteFont, $"SCORE {Player.Score}", new Vector2(10, 10), Color.DarkBlue);
             }
@@ -429,6 +416,7 @@ namespace PlaguePandemicsBats
                 _scene.Draw(gameTime);
                 _ui.Draw(_spriteBatch, gameTime);
                 _player.Draw(_spriteBatch);
+                _cat.Draw(_spriteBatch);
 
                 foreach (Projectile p in Projectiles.ToArray())
                 {
@@ -443,11 +431,6 @@ namespace PlaguePandemicsBats
                 foreach (Enemy e in Enemies.ToArray())
                 {
                     e.Draw(_spriteBatch);
-                }
-
-                foreach (Cat c in Friendlies.ToArray())
-                {
-                    c.Draw(_spriteBatch);
                 }
 
                 Rectangle rec = new Rectangle(0, 0, GraphicsDevice.Viewport.Width, GraphicsDevice.Viewport.Height);
@@ -560,7 +543,6 @@ namespace PlaguePandemicsBats
         private void LoadLevel()
         {
             //CHARACTERS & SCENE
-            _ammo = new Ammo(this, Vector2.Zero);
             _player = new Player(this);
             _scene = new Scene(this, "MainScene");
             _ui = new UI(this);
@@ -570,6 +552,31 @@ namespace PlaguePandemicsBats
 
             //BACKGROUND 
             background = new TilingBackground(this, "Fullgrass", new Vector2(4));
+        }
+
+        /// <summary>
+        /// This method allows the game to reload level
+        /// </summary>
+        private void ReloadLevel()
+        {
+            //Clear the lists
+            _enemies.Clear();
+            _projectiles.Clear();
+            _enemyProjectiles.Clear();
+            _scene.Sprites.Clear();
+            _collisionManager.Clear();
+
+            //Unload Components
+            _player = null;
+            _scene = null;
+            _ui = null;
+            _cat = null;
+            _spZ = null;
+            _shZ = null;
+            background = null;
+
+            //Load the level Again
+            LoadLevel();
         }
     }
 }
