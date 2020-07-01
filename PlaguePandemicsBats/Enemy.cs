@@ -10,8 +10,10 @@ using System.Threading.Tasks;
 
 namespace PlaguePandemicsBats
 {
+    //Enemy base Class
     public abstract class Enemy 
     {
+        #region Variables
         protected Game1 _game;
 
         internal Vector2 _position;
@@ -31,7 +33,11 @@ namespace PlaguePandemicsBats
 
         private float _deltaTime = 0;
         private SoundEffect _dieSound;
+        private float _timeToDamage = 1; 
+        private bool _isEnemyAbleToDamage = false;
+        #endregion
 
+        #region Constructor
         public Enemy(Game1 game)
         {
             _game = game;
@@ -47,7 +53,9 @@ namespace PlaguePandemicsBats
             _dieSound = _game.Content.Load<SoundEffect>("die");
             _game.Enemies.Add(this);
         }
+        #endregion
 
+        #region Methods
         /// <summary>
         /// This Function handles the movement of the enemy
         /// </summary>
@@ -74,9 +82,14 @@ namespace PlaguePandemicsBats
             {
                 foreach (Collider c in _enemyCollider.collisions)
                 {
+                    //If the enemy is colliding with the player
                     if (c.Tag == "Player")
                     {
-                        _game.Player.UpdateHealth(_damage);
+                        if (_isEnemyAbleToDamage)
+                        {
+                            _game.Player.UpdateHealth(_damage);
+                            _isEnemyAbleToDamage = false;
+                        }
                         _position = _oldPosition;
                     }
                     if (c.Tag == "Projectile")
@@ -97,9 +110,12 @@ namespace PlaguePandemicsBats
 
             _oldPosition = _position;
 
+            //Optimization of the game, the enemies will only move if the player is within 6 meters 
+            //Also it will not cause problems with the colliders
             if (Vector2.DistanceSquared(_position, _game.Player.Position) <= 36f)
                 Behaviour(gameTime);
 
+            //Validates if the enemy is still or moving
             if (_position != _oldPosition)
             {
                 _frame = (int)(_deltaTime * 6) % 3;
@@ -111,6 +127,11 @@ namespace PlaguePandemicsBats
             _currentSprite.SetPosition(_position);
             _enemyCollider.SetPosition(_position);
 
+            //Time to damage the player
+            if (_timeToDamage - _deltaTime <= 0)
+                _isEnemyAbleToDamage = true;
+
+            //If the enemy's health goes below zero it dies
             if (_health <= 0)
             {
                 isDead = true;
@@ -138,6 +159,6 @@ namespace PlaguePandemicsBats
             _currentSprite.Draw(sb);
             _enemyCollider?.Draw(null);
         }
-
+        #endregion
     }
 }

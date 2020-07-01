@@ -38,7 +38,7 @@ namespace PlaguePandemicsBats
 
     public class Game1 : Game
     {
-        #region  private variables
+        #region  Private variables
         private GraphicsDeviceManager _graphics;
         private SoundEffect _playSound;
         private Song _menuSong;
@@ -187,14 +187,7 @@ namespace PlaguePandemicsBats
             SpriteManager.AddSpriteSheet("TrimmedSheet");
             SpriteManager.AddSpriteSheet("Fullgrass");
 
-            _scene = new Scene(this, "MainScene");
-            _player = _scene.Player;
-            _ui = new UI(this);
-            _cat = new Cat(this);
-            _spZ = new SpawnerZombie(this, Vector2.One);
-            _shZ = new ShooterZombie(this, new Vector2(3, 1));
-
-            background = new TilingBackground(this, "Fullgrass", new Vector2(4));
+            LoadLevel();
 
             //buttons 
             _buttonPlay = new Button(this, Content.Load<Texture2D>("play"), new Vector2(GraphicsDevice.Viewport.Width / 2, GraphicsDevice.Viewport.Height / 1.8f)); 
@@ -246,13 +239,9 @@ namespace PlaguePandemicsBats
                     IsMouseVisible = true;
 
                     if (_buttonPlay.isClicked || KeyboardManager.IsKeyGoingDown(Keys.Enter))
-                    {
                         _gameState = GameState.ChooseCharacter;                   
-                    }
                     if (_highScoreButton.isClicked)
-                    {
                         _gameState = GameState.Highscores;
-                    }
 
                     _buttonPlay.Update(mouseState);
                     _highScoreButton.Update(mouseState);
@@ -266,20 +255,22 @@ namespace PlaguePandemicsBats
 
                     if (_girlButton.isClicked)
                     {
-                        _player.Gender = 0;
-                        _playSound.Play();
+                        _player.SetGender(0);
                         _gameState = GameState.Playing;
+                        _playSound.Play();
                     }
-
+                        
                     if (_guyButton.isClicked)
                     {
-                        _player.Gender = 1;
-                        _playSound.Play();
+                        _player.SetGender(1);
                         _gameState = GameState.Playing;
+                        _playSound.Play();
                     }
-
+                        
                     _girlButton.Update(mouseState);
                     _guyButton.Update(mouseState);
+
+
 
                     break;
                 case GameState.Highscores:
@@ -519,6 +510,18 @@ namespace PlaguePandemicsBats
         private void SaveHighScore(int newHighScore)
         {
             File.WriteAllText($@"{Content.RootDirectory}\highscore.txt", newHighScore.ToString());
+        }
+
+        private void LoadLevel()
+        {
+            _player = new Player(this);
+            _scene = new Scene(this, "MainScene");
+            _ui = new UI(this);
+            _cat = new Cat(this);
+            _spZ = new SpawnerZombie(this, Vector2.One);
+            _shZ = new ShooterZombie(this, new Vector2(3, 1));
+
+            background = new TilingBackground(this, "Fullgrass", new Vector2(4));
         }
     }
 }

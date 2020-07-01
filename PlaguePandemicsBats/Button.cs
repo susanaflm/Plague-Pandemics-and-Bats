@@ -16,7 +16,7 @@ namespace PlaguePandemicsBats
         private Vector2 _origin;
         private Rectangle _rec;
         private Color _color = new Color(255,255,255,255);
-        private bool down;
+        private MouseState _pastmouse;
         #endregion
 
         #region Public variables
@@ -41,6 +41,7 @@ namespace PlaguePandemicsBats
         /// <param name="mouse"></param>
         public void Update(MouseState mouse)
         {
+            isClicked = false;
             Rectangle mouseRec = new Rectangle(mouse.X, mouse.Y, 1, 1);
 
             mouse = Mouse.GetState();
@@ -49,13 +50,14 @@ namespace PlaguePandemicsBats
             if (mouseRec.Intersects(_rec))
             {
                 _color = new Color(180, 180, 180, 255);
-                if (mouse.LeftButton == ButtonState.Pressed)
+                if (mouse.LeftButton == ButtonState.Pressed && _pastmouse.LeftButton == ButtonState.Released)
                 {
                     isClicked = true;
                 }
             }
             else
                 _color = Color.White;
+            _pastmouse = mouse;
         }
 
         /// <summary>

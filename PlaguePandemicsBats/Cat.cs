@@ -22,7 +22,6 @@ namespace PlaguePandemicsBats
         private float _acceleration;
         private OBBCollider _catCollider;
         private int _health;
-        private int _damage;
         private int _frame = 0;
         private Dictionary<Direction, Sprite []> _spritesDirection;
         private Sprite _currentSprite;
@@ -43,7 +42,6 @@ namespace PlaguePandemicsBats
             };
 
             _health = 100;
-            _damage = 10;
 
             _currentSprite = _spritesDirection [_direction] [_frame];
 

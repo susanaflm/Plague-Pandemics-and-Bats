@@ -16,7 +16,6 @@ namespace PlaguePandemicsBats
         private const float playerWidth = 0.3f;
 
         private Game1 _game;
-
         private Texture2D _healthbar;
         private Dictionary<Direction, Vector2> _playerDirection;
         private Dictionary<Direction, Sprite[]> _spriteDirectionMale;
@@ -27,11 +26,12 @@ namespace PlaguePandemicsBats
         private Vector2 _oldPosition;
         private Vector2 _position;
         private float _acceleration;
-        private int _frame = 0;         
+        private int _frame = 0;
         private int _playerGender;
         private int _health = 100;
         private int lives = 3;
-       
+        private int _score = 0;
+
         private Sprite _currentSprite;
         #endregion
 
@@ -42,14 +42,14 @@ namespace PlaguePandemicsBats
         /// </summary>
         /// <param name="game">Game1 Instance</param>
         /// <param name="playerGender">The gender of the character</param>
-        public Player(Game1 game, int playerGender)
+        public Player(Game1 game)
         {
-            _playerGender = playerGender;
             _game = game;
             _position = new Vector2(0, 0);
             _healthbar = _game.Content.Load<Texture2D>("healthbar");
 
             filePath = _game.Content.RootDirectory + "/highscore.txt";
+
             #region Dictionaries
             _playerDirection = new Dictionary<Direction, Vector2>
             {
@@ -61,10 +61,10 @@ namespace PlaguePandemicsBats
 
             _spriteDirectionMale = new Dictionary<Direction, Sprite[]>
             {
-                [Direction.Up] = new [] { new Sprite(game, "GuyU0", width: playerWidth), new Sprite(game, "GuyU1",width: playerWidth), new Sprite(game, "GuyU2", width: playerWidth) },
-                [Direction.Down] = new [] { new Sprite(game, "GuyD0", width: playerWidth), new Sprite(game, "GuyD1", width: playerWidth), new Sprite(game, "GuyD2", width: playerWidth) },
-                [Direction.Left] = new [] { new Sprite(game, "GuyL0", width: playerWidth), new Sprite(game, "GuyL1", width: playerWidth), new Sprite(game, "GuyL2", width: playerWidth) },
-                [Direction.Right] = new [] { new Sprite(game, "GuyR0", width: playerWidth), new Sprite(game, "GuyR1", width: playerWidth), new Sprite(game, "GuyR2", width: playerWidth) }
+                [Direction.Up] = new[] { new Sprite(game, "GuyU0", width: playerWidth), new Sprite(game, "GuyU1", width: playerWidth), new Sprite(game, "GuyU2", width: playerWidth) },
+                [Direction.Down] = new[] { new Sprite(game, "GuyD0", width: playerWidth), new Sprite(game, "GuyD1", width: playerWidth), new Sprite(game, "GuyD2", width: playerWidth) },
+                [Direction.Left] = new[] { new Sprite(game, "GuyL0", width: playerWidth), new Sprite(game, "GuyL1", width: playerWidth), new Sprite(game, "GuyL2", width: playerWidth) },
+                [Direction.Right] = new[] { new Sprite(game, "GuyR0", width: playerWidth), new Sprite(game, "GuyR1", width: playerWidth), new Sprite(game, "GuyR2", width: playerWidth) }
             };
 
             _spriteDirectionFemale = new Dictionary<Direction, Sprite[]>
@@ -75,15 +75,7 @@ namespace PlaguePandemicsBats
                 [Direction.Right] = new[] { new Sprite(game, "GirlR0", width: playerWidth), new Sprite(game, "GirlR1", width: playerWidth), new Sprite(game, "GirlR2", width: playerWidth) }
             };
             #endregion
-
-            if (_playerGender == 0)
-            {
-                _currentSprite = _spriteDirectionFemale[_direction][_frame];
-            }
-            else
-            {
-                _currentSprite = _spriteDirectionMale[_direction][_frame];
-            }
+            _currentSprite = _spriteDirectionMale[_direction][_frame];
 
             _playerCollider = new OBBCollider(game, "Player", _position, _currentSprite.size, rotation: 0);
             _playerCollider.SetDebug(true);
@@ -121,14 +113,13 @@ namespace PlaguePandemicsBats
         /// <summary>
         /// Gets the Player's current Score
         /// </summary>
-        public int Score { get; set; }
+        public int Score => _score;
 
         /// <summary>
         /// Gets the Player's Highscore
         /// </summary>
         public int Highscore { get; set; }
 
-        public int Gender { get; set; }
         #endregion
 
         #region Methods
@@ -148,15 +139,13 @@ namespace PlaguePandemicsBats
 
         public void Update(GameTime gameTime)
         {
+            float deltaTime = gameTime.DeltaTime();
+            float totalTime = gameTime.TotalTime();
+
             if (Score > Highscore)
             {
                 Highscore = Score;
             }
-
-            float deltaTime = gameTime.DeltaTime();
-            float totalTime = gameTime.TotalTime();
-
-            _playerGender = Gender;
 
             if (_playerGender == 0)
             {
@@ -179,7 +168,7 @@ namespace PlaguePandemicsBats
 
             if (_oldPosition != _position)
             {
-                _frame = (int) (totalTime * 6 ) % 3;
+                _frame = (int)(totalTime * 6) % 3;
                 if (_frame > 2)
                     _frame = 1;
             }
@@ -194,7 +183,7 @@ namespace PlaguePandemicsBats
 
         public void UpdateScore(int x)
         {
-            Score += x;
+            _score += x;
         }
 
         public void SetHighScore()
@@ -204,7 +193,7 @@ namespace PlaguePandemicsBats
             int currentScore, highScore;
 
             //setting the variables to their current state
-            currentScore = Score;
+            currentScore = _score;
             highScore = Highscore;
 
             line = highScore.ToString();
@@ -255,7 +244,7 @@ namespace PlaguePandemicsBats
                 _game.Projectiles.Add(proj);
                 proj.Shoot();
             }
-            
+
         }
 
         /// <summary>
@@ -273,17 +262,37 @@ namespace PlaguePandemicsBats
         public void Die()
         {
             lives--;
-            Score = 0;
+            _score = 0;
 
             //TODO: Go Back To checkpoint
         }
 
+        /// <summary>
+        /// This Function allows to place the player in a certain position
+        /// </summary>
+        /// <param name="position">Position to put the player</param>
         public void SetPosition(Vector2 position)
         {
             _position = position;
             _playerCollider.SetPosition(position);
         }
 
+        /// <summary>
+        /// Sets the Player's Gender
+        /// </summary>
+        /// <param name="playerGender">0 for female, 1 for male</param>
+        public void SetGender(int playerGender)
+        {
+            if (playerGender == 0)
+                _playerGender = 0;
+            else
+                _playerGender = 1;
+        }
+
+        /// <summary>
+        /// Draws the player's sprites
+        /// </summary>
+        /// <param name="sb"></param>
         public void Draw(SpriteBatch sb)
         {
             _currentSprite.Draw(sb);

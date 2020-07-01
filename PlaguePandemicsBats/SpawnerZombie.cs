@@ -7,9 +7,10 @@ using System.Threading.Tasks;
 
 namespace PlaguePandemicsBats
 {
+    //Spawner Enemy Type
     class SpawnerZombie : Enemy
     {
-        private const float _zombieWidth = 0.4f;
+        #region Variables
         private const float _zombieheight = 0.55f;
 
         private int _spawnQuantity = 3;
@@ -18,8 +19,9 @@ namespace PlaguePandemicsBats
         private float _timer;
         private List<Bat> _spawnedBats;
         private bool _isSpawnAvailable = false;
+        #endregion
 
-
+        #region Contructor
         public SpawnerZombie(Game1 game, Vector2 position) : base(game)
         {
             _position = position;
@@ -44,7 +46,9 @@ namespace PlaguePandemicsBats
             _enemyCollider.SetDebug(true);
             game.CollisionManager.Add(_enemyCollider);
         }
+        #endregion
 
+        #region Methods
         internal override void Behaviour(GameTime gameTime)
         {
             //Spawning Method, within a Range to the Player
@@ -67,12 +71,14 @@ namespace PlaguePandemicsBats
                 else
                     _direction = Direction.Left;
 
+                //Timer to Make the enemy spawn a bat
                 if (_spawnTimer - _timer <= 0 )
                 {
                     _isSpawnAvailable = true;
                     _timer = 0;
                 }
 
+                //Spawns a Bat and adds to the list of spawned Bats if the spawn is available
                 if (_spawnedBats.Count < _spawnQuantity && _isSpawnAvailable)
                 {
                     Bat bat = new Bat(_game, Vector2.Add(_position, new Vector2(0, _currentSprite.size.Y) * _enemyDirection[_direction]));
@@ -82,12 +88,12 @@ namespace PlaguePandemicsBats
 
                 foreach (Bat b in _spawnedBats.ToArray())
                 {
+                    //Check if the bat died and removes it from the list
                     if (b.isDead)
-                    {
                         _spawnedBats.Remove(b);
-                    }
                 }
             }
         }
+        #endregion
     }
 }

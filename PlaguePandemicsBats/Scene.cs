@@ -20,7 +20,7 @@ namespace PlaguePandemicsBats
         private SpriteBatch _spriteBatch;        
         private List<Sprite> _sprites;
         #endregion
-        public Player Player { get; }
+
         #region Constructor
         public Scene(Game1 game, string sceneFile)
         {
@@ -47,8 +47,7 @@ namespace PlaguePandemicsBats
 
                 if (image ["itemIdentifier"]?.Value<string>() == "Player")
                 {
-                    Player = new Player(_game, 1);
-                    Player.SetPosition(new Vector2(x, y));
+                    _game.Player.SetPosition(new Vector2(x, y));
                 }
                 else if (image ["imageName"]?.Value<string>() == "ZGirlD0")
                 {
@@ -63,7 +62,7 @@ namespace PlaguePandemicsBats
                 }
                 else
                 {
-                    Sprite sprite = new Sprite(_game, imgName, scale: new Vector2(scaleX, scaleY), collides: false);
+                    Sprite sprite = new Sprite(_game, imgName, scale: new Vector2(scaleX, scaleY), collides: true);
                     sprite.SetPosition(new Vector2(x + sprite.size.X / 2, y + sprite.size.Y / 2));
                     sprite.SetRotation(rotation);
                     _sprites.Add(sprite);

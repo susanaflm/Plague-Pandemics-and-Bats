@@ -7,8 +7,10 @@ using System.Threading.Tasks;
 
 namespace PlaguePandemicsBats
 {
+    //Shooter Enemy Type
     class ShooterZombie : Enemy
     {
+        #region Variables
         private const float _zombieWidth = 0.4f;
         private const float _projWidth = 0.2f;
 
@@ -17,7 +19,9 @@ namespace PlaguePandemicsBats
         private float _timer;
         private bool isRunningAway = false;
         private bool isShootingAvailable = false;
+        #endregion
 
+        #region Constructor
         public ShooterZombie(Game1 game, Vector2 position) : base(game)
         {
             _position = position;
@@ -41,9 +45,12 @@ namespace PlaguePandemicsBats
             _enemyCollider.SetDebug(true);
             game.CollisionManager.Add(_enemyCollider);
         }
+        #endregion
 
+        #region Methods
         internal override void Behaviour(GameTime gameTime)
         {
+            //Checks the Distance to the player to know when to Run
             if (Vector2.DistanceSquared(_position, _game.Player.Position) <= 1.5 * 1.5)
             {
                 isRunningAway = true;
@@ -58,19 +65,23 @@ namespace PlaguePandemicsBats
                 isRunningAway = false;
             }
 
+            //If the Player is in Range to the enemy, it shoots
             if (!isRunningAway && Vector2.DistanceSquared(_position, _game.Player.Position) <= _range * _range)
             {
                 _timer += gameTime.DeltaTime();
 
+                //Direction in which the zombie will shoot the projectile
                 Vector2 projOrientation = _game.Player.Position - _position;
                 projOrientation.Normalize();
 
+                //Timer to see when to shoot
                 if (_shootTimer - _timer <= 0)
                 {
                     isShootingAvailable = true;
                     _timer = 0;
                 }
 
+                //Checks if it can shoot according to the timer
                 if (isShootingAvailable)
                 {
                     new EnemyProjectile(_game, projOrientation, _position);
@@ -78,5 +89,6 @@ namespace PlaguePandemicsBats
                 }
             }
         }
+        #endregion
     }
 }
