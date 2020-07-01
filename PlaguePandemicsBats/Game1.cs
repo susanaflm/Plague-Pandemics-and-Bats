@@ -52,7 +52,6 @@ namespace PlaguePandemicsBats
         private Player _player;
         private SpawnerZombie _spZ;
         private ShooterZombie _shZ;
-        private Ammo _ammo;
         private Cat _cat;
         private Scene _scene;
         private Button _buttonPlay, _buttonQuit, _guyButton, _girlButton, _highScoreButton, _optnButton, _creditsButton, _back2menuButton;
@@ -320,12 +319,6 @@ namespace PlaguePandemicsBats
                         a.Update();
                     }
 
-                    _player.Update(gameTime);
-                    _cat.Update(gameTime);
-                    _collisionManager.Update(gameTime);
-                    _player.LateUpdate(gameTime);
-                    _cat.LateUpdate(gameTime);
-
                     foreach (Projectile p in Projectiles.ToArray())
                     {
                         p.Update(gameTime);
@@ -339,8 +332,22 @@ namespace PlaguePandemicsBats
                     foreach (Enemy e in Enemies.ToArray())
                     {
                         e.Update(gameTime);
+                    }
+
+                    _player.Update(gameTime);
+
+                    _cat.Update(gameTime);
+
+                    _collisionManager.Update(gameTime);
+
+                    foreach (Enemy e in Enemies.ToArray())
+                    {
                         e.LateUpdate(gameTime);
                     }
+
+                    _player.LateUpdate(gameTime);
+
+                    _cat.LateUpdate(gameTime);
 
                     break;
                 #endregion

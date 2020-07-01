@@ -61,11 +61,15 @@ namespace PlaguePandemicsBats
         {
             if (_projectileCollider._inCollision)
             {
-                if (_projectileCollider.collisions[0].Tag == "Enemy" || _projectileCollider.collisions[0].Tag == "Obstacle")
+                foreach (Collider c in _projectileCollider.collisions)
                 {
-                    _game.Projectiles.Remove(this);
-                    _game.CollisionManager.Remove(_projectileCollider);
+                    if (c.Tag == "Enemy" || c.Tag == "Obstacle")
+                    {
+                        _game.Projectiles.Remove(this);
+                        _game.CollisionManager.Remove(_projectileCollider);
+                    }
                 }
+               
             }
 
             float dist = Vector2.Distance(_origin, _position);

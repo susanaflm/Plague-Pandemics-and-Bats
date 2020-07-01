@@ -93,9 +93,15 @@ namespace PlaguePandemicsBats
                         }
                         _position = _oldPosition;
                     }
+
                     if (c.Tag == "Projectile")
                     {
                         _health -= 10;
+                    }
+
+                    if (c.Tag == "Obstacle")
+                    {
+                        _position = _oldPosition;
                     }
                 }
             }
