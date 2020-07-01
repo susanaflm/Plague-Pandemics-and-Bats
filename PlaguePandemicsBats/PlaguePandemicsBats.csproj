@@ -133,6 +133,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="app.manifest" />
+    <None Include="Content\astronboy.spritefont" />
     <None Include="Content\font.spritefont" />
     <None Include="Content\Fullgrass.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -167,6 +168,8 @@
     <Content Include="Content\guybutton.png" />
     <Content Include="Content\healthbar.png" />
     <Content Include="Content\highscoreMenu.png" />
+    <Content Include="Content\icon.png" />
+    <Content Include="Content\LoadingScreen.png" />
     <Content Include="Content\mainmenu.png" />
     <Content Include="Content\menusong.mp3" />
     <Content Include="Content\mmButton.png" />

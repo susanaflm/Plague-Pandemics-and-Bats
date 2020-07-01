@@ -80,6 +80,7 @@ namespace PlaguePandemicsBats
                 [Direction.Right] = new [] { new Sprite(game, "GirlR0", width: playerWidth), new Sprite(game, "GirlR1", width: playerWidth), new Sprite(game, "GirlR2", width: playerWidth) }
             };
             #endregion
+
             _currentSprite = _spriteDirectionMale [_direction] [_frame];
 
             _playerCollider = new OBBCollider(game, "Player", _position, _currentSprite.size, rotation: 0);
@@ -114,6 +115,11 @@ namespace PlaguePandemicsBats
         /// Get the Player's Collider
         /// </summary>
         public Collider Collider => _playerCollider;
+
+        /// <summary>
+        /// Gets the Player's Highscore
+        /// </summary>
+        public int Highscore { get; set; }
 
         /// <summary>
         /// Gets the Player's current Score
@@ -184,6 +190,12 @@ namespace PlaguePandemicsBats
         public void UpdateScore(int x)
         {
             _score += x;
+
+            if (Score > Highscore)
+            {
+                Highscore = Score;
+                _game.SaveHighScore(Highscore);
+            }
         }
 
         public void AddAmmo(int ammoQuantity)
@@ -243,8 +255,6 @@ namespace PlaguePandemicsBats
         {
             _lives--;
             _score = 0;
-
-
             //TODO: Go Back To checkpoint and save the score on checkpoint
 
             _health = 100;
@@ -256,7 +266,7 @@ namespace PlaguePandemicsBats
         }
 
         /// <summary>
-        /// This Function allows to place the player in a certain position
+        /// This function allows to place the player in a certain position
         /// </summary>
         /// <param name="position">Position to put the player</param>
         public void SetPosition(Vector2 position)
@@ -266,7 +276,7 @@ namespace PlaguePandemicsBats
         }
 
         /// <summary>
-        /// Sets the Player's Gender
+        /// Sets the player's gender
         /// </summary>
         /// <param name="playerGender">0 for female, 1 for male</param>
         public void SetGender(int playerGender)

@@ -16,7 +16,7 @@ namespace PlaguePandemicsBats
         private const float _blinkRate = 0.5f;
 
         private SpriteFont _spriteFont;
-        private Game _game;
+        private Game1 _game;
         private string _input = "";
         private float _blinkTimer = 0f;
         #endregion
@@ -50,6 +50,8 @@ namespace PlaguePandemicsBats
             if (KeyboardManager.IsKeyGoingDown(k = Keys.Space)) _input += " ";
 
             if (_input.Length > 0 && KeyboardManager.IsKeyGoingDown(k = Keys.Back)) _input = _input.Substring(0, _input.Length - 1);
+
+            _game.Player.Name = _input;
         }
 
         /// <summary>
@@ -59,7 +61,7 @@ namespace PlaguePandemicsBats
         public void Draw(SpriteBatch spriteBatch, GameTime gameTime)
         {
             Vector2 inputSize = _spriteFont.MeasureString(_input);
-            Vector2 position = new Vector2(20, 50);
+            Vector2 position = new Vector2(0, 0);
 
             spriteBatch.DrawString(_spriteFont, _input, position, color: Color.Black);
 
@@ -71,6 +73,7 @@ namespace PlaguePandemicsBats
                 _blinkTimer = 0f;
 
             _blinkTimer += (float)gameTime.ElapsedGameTime.TotalSeconds;
+
         }
         #endregion
     }

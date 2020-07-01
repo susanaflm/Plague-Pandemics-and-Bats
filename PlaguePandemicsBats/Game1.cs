@@ -32,7 +32,7 @@ namespace PlaguePandemicsBats
     /// </summary>
     public enum GameState
     {
-        MainMenu, Options, Highscores, Playing, Paused, ChooseName, ChooseCharacter
+        MainMenu, Options, Highscores, Playing, Paused, ChooseName, ChooseCharacter, LoadingScreen
     }
     #endregion
 
@@ -43,7 +43,7 @@ namespace PlaguePandemicsBats
         private SoundEffect _playSound;
         private Song _menuSong;
         private SpriteBatch _spriteBatch;
-        private SpriteFont _spriteFont;
+        private SpriteFont _spriteFont, _astronBoy;
         private Texture2D _pausedTexture;
         private Rectangle _pausedRect;
         private Camera _camera;
@@ -102,6 +102,11 @@ namespace PlaguePandemicsBats
         /// Get game's player 
         /// </summary>
         public Player Player => _player;
+
+        /// <summary>
+        /// Get game's cat 
+        /// </summary>
+        public Cat Cat => _cat;
 
         /// <summary>
         /// Get game's UI
@@ -176,6 +181,7 @@ namespace PlaguePandemicsBats
 
             //FONT
             _spriteFont = Content.Load<SpriteFont>("minecraft");
+            _astronBoy = Content.Load<SpriteFont>("astronboy");
 
             //SOUNDS
             _playSound = Content.Load<SoundEffect>("playsound");
@@ -270,21 +276,40 @@ namespace PlaguePandemicsBats
                     if (_girlButton.isClicked)
                     {
                         _player.SetGender(0);
-                        _gameState = GameState.Playing;
-                        _playSound.Play();
+                        _gameState = GameState.LoadingScreen;
                     }
                         
                     if (_guyButton.isClicked)
                     {
                         _player.SetGender(1);
-                        _gameState = GameState.Playing;
-                        _playSound.Play();
+                        _gameState = GameState.LoadingScreen;
                     }
                         
                     _girlButton.Update(mouseState, 0);
                     _guyButton.Update(mouseState, 0);
                     break;
                 #endregion
+
+                #region Loading
+                case GameState.LoadingScreen:
+
+                    if (Keyboard.GetState().IsKeyDown(Keys.Enter))
+                    { 
+                        _gameState = GameState.Playing;
+                        _playSound.Play();
+                    }
+                       
+                    break;
+                #endregion
+
+                //#region Name
+                //case GameState.ChooseName:
+                //    if(Keyboard.GetState().IsKeyDown(Keys.Enter))
+                //    {
+                //        _gameState = GameState.LoadingScreen;
+                //    }
+                //    break;
+                //#endregion
 
                 #region Highscore
                 case GameState.Highscores:
@@ -393,7 +418,9 @@ namespace PlaguePandemicsBats
 
             #region Playing
             if (_gameState == GameState.Playing)
-            {                
+            {
+                Texture2D texture = Content.Load<Texture2D>("icon");
+                
                 background.Draw(gameTime);
                 
                 _scene.Draw(gameTime);
@@ -420,8 +447,9 @@ namespace PlaguePandemicsBats
                     e.Draw(_spriteBatch);
                 }
 
-                Pixel.DrawRectangle(new Rectangle(8, 8, 102, 22), Color.White* 0.5f);
-                _spriteBatch.DrawString(_spriteFont, $"SCORE {Player.Score}", new Vector2(10, 10), Color.DarkBlue);
+                _spriteBatch.Draw(texture, new Vector2(10, 45), Color.White);
+                _spriteBatch.DrawString(_astronBoy, $"X {Player.AmmoQuantity}", new Vector2(45, 45), Color.DarkSlateGray);
+                _spriteBatch.DrawString(_astronBoy, $"SCORE {Player.Score}", new Vector2(10, 10), Color.DarkSlateGray);
             }
             #endregion
 
@@ -498,6 +526,23 @@ namespace PlaguePandemicsBats
             }
             #endregion
 
+            #region Loading
+            if (_gameState == GameState.LoadingScreen)
+            {
+                Texture2D texture = Content.Load<Texture2D>("LoadingScreen");
+                //fullscreen
+                Rectangle rec = new Rectangle(0, 0, GraphicsDevice.Viewport.Width, GraphicsDevice.Viewport.Height);
+                Color color = Color.White;
+
+                _spriteBatch.Draw(texture, rec, color);
+            }
+            #endregion
+
+            //#region Name
+            //    if(_gameState == GameState.ChooseName)
+            //        _ui.Draw(_spriteBatch, gameTime);
+            //#endregion
+
             #region Highscore
             if ( _gameState == GameState.Highscores)
             {
@@ -535,7 +580,7 @@ namespace PlaguePandemicsBats
         {
             try
             {
-                string[] file = File.ReadAllLines($@"{Content.RootDirectory}\highscore.txt");
+                string[] file = File.ReadAllLines($@"{Content.RootDirectory}/highscore.txt");
 
                 if (file.Length != 0 && !int.TryParse(file[0], out _highScore))
                 {
@@ -552,9 +597,12 @@ namespace PlaguePandemicsBats
         /// Saves the New HighScore
         /// </summary>
         /// <param name="newHighScore">The new High Score to save</param>
-        private void SaveHighScore(int newHighScore)
+        public void SaveHighScore(int newHighScore)
         {
-            File.WriteAllText($@"{Content.RootDirectory}\highscore.txt", newHighScore.ToString());
+            string path = this.Content.RootDirectory + "/highscore.txt";
+            string text = _player.Name + ";" + newHighScore.ToString();
+
+            File.WriteAllText(path, text);
         }
 
         private void LoadLevel()
@@ -564,8 +612,8 @@ namespace PlaguePandemicsBats
             _scene = new Scene(this, "MainScene");
             _ui = new UI(this);
             _cat = new Cat(this);
-            _spZ = new SpawnerZombie(this, Vector2.One);
-            _shZ = new ShooterZombie(this, new Vector2(3, 1));
+            //_spZ = new SpawnerZombie(this, Vector2.One);
+            //_shZ = new ShooterZombie(this, new Vector2(3, 1));
 
             //BACKGROUND 
             background = new TilingBackground(this, "Fullgrass", new Vector2(4));

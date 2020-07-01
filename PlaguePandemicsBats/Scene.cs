@@ -51,9 +51,28 @@ namespace PlaguePandemicsBats
                 {
                     new PinkZombie(_game, new Vector2(x, y));
                 }
+                else if (image ["imageName"]?.Value<string>() == "ZGuyD0")
+                {
+                    new ShooterZombie(_game, new Vector2(x, y));
+                }
+                else if (image ["imageName"]?.Value<string>() == "ZGlassBoyD0")
+                {
+                    new SpawnerZombie(_game, new Vector2(x, y));
+                }
+                //else if (image ["imageName"]?.Value<string>() == "catD0")
+                //{
+                //    new Cat(_game, new Vector2(x, y));
+                //}
                 else if (image ["imageName"]?.Value<string>() == "cure")
                 {
                     new Ammo(_game, new Vector2(x,y));
+                }               
+                else if (image ["itemIdentifier"]?.Value<string>() == "NoCollider")
+                {
+                    Sprite sprite = new Sprite(_game, imgName, scale: new Vector2(scaleX, scaleY), collides: false);
+                    sprite.SetPosition(new Vector2(x + sprite.size.X / 2, y + sprite.size.Y / 2));
+                    sprite.SetRotation(rotation);
+                    _sprites.Add(sprite);
                 }
                 else if (image ["tags"]?.Value<JArray>().ToString() == "collider")
                 {                
