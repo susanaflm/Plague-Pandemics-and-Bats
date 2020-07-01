@@ -6,10 +6,16 @@ Plague, Pandemics & Bats is an original game concept surging from the recent pan
 
 ## Controls
 The game allows for both types of control movements:
-*WASD*
-<kbd>W</kbd> <kbd>A</kbd> <kbd>S</kbd> <kbd>D</kbd>
 
-*ARROWS*
-<kbd>Up</kbd> <kbd>Left</kbd> <kbd>Down</kbd> <kbd>Right</kbd>.
+<kbd>W</kbd> <kbd>A</kbd> <kbd>S</kbd> <kbd>D</kbd> & <kbd>Up</kbd> <kbd>Left</kbd> <kbd>Down</kbd> <kbd>Right</kbd>.
+
+## Player
+
+->Player
+
+The main characters of the game:
+**Maria Soto** & **Oliver Buchanan**
+
+The "player", this class is responsible for the designation of player controls, assigning scores, modifying the highscore if the current score exceeds it, removing lives from the player, it also orientates how the class Cat moves.
 
 
