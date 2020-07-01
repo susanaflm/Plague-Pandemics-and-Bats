@@ -33,7 +33,8 @@ namespace PlaguePandemicsBats
 
         private float _deltaTime = 0;
         private SoundEffect _dieSound;
-        private float _timeToDamage = 1; 
+        private float _timeToDamage = 1;
+        private float _timer = 0;
         private bool _isEnemyAbleToDamage = false;
         #endregion
 
@@ -107,6 +108,7 @@ namespace PlaguePandemicsBats
         public void Update(GameTime gameTime)
         {
             _deltaTime += gameTime.DeltaTime();
+            _timer += gameTime.DeltaTime();
 
             _oldPosition = _position;
 
@@ -128,8 +130,11 @@ namespace PlaguePandemicsBats
             _enemyCollider.SetPosition(_position);
 
             //Time to damage the player
-            if (_timeToDamage - _deltaTime <= 0)
+            if (_timeToDamage - _timer <= 0)
+            {
+                _timer = 0;
                 _isEnemyAbleToDamage = true;
+            }
 
             //If the enemy's health goes below zero it dies
             if (_health <= 0)

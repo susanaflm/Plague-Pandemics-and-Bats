@@ -26,6 +26,8 @@ namespace PlaguePandemicsBats
         private Dictionary<Direction, Sprite []> _spritesDirection;
         private Sprite _currentSprite;
         private float _deltaTime = 0;
+        private bool _isFollowingPlayer = false;
+        private bool _isAttackingEnemy = false;
         #endregion
 
         #region Constructor
@@ -73,8 +75,11 @@ namespace PlaguePandemicsBats
 
             _oldPosition = _position;
 
-            Movement(gameTime);
-
+            if (_isFollowingPlayer)
+            {
+                Movement(gameTime);
+            }
+            
             _frame = (int)(_deltaTime * 6) % 3;
             if (_frame > 2)
                 _frame = 1;
@@ -107,7 +112,16 @@ namespace PlaguePandemicsBats
                         _health -= 10;
                         _position = _oldPosition;
                     }
-                   
+
+                    if (c.Tag == "Obstacle")
+                    {
+                        _position = _oldPosition;
+                    }
+
+                    if (c.Tag == "Player")
+                    {
+                        _isFollowingPlayer = true;
+                    }
                 }
             }
         }
