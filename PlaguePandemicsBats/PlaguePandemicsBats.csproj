@@ -43,6 +43,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="AABBCollider.cs" />
+    <Compile Include="Ammo.cs" />
     <Compile Include="Bat.cs" />
     <Compile Include="Button.cs" />
     <Compile Include="Camera.cs" />
@@ -146,6 +147,7 @@
     <None Include="Content\pandemics\export\scenes\MainScene.dt" />
     <None Include="Content\pandemics\project.dt" />
     <None Include="Content\pandemics\project.pit" />
+    <None Include="Content\pandemics\scenes\FinalScene.dt" />
     <None Include="Content\pandemics\scenes\MainScene.dt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -163,6 +165,7 @@
     <Content Include="Content\Fullgrass.png" />
     <Content Include="Content\girlbutton.png" />
     <Content Include="Content\guybutton.png" />
+    <Content Include="Content\healthbar.png" />
     <Content Include="Content\highscoreMenu.png" />
     <Content Include="Content\mainmenu.png" />
     <Content Include="Content\menusong.mp3" />
@@ -173,6 +176,7 @@
     <Content Include="Content\pandemics\assets\orig\images\BigHouseR.png" />
     <Content Include="Content\pandemics\assets\orig\images\BigTree.png" />
     <Content Include="Content\pandemics\assets\orig\images\BlueHouse.png" />
+    <Content Include="Content\pandemics\assets\orig\images\borona.png" />
     <Content Include="Content\pandemics\assets\orig\images\Building1.png" />
     <Content Include="Content\pandemics\assets\orig\images\catD0.png" />
     <Content Include="Content\pandemics\assets\orig\images\catD1.png" />

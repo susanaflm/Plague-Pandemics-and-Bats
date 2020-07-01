@@ -42,8 +42,6 @@ namespace PlaguePandemicsBats
                 float rotation = deg2Reg * (image ["rotation"]?.Value<float>() ?? 0f);
                 float scaleX = image ["scaleX"]?.Value<float>() ?? 1;
                 float scaleY = image ["scaleY"]?.Value<float>() ?? 1;
-                //float width = image["width"].Value<float>();
-                //float height = image["height"].Value<float>();;
 
                 if (image ["itemIdentifier"]?.Value<string>() == "Player")
                 {
@@ -52,6 +50,10 @@ namespace PlaguePandemicsBats
                 else if (image ["imageName"]?.Value<string>() == "ZGirlD0")
                 {
                     new PinkZombie(_game, new Vector2(x, y));
+                }
+                else if (image ["imageName"]?.Value<string>() == "cure")
+                {
+                    new Ammo(_game);
                 }
                 else if (image ["tags"]?.Value<JArray>().ToString() == "collider")
                 {                

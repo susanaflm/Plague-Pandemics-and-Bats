@@ -18,8 +18,8 @@ namespace PlaguePandemicsBats
         private Game1 _game;
         private Texture2D _healthbar;
         private Dictionary<Direction, Vector2> _playerDirection;
-        private Dictionary<Direction, Sprite[]> _spriteDirectionMale;
-        private Dictionary<Direction, Sprite[]> _spriteDirectionFemale;
+        private Dictionary<Direction, Sprite []> _spriteDirectionMale;
+        private Dictionary<Direction, Sprite []> _spriteDirectionFemale;
         private OBBCollider _playerCollider;
 
         private Direction _direction = Direction.Down;
@@ -36,6 +36,7 @@ namespace PlaguePandemicsBats
         #endregion
 
         public string filePath;
+
         #region Constructor
         /// <summary>
         /// Player Constructor
@@ -59,23 +60,23 @@ namespace PlaguePandemicsBats
                 [Direction.Right] = Vector2.UnitX
             };
 
-            _spriteDirectionMale = new Dictionary<Direction, Sprite[]>
+            _spriteDirectionMale = new Dictionary<Direction, Sprite []>
             {
-                [Direction.Up] = new[] { new Sprite(game, "GuyU0", width: playerWidth), new Sprite(game, "GuyU1", width: playerWidth), new Sprite(game, "GuyU2", width: playerWidth) },
-                [Direction.Down] = new[] { new Sprite(game, "GuyD0", width: playerWidth), new Sprite(game, "GuyD1", width: playerWidth), new Sprite(game, "GuyD2", width: playerWidth) },
-                [Direction.Left] = new[] { new Sprite(game, "GuyL0", width: playerWidth), new Sprite(game, "GuyL1", width: playerWidth), new Sprite(game, "GuyL2", width: playerWidth) },
-                [Direction.Right] = new[] { new Sprite(game, "GuyR0", width: playerWidth), new Sprite(game, "GuyR1", width: playerWidth), new Sprite(game, "GuyR2", width: playerWidth) }
+                [Direction.Up] = new [] { new Sprite(game, "GuyU0", width: playerWidth), new Sprite(game, "GuyU1", width: playerWidth), new Sprite(game, "GuyU2", width: playerWidth) },
+                [Direction.Down] = new [] { new Sprite(game, "GuyD0", width: playerWidth), new Sprite(game, "GuyD1", width: playerWidth), new Sprite(game, "GuyD2", width: playerWidth) },
+                [Direction.Left] = new [] { new Sprite(game, "GuyL0", width: playerWidth), new Sprite(game, "GuyL1", width: playerWidth), new Sprite(game, "GuyL2", width: playerWidth) },
+                [Direction.Right] = new [] { new Sprite(game, "GuyR0", width: playerWidth), new Sprite(game, "GuyR1", width: playerWidth), new Sprite(game, "GuyR2", width: playerWidth) }
             };
 
-            _spriteDirectionFemale = new Dictionary<Direction, Sprite[]>
+            _spriteDirectionFemale = new Dictionary<Direction, Sprite []>
             {
-                [Direction.Up] = new[] { new Sprite(game, "GirlU0", width: playerWidth), new Sprite(game, "GirlU1", width: playerWidth), new Sprite(game, "GirlU2", width: playerWidth) },
-                [Direction.Down] = new[] { new Sprite(game, "GirlD0", width: playerWidth), new Sprite(game, "GirlD1", width: playerWidth), new Sprite(game, "GirlD2", width: playerWidth) },
-                [Direction.Left] = new[] { new Sprite(game, "GirlL0", width: playerWidth), new Sprite(game, "GirlL1", width: playerWidth), new Sprite(game, "GirlL2", width: playerWidth) },
-                [Direction.Right] = new[] { new Sprite(game, "GirlR0", width: playerWidth), new Sprite(game, "GirlR1", width: playerWidth), new Sprite(game, "GirlR2", width: playerWidth) }
+                [Direction.Up] = new [] { new Sprite(game, "GirlU0", width: playerWidth), new Sprite(game, "GirlU1", width: playerWidth), new Sprite(game, "GirlU2", width: playerWidth) },
+                [Direction.Down] = new [] { new Sprite(game, "GirlD0", width: playerWidth), new Sprite(game, "GirlD1", width: playerWidth), new Sprite(game, "GirlD2", width: playerWidth) },
+                [Direction.Left] = new [] { new Sprite(game, "GirlL0", width: playerWidth), new Sprite(game, "GirlL1", width: playerWidth), new Sprite(game, "GirlL2", width: playerWidth) },
+                [Direction.Right] = new [] { new Sprite(game, "GirlR0", width: playerWidth), new Sprite(game, "GirlR1", width: playerWidth), new Sprite(game, "GirlR2", width: playerWidth) }
             };
             #endregion
-            _currentSprite = _spriteDirectionMale[_direction][_frame];
+            _currentSprite = _spriteDirectionMale [_direction] [_frame];
 
             _playerCollider = new OBBCollider(game, "Player", _position, _currentSprite.size, rotation: 0);
             _playerCollider.SetDebug(true);
@@ -119,6 +120,11 @@ namespace PlaguePandemicsBats
         /// Gets the Player's Highscore
         /// </summary>
         public int Highscore { get; set; }
+
+        /// <summary>
+        /// Assigning player's ammo
+        /// </summary>
+        public int AmmoQuantity { get; set; }
 
         #endregion
 
