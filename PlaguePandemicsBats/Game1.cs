@@ -148,6 +148,16 @@ namespace PlaguePandemicsBats
 
             _camera = new Camera(this, worldWidth: 9f);
 
+            LoadHighScores();
+
+            Player.OnPlayerLose += () =>
+            {
+                if (_player.Score > _highScore)
+                {
+                    SaveHighScore(_player.Score);
+                }
+            };
+
             //LISTS
             _enemies = new List<Enemy>();
             _projectiles = new List<Projectile>();
@@ -559,6 +569,11 @@ namespace PlaguePandemicsBats
         /// </summary>
         private void ReloadLevel()
         {
+            if (_player.Score > _highScore)
+            {
+                SaveHighScore(_player.Score);
+            }
+
             //Clear the lists
             _enemies.Clear();
             _projectiles.Clear();

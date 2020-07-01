@@ -12,6 +12,8 @@ namespace PlaguePandemicsBats
 {
     public class Player
     {
+        public static event Action OnPlayerLose;
+        
         #region Private variables 
         private const float playerWidth = 0.3f;
 
@@ -32,6 +34,7 @@ namespace PlaguePandemicsBats
         private int _lives = 3;
         private int _ammoCount = 0;
         private int _score = 0;
+        private int _lastCheckPointScore = 0;
 
         private Sprite _currentSprite;
         #endregion
@@ -118,11 +121,6 @@ namespace PlaguePandemicsBats
         public int Score => _score;
 
         /// <summary>
-        /// Gets the Player's Highscore
-        /// </summary>
-        public int Highscore { get; set; }
-
-        /// <summary>
         /// Assigning player's ammo
         /// </summary>
         public int AmmoQuantity => _ammoCount;
@@ -148,11 +146,6 @@ namespace PlaguePandemicsBats
         {
             float deltaTime = gameTime.DeltaTime();
             float totalTime = gameTime.TotalTime();
-
-            if (Score > Highscore)
-            {
-                Highscore = Score;
-            }
 
             if (_playerGender == 0)
             {
@@ -196,32 +189,6 @@ namespace PlaguePandemicsBats
         public void AddAmmo(int ammoQuantity)
         {
             _ammoCount += ammoQuantity;
-        }
-
-        public void SetHighScore()
-        {
-            //new line to insert on the text file
-            string line;
-            int currentScore, highScore;
-
-            //setting the variables to their current state
-            currentScore = _score;
-            highScore = Highscore;
-
-            line = highScore.ToString();
-
-            //comparing to get the highest score
-            if (currentScore >= highScore)
-            {
-                highScore = currentScore;
-                Highscore = highScore;
-
-                var newHighScore = File.Create(filePath);
-                newHighScore.Close();
-                File.WriteAllText(filePath, line);
-                newHighScore.Close();
-            }
-            else Highscore = highScore;
         }
 
         public void HandleInput()
@@ -277,7 +244,15 @@ namespace PlaguePandemicsBats
             _lives--;
             _score = 0;
 
-            //TODO: Go Back To checkpoint
+
+            //TODO: Go Back To checkpoint and save the score on checkpoint
+
+            _health = 100;
+
+            if (_lives < 0)
+            {
+                OnPlayerLose?.Invoke();
+            }
         }
 
         /// <summary>
