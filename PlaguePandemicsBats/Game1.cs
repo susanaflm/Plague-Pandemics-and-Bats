@@ -135,6 +135,9 @@ namespace PlaguePandemicsBats
         /// </summary>
         public List<EnemyProjectile> EnemyProjectiles => _enemyProjectiles;
 
+        /// <summary>
+        /// Get Game's Ammo
+        /// </summary>
         public List<Ammo> Ammo => _ammoList;
         #endregion
 
@@ -334,6 +337,10 @@ namespace PlaguePandemicsBats
                         c.Update(gameTime);
                         c.LateUpdate(gameTime);
                     }
+                    foreach (Ammo a in Ammo.ToArray())
+                    {
+                        a.Update();
+                    }
                     break;
                 #endregion
 
@@ -377,8 +384,12 @@ namespace PlaguePandemicsBats
                 background.Draw(gameTime);
                 
                 _scene.Draw(gameTime);
-                _ammo.Draw(gameTime);
                 _player.Draw(_spriteBatch);
+
+                foreach (Ammo a in Ammo.ToArray())
+                {
+                    a.Draw(_spriteBatch);
+                }
 
                 foreach (Projectile p in Projectiles.ToArray())
                 {
@@ -544,7 +555,7 @@ namespace PlaguePandemicsBats
         private void LoadLevel()
         {
             //CHARACTERS & SCENE
-            _ammo = new Ammo(this);
+            _ammo = new Ammo(this, Vector2.Zero);
             _player = new Player(this);
             _scene = new Scene(this, "MainScene");
             _ui = new UI(this);

@@ -27,6 +27,7 @@ namespace PlaguePandemicsBats
         public void Remove(Collider c)
         {
             colliders.Remove(c);
+            inRangeColliders.Remove(c);
         }
 
         public void Update(GameTime gameTime)

@@ -10,26 +10,26 @@ using Microsoft.Xna.Framework.Input;
 
 namespace PlaguePandemicsBats
 {
-    public class Ammo : DrawableGameComponent
+    public class Ammo
     {
         private Game1 _game;
-        private Texture2D _texture;
-        private SpriteManager _sprite;
-        private Rectangle _rec;
-        private SpriteBatch _spriteBatch;
+        private Sprite _ammoTex;
         private OBBCollider _collider;
         private int _ammoCount = 10;
 
-        public Ammo(Game1 game) : base(game)
+        public Ammo(Game1 game, Vector2 position)
         {
             _game = game;
-            _spriteBatch = new SpriteBatch(GraphicsDevice);
-            _sprite = new SpriteManager(_game);
-            _texture = _sprite.getTexture("cure");
-            _rec = _sprite.getRectangle("cure");
+
+            _ammoTex = new Sprite(game, "cure", width: 0.1f);
+            _ammoTex.SetPosition(position);
+
+            _collider = new OBBCollider(game, "Ammo", position, _ammoTex.size, 0);
+            game.CollisionManager.Add(_collider);
+            _game.Ammo.Add(this);
         }
 
-        public virtual void Update()
+        public void Update()
         {
             if (_collider._inCollision)
             {
@@ -38,22 +38,21 @@ namespace PlaguePandemicsBats
                     if (c.Tag == "Player")
                     {
                         AddAmmo();
-                        _game.Components.Remove(this);
+                        _game.Ammo.Remove(this);
+                        _game.CollisionManager.Remove(_collider);
                     }                   
                 }
             }
         }
+
         public void AddAmmo()
         {
-            _game.Player.AmmoQuantity += _ammoCount;
-            _game.Ammo.Add(this);
-        }
-        public override void Draw(GameTime gameTime)
-        {
-            _spriteBatch.Begin(samplerState: SamplerState.PointClamp);
-            _spriteBatch.Draw(_texture, _rec, Color.White);            
-            _spriteBatch.End();
+            _game.Player.AddAmmo(_ammoCount);
         }
 
+        public void Draw(SpriteBatch sb)
+        {
+            _ammoTex.Draw(sb);
+        }
     }
 }

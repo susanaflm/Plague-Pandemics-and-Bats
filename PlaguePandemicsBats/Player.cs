@@ -29,7 +29,8 @@ namespace PlaguePandemicsBats
         private int _frame = 0;
         private int _playerGender;
         private int _health = 100;
-        private int lives = 3;
+        private int _lives = 3;
+        private int _ammoCount = 0;
         private int _score = 0;
 
         private Sprite _currentSprite;
@@ -124,7 +125,7 @@ namespace PlaguePandemicsBats
         /// <summary>
         /// Assigning player's ammo
         /// </summary>
-        public int AmmoQuantity { get; set; }
+        public int AmmoQuantity => _ammoCount;
 
         #endregion
 
@@ -192,6 +193,11 @@ namespace PlaguePandemicsBats
             _score += x;
         }
 
+        public void AddAmmo(int ammoQuantity)
+        {
+            _ammoCount += ammoQuantity;
+        }
+
         public void SetHighScore()
         {
             //new line to insert on the text file
@@ -244,11 +250,12 @@ namespace PlaguePandemicsBats
             {
                 _position = Vector2.Zero;
             }
-            if (KeyboardManager.IsKeyGoingDown(Keys.Space))
+            if (KeyboardManager.IsKeyGoingDown(Keys.Space) && _ammoCount > 0)
             {
                 Projectile proj = new Projectile(_game);
                 _game.Projectiles.Add(proj);
                 proj.Shoot();
+                _ammoCount--;
             }
 
         }
@@ -267,7 +274,7 @@ namespace PlaguePandemicsBats
         /// </summary>
         public void Die()
         {
-            lives--;
+            _lives--;
             _score = 0;
 
             //TODO: Go Back To checkpoint

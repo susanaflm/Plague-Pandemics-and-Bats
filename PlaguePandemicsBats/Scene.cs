@@ -53,7 +53,7 @@ namespace PlaguePandemicsBats
                 }
                 else if (image ["imageName"]?.Value<string>() == "cure")
                 {
-                    new Ammo(_game);
+                    new Ammo(_game, new Vector2(x,y));
                 }
                 else if (image ["tags"]?.Value<JArray>().ToString() == "collider")
                 {                
