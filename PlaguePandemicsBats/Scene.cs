@@ -59,10 +59,6 @@ namespace PlaguePandemicsBats
                 {
                     new SpawnerZombie(_game, new Vector2(x, y));
                 }
-                //else if (image ["imageName"]?.Value<string>() == "catD0")
-                //{
-                //    new Cat(_game, new Vector2(x, y));
-                //}
                 else if (image ["imageName"]?.Value<string>() == "cure")
                 {
                     new Ammo(_game, new Vector2(x,y));
