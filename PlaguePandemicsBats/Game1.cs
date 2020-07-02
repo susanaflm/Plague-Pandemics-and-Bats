@@ -618,9 +618,9 @@ namespace PlaguePandemicsBats
         {
             //CHARACTERS & SCENE
             _player = new Player(this);
+            _cat = new Cat(this);
             _scene = new Scene(this, "MainScene");
             _ui = new UI(this);
-            _cat = new Cat(this);
             //_spZ = new SpawnerZombie(this, Vector2.One);
             //_shZ = new ShooterZombie(this, new Vector2(3, 1));
 
