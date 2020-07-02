@@ -159,7 +159,8 @@ namespace PlaguePandemicsBats
             {
                 if (_player.Score > _highScore)
                 {
-                    SaveHighScore(_player.Score);
+                    _player.Highscore = _player.Score;
+                    SaveHighScore(_player.Highscore);
                 }
             };
 
@@ -454,6 +455,7 @@ namespace PlaguePandemicsBats
 
                 //DRAW TOP LEFT CORNER TEXTS
                 _spriteBatch.DrawString(_astronBoy, $"X {Player.AmmoQuantity}", new Vector2(45, 45), Color.DarkSlateGray);
+                _spriteBatch.DrawString(_astronBoy, $"LIVES {Player.Lives}", new Vector2(10, 480), Color.DarkSlateGray);
                 _spriteBatch.DrawString(_astronBoy, $"SCORE {Player.Score}", new Vector2(10, 10), Color.DarkSlateGray);
             }
             #endregion
@@ -574,6 +576,10 @@ namespace PlaguePandemicsBats
             if (_gameState == GameState.Highscores)
             {
                 Texture2D texture = Content.Load<Texture2D>("highscoreMenu");
+                string [] file = File.ReadAllLines($@"{Content.RootDirectory}/highscore.txt");
+                string text;
+                int line = 0;
+                Vector2 vec;
                 //fullscreen
                 Rectangle rec = new Rectangle(0, 0, GraphicsDevice.Viewport.Width, GraphicsDevice.Viewport.Height);
                 Color color = Color.White;
@@ -585,10 +591,6 @@ namespace PlaguePandemicsBats
                 _highScoreButton.Draw(_spriteBatch, 0);
                 _back2menuButton.Draw(_spriteBatch, 0);
 
-                string [] file = File.ReadAllLines($@"{Content.RootDirectory}/highscore.txt");
-                string text;
-                Vector2 vec;
-
                 for (int i = 0; i < file.Length; i++)
                 {
                     vec = new Vector2(i, i);
@@ -597,10 +599,15 @@ namespace PlaguePandemicsBats
                     {
                         text = " ";
                     }
+                    else if ( file[i] == "-")
+                    {
+                        line++;
+                        text = " ";
+                    }
                     else
                     {
                         text = $"{file [i]}";
-                    }
+                    }                   
                     _spriteBatch.DrawString(_spriteFont, text, vec, Color.White);
                 }
                 #endregion
@@ -647,7 +654,7 @@ namespace PlaguePandemicsBats
         public void SaveHighScore(int newHighScore)
         {
             string path = this.Content.RootDirectory + "/highscore.txt";
-            string text = _player.Name + ";" + newHighScore.ToString();
+            string text = _player.Name + ";" + newHighScore.ToString() + "-";
 
             File.AppendAllText(path, text);
         }
@@ -671,7 +678,8 @@ namespace PlaguePandemicsBats
         {
             if (_player.Score > _highScore)
             {
-                SaveHighScore(_player.Score);
+                _player.Highscore = _player.Score;
+                SaveHighScore(_player.Highscore);
             }
 
             //Clear the lists

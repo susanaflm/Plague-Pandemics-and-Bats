@@ -51,6 +51,11 @@ namespace PlaguePandemicsBats
                 {
                     new PinkZombie(_game, new Vector2(x, y));
                 }
+                else if (image ["imageName"]?.Value<string>() == "CheckPoint")
+                {
+                    _game.Player.CheckPointX = x;
+                    _game.Player.CheckPointY = y;
+                }
                 else if (image ["imageName"]?.Value<string>() == "ZGuyD0")
                 {
                     new ShooterZombie(_game, new Vector2(x, y));

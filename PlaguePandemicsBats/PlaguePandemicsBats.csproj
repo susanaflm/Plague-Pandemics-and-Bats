@@ -169,6 +169,7 @@
     <Content Include="Content\healthbar.png" />
     <Content Include="Content\highscoreMenu.png" />
     <Content Include="Content\icon.png" />
+    <Content Include="Content\lives.png" />
     <Content Include="Content\LoadingScreen.png" />
     <Content Include="Content\mainmenu.png" />
     <Content Include="Content\menusong.mp3" />

@@ -96,6 +96,8 @@ namespace PlaguePandemicsBats
         /// </summary>
         public string Name { get; set; }
 
+        public int Lives => _lives;
+
         /// <summary>
         /// Get the Player's Position
         /// </summary>
@@ -120,6 +122,11 @@ namespace PlaguePandemicsBats
         /// Gets the Player's Highscore
         /// </summary>
         public int Highscore { get; set; }
+
+
+        public float CheckPointX { get; set; }
+
+        public float CheckPointY { get; set; }
 
         /// <summary>
         /// Gets the Player's current Score
@@ -194,7 +201,6 @@ namespace PlaguePandemicsBats
             if (Score > Highscore)
             {
                 Highscore = Score;
-                _game.SaveHighScore(Highscore);
             }
         }
 
@@ -254,13 +260,14 @@ namespace PlaguePandemicsBats
         public void Die()
         {
             _lives--;
-            _score = 0;
-            //TODO: Go Back To checkpoint and save the score on checkpoint
+
+            this.SetPosition(new Vector2(5.36f, -5.18f));
 
             _health = 100;
 
-            if (_lives < 0)
-            {
+            if (_lives <= 0)
+            {   
+                _score = 0;
                 OnPlayerLose?.Invoke();
             }
         }
@@ -293,6 +300,14 @@ namespace PlaguePandemicsBats
         /// <param name="sb"></param>
         public void Draw(SpriteBatch sb)
         {
+            int i;
+
+            Texture2D texture = _game.Content.Load<Texture2D>("lives");
+
+            for ( i = 0; i<= _lives; i++)
+            {
+                sb.Draw(texture, new Vector2(150 , 480), Color.White);
+            }
             _currentSprite.Draw(sb);
             _playerCollider?.Draw(null);
         }
