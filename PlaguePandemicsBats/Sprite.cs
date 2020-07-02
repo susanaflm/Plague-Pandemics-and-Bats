@@ -7,10 +7,9 @@ namespace PlaguePandemicsBats
 {
     public class Sprite
     {
-        private Texture2D texture; // Texture da SpriteSheet
-        internal Rectangle bounds; // Posição na SpriteSheet
+        private Texture2D texture; 
+        internal Rectangle bounds; 
         private Vector2 origin;
-        //private Vector2 _scale = Vector2.One;
 
         internal string _spriteName;
         internal Vector2 size; // Tamanho em unidades "reais"
@@ -40,23 +39,17 @@ namespace PlaguePandemicsBats
 
             origin = bounds.Size.ToVector2() / 2f;
             
-            // Se nao indicaram largura nem altura, dar erro
             if (!scale.HasValue && width == 0f && height == 0f)
                 throw new Exception("Sprite constructor requires scale, width or height");
 
             if (scale.HasValue)
             {
-                //_scale = (Vector2)scale;
-                //width = bounds.Width / 80f;
-                //height = bounds.Height / 80f;
                 width = scale.Value.X * bounds.Width / 80f;
                 height = scale.Value.Y * bounds.Height / 80f;
             }
 
             if (width == 0f)
             {
-                /* height -> bounds.height
-                 * width -> bounds.width         */
                 width = bounds.Width * height / bounds.Height;
             }
 
@@ -117,17 +110,6 @@ namespace PlaguePandemicsBats
 
         public void Draw(SpriteBatch spriteBatch)
         {
-            //spriteBatch.Draw(
-            //        texture,
-            //    new Rectangle(Camera.ToPixel(position + size * _scale / 2f).ToPoint(),
-            //        (Camera.ToLength(size * _scale)).ToPoint()),
-            //    bounds,
-            //    _color,
-            //    rotation,
-            //        origin,
-            //SpriteEffects.None,
-            //    0);
-
             spriteBatch.Draw(
                texture,
                new Rectangle(Camera.ToPixel(position).ToPoint(), Camera.ToLength(size).ToPoint()),
@@ -137,7 +119,6 @@ namespace PlaguePandemicsBats
                origin,
                SpriteEffects.None,
                0);
-
 
             obbCollider?.Draw(null);
             aabbCollider?.Draw(null);
