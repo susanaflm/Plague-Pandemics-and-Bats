@@ -6,6 +6,7 @@ using Microsoft.Xna.Framework.Media;
 using Newtonsoft.Json.Serialization;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.IO;
 
 namespace PlaguePandemicsBats
@@ -203,10 +204,10 @@ namespace PlaguePandemicsBats
             MediaPlayer.Play(_menuSong);
 
             #region Buttons
-            _buttonPlay = new Button(this, Content.Load<Texture2D>("play"), new Vector2(GraphicsDevice.Viewport.Width / 2, GraphicsDevice.Viewport.Height / 1.8f)); 
+            _buttonPlay = new Button(this, Content.Load<Texture2D>("play"), new Vector2(GraphicsDevice.Viewport.Width / 2, GraphicsDevice.Viewport.Height / 1.8f));
             _highScoreButton = new Button(this, Content.Load<Texture2D>("button"), new Vector2(GraphicsDevice.Viewport.Width / 2, GraphicsDevice.Viewport.Height / 1.46f));
             _buttonQuit = new Button(this, Content.Load<Texture2D>("quit"), new Vector2(GraphicsDevice.Viewport.Width / 2, GraphicsDevice.Viewport.Height / 1.23f));
-            _optnButton = new Button(this, Content.Load<Texture2D>("optnButton"),new Vector2(GraphicsDevice.Viewport.Width / 1.05f, GraphicsDevice.Viewport.Height / 5.7f));
+            _optnButton = new Button(this, Content.Load<Texture2D>("optnButton"), new Vector2(GraphicsDevice.Viewport.Width / 1.05f, GraphicsDevice.Viewport.Height / 5.7f));
             _creditsButton = new Button(this, Content.Load<Texture2D>("creditsButton"), new Vector2(GraphicsDevice.Viewport.Width / 1.05f, GraphicsDevice.Viewport.Height / 3.3f));
             _back2menuButton = new Button(this, Content.Load<Texture2D>("mmButton"), new Vector2(GraphicsDevice.Viewport.Width / 2, GraphicsDevice.Viewport.Height / 1.46f));
             _girlButton = new Button(this, Content.Load<Texture2D>("girlbutton"), new Vector2(190, 370));
@@ -278,13 +279,13 @@ namespace PlaguePandemicsBats
                         _player.SetGender(0);
                         _gameState = GameState.ChooseName;
                     }
-                        
+
                     if (_guyButton.isClicked)
                     {
                         _player.SetGender(1);
                         _gameState = GameState.ChooseName;
                     }
-                        
+
                     _girlButton.Update(mouseState, 0);
                     _guyButton.Update(mouseState, 0);
                     break;
@@ -294,11 +295,11 @@ namespace PlaguePandemicsBats
                 case GameState.LoadingScreen:
 
                     if (Keyboard.GetState().IsKeyDown(Keys.Enter))
-                    { 
+                    {
                         _gameState = GameState.Playing;
                         _playSound.Play();
                     }
-                       
+
                     break;
                 #endregion
 
@@ -393,7 +394,7 @@ namespace PlaguePandemicsBats
                         _gameState = GameState.MainMenu;
                         MediaPlayer.Play(_menuSong);
                     }
-                        
+
 
                     _buttonPlay.Update(mouseState, 0);
                     _buttonQuit.Update(mouseState, 0);
@@ -422,9 +423,9 @@ namespace PlaguePandemicsBats
             if (_gameState == GameState.Playing)
             {
                 Texture2D texture = Content.Load<Texture2D>("icon");
-                
+
                 background.Draw(gameTime);
-                
+
                 _scene.Draw(gameTime);
                 _player.Draw(_spriteBatch);
                 _cat.Draw(_spriteBatch);
@@ -499,8 +500,8 @@ namespace PlaguePandemicsBats
                 //fullscreen
                 Rectangle rec = new Rectangle(0, 0, GraphicsDevice.Viewport.Width, GraphicsDevice.Viewport.Height);
                 Color color = Color.White;
-                
-                _spriteBatch.Draw(texture , rec , color);
+
+                _spriteBatch.Draw(texture, rec, color);
 
                 _buttonPlay.Draw(_spriteBatch, 0);
                 _buttonQuit.Draw(_spriteBatch, 0);
@@ -549,11 +550,11 @@ namespace PlaguePandemicsBats
                 _spriteBatch.Draw(texture, rec, Color.White);
                 _ui.Draw(_spriteBatch, gameTime);
             }
-               
+
             #endregion
 
             #region Highscore
-            if ( _gameState == GameState.Highscores)
+            if (_gameState == GameState.Highscores)
             {
                 Texture2D texture = Content.Load<Texture2D>("highscoreMenu");
                 //fullscreen
@@ -566,30 +567,70 @@ namespace PlaguePandemicsBats
                 _back2menuButton = new Button(this, Content.Load<Texture2D>("mmButton"), new Vector2(830, 60));
                 _highScoreButton.Draw(_spriteBatch, 0);
                 _back2menuButton.Draw(_spriteBatch, 0);
+
+                string [] file = File.ReadAllLines($@"{Content.RootDirectory}/highscore.txt");
+                string text;
+                Vector2 vec;
+
+                for ( int i = 0; i < file.Length; i++)
+                {
+                    vec = new Vector2(i, i);
+
+                    if (file [i] == " " || file [i] == ";")
+                    {
+                        text = " ";
+                    }
+                    else
+                    {
+                        text = $"{file[i]}";
+                    }
+                    _spriteBatch.DrawString(_spriteFont, text, vec, Color.White);
+                }
+
+                #endregion
+
+                #region Options
+                if (_gameState == GameState.Options)
+                {
+
+                }
+                #endregion
+
+                _spriteBatch.End();
+
+                base.Draw(gameTime);
             }
-            #endregion
-
-            #region Options
-            if (_gameState == GameState.Options)
-            {
-               
-            }
-            #endregion
-
-            _spriteBatch.End();
-
-            base.Draw(gameTime);
         }
-
+    
         /// <summary>
         /// Read high Scores from the file
         /// If file is not available HighScore is set to 0
         /// </summary>
         public void LoadHighScores()
         {
+            //int i;
+
             try
             {
                 string[] file = File.ReadAllLines($@"{Content.RootDirectory}/highscore.txt");
+
+                //for (i = 0; i < file.Length; i++)
+                //{ 
+
+                //    if (file [i] == " ")
+                //    {                      
+                //        _spriteBatch.DrawString(_spriteFont, " ", new Vector2(i,i), Color.White);
+                //    }
+                //    if (file [i] == ";")
+                //    {
+                //        _spriteBatch.DrawString(_spriteFont, " ", new Vector2(i, i), Color.White);
+                //    }
+                //    else
+                //    {
+                //        _spriteBatch.DrawString(_spriteFont, "${file[i]}", new Vector2(i, i), Color.White);                       
+                //    }
+
+                //}
 
                 if (file.Length != 0 && !int.TryParse(file[0], out _highScore))
                 {
