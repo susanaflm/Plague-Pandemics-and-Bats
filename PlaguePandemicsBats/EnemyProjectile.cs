@@ -58,7 +58,7 @@ namespace PlaguePandemicsBats
             _currentSprite = _sprites[0];
 
             _projCollider = new CircleCollider(game, "EnemyProjectile", position, _sprites[0].size.X / 2);
-            _projCollider.SetDebug(true);
+            _projCollider.SetDebug(false);
             game.CollisionManager.Add(_projCollider);
 
             game.EnemyProjectiles.Add(this);
@@ -83,9 +83,9 @@ namespace PlaguePandemicsBats
 
             _position += _projSpeed * _orientation * gameTime.DeltaTime();
 
-            _frame = (int)(_deltaTime * 3) % 16;
+            _frame = (int)(_deltaTime * 10) % 16;
 
-            if (_frame < 16)
+            if (_frame > 15)
             {
                 _frame = 0;
             }
@@ -93,6 +93,7 @@ namespace PlaguePandemicsBats
             _currentSprite = _sprites[_frame];
             _currentSprite.SetPosition(_position);
             _projCollider.SetPosition(_position);
+            Console.WriteLine($"frame: {_frame}");
 
             if (Vector2.Distance(_origin, _position) >= _distance)
             {
