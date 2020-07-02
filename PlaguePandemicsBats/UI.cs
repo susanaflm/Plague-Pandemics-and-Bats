@@ -25,7 +25,7 @@ namespace PlaguePandemicsBats
         public UI(Game1 game) : base(game)
         {
             _game = game;
-            _spriteFont = _game.Content.Load<SpriteFont>("font");
+            _spriteFont = _game.Content.Load<SpriteFont>("minecraft");
         }
         #endregion
 
@@ -41,15 +41,15 @@ namespace PlaguePandemicsBats
 
             for (k = Keys.A; k <= Keys.Z; k++)
             {
-                if (KeyboardManager.IsKeyGoingDown((k)))
+                if (KeyboardManager.IsKeyGoingDown(k))
                 {
-                    _input = k.ToString();
+                    _input += k.ToString();
                 }
             }
 
-            if (KeyboardManager.IsKeyGoingDown(k = Keys.Space)) _input += " ";
+            if (KeyboardManager.IsKeyGoingDown(Keys.Space)) _input += " ";
 
-            if (_input.Length > 0 && KeyboardManager.IsKeyGoingDown(k = Keys.Back)) _input = _input.Substring(0, _input.Length - 1);
+            if (_input.Length > 0 && KeyboardManager.IsKeyGoingDown(Keys.Back)) _input = _input.Substring(0, _input.Length - 1);
 
             _game.Player.Name = _input;
         }
@@ -59,16 +59,16 @@ namespace PlaguePandemicsBats
         /// </summary>
         /// <param name="spriteBatch"></param>
         public void Draw(SpriteBatch spriteBatch, GameTime gameTime)
-        {
+        {           
+            Vector2 position = new Vector2(384, 300);
+
+            spriteBatch.DrawString(_spriteFont, _input, position, Color.Black);
             Vector2 inputSize = _spriteFont.MeasureString(_input);
-            Vector2 position = new Vector2(0, 0);
-
-            spriteBatch.DrawString(_spriteFont, _input, position, color: Color.Black);
-
-            position.X = inputSize.X;
+            position.X += inputSize.X;
 
             if (_blinkTimer < _blinkRate)
                 spriteBatch.DrawString(_spriteFont, "_", position, color: Color.Black);
+
             else if (_blinkTimer > 2 * _blinkRate)
                 _blinkTimer = 0f;
 

@@ -276,13 +276,13 @@ namespace PlaguePandemicsBats
                     if (_girlButton.isClicked)
                     {
                         _player.SetGender(0);
-                        _gameState = GameState.LoadingScreen;
+                        _gameState = GameState.ChooseName;
                     }
                         
                     if (_guyButton.isClicked)
                     {
                         _player.SetGender(1);
-                        _gameState = GameState.LoadingScreen;
+                        _gameState = GameState.ChooseName;
                     }
                         
                     _girlButton.Update(mouseState, 0);
@@ -302,14 +302,16 @@ namespace PlaguePandemicsBats
                     break;
                 #endregion
 
-                //#region Name
-                //case GameState.ChooseName:
-                //    if(Keyboard.GetState().IsKeyDown(Keys.Enter))
-                //    {
-                //        _gameState = GameState.LoadingScreen;
-                //    }
-                //    break;
-                //#endregion
+                #region Name
+                case GameState.ChooseName:
+                    _ui.Update(gameTime);
+
+                    if (Keyboard.GetState().IsKeyDown(Keys.Enter))
+                    {
+                        _gameState = GameState.LoadingScreen;
+                    }
+                    break;
+                #endregion
 
                 #region Highscore
                 case GameState.Highscores:
@@ -538,10 +540,17 @@ namespace PlaguePandemicsBats
             }
             #endregion
 
-            //#region Name
-            //    if(_gameState == GameState.ChooseName)
-            //        _ui.Draw(_spriteBatch, gameTime);
-            //#endregion
+            #region Name
+            if (_gameState == GameState.ChooseName)
+            {
+                Texture2D texture = Content.Load<Texture2D>("pickYourNameScreen");
+                Rectangle rec = new Rectangle(0, 0, GraphicsDevice.Viewport.Width, GraphicsDevice.Viewport.Height);
+
+                _spriteBatch.Draw(texture, rec, Color.White);
+                _ui.Draw(_spriteBatch, gameTime);
+            }
+               
+            #endregion
 
             #region Highscore
             if ( _gameState == GameState.Highscores)

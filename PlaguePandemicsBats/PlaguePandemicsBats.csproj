@@ -300,6 +300,7 @@
     <Content Include="Content\pandemics\assets\orig\pack\pack.png" />
     <Content Include="Content\pandemics\export\orig\pack.png" />
     <Content Include="Content\pause.png" />
+    <Content Include="Content\pickYourNameScreen.png" />
     <Content Include="Content\play.png" />
     <Content Include="Content\playsound.wav" />
     <Content Include="Content\quit.png" />
