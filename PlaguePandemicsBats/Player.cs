@@ -19,7 +19,6 @@ namespace PlaguePandemicsBats
         private const float playerWidth = 0.3f;
 
         private Game1 _game;
-        private Texture2D healthbar;
         private Dictionary<Direction, Vector2> _playerDirection;
         private Dictionary<Direction, Sprite []> _spriteDirectionMale;
         private Dictionary<Direction, Sprite []> _spriteDirectionFemale;
@@ -317,7 +316,7 @@ namespace PlaguePandemicsBats
 
             _score = _lastCheckPointScore;
             _ammoCount = _lastCheckPointAmmo;
-            _health = 100;
+            health = 100;
 
             if (_lives < 0)
             {   
