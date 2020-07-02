@@ -33,7 +33,7 @@ namespace PlaguePandemicsBats
             _currentSprite = _spritesDirection[_direction][_frame];
 
             _enemyCollider = new OBBCollider(game, "Enemy", _position, _currentSprite.size, 0);
-            _enemyCollider.SetDebug(true);
+            _enemyCollider.SetDebug(false);
             game.CollisionManager.Add(_enemyCollider);
         }
 
