@@ -45,8 +45,8 @@ namespace PlaguePandemicsBats
         private Song _menuSong;
         private SpriteBatch _spriteBatch;
         private SpriteFont _spriteFont, _astronBoy;
-        private Texture2D _pausedTexture;
-        private Rectangle _pausedRect;
+        private Texture2D _pausedTexture, _hb;
+        private Rectangle _pausedRect, _hbRec;
         private Camera _camera;
         private SpriteManager _spriteManager;
         private CollisionManager _collisionManager;
@@ -83,6 +83,8 @@ namespace PlaguePandemicsBats
         /// Get game's sprite batch.
         /// </summary>
         public SpriteBatch SpriteBatch => _spriteBatch;
+
+        public SpriteFont SpriteFont => _astronBoy;
 
         /// <summary>
         /// Get the game's Camera
@@ -180,7 +182,8 @@ namespace PlaguePandemicsBats
         protected override void LoadContent()
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
-
+            _hb = Content.Load<Texture2D>("healthbar");
+            
             //FONT
             _spriteFont = Content.Load<SpriteFont>("minecraft");
             _astronBoy = Content.Load<SpriteFont>("astronboy");
@@ -239,6 +242,7 @@ namespace PlaguePandemicsBats
                 Exit();
 
             MouseState mouseState = Mouse.GetState();
+
 
             switch (_gameState)
             {
@@ -335,6 +339,11 @@ namespace PlaguePandemicsBats
                 case GameState.Playing:
                     MediaPlayer.Stop();
                     IsMouseVisible = false;
+
+                    _hbRec = new Rectangle((int)_player.Position.X, (int)_player.Position.Y, _player.health, 20);
+
+                    if (_player.isBeingDamaged)
+                        _player.health -= 10;
 
                     if (KeyboardManager.IsKeyGoingDown(Keys.Escape))
                     {
@@ -599,7 +608,7 @@ namespace PlaguePandemicsBats
                     {
                         text = " ";
                     }
-                    else if ( file[i] == "-")
+                    else if (file [i] == "-")
                     {
                         line++;
                         text = " ";
@@ -607,20 +616,21 @@ namespace PlaguePandemicsBats
                     else
                     {
                         text = $"{file [i]}";
-                    }                   
+                    }
                     _spriteBatch.DrawString(_spriteFont, text, vec, Color.White);
                 }
+            }
                 #endregion
 
-                #region Options
+            #region Options
                 if (_gameState == GameState.Options)
                 {
 
                 }
-                #endregion
+            #endregion
 
-                
-            }
+            _spriteBatch.Draw(_hb, _hbRec, Color.White);
+
             _spriteBatch.End();
 
             base.Draw(gameTime);

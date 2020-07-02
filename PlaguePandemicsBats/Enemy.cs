@@ -88,6 +88,7 @@ namespace PlaguePandemicsBats
                     {
                         if (_isEnemyAbleToDamage)
                         {
+                            _game.Player.isBeingDamaged = true;
                             _game.Player.UpdateHealth(_damage);
                             _isEnemyAbleToDamage = false;
                         }

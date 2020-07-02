@@ -14,12 +14,12 @@ namespace PlaguePandemicsBats
     public class Player
     {
         public static event Action OnPlayerLose;
-        
+
         #region Private variables 
         private const float playerWidth = 0.3f;
 
         private Game1 _game;
-        private Texture2D _healthbar;
+        private Texture2D healthbar;
         private Dictionary<Direction, Vector2> _playerDirection;
         private Dictionary<Direction, Sprite []> _spriteDirectionMale;
         private Dictionary<Direction, Sprite []> _spriteDirectionFemale;
@@ -36,7 +36,7 @@ namespace PlaguePandemicsBats
         private float _punchTimer = 0.8f;
         private int _frame = 0;
         private int _playerGender;
-        private int _health = 100;
+        public int health = 100;
         private int _lives = 3;
         private int _ammoCount = 0;
         private int _score = 0;
@@ -49,7 +49,7 @@ namespace PlaguePandemicsBats
         #endregion
 
         public string filePath;
-
+        public bool isBeingDamaged = false;
         #region Constructor
         /// <summary>
         /// Player Constructor
@@ -61,7 +61,6 @@ namespace PlaguePandemicsBats
             _game = game;
             _position = new Vector2(0, 0);
             _lastCheckPointPosition = _position;
-            _healthbar = _game.Content.Load<Texture2D>("healthbar");
 
             filePath = _game.Content.RootDirectory + "/highscore.txt";
 
@@ -219,7 +218,7 @@ namespace PlaguePandemicsBats
             else
                 _frame = 0;
 
-            if (_health <= 0)
+            if (health <= 0)
                 Die();
 
             Camera.LookAt(_position);
@@ -299,7 +298,12 @@ namespace PlaguePandemicsBats
         /// <param name="damage">damage done to the player</param>
         public void UpdateHealth(int damage)
         {
-            _health -= damage;
+            int temp;
+            health -= damage;
+            temp = health;
+
+            if(temp == health)
+                isBeingDamaged = false;
         }
 
         /// <summary>
@@ -356,12 +360,22 @@ namespace PlaguePandemicsBats
         /// <param name="sb"></param>
         public void Draw(SpriteBatch sb)
         {
-            Texture2D texture = _game.Content.Load<Texture2D>("lives");
+            Texture2D lives = _game.Content.Load<Texture2D>("lives");
+            //Texture2D hb = _game.Content.Load<Texture2D>("healthbar");
+            //Rectangle rec = new Rectangle((int)_position.X, (int)_position.Y, hb.Width, hb.Height);
+            
+            //if(health > 0)
+            //{
+            //    sb.Draw(hb, rec, Color.White);
+            //}
 
             for (int i = 0; i<= _lives; i++)
             {
-                sb.Draw(texture, new Vector2(150, 480), Color.White);
+                sb.Draw(lives, new Vector2(150, 480), Color.White);
             }
+
+            sb.DrawString(_game.SpriteFont, $"{Name}", new Vector2(_game.GraphicsDevice.Viewport.Width / 2f, _game.GraphicsDevice.Viewport.Height / 1.8f), Color.HotPink);
+
             _currentSprite.Draw(sb);
             _playerCollider?.Draw(null);
         }
