@@ -89,21 +89,11 @@ namespace PlaguePandemicsBats
                 if (_inRangeEnemies.Count == 0)
                 {
                     Movement(gameTime);
-
-                    //If the cat gets Stuck in a corner or is too far, teleport to the player position
-                    if (Vector2.DistanceSquared(_position, _game.Player.Position) >= 16f)
-                        SetPosition(_game.Player.Position);
                 }
                 else
                 {
                     Attack(gameTime);
-
-                    //Repeated because bugs
-                    if (Vector2.DistanceSquared(_position, _game.Player.Position) >= 16f)
-                        SetPosition(_game.Player.Position);
                 }
-
-                
             }
 
             _frame = (int)(_deltaTime * 6) % 3;

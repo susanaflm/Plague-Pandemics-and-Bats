@@ -45,16 +45,31 @@ namespace PlaguePandemicsBats
 
                 if (image ["itemIdentifier"]?.Value<string>() == "Player")
                 {
-                    _game.Player.SetPosition(new Vector2(x, y));
+                    _game.Player.SetSpawn(new Vector2(x, y));
                 }
                 else if (image ["imageName"]?.Value<string>() == "ZGirlD0")
                 {
                     new PinkZombie(_game, new Vector2(x, y));
                 }
-                else if (image ["imageName"]?.Value<string>() == "CheckPoint")
+                else if (image ["itemIdentifier"]?.Value<string>() == "CheckPoint")
                 {
-                    _game.Player.CheckPointX = x;
-                    _game.Player.CheckPointY = y;
+                    Sprite sprite = new Sprite(_game, imgName, scale: new Vector2(scaleX, scaleY), collides: false);
+                    sprite.SetPosition(new Vector2(x + sprite.size.X / 2, y + sprite.size.Y / 2));
+                    sprite.SetRotation(rotation);
+                    _sprites.Add(sprite);
+
+                    OBBCollider checkpointCollider = new OBBCollider(_game, "CheckPoint", new Vector2(x + sprite.size.X / 2, y + sprite.size.Y / 2), sprite.size, rotation);
+                    _game.CollisionManager.Add(checkpointCollider);
+                }
+                else if (image["itemIdentifier"]?.Value<string>() == "RedTree")
+                {
+                    Sprite sprite = new Sprite(_game, imgName, scale: new Vector2(scaleX, scaleY), collides: false);
+                    sprite.SetPosition(new Vector2(x + sprite.size.X / 2, y + sprite.size.Y / 2));
+                    sprite.SetRotation(rotation);
+                    _sprites.Add(sprite);
+
+                    OBBCollider checkpointCollider = new OBBCollider(_game, "RedTree", new Vector2(x + sprite.size.X / 2, y + sprite.size.Y / 2), sprite.size, rotation);
+                    _game.CollisionManager.Add(checkpointCollider);
                 }
                 else if (image ["imageName"]?.Value<string>() == "ZGuyD0")
                 {

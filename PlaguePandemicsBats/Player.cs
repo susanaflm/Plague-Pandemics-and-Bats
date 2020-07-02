@@ -29,6 +29,8 @@ namespace PlaguePandemicsBats
         private Direction _direction = Direction.Down;
         private Vector2 _oldPosition;
         private Vector2 _position;
+        private Vector2 _lastCheckPointPosition;
+        private Vector2 _playerSpawn;
         private float _acceleration;
         private float _timer = 0;
         private float _punchTimer = 0.8f;
@@ -39,8 +41,10 @@ namespace PlaguePandemicsBats
         private int _ammoCount = 0;
         private int _score = 0;
         private int _lastCheckPointScore = 0;
+        private int _lastCheckPointAmmo = 0;
         private int _punchDamage = 15;
         private bool _isPunchAvailable = false;
+        private bool _playerHasCat = false;
 
         #endregion
 
@@ -56,6 +60,7 @@ namespace PlaguePandemicsBats
         {
             _game = game;
             _position = new Vector2(0, 0);
+            _lastCheckPointPosition = _position;
             _healthbar = _game.Content.Load<Texture2D>("healthbar");
 
             filePath = _game.Content.RootDirectory + "/highscore.txt";
@@ -128,11 +133,6 @@ namespace PlaguePandemicsBats
         /// </summary>
         public int Highscore { get; set; }
 
-
-        public float CheckPointX { get; set; }
-
-        public float CheckPointY { get; set; }
-
         /// <summary>
         /// Gets the Player's current Score
         /// </summary>
@@ -155,6 +155,25 @@ namespace PlaguePandemicsBats
                     if (c.Tag == "Obstacle")
                     {
                         _position = _oldPosition;
+                    }
+
+                    if (c.Tag == "RedTree" && !_playerHasCat)
+                    {
+                        _position = _oldPosition;
+                    }
+
+                    if (c.Tag == "Cat")
+                    {
+                        _playerHasCat = true;
+                    }
+
+                    if (c.Tag == "CheckPoint")
+                    {
+                        _lastCheckPointPosition = c._position;
+                        _lastCheckPointScore = _score;
+                        _lastCheckPointAmmo = _ammoCount;
+
+                        _game.CollisionManager.Remove(c);
                     }
                 }
             }
@@ -290,8 +309,10 @@ namespace PlaguePandemicsBats
         {
             _lives--;
 
-            SetPosition(new Vector2(5.36f, -5.18f));
+            SetPosition(_lastCheckPointPosition);
 
+            _score = _lastCheckPointScore;
+            _ammoCount = _lastCheckPointAmmo;
             _health = 100;
 
             if (_lives < 0)
@@ -308,6 +329,13 @@ namespace PlaguePandemicsBats
         {
             _position = position;
             _playerCollider.SetPosition(position);
+        }
+
+        public void SetSpawn(Vector2 position)
+        {
+            _playerSpawn = position;
+            _lastCheckPointPosition = _playerSpawn;
+            SetPosition(position);
         }
 
         /// <summary>
