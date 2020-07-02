@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using System.Threading;
 
 namespace PlaguePandemicsBats
 {
@@ -23,11 +24,14 @@ namespace PlaguePandemicsBats
         private Dictionary<Direction, Sprite []> _spriteDirectionMale;
         private Dictionary<Direction, Sprite []> _spriteDirectionFemale;
         private OBBCollider _playerCollider;
+        private Sprite _currentSprite;
 
         private Direction _direction = Direction.Down;
         private Vector2 _oldPosition;
         private Vector2 _position;
         private float _acceleration;
+        private float _timer = 0;
+        private float _punchTimer = 0.8f;
         private int _frame = 0;
         private int _playerGender;
         private int _health = 100;
@@ -35,8 +39,9 @@ namespace PlaguePandemicsBats
         private int _ammoCount = 0;
         private int _score = 0;
         private int _lastCheckPointScore = 0;
+        private int _punchDamage = 15;
+        private bool _isPunchAvailable = false;
 
-        private Sprite _currentSprite;
         #endregion
 
         public string filePath;
@@ -159,6 +164,13 @@ namespace PlaguePandemicsBats
         {
             float deltaTime = gameTime.DeltaTime();
             float totalTime = gameTime.TotalTime();
+            _timer += gameTime.DeltaTime();
+
+            if (_punchTimer - _timer <= 0)
+            {
+                _isPunchAvailable = true;
+                _timer = 0;
+            }
 
             if (_playerGender == 0)
             {
@@ -209,6 +221,17 @@ namespace PlaguePandemicsBats
             _ammoCount += ammoQuantity;
         }
 
+        private void Punch()
+        {
+            foreach (Enemy enemy in _game.Enemies)
+            {
+                if (Vector2.Distance(enemy._position, _position) <= 0.8)
+                {
+                    enemy.DamageEnemy(_punchDamage);
+                }
+            }
+        }
+
         public void HandleInput()
         {
             if (KeyboardManager.IsKeyDown(Keys.W) || KeyboardManager.IsKeyDown(Keys.Up))
@@ -242,6 +265,12 @@ namespace PlaguePandemicsBats
                 proj.Shoot();
                 _ammoCount--;
             }
+            if ((KeyboardManager.IsKeyGoingDown(Keys.J) || KeyboardManager.IsKeyGoingDown(Keys.Z)) && _isPunchAvailable)
+            {
+                Punch();
+                _isPunchAvailable = false;
+                //TODO: SoundEffect
+            }
 
         }
 
@@ -261,13 +290,12 @@ namespace PlaguePandemicsBats
         {
             _lives--;
 
-            this.SetPosition(new Vector2(5.36f, -5.18f));
+            SetPosition(new Vector2(5.36f, -5.18f));
 
             _health = 100;
 
-            if (_lives <= 0)
+            if (_lives < 0)
             {   
-                _score = 0;
                 OnPlayerLose?.Invoke();
             }
         }
@@ -300,13 +328,11 @@ namespace PlaguePandemicsBats
         /// <param name="sb"></param>
         public void Draw(SpriteBatch sb)
         {
-            int i;
-
             Texture2D texture = _game.Content.Load<Texture2D>("lives");
 
-            for ( i = 0; i<= _lives; i++)
+            for (int i = 0; i<= _lives; i++)
             {
-                sb.Draw(texture, new Vector2(150 , 480), Color.White);
+                sb.Draw(texture, new Vector2(150, 480), Color.White);
             }
             _currentSprite.Draw(sb);
             _playerCollider?.Draw(null);
