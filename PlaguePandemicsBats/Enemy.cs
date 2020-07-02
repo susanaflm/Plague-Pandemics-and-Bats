@@ -83,7 +83,7 @@ namespace PlaguePandemicsBats
             {
                 foreach (Collider c in _enemyCollider.collisions)
                 {
-                    //If the enemy is colliding with the player
+                    //Check Colliders, and decide for each type
                     if (c.Tag == "Player")
                     {
                         if (_isEnemyAbleToDamage)
@@ -159,6 +159,15 @@ namespace PlaguePandemicsBats
             _dieSound.Play();
             _game.CollisionManager.Remove(_enemyCollider);
             _game.Enemies.Remove(this);
+        }
+
+        /// <summary>
+        /// Allows some classes to damage the player
+        /// </summary>
+        /// <param name="damageAmount"></param>
+        public void DamageEnemy(int damageAmount)
+        {
+            _health -= damageAmount;
         }
 
         /// <summary>

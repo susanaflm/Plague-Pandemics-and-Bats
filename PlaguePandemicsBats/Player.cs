@@ -227,7 +227,7 @@ namespace PlaguePandemicsBats
             }
             if (KeyboardManager.IsKeyDown(Keys.LeftShift))
             {
-                _position = Vector2.Zero;
+                _position = Vector2.One;
             }
             if (KeyboardManager.IsKeyGoingDown(Keys.Space) && _ammoCount > 0)
             {
