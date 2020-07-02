@@ -611,7 +611,7 @@ namespace PlaguePandemicsBats
             string path = this.Content.RootDirectory + "/highscore.txt";
             string text = _player.Name + ";" + newHighScore.ToString();
 
-            File.WriteAllText(path, text);
+            File.AppendAllText(path, text);
         }
 
         private void LoadLevel()
