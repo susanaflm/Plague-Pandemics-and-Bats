@@ -128,7 +128,7 @@ namespace PlaguePandemicsBats
         }
 
         /// <summary>
-        /// Updates the colision effects
+        /// Updates the collision effects
         /// </summary>
         /// <param name="gameTime"></param>
         public virtual void LateUpdate(GameTime gameTime)
@@ -140,8 +140,12 @@ namespace PlaguePandemicsBats
                     if (c.Tag == "Enemy")
                     {
                         _position = _oldPosition;
-                        _inRangeEnemies[0].DamageEnemy(_damage);
-                        _isCatAbleToAttack = false;
+
+                        if (_isCatAbleToAttack)
+                        {
+                            _inRangeEnemies[0].DamageEnemy(_damage);
+                            _isCatAbleToAttack = false;
+                        }
                     }
 
                     //This is turned off, the cat will move through obstacles, because its a cat
@@ -216,6 +220,7 @@ namespace PlaguePandemicsBats
                 _direction = Direction.Left;
 
             faceDir.Normalize();
+            _acceleration = 1.2f;
 
             _position += faceDir * _acceleration * gameTime.DeltaTime();
         }

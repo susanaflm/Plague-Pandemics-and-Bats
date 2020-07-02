@@ -51,5 +51,26 @@ namespace PlaguePandemicsBats
             else if (dist <= 0.001)
                 _direction = Direction.Up;
         }
+
+        public override void LateUpdate(GameTime gameTime)
+        {
+            base.LateUpdate(gameTime);
+
+            if (_enemyCollider._inCollision)
+            {
+                foreach (Collider c in _enemyCollider.collisions)
+                {
+                    if (c.Tag == "Obstacle")
+                    {
+                        float dist = Math.Abs(Camera.PixelSize(Vector2.Distance(_originPosition, _position)));
+
+                        if (dist >= Camera.PixelSize(_patrolDistance))
+                            _direction = Direction.Up;
+                        else if (dist <= 0.001)
+                            _direction = Direction.Down;
+                    }
+                }
+            }
+        }
     }
 }

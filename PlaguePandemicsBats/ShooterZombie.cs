@@ -35,7 +35,7 @@ namespace PlaguePandemicsBats
             };
 
             _score = 800;
-            _health = 20;
+            _health = 30;
             _damage = 0;
             _acceleration = 1f;
 
@@ -56,6 +56,18 @@ namespace PlaguePandemicsBats
                 isRunningAway = true;
 
                 Vector2 runDirection = _position - _game.Player.Position;
+                float angle = (float)Math.Atan2(runDirection.Y, runDirection.X);
+
+                if (angle <= -3 * Math.PI / 4)
+                    _direction = Direction.Left;
+                else if (angle <= -Math.PI / 4)
+                    _direction = Direction.Down;
+                else if (angle <= Math.PI / 4)
+                    _direction = Direction.Right;
+                else if (angle <= 3 * Math.PI / 4)
+                    _direction = Direction.Up;
+                else
+                    _direction = Direction.Left;
                 runDirection.Normalize();
 
                 _position += runDirection * gameTime.DeltaTime() * _acceleration;
@@ -72,6 +84,19 @@ namespace PlaguePandemicsBats
 
                 //Direction in which the zombie will shoot the projectile
                 Vector2 projOrientation = _game.Player.Position - _position;
+                float angle = (float)Math.Atan2(projOrientation.Y, projOrientation.X);
+
+                if (angle <= -3 * Math.PI / 4)
+                    _direction = Direction.Left;
+                else if (angle <= -Math.PI / 4)
+                    _direction = Direction.Down;
+                else if (angle <= Math.PI / 4)
+                    _direction = Direction.Right;
+                else if (angle <= 3 * Math.PI / 4)
+                    _direction = Direction.Up;
+                else
+                    _direction = Direction.Left;
+
                 projOrientation.Normalize();
 
                 //Timer to see when to shoot
