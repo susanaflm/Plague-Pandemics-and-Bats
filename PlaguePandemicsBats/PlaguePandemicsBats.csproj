@@ -134,6 +134,7 @@
     </None>
     <None Include="app.manifest" />
     <None Include="Content\astronboy.spritefont" />
+    <None Include="Content\bigfont.spritefont" />
     <None Include="Content\font.spritefont" />
     <None Include="Content\Fullgrass.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -304,6 +305,7 @@
     <Content Include="Content\pickYourNameScreen.png" />
     <Content Include="Content\play.png" />
     <Content Include="Content\playsound.wav" />
+    <Content Include="Content\punch.wav" />
     <Content Include="Content\quit.png" />
     <Content Include="Content\TrimmedSheet.png" />
   </ItemGroup>

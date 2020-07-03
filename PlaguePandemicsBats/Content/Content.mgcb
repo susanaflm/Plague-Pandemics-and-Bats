@@ -20,6 +20,13 @@
 /processorParam:TextureFormat=Compressed
 /build:astronboy.spritefont
 
+#begin bigfont.spritefont
+/importer:FontDescriptionImporter
+/processor:FontDescriptionProcessor
+/processorParam:PremultiplyAlpha=True
+/processorParam:TextureFormat=Compressed
+/build:bigfont.spritefont
+
 #begin button.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -279,6 +286,12 @@
 /processor:SoundEffectProcessor
 /processorParam:Quality=Best
 /build:playsound.wav
+
+#begin punch.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:punch.wav
 
 #begin quit.png
 /importer:TextureImporter

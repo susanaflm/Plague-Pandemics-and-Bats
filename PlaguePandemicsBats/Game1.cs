@@ -340,7 +340,7 @@ namespace PlaguePandemicsBats
                     MediaPlayer.Stop();
                     IsMouseVisible = false;
 
-                    _hbRec = new Rectangle((int)_player.Position.X, (int)_player.Position.Y, _player.health, 20);
+                    _hbRec = new Rectangle(10, 450 , _player.health, 20);
 
                     if (_player.isBeingDamaged)
                         _player.health -= 10;

@@ -8,6 +8,7 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using System.Threading;
+using Microsoft.Xna.Framework.Audio;
 
 namespace PlaguePandemicsBats
 {
@@ -30,6 +31,8 @@ namespace PlaguePandemicsBats
         private Vector2 _position;
         private Vector2 _lastCheckPointPosition;
         private Vector2 _playerSpawn;
+        private SpriteFont _font;
+        private SoundEffect _punchSound;
         private float _acceleration;
         private float _timer = 0;
         private float _punchTimer = 0.8f;
@@ -49,6 +52,7 @@ namespace PlaguePandemicsBats
 
         public string filePath;
         public bool isBeingDamaged = false;
+
         #region Constructor
         /// <summary>
         /// Player Constructor
@@ -60,6 +64,8 @@ namespace PlaguePandemicsBats
             _game = game;
             _position = new Vector2(0, 0);
             _lastCheckPointPosition = _position;
+            _font = _game.Content.Load<SpriteFont>("bigfont");
+            _punchSound = _game.Content.Load<SoundEffect>("punch");
 
             filePath = _game.Content.RootDirectory + "/highscore.txt";
 
@@ -181,6 +187,7 @@ namespace PlaguePandemicsBats
         {
             float deltaTime = gameTime.DeltaTime();
             float totalTime = gameTime.TotalTime();
+
             _timer += gameTime.DeltaTime();
 
             if (_punchTimer - _timer <= 0)
@@ -244,6 +251,7 @@ namespace PlaguePandemicsBats
             {
                 if (Vector2.Distance(enemy._position, _position) <= 0.8)
                 {
+                    _punchSound.Play();
                     enemy.DamageEnemy(_punchDamage);
                 }
             }
@@ -359,21 +367,7 @@ namespace PlaguePandemicsBats
         /// <param name="sb"></param>
         public void Draw(SpriteBatch sb)
         {
-            Texture2D lives = _game.Content.Load<Texture2D>("lives");
-            //Texture2D hb = _game.Content.Load<Texture2D>("healthbar");
-            //Rectangle rec = new Rectangle((int)_position.X, (int)_position.Y, hb.Width, hb.Height);
-            
-            //if(health > 0)
-            //{
-            //    sb.Draw(hb, rec, Color.White);
-            //}
-
-            for (int i = 0; i<= _lives; i++)
-            {
-                sb.Draw(lives, new Vector2(150, 480), Color.White);
-            }
-
-            sb.DrawString(_game.SpriteFont, $"{Name}", new Vector2(_game.GraphicsDevice.Viewport.Width / 2f, _game.GraphicsDevice.Viewport.Height / 1.8f), Color.HotPink);
+            sb.DrawString(_font, $"{Name}", new Vector2(_game.GraphicsDevice.Viewport.Width / 2.07f, _game.GraphicsDevice.Viewport.Height / 2.32f), Color.DarkSlateGray);
 
             _currentSprite.Draw(sb);
             _playerCollider?.Draw(null);
