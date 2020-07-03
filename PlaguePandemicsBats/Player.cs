@@ -17,7 +17,9 @@ namespace PlaguePandemicsBats
         public static event Action OnPlayerLose;
 
         #region Private variables 
-        private const float playerWidth = 0.3f;
+        private const float playerWidth = 0.4f;
+        private const float playerGWidth = 0.33f;
+        private const float playerHeight = 0.44f;
 
         private Game1 _game;
         private Dictionary<Direction, Vector2> _playerDirection;
@@ -49,11 +51,12 @@ namespace PlaguePandemicsBats
 
         #endregion
 
+        #region Public variables
         public string filePath;
         public int _lastCheckPointScore = 0;
         public bool isBeingDamaged = false;
         public Vector2 TPpos;
-
+		#endregion
         #region Constructor
         /// <summary>
         /// Player Constructor
@@ -81,18 +84,18 @@ namespace PlaguePandemicsBats
 
             _spriteDirectionMale = new Dictionary<Direction, Sprite []>
             {
-                [Direction.Up] = new [] { new Sprite(game, "GuyU0", width: playerWidth), new Sprite(game, "GuyU1", width: playerWidth), new Sprite(game, "GuyU2", width: playerWidth) },
-                [Direction.Down] = new [] { new Sprite(game, "GuyD0", width: playerWidth), new Sprite(game, "GuyD1", width: playerWidth), new Sprite(game, "GuyD2", width: playerWidth) },
-                [Direction.Left] = new [] { new Sprite(game, "GuyL0", width: playerWidth), new Sprite(game, "GuyL1", width: playerWidth), new Sprite(game, "GuyL2", width: playerWidth) },
-                [Direction.Right] = new [] { new Sprite(game, "GuyR0", width: playerWidth), new Sprite(game, "GuyR1", width: playerWidth), new Sprite(game, "GuyR2", width: playerWidth) }
+                [Direction.Up] = new [] { new Sprite(game, "GuyU0", width: playerGWidth, height: playerHeight), new Sprite(game, "GuyU1", width: playerGWidth, height: playerHeight), new Sprite(game, "GuyU2", width: playerGWidth, height: playerHeight) },
+                [Direction.Down] = new [] { new Sprite(game, "GuyD0", width: playerGWidth, height: playerHeight), new Sprite(game, "GuyD1", width: playerGWidth, height: playerHeight), new Sprite(game, "GuyD2", width: playerGWidth, height: playerHeight) },
+                [Direction.Left] = new [] { new Sprite(game, "GuyL0", width: playerGWidth, height: playerHeight), new Sprite(game, "GuyL1", width: playerGWidth, height: playerHeight), new Sprite(game, "GuyL2", width: playerGWidth, height: playerHeight) },
+                [Direction.Right] = new [] { new Sprite(game, "GuyR0", width: playerGWidth, height: playerHeight), new Sprite(game, "GuyR1", width: playerGWidth, height: playerHeight), new Sprite(game, "GuyR2", width: playerGWidth, height: playerHeight) }
             };
 
             _spriteDirectionFemale = new Dictionary<Direction, Sprite []>
             {
-                [Direction.Up] = new [] { new Sprite(game, "GirlU0", width: playerWidth), new Sprite(game, "GirlU1", width: playerWidth), new Sprite(game, "GirlU2", width: playerWidth) },
-                [Direction.Down] = new [] { new Sprite(game, "GirlD0", width: playerWidth), new Sprite(game, "GirlD1", width: playerWidth), new Sprite(game, "GirlD2", width: playerWidth) },
-                [Direction.Left] = new [] { new Sprite(game, "GirlL0", width: playerWidth), new Sprite(game, "GirlL1", width: playerWidth), new Sprite(game, "GirlL2", width: playerWidth) },
-                [Direction.Right] = new [] { new Sprite(game, "GirlR0", width: playerWidth), new Sprite(game, "GirlR1", width: playerWidth), new Sprite(game, "GirlR2", width: playerWidth) }
+                [Direction.Up] = new [] { new Sprite(game, "GirlU0", width: playerWidth, height: playerHeight), new Sprite(game, "GirlU1", width: playerWidth, height: playerHeight), new Sprite(game, "GirlU2", width: playerWidth, height: playerHeight) },
+                [Direction.Down] = new [] { new Sprite(game, "GirlD0", width: playerWidth, height: playerHeight), new Sprite(game, "GirlD1", width: playerWidth, height: playerHeight), new Sprite(game, "GirlD2", width: playerWidth, height: playerHeight) },
+                [Direction.Left] = new [] { new Sprite(game, "GirlL0", width: playerWidth, height: playerHeight), new Sprite(game, "GirlL1", width: playerWidth, height: playerHeight), new Sprite(game, "GirlL2", width: playerWidth, height: playerHeight) },
+                [Direction.Right] = new [] { new Sprite(game, "GirlR0", width: playerWidth, height: playerHeight), new Sprite(game, "GirlR1", width: playerWidth, height: playerHeight), new Sprite(game, "GirlR2", width: playerWidth, height: playerHeight) }
             };
             #endregion
 

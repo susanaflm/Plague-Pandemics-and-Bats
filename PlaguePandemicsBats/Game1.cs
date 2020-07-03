@@ -42,7 +42,7 @@ namespace PlaguePandemicsBats
         #region  Private variables
         private GraphicsDeviceManager _graphics;
         private SoundEffect _playSound;
-        private Song _menuSong;
+        private Song _menuSong, _gameSong;
         private SpriteBatch _spriteBatch;
         private SpriteFont _spriteFont, _astronBoy;
         private Texture2D _pausedTexture, _hb;
@@ -188,6 +188,7 @@ namespace PlaguePandemicsBats
             //SOUNDS
             _playSound = Content.Load<SoundEffect>("playsound");
             _menuSong = Content.Load<Song>("menusong");
+            _gameSong = Content.Load<Song>("gameSong");
 
             //PAUSE
             _pausedTexture = Content.Load<Texture2D>("pause");
@@ -203,7 +204,6 @@ namespace PlaguePandemicsBats
             #endregion
 
             MediaPlayer.Play(_menuSong);
-
             #region Buttons
             _buttonPlay = new Button(this, Content.Load<Texture2D>("play"), new Vector2(GraphicsDevice.Viewport.Width / 2, GraphicsDevice.Viewport.Height / 1.8f));
             _highScoreButton = new Button(this, Content.Load<Texture2D>("button"), new Vector2(GraphicsDevice.Viewport.Width / 2, GraphicsDevice.Viewport.Height / 1.46f));
@@ -216,8 +216,10 @@ namespace PlaguePandemicsBats
             _guyButton = new Button(this, Content.Load<Texture2D>("guybutton"), new Vector2(770, 360));
             #endregion
 
-            //FIRST GAME STATE
+            // GAME STATE
             if (_gameState == GameState.MainMenu) MediaPlayer.Play(_menuSong);
+            if(_gameState == GameState.Playing) MediaPlayer.Play(_gameSong);
+
         }
 
         /// <summary>
@@ -332,7 +334,7 @@ namespace PlaguePandemicsBats
                     MediaPlayer.Stop();
                     IsMouseVisible = false;
 
-                    _hbRec = new Rectangle(10, 450 , _player.health, 20);
+                    _hbRec = new Rectangle(790, 45, _player.health, 20);
 
                     if (_player.isBeingDamaged)
                         _player.health -= 10;
@@ -456,7 +458,7 @@ namespace PlaguePandemicsBats
 
                 //DRAW TOP LEFT CORNER TEXTS
                 _spriteBatch.DrawString(_astronBoy, $"X {Player.AmmoQuantity}", new Vector2(45, 45), Color.DarkSlateGray);
-                _spriteBatch.DrawString(_astronBoy, $"LIVES {Player.Lives}", new Vector2(10, 480), Color.DarkSlateGray);
+                _spriteBatch.DrawString(_astronBoy, $"LIVES {Player.Lives}", new Vector2(790, 10), Color.DarkSlateGray);
                 _spriteBatch.DrawString(_astronBoy, $"SCORE {Player.Score}", new Vector2(10, 10), Color.DarkSlateGray);
                 _spriteBatch.Draw(_hb, _hbRec, Color.White);
             }
@@ -470,7 +472,6 @@ namespace PlaguePandemicsBats
 
                 //CHARACTERS AND SCENE
                 _scene.Draw(gameTime);
-                _ui.Draw(_spriteBatch, gameTime);
                 _player.Draw(_spriteBatch);
                 _cat.Draw(_spriteBatch);
 
