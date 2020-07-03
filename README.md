@@ -71,34 +71,56 @@ For instance, it restrains the `Player` from running into obstacles.
 The main characters of the game:
 **Maria Soto** & **Oliver Buchanan**
 
-The `Player` starts with 0 points, 0 projectiles, 100 health and a total of 3 lives. 
-Each life is lost by losing all the 100 health point, and the player loses if the lives are all lost. 
-In the early game, the player must punch its enemies to death, until it finds some vaccines laying in the floor
+The class `Player` is responsible for the moviment of the player and assures the user starts with 0 points, 0 projectiles, 100 health and a total of 3 lives. 
 
-When the player dies, it goes to the last checkpoint, with the ammo and score that the player had when it touched that checkpoint.
+[**LIVES system**]: 
 
-The Class Player is responsible for handling its movement. It has some properties such as the player position, direction, collider, score and ammo quantity.
+Everytime the `Player` reaches 0 health one live is removed.
 
-In case the player loses, an event is triggered saving the highscore if the score of the current run is greater than the pre-loaded highscore.
+[**CHECKPOINT system**]: 
 
+The `Player` has a few checkpoints he can get back to, in case of death the user goes back to the closest checkpoint he/her interacted with along with the items it had upon touching the checkpoint.
+
+[**MOVEMENT // ECONOMY**]: 
+
+
+The projectiles [[Pick-Ups](#Pick-Ups)] the player is given are scarce reeinforcing a sense of economy of these to later fight the boss [[Corona](#FinalBoss)], however, in order to get through the levels of heavy `Enemy` presence we've implemented a punch ability.
+This class benefits from properties such as the player position & direction, collider, score and ammo quantity.
+
+Reaching 0 lives triggers an event upon loss saving the highscore and opening the Game Over screen along with the option to restart.
+
+```cs
+Player.OnPlayerLose += () =>
+            {
+               SaveHighScore(_player.Highscore);
+                _gameState = GameState.GameOver;
+            };
+```
 
 ## Projectile
 
-The Player has access to some projectiles, that it can shoot to damage enemies.
 
-The Projectile class is responsible for the projectile's movement and to damage enemies, dealing 10 damage per hit.
+The `Projectile` class is responsible for its movement and damage towards enemies, each projectile deals 10 damage per hit, the `Player` is the only character able to benefit from these.
 
 
 ## Pick-Ups
+Class `Ammo`
 
-During the gameplay, the player will be able to pick up some vaccines that it will add up to its ammo count.
 
-The class handles the collision with the player and conceding it its ammo. Each pick up awards the player with 10 projectiles.
+During the gameplay, the `Player` will be able to pick up only **10** vaccines at a time to further increment its ammo count.
+
+This class handles the collision with the `Player` and conceding it its ammo.
 
 
 ## Enemies
+Class `Enemy`
+Main class responsable to attribute damage, score, health and certain global methods to all types of enemies in our game; these are categorized and separated in other subclasses inhereting from `Enemy`.
 
-In this Game, exist 4 types of enemies the Pink Zombie, the Spawner Zombie and the Shooter Zombie. The 4th one is spawned by the Spawner Zombie and its a bat.
+  - Pink Zombie
+  - Spawner Zombie
+  - Shooter Zombie
+  - Bat 
+
 
 The abstract class Enemy is responsible for the general instructions, such as collision, update and drawing logic allowing the inherited classes to have its own type of behaviour.
 
