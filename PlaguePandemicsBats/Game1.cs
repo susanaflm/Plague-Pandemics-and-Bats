@@ -33,7 +33,7 @@ namespace PlaguePandemicsBats
     /// </summary>
     public enum GameState
     {
-        MainMenu, Highscores, Playing, Paused, ChooseName, ChooseCharacter, LoadingScreen
+        MainMenu, Highscores, Playing, Paused, ChooseName, ChooseCharacter, LoadingScreen, GameOver
     }
     #endregion
 
@@ -161,6 +161,7 @@ namespace PlaguePandemicsBats
             Player.OnPlayerLose += () =>
             {
                SaveHighScore(_player.Highscore);
+                _gameState = GameState.GameOver;
             };
 
             //LISTS
@@ -242,7 +243,6 @@ namespace PlaguePandemicsBats
                 Exit();
 
             MouseState mouseState = Mouse.GetState();
-
 
             switch (_gameState)
             {
@@ -400,7 +400,17 @@ namespace PlaguePandemicsBats
                     _buttonQuit.Update(mouseState, 0);
                     _back2menuButton.Update(mouseState, 0);
                     break;
+                #endregion
+                #region Game Over
+                case GameState.GameOver:
+                    IsMouseVisible = true;
 
+                    if (_back4menuButton.isClicked)
+                        _gameState = GameState.MainMenu;
+
+                    _back4menuButton.Update(mouseState, 0);
+
+                    break;
                 default:
                     break;
                     #endregion
@@ -607,6 +617,15 @@ namespace PlaguePandemicsBats
                 }
             }
                 #endregion
+
+            if (_gameState == GameState.GameOver)
+            {
+                Texture2D go = Content.Load<Texture2D>("gameOver");
+                Rectangle rec = new Rectangle(0, 0, GraphicsDevice.Viewport.Width, GraphicsDevice.Viewport.Height);
+
+                _spriteBatch.Draw(go, rec, Color.White);
+                _back4menuButton.Draw(_spriteBatch, 0);
+            }
 
             _spriteBatch.End();
 

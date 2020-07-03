@@ -57,6 +57,7 @@ namespace PlaguePandemicsBats
         public bool isBeingDamaged = false;
         public Vector2 TPpos;
 		#endregion
+
         #region Constructor
         /// <summary>
         /// Player Constructor
@@ -335,7 +336,7 @@ namespace PlaguePandemicsBats
             _ammoCount = _lastCheckPointAmmo;
             health = 100;
 
-            if (_lives < 0)
+            if (_lives <= 0)
             {   
                 OnPlayerLose?.Invoke();
             }
