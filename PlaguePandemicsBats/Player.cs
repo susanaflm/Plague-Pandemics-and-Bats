@@ -42,7 +42,6 @@ namespace PlaguePandemicsBats
         private int _lives = 3;
         private int _ammoCount = 0;
         private int _score = 0;
-        private int _lastCheckPointScore = 0;
         private int _lastCheckPointAmmo = 0;
         private int _punchDamage = 15;
         private bool _isPunchAvailable = false;
@@ -51,6 +50,7 @@ namespace PlaguePandemicsBats
         #endregion
 
         public string filePath;
+        public int _lastCheckPointScore = 0;
         public bool isBeingDamaged = false;
 
         #region Constructor
@@ -294,7 +294,6 @@ namespace PlaguePandemicsBats
             {
                 Punch();
                 _isPunchAvailable = false;
-                //TODO: SoundEffect
             }
 
         }

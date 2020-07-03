@@ -33,7 +33,7 @@ namespace PlaguePandemicsBats
     /// </summary>
     public enum GameState
     {
-        MainMenu, Options, Highscores, Playing, Paused, ChooseName, ChooseCharacter, LoadingScreen
+        MainMenu, Highscores, Playing, Paused, ChooseName, ChooseCharacter, LoadingScreen
     }
     #endregion
 
@@ -55,7 +55,7 @@ namespace PlaguePandemicsBats
         private ShooterZombie _shZ;
         private Cat _cat;
         private Scene _scene;
-        private Button _buttonPlay, _buttonQuit, _guyButton, _girlButton, _highScoreButton, _optnButton, _creditsButton, _back2menuButton;
+        private Button _buttonPlay, _buttonQuit, _guyButton, _girlButton, _highScoreButton, _optnButton, _creditsButton, _back2menuButton, _back4menuButton;
         private UI _ui;
         private List<Ammo> _ammoList;
         private List<Projectile> _projectiles;
@@ -159,11 +159,8 @@ namespace PlaguePandemicsBats
 
             Player.OnPlayerLose += () =>
             {
-                if (_player.Score > _highScore)
-                {
-                    _player.Highscore = _player.Score;
-                    SaveHighScore(_player.Highscore);
-                }
+               _player.Highscore = _player._lastCheckPointScore;
+               SaveHighScore(_player.Highscore);
             };
 
             //LISTS
@@ -214,6 +211,7 @@ namespace PlaguePandemicsBats
             _optnButton = new Button(this, Content.Load<Texture2D>("optnButton"), new Vector2(GraphicsDevice.Viewport.Width / 1.05f, GraphicsDevice.Viewport.Height / 5.7f));
             _creditsButton = new Button(this, Content.Load<Texture2D>("creditsButton"), new Vector2(GraphicsDevice.Viewport.Width / 1.05f, GraphicsDevice.Viewport.Height / 3.3f));
             _back2menuButton = new Button(this, Content.Load<Texture2D>("mmButton"), new Vector2(GraphicsDevice.Viewport.Width / 2, GraphicsDevice.Viewport.Height / 1.46f));
+            _back4menuButton = new Button(this, Content.Load<Texture2D>("mmButton"), new Vector2(GraphicsDevice.Viewport.Width / 2, 480));
             _girlButton = new Button(this, Content.Load<Texture2D>("girlbutton"), new Vector2(190, 370));
             _guyButton = new Button(this, Content.Load<Texture2D>("guybutton"), new Vector2(770, 360));
             #endregion
@@ -323,15 +321,9 @@ namespace PlaguePandemicsBats
                 case GameState.Highscores:
                     IsMouseVisible = true;
 
-                    _back2menuButton = new Button(this, Content.Load<Texture2D>("mmButton"), new Vector2(830, 60));
+                    if (_back4menuButton.isClicked) _gameState = GameState.MainMenu;
 
-                    if (_back2menuButton.isClicked) _gameState = GameState.MainMenu;
-
-                    _back2menuButton.Update(mouseState, 0);
-                    break;
-
-                case GameState.Options:
-                    IsMouseVisible = true;
+                    _back4menuButton.Update(mouseState, 0);
                     break;
                 #endregion
 
@@ -405,8 +397,8 @@ namespace PlaguePandemicsBats
                     _buttonPlay.Update(mouseState, 0);
                     _buttonQuit.Update(mouseState, 0);
                     _back2menuButton.Update(mouseState, 0);
-
                     break;
+
                 default:
                     break;
                     #endregion
@@ -466,6 +458,7 @@ namespace PlaguePandemicsBats
                 _spriteBatch.DrawString(_astronBoy, $"X {Player.AmmoQuantity}", new Vector2(45, 45), Color.DarkSlateGray);
                 _spriteBatch.DrawString(_astronBoy, $"LIVES {Player.Lives}", new Vector2(10, 480), Color.DarkSlateGray);
                 _spriteBatch.DrawString(_astronBoy, $"SCORE {Player.Score}", new Vector2(10, 10), Color.DarkSlateGray);
+                _spriteBatch.Draw(_hb, _hbRec, Color.White);
             }
             #endregion
 
@@ -527,8 +520,6 @@ namespace PlaguePandemicsBats
                 _buttonPlay.Draw(_spriteBatch, 0);
                 _buttonQuit.Draw(_spriteBatch, 0);
                 _highScoreButton.Draw(_spriteBatch, 0);
-                _creditsButton.Draw(_spriteBatch, 1);
-                _optnButton.Draw(_spriteBatch, 2);
             }
             #endregion
 
@@ -594,15 +585,11 @@ namespace PlaguePandemicsBats
                 Color color = Color.White;
 
                 _spriteBatch.Draw(texture, rec, color);
-
-                _highScoreButton = new Button(this, Content.Load<Texture2D>("button"), new Vector2(100, 60));
-                _back2menuButton = new Button(this, Content.Load<Texture2D>("mmButton"), new Vector2(830, 60));
-                _highScoreButton.Draw(_spriteBatch, 0);
-                _back2menuButton.Draw(_spriteBatch, 0);
+                _back4menuButton.Draw(_spriteBatch, 0);
 
                 for (int i = 0; i < file.Length; i++)
                 {
-                    vec = new Vector2(i, i);
+                    vec = new Vector2(i + GraphicsDevice.Viewport.Width/2, i + GraphicsDevice.Viewport.Height / 2);                   
 
                     if (file [i] == " " || file [i] == ";")
                     {
@@ -621,15 +608,6 @@ namespace PlaguePandemicsBats
                 }
             }
                 #endregion
-
-            #region Options
-                if (_gameState == GameState.Options)
-                {
-
-                }
-            #endregion
-
-            _spriteBatch.Draw(_hb, _hbRec, Color.White);
 
             _spriteBatch.End();
 

@@ -93,7 +93,6 @@ namespace PlaguePandemicsBats
             _currentSprite = _sprites[_frame];
             _currentSprite.SetPosition(_position);
             _projCollider.SetPosition(_position);
-            Console.WriteLine($"frame: {_frame}");
 
             if (Vector2.Distance(_origin, _position) >= _distance)
             {

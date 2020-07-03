@@ -86,7 +86,11 @@ namespace PlaguePandemicsBats
                 else if (image ["imageName"]?.Value<string>() == "cure")
                 {
                     new Ammo(_game, new Vector2(x,y));
-                }               
+                }
+                else if (image ["imageName"]?.Value<string>() == "DragonFront")
+                {
+                    new Dragon(_game, new Vector2(x, y));
+                }
                 else if (image ["itemIdentifier"]?.Value<string>() == "NoCollider")
                 {
                     Sprite sprite = new Sprite(_game, imgName, scale: new Vector2(scaleX, scaleY), collides: false);

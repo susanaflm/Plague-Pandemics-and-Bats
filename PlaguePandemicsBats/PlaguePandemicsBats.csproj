@@ -51,6 +51,7 @@
     <Compile Include="CircleCollider.cs" />
     <Compile Include="Collider.cs" />
     <Compile Include="CollisionManager.cs" />
+    <Compile Include="Dragon.cs" />
     <Compile Include="Enemy.cs" />
     <Compile Include="EnemyProjectile.cs" />
     <Compile Include="Extension.cs" />

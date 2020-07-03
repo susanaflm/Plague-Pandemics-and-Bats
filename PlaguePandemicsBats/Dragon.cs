@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace PlaguePandemicsBats
 {
-    public class Dragon : Cat
+    public class Dragon 
     {
         #region Private variables
         private const float __dragonWidth = 0.4f;
@@ -29,10 +29,10 @@ namespace PlaguePandemicsBats
         #endregion
 
         #region Constructor
-        public Dragon(Game1 game) : base(game)
+        public Dragon(Game1 game, Vector2 position) 
         {
             _game = game;
-            _position = new Vector2(-3, 0);
+            _position = position;
             _spritesDirection = new Dictionary<Direction, Sprite []>
             {
                 [Direction.Up] = new [] { new Sprite(game, "DragonBack", width: 0.2f, height: __dragonHeight), new Sprite(game, "DragonBackU", width: 0.2f, height: __dragonHeight), new Sprite(game, "DragonBackD", width: 0.2f, height: __dragonHeight) },
