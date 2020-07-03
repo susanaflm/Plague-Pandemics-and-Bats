@@ -78,8 +78,16 @@ namespace PlaguePandemicsBats
                     sprite.SetPosition(new Vector2(x + sprite.size.X / 2, y + sprite.size.Y / 2));
                     sprite.SetRotation(rotation);
                     _sprites.Add(sprite);
+                }
+                else if (image ["itemIdentifier"]?.Value<string>() == "BlueHouse")
+                {
+                    Sprite sprite = new Sprite(_game, imgName, scale: new Vector2(scaleX, scaleY), collides: false);
+                    sprite.SetPosition(new Vector2(x + sprite.size.X / 2, y + sprite.size.Y / 2));
+                    sprite.SetRotation(rotation);
+                    _sprites.Add(sprite);
 
-
+                    OBBCollider BlueHouseeCollider = new OBBCollider(_game, "BlueHouse", new Vector2(x + sprite.size.X / 2, y + sprite.size.Y / 2), sprite.size, rotation);
+                    _game.CollisionManager.Add(BlueHouseeCollider);
                 }
                 else if (image["itemIdentifier"]?.Value<string>() == "TP")
                 {

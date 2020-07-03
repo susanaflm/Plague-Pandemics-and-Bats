@@ -171,6 +171,11 @@ namespace PlaguePandemicsBats
                         _position = _oldPosition;
                     }
 
+                    if (c.Tag == "BlueHouse")
+                    {
+                        _position = _oldPosition;
+                    }
+
                     if (c.Tag == "TP")
                     {
                         SetPosition(TPpos);

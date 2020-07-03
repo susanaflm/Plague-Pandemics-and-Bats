@@ -616,8 +616,9 @@ namespace PlaguePandemicsBats
                    
                 }
             }
-                #endregion
+            #endregion
 
+            #region Game Over
             if (_gameState == GameState.GameOver)
             {
                 Texture2D go = Content.Load<Texture2D>("gameOver");
@@ -630,8 +631,9 @@ namespace PlaguePandemicsBats
             _spriteBatch.End();
 
             base.Draw(gameTime);
+            #endregion
         }
-    
+
         /// <summary>
         /// Read high Scores from the file
         /// If file is not available HighScore is set to 0
