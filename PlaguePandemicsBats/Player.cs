@@ -48,12 +48,12 @@ namespace PlaguePandemicsBats
         private int _punchDamage = 15;
         private bool _isPunchAvailable = false;
         private bool _playerHasCat = false;
-
         #endregion
 
         #region Public variables
         public string filePath;
         public int _lastCheckPointScore = 0;
+        public bool isDragonHiden = true;
         public bool isBeingDamaged = false;
         public Vector2 TPpos;
 		#endregion
@@ -185,6 +185,11 @@ namespace PlaguePandemicsBats
                     if (c.Tag == "Cat")
                     {
                         _playerHasCat = true;
+                    }
+
+                    if(c.Tag == "Dragon")
+                    {
+                        isDragonHiden = false;
                     }
 
                     if (c.Tag == "CheckPoint")

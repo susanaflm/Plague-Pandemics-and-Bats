@@ -140,12 +140,6 @@ namespace PlaguePandemicsBats
                         }
                     }
 
-                    //This is turned off, the cat will move through obstacles, because its a cat
-                    //if (c.Tag == "Obstacle")
-                    //{
-                    //   // _position = _oldPosition;
-                    //}
-
                     if (c.Tag == "Player")
                     {
                         _isFollowingPlayer = true;

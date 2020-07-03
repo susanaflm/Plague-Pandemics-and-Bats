@@ -54,6 +54,7 @@ namespace PlaguePandemicsBats
         private SpawnerZombie _spZ;
         private ShooterZombie _shZ;
         private Cat _cat;
+        private Dragon _dragon;
         private Scene _scene;
         private Button _buttonPlay, _buttonQuit, _guyButton, _girlButton, _highScoreButton, _optnButton, _creditsButton, _back2menuButton, _back4menuButton;
         private UI _ui;
@@ -111,6 +112,11 @@ namespace PlaguePandemicsBats
         /// Get game's cat 
         /// </summary>
         public Cat Cat => _cat;
+
+        /// <summary>
+        /// Get game's dragon 
+        /// </summary>
+        public Dragon Dragon => _dragon;
 
         /// <summary>
         /// Get game's UI
@@ -227,10 +233,6 @@ namespace PlaguePandemicsBats
         /// UnloadContent will be called once per game and is the place to unload
         /// game-specific content.
         /// </summary>
-        protected override void UnloadContent()
-        {
-
-        }
 
         /// <summary>
         /// Allows the game to run logic such as updating the world,
@@ -368,6 +370,7 @@ namespace PlaguePandemicsBats
 
                     _player.Update(gameTime);
                     _cat.Update(gameTime);
+                    _dragon.Update(gameTime);
                     _collisionManager.Update(gameTime);
 
                     foreach (Enemy e in Enemies.ToArray())
@@ -377,6 +380,7 @@ namespace PlaguePandemicsBats
 
                     _player.LateUpdate(gameTime);
                     _cat.LateUpdate(gameTime);
+                    _dragon.LateUpdate(gameTime);
                     break;
                 #endregion
 
@@ -401,6 +405,7 @@ namespace PlaguePandemicsBats
                     _back2menuButton.Update(mouseState, 0);
                     break;
                 #endregion
+
                 #region Game Over
                 case GameState.GameOver:
                     IsMouseVisible = true;
@@ -441,6 +446,7 @@ namespace PlaguePandemicsBats
                 _scene.Draw(gameTime);
                 _player.Draw(_spriteBatch);
                 _cat.Draw(_spriteBatch);
+                _dragon.Draw(_spriteBatch);
 
                 //DRAW ENEMIES & PROJECTILES
                 foreach (Ammo a in Ammo.ToArray())
@@ -669,11 +675,6 @@ namespace PlaguePandemicsBats
             string path = this.Content.RootDirectory + "/highscore.txt";
             string text = _player.Name + ";" + newHighScore.ToString() + "\n";
             int i;
-            //int max;
-            //foreach ( int f in fileHighscores.ToArray())
-            //{
-            //    Max(f, newHighScore);
-            //}
 
             for (i = 0; i < 5; i++)
             {
@@ -683,12 +684,12 @@ namespace PlaguePandemicsBats
             File.AppendAllText(path, text);
         }
 
-
         private void LoadLevel()
         {
             //CHARACTERS & SCENE
             _player = new Player(this);
             _cat = new Cat(this);
+            _dragon = new Dragon(this);
             _scene = new Scene(this, "MainScene");
             _ui = new UI(this);
 
@@ -717,6 +718,7 @@ namespace PlaguePandemicsBats
             //Unload Components
             _player = null;
             _scene = null;
+            _dragon = null;
             _ui = null;
             _cat = null;
             _spZ = null;

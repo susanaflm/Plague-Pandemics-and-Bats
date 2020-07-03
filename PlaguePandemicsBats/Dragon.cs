@@ -12,15 +12,14 @@ namespace PlaguePandemicsBats
     public class Dragon 
     {
         #region Private variables
-        private const float __dragonWidth = 0.4f;
-        private const float __dragonHeight = 0.3f;
+        private const float _dragonHeight = 1.5f;
 
         private Game1 _game;
         private Vector2 _position;
         private Vector2 _oldPosition;
         private Direction _direction = Direction.Down;
         private float _acceleration;
-        private OBBCollider __dragonCollider;
+        private OBBCollider _dragonCollider;
         private int _health;
         private int _frame = 0;
         private Dictionary<Direction, Sprite []> _spritesDirection;
@@ -28,26 +27,33 @@ namespace PlaguePandemicsBats
         private float _deltaTime = 0;
         #endregion
 
+        #region Public variables
+        public bool isDragonAlive = true;
+        #endregion
+
         #region Constructor
-        public Dragon(Game1 game, Vector2 position) 
+        public Dragon(Game1 game) 
         {
             _game = game;
-            _position = position;
-            _spritesDirection = new Dictionary<Direction, Sprite []>
-            {
-                [Direction.Up] = new [] { new Sprite(game, "DragonBack", width: 0.2f, height: __dragonHeight), new Sprite(game, "DragonBackU", width: 0.2f, height: __dragonHeight), new Sprite(game, "DragonBackD", width: 0.2f, height: __dragonHeight) },
-                [Direction.Down] = new [] { new Sprite(game, "DragonFront", width: 0.2f, height: __dragonHeight), new Sprite(game, "DragonFrontU", width: 0.2f, height: __dragonHeight), new Sprite(game, "DragonFrontD", width: 0.2f, height: __dragonHeight) },
-                [Direction.Left] = new [] { new Sprite(game, "DragonL", width: __dragonWidth, height: __dragonHeight), new Sprite(game, "DragonLU", width: __dragonWidth, height: __dragonHeight), new Sprite(game, "DragonLD", width: __dragonWidth, height: __dragonHeight) },
-                [Direction.Right] = new [] { new Sprite(game, "DragonR", width: __dragonWidth, height: __dragonHeight), new Sprite(game, "DragonRU", width: __dragonWidth, height: __dragonHeight), new Sprite(game, "DragonRD", width: __dragonWidth, height: __dragonHeight) }
-            };
-
+            _position = new Vector2(-2, 0);
             _health = 100;
 
+            #region Dictionary
+            _spritesDirection = new Dictionary<Direction, Sprite []>
+            {
+                [Direction.Up] = new [] { new Sprite(game, "DragonBack", height: _dragonHeight), new Sprite(game, "DragonBackU", height: _dragonHeight), new Sprite(game, "DragonBackD", height: _dragonHeight) },
+                [Direction.Down] = new [] { new Sprite(game, "DragonFront", height: _dragonHeight), new Sprite(game, "DragonFrontU", height: _dragonHeight), new Sprite(game, "DragonFrontD", height: _dragonHeight) },
+                [Direction.Left] = new [] { new Sprite(game, "DragonL", height: _dragonHeight), new Sprite(game, "DragonLU", height: _dragonHeight), new Sprite(game, "DragonLD", height: _dragonHeight) },
+                [Direction.Right] = new [] { new Sprite(game, "DragonR", height: _dragonHeight), new Sprite(game, "DragonRU", height: _dragonHeight), new Sprite(game, "DragonRD", height: _dragonHeight) }
+            };
+            #endregion
+           
             _currentSprite = _spritesDirection [_direction] [_frame];
 
-            __dragonCollider = new OBBCollider(game, "_dragon", _position, _currentSprite.size, 0);
-            __dragonCollider.SetDebug(true);
-            game.CollisionManager.Add(__dragonCollider);
+            //COLLIDERS
+            _dragonCollider = new OBBCollider(game, "_dragon", _position, _currentSprite.size, 0);
+            _dragonCollider.SetDebug(false);
+            game.CollisionManager.Add(_dragonCollider);
         }
         #endregion
 
@@ -60,7 +66,7 @@ namespace PlaguePandemicsBats
         public void SetPosition(Vector2 position)
         {
             _position = position;
-            __dragonCollider.SetPosition(position);
+            _dragonCollider.SetPosition(position);
         }
 
         /// <summary>
@@ -69,27 +75,32 @@ namespace PlaguePandemicsBats
         /// <param name="gameTime"></param>
         public void Update(GameTime gameTime)
         {
-            _deltaTime += gameTime.DeltaTime();
-
-            _oldPosition = _position;
-
-            Movement(gameTime);
-
-            _frame = (int)(_deltaTime * 6) % 3;
-            if (_frame > 2)
-                _frame = 1;
-
-            if (_oldPosition == _position)
+            if(isDragonAlive)
             {
-                _currentSprite = _spritesDirection [_direction] [0];
-            }
-            else
-            {
-                _currentSprite = _spritesDirection [_direction] [_frame];
-            }
+                _deltaTime += gameTime.DeltaTime();
 
-            _currentSprite.SetPosition(_position);
-            __dragonCollider.SetPosition(_position);
+                _oldPosition = _position;
+
+                if(_game.Player.isDragonHiden = false)
+                     Movement(gameTime);
+
+                _frame = (int)(_deltaTime * 6) % 3;
+                if (_frame > 2)
+                    _frame = 1;
+
+                if (_oldPosition == _position)
+                {
+                    _currentSprite = _spritesDirection [_direction] [0];
+                }
+                else
+                {
+                    _currentSprite = _spritesDirection [_direction] [_frame];
+                }
+
+                _currentSprite.SetPosition(_position);
+                _dragonCollider.SetPosition(_position);
+            }
+            
         }
 
         /// <summary>
@@ -98,14 +109,15 @@ namespace PlaguePandemicsBats
         /// <param name="gameTime"></param>
         public virtual void LateUpdate(GameTime gameTime)
         {
-            if (__dragonCollider._inCollision)
+            if (_dragonCollider._inCollision && isDragonAlive)
             {
-                foreach (Collider c in __dragonCollider.collisions)
+                foreach (Collider c in _dragonCollider.collisions)
                 {
                     if (c.Tag == "Enemy")
                     {
                         _health = 0;
                         _position = _oldPosition;
+                        this.Die();
                     }
 
                 }
@@ -147,13 +159,25 @@ namespace PlaguePandemicsBats
         }
 
         /// <summary>
-        /// Draws the _dragon
+        /// Draws the dragon
         /// </summary>
         /// <param name="spriteBatch"></param>
         public void Draw(SpriteBatch spriteBatch)
         {
-            _currentSprite.Draw(spriteBatch);
-            __dragonCollider?.Draw(null);
+            if (isDragonAlive)
+            {
+                _currentSprite.Draw(spriteBatch);
+                _dragonCollider?.Draw(null);
+            }            
+        }
+
+        /// <summary>
+        /// Kills the dragon
+        /// </summary>
+        public  void Die()
+        {
+            isDragonAlive = false;
+            _game.CollisionManager.Remove(_dragonCollider);          
         }
 
         #endregion
