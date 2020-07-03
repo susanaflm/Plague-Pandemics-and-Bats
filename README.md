@@ -113,7 +113,7 @@ Special item that the player will be able to find if he crosses some non collidi
 
 ## Special-Obstacles
 
-The game has its secrets, and with that we implemented some obstacles that the player can cross them when meeting a certain condition. For instance, if the player finds the cat, and makes it follow him, the player will now cross the red trees. This can be used to reach areas of the map that couldn't be accessed any other way.
+The game has its secrets, and with that we implemented some obstacles that the player can cross when meeting a certain condition. For instance, if the player finds the cat, and makes it follow him, the player will now cross the red trees. This can be used to reach areas of the map that couldn't be accessed any other way.
 
 There's also a building that teleports the player to a new position, in which the player will be able to proceed to the rest of the map and find the last house, that it will lead him to the final boss.
 
