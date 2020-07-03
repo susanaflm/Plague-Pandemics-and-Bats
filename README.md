@@ -1,3 +1,4 @@
+
 # PLAGUE, PANDEMICS & BATS
 
 - [Introduction](#Introduction)
@@ -114,40 +115,43 @@ This class handles the collision with the `Player` and conceding it its ammo.
 
 ## Enemies
 Class `Enemy`
-Main class responsable to attribute damage, score, health and certain global methods to all types of enemies in our game; these are categorized and separated in other subclasses inhereting from `Enemy`.
 
-  - Pink Zombie
-  - Spawner Zombie
-  - Shooter Zombie
-  - Bat 
+Main «abstract» class responsible to attribute damage, score, health and certain global methods to all types of enemies in our game (eg: collision, update and drawing logic); these are categorized and separated in other subclasses inhereting from `Enemy`.
 
+- `Pink Zombie` -> patroller [ EASY ]
+- `Spawner Zombie` -> bat spawner [ MEDIUM ]
+- `Shooter Zombie` -> shoots projectiles but if the user gets close this character runs away [ STILL MEDIUM ]
+  - `Bat` (dependent of spawner) -> pursuits `Player`
 
-The abstract class Enemy is responsible for the general instructions, such as collision, update and drawing logic allowing the inherited classes to have its own type of behaviour.
-
-Each Enemy has a different behaviour, the Pink Zombie patrols an area, the Spawner Zombie spawns bats that pursuits the player, and the Shooter Zombie that shoots a projectile towards the player and running when it is too close.
 
 
 ## Cat
+Class `Cat`
 
-Somewhere in the map, the player can find a cat that will follow him around and attack enemies
+-stable friendly that follows around our player, enabling access to certain map areas and attacking enemies nearby.
 
-The class Cat is in charge of handling the movement of the cat, and deciding when to attack a enemy.
-
-To detect an enemy we used an algorithm that filters the game's list of enemies, to the ones that are in the cat's range and then it organizes the filtered list by ordering them from the closest to the furthest enemy, the algorithm will check the enemy that is in the first position and get its position. The cat will now follow the closest enemy only leaving that enemy until he's dead
+`Enemy` attacks and `Cat` movement are methods both controlled in this class; the first uses an algorithm that filters the game's list of enemies to the ones that
+are within the cat's range, 
+filtering then the list by *closest* -> *furthest* enemy positions, after that, it gets the 1st position on that list commanding then the `Cat` to chase them.
 
 
 ## Dragon
+Class `Dragon`
 
-Special item that the player will be able to find if he crosses some non colliding fences. This dragon is able to perform a single attack, that will insta kill the closest enemy to the player
+-unstable friendly that follows around our player, insta killing one `Enemy` on command.
+
+
+Special friendly that the `Player` will be able to find if he crosses some non-colliding fences. This dragon is able to perform a single attack.
 
 
 ## Special-Obstacles
 
-The game has its secrets, and with that we implemented some obstacles that the player can cross when meeting a certain condition. For instance, if the player finds the cat, and makes it follow him, the player will now cross the red trees. This can be used to reach areas of the map that couldn't be accessed any other way.
+The game has its secrets passages and mechanincs, and with that we implemented some obstacles that the player can cross when reaching certains conditions. 
+For instance, upon finding and "petting" the `Cat`, the `Player` will be able to now cross the red trees. This can be used to reach areas of the map that couldn't be accessed any other way.
 
-There's also a building that teleports the player to a new position, in which the player will be able to proceed to the rest of the map and find the last house, that it will lead him to the final boss.
+Teleports are available in various ways, checkpoints, houses, buildings, closely looking at the Pink Building, the `Player` will cross to another map area on which he/her will be able to proceed to the rest of the map and find the last house that leads to the final boss.
 
 
 ## Corona
 
-The final boss of the game, the ultimate and super powerful enemy that is the corona. This final boss is able to sit still and wait for its dead
+The final boss of the game, the ultimate and super powerful enemy that is the corona. The `Player` will require that vaccines he/her saved up to that moment to defeat this threat.
