@@ -68,9 +68,30 @@ namespace PlaguePandemicsBats
                     sprite.SetRotation(rotation);
                     _sprites.Add(sprite);
 
-                    OBBCollider checkpointCollider = new OBBCollider(_game, "RedTree", new Vector2(x + sprite.size.X / 2, y + sprite.size.Y / 2), sprite.size, rotation);
-                    _game.CollisionManager.Add(checkpointCollider);
+                    OBBCollider RedTreeCollider = new OBBCollider(_game, "RedTree", new Vector2(x + sprite.size.X / 2, y + sprite.size.Y / 2), sprite.size, rotation);
+                    _game.CollisionManager.Add(RedTreeCollider);
                 }
+                else if (image["itemIdentifier"]?.Value<string>() == "TPPosition")
+                {
+                    Sprite sprite = new Sprite(_game, imgName, scale: new Vector2(scaleX, scaleY), collides: false);
+                    _game.Player.TPpos = new Vector2(x + sprite.size.X / 2, y + sprite.size.Y / 2);
+                    sprite.SetPosition(new Vector2(x + sprite.size.X / 2, y + sprite.size.Y / 2));
+                    sprite.SetRotation(rotation);
+                    _sprites.Add(sprite);
+
+
+                }
+                else if (image["itemIdentifier"]?.Value<string>() == "TP")
+                {
+                    Sprite sprite = new Sprite(_game, imgName, scale: new Vector2(scaleX, scaleY), collides: false);
+                    sprite.SetPosition(new Vector2(x + sprite.size.X / 2, y + sprite.size.Y / 2));
+                    sprite.SetRotation(rotation);
+                    _sprites.Add(sprite);
+
+                    OBBCollider TpCollider = new OBBCollider(_game, "TP", new Vector2(x + sprite.size.X / 2, y + sprite.size.Y / 2), sprite.size, rotation);
+                    _game.CollisionManager.Add(TpCollider);
+                }
+            
                 else if (image ["imageName"]?.Value<string>() == "ZGuyD0")
                 {
                     new ShooterZombie(_game, new Vector2(x, y));

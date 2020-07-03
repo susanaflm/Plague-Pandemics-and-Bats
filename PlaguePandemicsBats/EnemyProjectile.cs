@@ -70,11 +70,12 @@ namespace PlaguePandemicsBats
 
             if (_projCollider._inCollision)
             {
-                if (_projCollider.collisions[0].Tag == "Player" || _projCollider.collisions[0].Tag == "Obstacle")
+                if (_projCollider.collisions[0].Tag == "Player" || _projCollider.collisions[0].Tag == "Obstacle" || _projCollider.collisions[0].Tag == "RedTree" || _projCollider.collisions[0].Tag == "TP")
                 {
                     _game.EnemyProjectiles.Remove(this);
                     _game.CollisionManager.Remove(_projCollider);
                 }
+
                 if (_projCollider.collisions[0].Tag == "Player")
                 {
                     _game.Player.UpdateHealth(_damage);

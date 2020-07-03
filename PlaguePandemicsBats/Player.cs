@@ -52,6 +52,7 @@ namespace PlaguePandemicsBats
         public string filePath;
         public int _lastCheckPointScore = 0;
         public bool isBeingDamaged = false;
+        public Vector2 TPpos;
 
         #region Constructor
         /// <summary>
@@ -164,6 +165,12 @@ namespace PlaguePandemicsBats
                     if (c.Tag == "RedTree" && !_playerHasCat)
                     {
                         _position = _oldPosition;
+                    }
+
+                    if (c.Tag == "TP")
+                    {
+                        SetPosition(TPpos);
+                        _game.Cat.SetPosition(TPpos);
                     }
 
                     if (c.Tag == "Cat")

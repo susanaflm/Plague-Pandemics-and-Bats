@@ -100,7 +100,7 @@ namespace PlaguePandemicsBats
                         _health -= 10;
                     }
 
-                    if (c.Tag == "Obstacle")
+                    if (c.Tag == "Obstacle" || c.Tag == "RedTree" || c.Tag == "TP")
                     {
                         _position = _oldPosition;
                     }

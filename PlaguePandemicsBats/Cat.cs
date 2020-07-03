@@ -84,13 +84,15 @@ namespace PlaguePandemicsBats
             if (_isFollowingPlayer)
             {
                 //Filter the enemies list from game according to a range
-                _inRangeEnemies = _game.Enemies.Where(e => Vector2.DistanceSquared(e._position, _position) <= 4).ToList();
+                _inRangeEnemies = _game.Enemies.Where(e => Vector2.DistanceSquared(e._position, _position) <= 3).ToList();
 
-                if (_inRangeEnemies.Count == 0)
+                bool isCatAttacking = _inRangeEnemies.Count != 0 && Vector2.Distance(_position, _game.Player.Position) <= 2.5f;
+
+                if (!isCatAttacking)
                 {
                     Movement(gameTime);
                 }
-                else
+                else 
                 {
                     Attack(gameTime);
                 }

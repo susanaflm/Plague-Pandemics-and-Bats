@@ -1,1 +1,1 @@
-{"sceneName":"FinalScene","composite":{"sImages":[{"uniqueId":3,"itemIdentifier":"Collider","tags":[],"x":-3.6875,"y":-0.39999998,"originX":0.6125,"originY":0.625,"layerName":"Default","imageName":"borona"}],"layers":[{"layerName":"Default","isVisible":true}]},"physicsPropertiesVO":{}}
+{"sceneName":"FinalScene","composite":{"sImages":[{"uniqueId":3,"itemIdentifier":"Corona","tags":[],"x":-3.69,"y":-0.4,"originX":0.6125,"originY":0.625,"layerName":"Default","imageName":"borona"}],"layers":[{"layerName":"Default","isVisible":true}]},"physicsPropertiesVO":{}}

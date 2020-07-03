@@ -63,7 +63,7 @@ namespace PlaguePandemicsBats
             {
                 foreach (Collider c in _projectileCollider.collisions)
                 {
-                    if (c.Tag == "Enemy" || c.Tag == "Obstacle")
+                    if (c.Tag == "Enemy" || c.Tag == "Obstacle" || c.Tag == "RedTree" || c.Tag == "TP")
                     {
                         _game.Projectiles.Remove(this);
                         _game.CollisionManager.Remove(_projectileCollider);

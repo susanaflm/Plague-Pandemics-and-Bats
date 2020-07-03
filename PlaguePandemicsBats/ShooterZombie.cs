@@ -51,7 +51,7 @@ namespace PlaguePandemicsBats
         internal override void Behaviour(GameTime gameTime)
         {
             //Checks the Distance to the player to know when to Run
-            if (Vector2.DistanceSquared(_position, _game.Player.Position) <= 1.5 * 1.5)
+            if (Vector2.DistanceSquared(_position, _game.Player.Position) <= 1)
             {
                 isRunningAway = true;
 
