@@ -1,4 +1,3 @@
-
 # PLAGUE, PANDEMICS & BATS
 
 - [Introduction](#Introduction)
@@ -40,11 +39,11 @@ The game allows for both types of control movements:
 
 ->>**ATTACKS**
 
-|  |  |  |
-| ------ | ------ |------ |
-| <kbd>Z</kbd> | <kbd>J</kbd> | Punch |
-| <kbd>SPACE</kbd> | | Shoot |
-|    <kbd>E</kbd> |  | Dragon Attack  |
+| Keys | +Keys | Attack type | Damage |
+| ------ | ------ |------ | ------ |
+| <kbd>Z</kbd> | <kbd>J</kbd> | Punch | 15 |
+| <kbd>SPACE</kbd> | | Shoot | 10 |
+|    <kbd>E</kbd> |  | Dragon Attack  | 100 |
 
 
 ## Game
