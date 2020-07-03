@@ -68,6 +68,7 @@ namespace PlaguePandemicsBats
 
         #region Public variables
         public TilingBackground background;
+        public List<int> fileHighscores = new List<int>();
         #endregion
 
         #region Constructor
@@ -589,13 +590,17 @@ namespace PlaguePandemicsBats
                 {
                     vec = new Vector2(i + GraphicsDevice.Viewport.Width/2.3f, i + GraphicsDevice.Viewport.Height / 2.56f);
                     string [] text = file [i].Split(';');
-                    
+
                     foreach( var t in text)
                     {
-                        line += 25;
-                        vec = new Vector2(i + GraphicsDevice.Viewport.Width / 2.3f, i + line + GraphicsDevice.Viewport.Height / 3.9f);
+                        if(fileHighscores.Count < 5)
+                        {
+                            line += 25;
+                            vec = new Vector2(i + GraphicsDevice.Viewport.Width / 2.3f, i + line + GraphicsDevice.Viewport.Height / 4f);
                         
-                        _spriteBatch.DrawString(_spriteFont, $"{t}\n", vec, Color.White);                       
+                            _spriteBatch.DrawString(_spriteFont, $"{t}\n", vec, Color.White);           
+                        }
+                                   
                     }
                    
                 }
@@ -628,6 +633,11 @@ namespace PlaguePandemicsBats
             }
         }
 
+        public int Max(int x, int y)
+        {
+            return (x > y) ? x : y;
+        }
+
         /// <summary>
         /// Saves the New HighScore
         /// </summary>
@@ -636,9 +646,21 @@ namespace PlaguePandemicsBats
         {
             string path = this.Content.RootDirectory + "/highscore.txt";
             string text = _player.Name + ";" + newHighScore.ToString() + "\n";
+            int i;
+            //int max;
+            //foreach ( int f in fileHighscores.ToArray())
+            //{
+            //    Max(f, newHighScore);
+            //}
 
+            for (i = 0; i < 5; i++)
+            {
+                fileHighscores.Add(newHighScore);
+            }
+                      
             File.AppendAllText(path, text);
         }
+
 
         private void LoadLevel()
         {
