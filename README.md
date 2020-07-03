@@ -17,7 +17,12 @@
 ## Introduction 
 
 
-Plague, Pandemics & Bats is an original game concept surging from the recent pandemic of the virus COVID-19 on the year 2020, briefly explained, there are two main characters: a female and a male on which the player can choose from; the main objective is to end the plague by finding the big Corona source, on the meantime, gameplay wise, you go through different types of scenarios on which you find 4 types of enemies, the Pink Zombie, the Glass Zombie with the Bat and the Scarf Zombie, with distinct behaviours.
+Plague, Pandemics & Bats is an original game concept surging from the recent pandemic of the virus COVID-19 on the year 2020, briefly explained, 
+there are two main characters: a female and a male on which the player can choose from; 
+the main objective is to end the plague by finding the big Corona source, on the meantime, gameplay wise, you go through 
+different types of scenarios on which you find 4 types of enemies, the `Pink Zombie`, the `Glass Zombie` with the `Bat` and the `Scarf Zombie`, each having distinct behaviours.
+
+Furthermore, the `Player` can obtain certain friendlies that will help him/her go through the pandemic such as the `Cat` and the Easter Egg `Dragon`. 
 
 
 ## Controls
@@ -43,21 +48,22 @@ The game allows for both types of control movements:
 
 ## Game
 
-The class _Game_ starts by loading the textures, sounds and create the different components. It also tries to load the _highscore_ from a file, if the file doesn't exist or doesn't have any highscores, the highscore is set to 0.
+The class `Game` starts by loading the textures, sounds and create the different components,  also tries to load the _highscore_ from a file, if the file doesn't exist or doesn't have any highscores, the highscore is set to 0.
 
-Each frame, updates and draws the different objects.
+Each frame updates and draws the different objects.
 
 
 ## Game Map
 
-The Game Map was created using a external tool called Overlap2D. To load the map into the game it was created the class Scene, that reads the JSON File created by Overlap2D, to create and place the obstacles, player and enemies
+To create the game map we resorted to an external source called Overlap2D; we load the map through the class `Scene` which reads the JSON File from Overlap2D, generating and placing the obstacles, items and characters.
 
 
 ## Collision
 
-Collision Manager is a game component that controls every collider and collision in the game. This class is responsible to handle the different collisions according to the collider type and allows other classes to take action according to the object that they are colliding
+`CollisionManager` is a game component that manages and runs every collider & collision in the game in accordance with the _type_ of collider and collision, therefore, 
+actioning in proportion to which object they are colliding with. 
 
-For instance, it doens't let the player run through obstacles
+For instance, it restrains the `Player` from running into obstacles.
 
 
 ## Player
@@ -65,7 +71,9 @@ For instance, it doens't let the player run through obstacles
 The main characters of the game:
 **Maria Soto** & **Oliver Buchanan**
 
-The Player starts with 0 points, 0 projectiles, 100 health and a total of 3 lives. Each life is lost by losing all the 100 health point, and the player loses if the lives are all lost. In the early game, the player must punch its enemies to death, until it finds some vaccines laying in the floor
+The `Player` starts with 0 points, 0 projectiles, 100 health and a total of 3 lives. 
+Each life is lost by losing all the 100 health point, and the player loses if the lives are all lost. 
+In the early game, the player must punch its enemies to death, until it finds some vaccines laying in the floor
 
 When the player dies, it goes to the last checkpoint, with the ammo and score that the player had when it touched that checkpoint.
 
