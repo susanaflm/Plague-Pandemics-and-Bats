@@ -159,7 +159,6 @@ namespace PlaguePandemicsBats
 
             Player.OnPlayerLose += () =>
             {
-               _player.Highscore = _player._lastCheckPointScore;
                SaveHighScore(_player.Highscore);
             };
 
@@ -574,37 +573,31 @@ namespace PlaguePandemicsBats
 
             #region Highscore
             if (_gameState == GameState.Highscores)
-            {
+            {   
                 Texture2D texture = Content.Load<Texture2D>("highscoreMenu");
-                string [] file = File.ReadAllLines($@"{Content.RootDirectory}/highscore.txt");
-                string text;
-                int line = 0;
                 Vector2 vec;
-                //fullscreen
                 Rectangle rec = new Rectangle(0, 0, GraphicsDevice.Viewport.Width, GraphicsDevice.Viewport.Height);
                 Color color = Color.White;
-
+                
+                string [] file = File.ReadAllLines($@"{Content.RootDirectory}/highscore.txt");
+                int line = 20;
+                
                 _spriteBatch.Draw(texture, rec, color);
                 _back4menuButton.Draw(_spriteBatch, 0);
-
+                
                 for (int i = 0; i < file.Length; i++)
                 {
-                    vec = new Vector2(i + GraphicsDevice.Viewport.Width/2, i + GraphicsDevice.Viewport.Height / 2);                   
-
-                    if (file [i] == " " || file [i] == ";")
+                    vec = new Vector2(i + GraphicsDevice.Viewport.Width/2.3f, i + GraphicsDevice.Viewport.Height / 2.56f);
+                    string [] text = file [i].Split(';');
+                    
+                    foreach( var t in text)
                     {
-                        text = " ";
+                        line += 25;
+                        vec = new Vector2(i + GraphicsDevice.Viewport.Width / 2.3f, i + line + GraphicsDevice.Viewport.Height / 3.9f);
+                        
+                        _spriteBatch.DrawString(_spriteFont, $"{t}\n", vec, Color.White);                       
                     }
-                    else if (file [i] == "-")
-                    {
-                        line++;
-                        text = " ";
-                    }
-                    else
-                    {
-                        text = $"{file [i]}";
-                    }
-                    _spriteBatch.DrawString(_spriteFont, text, vec, Color.White);
+                   
                 }
             }
                 #endregion
@@ -642,7 +635,7 @@ namespace PlaguePandemicsBats
         public void SaveHighScore(int newHighScore)
         {
             string path = this.Content.RootDirectory + "/highscore.txt";
-            string text = _player.Name + ";" + newHighScore.ToString() + "-";
+            string text = _player.Name + ";" + newHighScore.ToString() + "\n";
 
             File.AppendAllText(path, text);
         }
