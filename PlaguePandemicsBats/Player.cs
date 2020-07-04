@@ -178,6 +178,7 @@ namespace PlaguePandemicsBats
                     {
                         _position = _oldPosition;
                         _game.hasPlayerTouchedBlueHouse = true;
+                        SetPosition(new Vector2(300, 300));
                     }
 
                     if (c.Tag == "TP")

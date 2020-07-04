@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace PlaguePandemicsBats
 {
-    public class Corona
+    public class Corona : DrawableGameComponent
     {
         #region Private variables
         private readonly Game1 _game;
@@ -25,12 +25,12 @@ namespace PlaguePandemicsBats
         #endregion
 
         #region Constructor
-        public Corona(Game1 game, Vector2 position)
+        public Corona(Game1 game) : base(game)
         {
             _game = game;
             _texture = _game.Content.Load<Texture2D>("borona");
             _spriteBatch = new SpriteBatch(_game.GraphicsDevice);
-            _position = position;
+            _position = game.Player.Position;
 
             _health = 500;
 
@@ -42,27 +42,28 @@ namespace PlaguePandemicsBats
 
         #region Methods
 
-        public void Update()
-
+        public override void Update(GameTime gameTime)
         {
             if (_health == 0)
             {
                 _game.CoronaDied();
             }
+
+            Attack(gameTime);
         }
 
-        public void LateUpdate()
+        public void LateUpdate(GameTime gameTime)
         {
             if (_coronaCollider._inCollision)
             {
-                if (_coronaCollider.Tag == "Player")
+                if (_coronaCollider.collisions[0].Tag == "Player")
                 {
                     _game.Player.Die();
                 }
 
-                if (_coronaCollider.Tag == "Projectile")
+                if (_coronaCollider.collisions[0].Tag == "Projectile")
                 {
-                    _health -= 10;
+                    _health -= 100;
                 }
             }
         }
@@ -91,18 +92,20 @@ namespace PlaguePandemicsBats
             new EnemyProjectile(_game, projOrientation, _position);
         }
 
+        public void SetPosition(Vector2 position)
+        {
+            _position = position;
+        }
+
         /// <summary>
         /// 
         /// </summary>
         /// <param name="gameTime"></param>
-        public void Draw()
+        public override void Draw(GameTime gameTime)
         {
-            if (_game.hasPlayerTouchedBlueHouse)
-            {
-                _spriteBatch.Begin(samplerState: SamplerState.PointClamp);
-                _spriteBatch.Draw(_texture, _rec, Color.White);
-                _spriteBatch.End();
-            }
+            _spriteBatch.Begin(samplerState: SamplerState.PointClamp);
+            _spriteBatch.Draw(_texture, _rec, Color.White);
+            _spriteBatch.End();
         }
 
         #endregion
