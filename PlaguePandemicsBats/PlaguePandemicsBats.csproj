@@ -169,6 +169,8 @@
     <Content Include="Content\creditsButton.png" />
     <Content Include="Content\creditsButtonOnHover.png" />
     <Content Include="Content\die.wav" />
+    <Content Include="Content\dragonIcon.jpg" />
+    <Content Include="Content\endgameSound.wav" />
     <Content Include="Content\Fullgrass.png" />
     <Content Include="Content\gameOver.png" />
     <Content Include="Content\gameSong.mp3" />

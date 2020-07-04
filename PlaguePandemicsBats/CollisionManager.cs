@@ -7,10 +7,13 @@ namespace PlaguePandemicsBats
 {
     public class CollisionManager
     {
+        #region Private variables
         private List<Collider> colliders;
         private List<Collider> inRangeColliders;
         private Game1 _game;
+        #endregion
 
+        #region Constructor
         public CollisionManager(Game1 game)
         {
             _game = game;
@@ -18,7 +21,9 @@ namespace PlaguePandemicsBats
             colliders = new List<Collider>();
             inRangeColliders = new List<Collider>();
         }
+        #endregion
 
+        #region Methods
         /// <summary>
         /// Adds a collider to the collider list
         /// </summary>
@@ -63,6 +68,7 @@ namespace PlaguePandemicsBats
                 for (int j = i + 1; j < inRangeColliders.Count; j++)
                 {
                     bool areColliding = false;
+
                     if (inRangeColliders[i] is CircleCollider c1 && inRangeColliders[j] is CircleCollider c2)
                     {
                         areColliding = CircleVsCircle(c1, c2);
@@ -158,6 +164,7 @@ namespace PlaguePandemicsBats
             return collision;
         }
 
+        
         bool ObbVsObb(OBBCollider a, OBBCollider b)
         {
             float ra, rb;
@@ -223,8 +230,10 @@ namespace PlaguePandemicsBats
         private Vector2 ClosestPtPointOBB(Vector2 p, OBBCollider b)
         {
             Vector2 d = p - b._position; 
+
             // Start result at center of box; make steps from there
             Vector2 q = b._position; 
+
             // For each OBB axis...
             for (int i = 0; i < 2; i++) { 
                 // ...project d onto that axis to get the distance
@@ -244,5 +253,6 @@ namespace PlaguePandemicsBats
         {
             return ObbVsObb(o, a.ToObb());
         }
+        #endregion
     }
 }

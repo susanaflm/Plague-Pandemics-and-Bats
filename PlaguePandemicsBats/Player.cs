@@ -35,6 +35,7 @@ namespace PlaguePandemicsBats
         private Vector2 _playerSpawn;
         private SpriteFont _font;
         private SoundEffect _punchSound;
+        private SoundEffect _gameLoss;
         private float _acceleration;
         private float _timer = 0;
         private float _punchTimer = 0.8f;
@@ -70,6 +71,7 @@ namespace PlaguePandemicsBats
             _lastCheckPointPosition = _position;
             _font = _game.Content.Load<SpriteFont>("bigfont");
             _punchSound = _game.Content.Load<SoundEffect>("punch");
+            _gameLoss = _game.Content.Load<SoundEffect>("endgameSound");
 
             filePath = _game.Content.RootDirectory + "/highscore.txt";
 
@@ -352,7 +354,8 @@ namespace PlaguePandemicsBats
             _health = 100;
 
             if (_lives <= 0)
-            {   
+            {
+                _gameLoss.Play();
                 SaveScore?.Invoke();
             }
         }

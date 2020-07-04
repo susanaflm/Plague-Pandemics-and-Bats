@@ -86,6 +86,7 @@ namespace PlaguePandemicsBats
                 //Filter the enemies list from game according to a range
                 _inRangeEnemies = _game.Enemies.Where(e => Vector2.DistanceSquared(e._position, _position) <= 3).ToList();
 
+                //determines whether the cat is able to attack or not based on the conditions
                 bool isCatAttacking = _inRangeEnemies.Count != 0 && Vector2.Distance(_position, _game.Player.Position) <= 2.5f;
 
                 if (!isCatAttacking)
@@ -99,6 +100,7 @@ namespace PlaguePandemicsBats
             }
 
             _frame = (int)(_deltaTime * 6) % 3;
+
             if (_frame > 2)
                 _frame = 1;
 
@@ -112,7 +114,6 @@ namespace PlaguePandemicsBats
                 _isCatAbleToAttack = true;
                 _timer = 0;
             }
-
 
             //Set the Sprite and Collider position
             _currentSprite.SetPosition(_position);

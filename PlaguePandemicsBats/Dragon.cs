@@ -153,11 +153,16 @@ namespace PlaguePandemicsBats
         /// <param name="spriteBatch"></param>
         public void Draw(SpriteBatch spriteBatch)
         {
+            Texture2D texture = _game.Content.Load<Texture2D>("dragonIcon");
+            Rectangle rec = new Rectangle(10, 460, texture.Width / 7, texture.Height / 7);
+
             if (isDragonAlive)
             {
                 _currentSprite.Draw(spriteBatch);
                 _dragonCollider?.Draw(null);
             }
+            if(dragonAttackActive && isDragonAlive)
+                spriteBatch.Draw(texture, rec, Color.White);
         }
 
         /// <summary>

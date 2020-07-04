@@ -383,7 +383,11 @@ namespace PlaguePandemicsBats
                     if (_buttonPlay.isClicked)
                         _gameState = GameState.Playing;
                     if (_buttonQuit.isClicked)
+                    {
                         Exit();
+                        _player.Die();
+                    }
+                       
                     if (_back2menuButton.isClicked)
                     {
                         _gameState = GameState.MainMenu;
@@ -447,9 +451,8 @@ namespace PlaguePandemicsBats
                     _scene.Draw(gameTime);
                 }
                 else
-                {
                     _finalScene.Draw(gameTime);
-                }
+                
 
                 _player.Draw(_spriteBatch);
                 _cat.Draw(_spriteBatch);
@@ -701,13 +704,9 @@ namespace PlaguePandemicsBats
         {
             string path = Content.RootDirectory + "/highscore.txt";
             string text = _player.Name + ";" + newHighScore.ToString() + "\n";
-            int i;
 
-            for (i = 0; i < 5; i++)
-            {
-                fileHighscores.Add(newHighScore);
-            }
-                      
+            fileHighscores.Add(newHighScore);
+                                 
             File.AppendAllText(path, text);
         }
 
@@ -720,10 +719,12 @@ namespace PlaguePandemicsBats
             _player = new Player(this);
             _cat = new Cat(this);
             _dragon = new Dragon(this);
-            _scene = new Scene(this, "MainScene");
-            _finalScene = new Scene(this, "FinalScene");
+            _scene = new Scene(this, "MainScene");            
             _ui = new UI(this);
 
+            if(hasPlayerTouchedBlueHouse)
+                _finalScene = new Scene(this, "FinalScene");
+            
             //BACKGROUND 
             background = new TilingBackground(this, "Fullgrass", new Vector2(4));
         }
