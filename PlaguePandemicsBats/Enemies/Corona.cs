@@ -11,18 +11,20 @@ namespace PlaguePandemicsBats
 {
     public class Corona
     {
-        private Game1 _game;
-        private Texture2D _texture;
-        private SpriteBatch _spriteBatch;
+        #region Private variables
+        private readonly Game1 _game;
+        private readonly Texture2D _texture;
+        private readonly SpriteBatch _spriteBatch;
+        private readonly CircleCollider _coronaCollider;
+
         private Direction _direction = Direction.Down;
-        private OBBCollider _coronaCollider;
         private Rectangle _rec;
         private Vector2 _position;
-        private int _score;
         private int _health;
-        private int _damage;
         private float _timer;
+        #endregion
 
+        #region Constructor
         public Corona(Game1 game, Vector2 position)
         {
             _game = game;
@@ -30,22 +32,38 @@ namespace PlaguePandemicsBats
             _spriteBatch = new SpriteBatch(_game.GraphicsDevice);
             _position = position;
 
-            _score = 200;
             _health = 500;
-            _damage = 30;
 
-            _coronaCollider = new OBBCollider(game, "Corona", _position, _texture.Bounds.Size.ToVector2(), 0);
-            _coronaCollider.SetDebug(false);
+            _coronaCollider = new CircleCollider(_game, "Corona", new Vector2(_texture.Width - _texture.Width / 2), _texture.Width / 2f);
+            _coronaCollider.SetDebug(true);
             game.CollisionManager.Add(_coronaCollider);
         }
+        #endregion
 
         #region Methods
 
-        public void Update(GameTime gameTime)
+        public void Update()
+
         {
             if (_health == 0)
             {
                 _game.CoronaDied();
+            }
+        }
+
+        public void LateUpdate()
+        {
+            if (_coronaCollider._inCollision)
+            {
+                if (_coronaCollider.Tag == "Player")
+                {
+                    _game.Player.Die();
+                }
+
+                if (_coronaCollider.Tag == "Projectile")
+                {
+                    _health -= 10;
+                }
             }
         }
 
@@ -77,15 +95,14 @@ namespace PlaguePandemicsBats
         /// 
         /// </summary>
         /// <param name="gameTime"></param>
-        public void Draw(GameTime gameTime)
+        public void Draw()
         {
-            if(_game.hasPlayerTouchedBlueHouse)
+            if (_game.hasPlayerTouchedBlueHouse)
             {
                 _spriteBatch.Begin(samplerState: SamplerState.PointClamp);
                 _spriteBatch.Draw(_texture, _rec, Color.White);
                 _spriteBatch.End();
             }
-            
         }
 
         #endregion
