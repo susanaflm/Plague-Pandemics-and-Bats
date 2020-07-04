@@ -14,7 +14,7 @@ namespace PlaguePandemicsBats
 {
     public class Player
     {
-        public static event Action OnPlayerLose;
+        public static event Action SaveScore;
 
         #region Private variables 
         private const float playerWidth = 0.4f;
@@ -40,7 +40,7 @@ namespace PlaguePandemicsBats
         private float _punchTimer = 0.8f;
         private int _frame = 0;
         private int _playerGender;
-        public int health = 100;
+        private int _health = 100;
         private int _lives = 3;
         private int _ammoCount = 0;
         private int _score = 0;
@@ -54,7 +54,6 @@ namespace PlaguePandemicsBats
         public string filePath;
         public int _lastCheckPointScore = 0;
         public bool isDragonHiden = true;
-        public bool isBeingDamaged = false;
         public Vector2 TPpos;
 		#endregion
 
@@ -137,6 +136,8 @@ namespace PlaguePandemicsBats
         /// </summary>
         public Collider Collider => _playerCollider;
 
+        public int Health => _health;
+
         /// <summary>
         /// Gets the Player's Highscore
         /// </summary>
@@ -174,12 +175,16 @@ namespace PlaguePandemicsBats
                     if (c.Tag == "BlueHouse")
                     {
                         _position = _oldPosition;
+                        _game.hasPlayerTouchedBlueHouse = true;
                     }
 
                     if (c.Tag == "TP")
                     {
                         SetPosition(TPpos);
-                        _game.Cat.SetPosition(TPpos);
+                        if (_playerHasCat)
+                        {
+                            _game.Cat.SetPosition(TPpos);
+                        }
                     }
 
                     if (c.Tag == "Cat")
@@ -228,7 +233,7 @@ namespace PlaguePandemicsBats
 
             _oldPosition = _position;
 
-            HandleInput();
+            HandleInput(gameTime);
 
             _position += _acceleration * deltaTime * _playerDirection[_direction];
             _currentSprite.SetPosition(_position);
@@ -245,7 +250,7 @@ namespace PlaguePandemicsBats
             else
                 _frame = 0;
 
-            if (health <= 0)
+            if (_health <= 0)
                 Die();
 
             Camera.LookAt(_position);
@@ -278,7 +283,7 @@ namespace PlaguePandemicsBats
             }
         }
 
-        public void HandleInput()
+        public void HandleInput(GameTime gameTime)
         {
             if (KeyboardManager.IsKeyDown(Keys.W) || KeyboardManager.IsKeyDown(Keys.Up))
             {
@@ -316,6 +321,11 @@ namespace PlaguePandemicsBats
                 Punch();
                 _isPunchAvailable = false;
             }
+            if (KeyboardManager.IsKeyGoingDown(Keys.E))
+            {
+                _game.Dragon.SetPosition(_position - new Vector2(4, 4) * _playerDirection[_game.Player.Direction]);
+                _game.Dragon.dragonAttackActive = true;
+            }
 
         }
 
@@ -325,12 +335,7 @@ namespace PlaguePandemicsBats
         /// <param name="damage">damage done to the player</param>
         public void UpdateHealth(int damage)
         {
-            int temp;
-            health -= damage;
-            temp = health;
-
-            if(temp == health)
-                isBeingDamaged = false;
+            _health -= damage;
         }
 
         /// <summary>
@@ -344,11 +349,11 @@ namespace PlaguePandemicsBats
 
             _score = _lastCheckPointScore;
             _ammoCount = _lastCheckPointAmmo;
-            health = 100;
+            _health = 100;
 
             if (_lives <= 0)
             {   
-                OnPlayerLose?.Invoke();
+                SaveScore?.Invoke();
             }
         }
 

@@ -88,7 +88,6 @@ namespace PlaguePandemicsBats
                     {
                         if (_isEnemyAbleToDamage)
                         {
-                            _game.Player.isBeingDamaged = true;
                             _game.Player.UpdateHealth(_damage);
                             _isEnemyAbleToDamage = false;
                         }
@@ -103,6 +102,11 @@ namespace PlaguePandemicsBats
                     if (c.Tag == "Obstacle" || c.Tag == "RedTree" || c.Tag == "TP")
                     {
                         _position = _oldPosition;
+                    }
+
+                    if (c.Tag == "Dragon")
+                    {
+                        Die();
                     }
                 }
             }

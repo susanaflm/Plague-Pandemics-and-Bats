@@ -150,7 +150,9 @@
     <None Include="Content\pandemics\export\scenes\MainScene.dt" />
     <None Include="Content\pandemics\project.dt" />
     <None Include="Content\pandemics\project.pit" />
-    <None Include="Content\pandemics\scenes\FinalScene.dt" />
+    <None Include="Content\pandemics\scenes\FinalScene.dt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="Content\pandemics\scenes\MainScene.dt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

@@ -118,7 +118,7 @@ namespace PlaguePandemicsBats
                 }
                 else if (image ["imageName"]?.Value<string>() == "DragonFront")
                 {
-                    _game.Dragon.SetPosition(new Vector2(x, y));
+                    _game.Dragon.SetPosition(new Vector2(x + _game.Dragon.SpriteSize.X / 2, y + _game.Dragon.SpriteSize.Y / 2));
                 }
                 else if (image ["itemIdentifier"]?.Value<string>() == "NoCollider")
                 {

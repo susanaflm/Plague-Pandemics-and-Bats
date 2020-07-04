@@ -51,11 +51,10 @@ namespace PlaguePandemicsBats
         private SpriteManager _spriteManager;
         private CollisionManager _collisionManager;
         private Player _player;
-        private SpawnerZombie _spZ;
-        private ShooterZombie _shZ;
         private Cat _cat;
         private Dragon _dragon;
         private Scene _scene;
+        private Scene _finalScene;
         private Button _buttonPlay, _buttonQuit, _guyButton, _girlButton, _highScoreButton, _optnButton, _creditsButton, _back2menuButton, _back4menuButton;
         private UI _ui;
         private List<Ammo> _ammoList;
@@ -70,6 +69,8 @@ namespace PlaguePandemicsBats
         #region Public variables
         public TilingBackground background;
         public List<int> fileHighscores = new List<int>();
+
+        public bool hasPlayerTouchedBlueHouse = false;
         #endregion
 
         #region Constructor
@@ -164,7 +165,7 @@ namespace PlaguePandemicsBats
 
             LoadHighScores();
 
-            Player.OnPlayerLose += () =>
+            Player.SaveScore += () =>
             {
                SaveHighScore(_player.Highscore);
                 _gameState = GameState.GameOver;
@@ -210,7 +211,6 @@ namespace PlaguePandemicsBats
             SpriteManager.AddSpriteSheet("Fullgrass");
             #endregion
 
-            MediaPlayer.Play(_menuSong);
             #region Buttons
             _buttonPlay = new Button(this, Content.Load<Texture2D>("play"), new Vector2(GraphicsDevice.Viewport.Width / 2, GraphicsDevice.Viewport.Height / 1.8f));
             _highScoreButton = new Button(this, Content.Load<Texture2D>("button"), new Vector2(GraphicsDevice.Viewport.Width / 2, GraphicsDevice.Viewport.Height / 1.46f));
@@ -223,16 +223,9 @@ namespace PlaguePandemicsBats
             _guyButton = new Button(this, Content.Load<Texture2D>("guybutton"), new Vector2(770, 360));
             #endregion
 
-            // GAME STATE
-            if (_gameState == GameState.MainMenu) MediaPlayer.Play(_menuSong);
-            if(_gameState == GameState.Playing) MediaPlayer.Play(_gameSong);
-
+            // GAME Songs
+             MediaPlayer.Play(_menuSong);
         }
-
-        /// <summary>
-        /// UnloadContent will be called once per game and is the place to unload
-        /// game-specific content.
-        /// </summary>
 
         /// <summary>
         /// Allows the game to run logic such as updating the world,
@@ -301,10 +294,12 @@ namespace PlaguePandemicsBats
                 #region Loading
                 case GameState.LoadingScreen:
 
-                    if (Keyboard.GetState().IsKeyDown(Keys.Enter))
+                    if (KeyboardManager.IsKeyGoingDown(Keys.Enter))
                     {
                         _gameState = GameState.Playing;
                         _playSound.Play();
+                        MediaPlayer.Stop();
+                        MediaPlayer.Play(_gameSong);
                     }
 
                     break;
@@ -314,7 +309,7 @@ namespace PlaguePandemicsBats
                 case GameState.ChooseName:
                     _ui.Update(gameTime);
 
-                    if (Keyboard.GetState().IsKeyDown(Keys.Enter))
+                    if (KeyboardManager.IsKeyGoingDown(Keys.Enter))
                     {
                         _gameState = GameState.LoadingScreen;
                     }
@@ -333,13 +328,9 @@ namespace PlaguePandemicsBats
 
                 #region Playing
                 case GameState.Playing:
-                    MediaPlayer.Stop();
                     IsMouseVisible = false;
 
-                    _hbRec = new Rectangle(790, 45, _player.health, 20);
-
-                    if (_player.isBeingDamaged)
-                        _player.health -= 10;
+                    _hbRec = new Rectangle(790, 45, _player.Health, 20);
 
                     if (KeyboardManager.IsKeyGoingDown(Keys.Escape))
                     {
@@ -396,6 +387,8 @@ namespace PlaguePandemicsBats
                     if (_back2menuButton.isClicked)
                     {
                         _gameState = GameState.MainMenu;
+                        SaveHighScore(_player.Highscore);
+                        MediaPlayer.Stop();
                         MediaPlayer.Play(_menuSong);
                     }
 
@@ -439,11 +432,17 @@ namespace PlaguePandemicsBats
             {
                 Texture2D texture = Content.Load<Texture2D>("icon");
 
-                //DRAW BACKGROUND
-                background.Draw(gameTime);
+                //CHARACTERS AND SCENE
+                if (!hasPlayerTouchedBlueHouse)
+                {
+                    background.Draw(gameTime);
+                    _scene.Draw(gameTime);
+                }
+                else
+                {
+                    _finalScene.Draw(gameTime);
+                }
 
-                //DRAW CHARACTERS & SCENE
-                _scene.Draw(gameTime);
                 _player.Draw(_spriteBatch);
                 _cat.Draw(_spriteBatch);
                 _dragon.Draw(_spriteBatch);
@@ -483,11 +482,17 @@ namespace PlaguePandemicsBats
             #region Paused
             if (_gameState == GameState.Paused)
             {
-                //DRAWS THE BACKGOUND
-                background.Draw(gameTime);
-
                 //CHARACTERS AND SCENE
-                _scene.Draw(gameTime);
+                if (!hasPlayerTouchedBlueHouse)
+                {
+                    background.Draw(gameTime);
+                    _scene.Draw(gameTime);
+                }
+                else
+                {
+                    _finalScene.Draw(gameTime);
+                }
+                
                 _player.Draw(_spriteBatch);
                 _cat.Draw(_spriteBatch);
 
@@ -661,18 +666,13 @@ namespace PlaguePandemicsBats
             }
         }
 
-        public int Max(int x, int y)
-        {
-            return (x > y) ? x : y;
-        }
-
         /// <summary>
         /// Saves the New HighScore
         /// </summary>
         /// <param name="newHighScore">The new High Score to save</param>
         public void SaveHighScore(int newHighScore)
         {
-            string path = this.Content.RootDirectory + "/highscore.txt";
+            string path = Content.RootDirectory + "/highscore.txt";
             string text = _player.Name + ";" + newHighScore.ToString() + "\n";
             int i;
 
@@ -684,6 +684,9 @@ namespace PlaguePandemicsBats
             File.AppendAllText(path, text);
         }
 
+        /// <summary>
+        /// This Function loads the level sprites. Also it creates the player and some entities
+        /// </summary>
         private void LoadLevel()
         {
             //CHARACTERS & SCENE
@@ -691,6 +694,7 @@ namespace PlaguePandemicsBats
             _cat = new Cat(this);
             _dragon = new Dragon(this);
             _scene = new Scene(this, "MainScene");
+            //_finalScene = new Scene(this, "FinalScene");
             _ui = new UI(this);
 
             //BACKGROUND 
@@ -718,11 +722,10 @@ namespace PlaguePandemicsBats
             //Unload Components
             _player = null;
             _scene = null;
+            _finalScene = null;
             _dragon = null;
             _ui = null;
             _cat = null;
-            _spZ = null;
-            _shZ = null;
             background = null;
 
             //Load the level Again
