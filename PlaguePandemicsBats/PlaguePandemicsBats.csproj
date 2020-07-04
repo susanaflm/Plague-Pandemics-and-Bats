@@ -140,6 +140,7 @@
     <None Include="Content\Fullgrass.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Include="Content\lab.json" />
     <None Include="Content\minecraft.spritefont" />
     <None Include="Content\NonTrimmedSheet.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -178,6 +179,7 @@
     <Content Include="Content\healthbar.png" />
     <Content Include="Content\highscoreMenu.png" />
     <Content Include="Content\icon.png" />
+    <Content Include="Content\lab.png" />
     <Content Include="Content\lives.png" />
     <Content Include="Content\LoadingScreen.png" />
     <Content Include="Content\mainmenu.png" />

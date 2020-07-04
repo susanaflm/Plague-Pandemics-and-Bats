@@ -67,7 +67,7 @@ namespace PlaguePandemicsBats
         #endregion
 
         #region Public variables
-        public TilingBackground background;
+        public TilingBackground background, finalscene;
         public List<int> fileHighscores = new List<int>();
 
         public bool hasPlayerTouchedBlueHouse = false;
@@ -339,36 +339,39 @@ namespace PlaguePandemicsBats
                         _buttonPlay.isClicked = false;
                     }
 
+                    if (!hasPlayerTouchedBlueHouse)
+                    {
+
+                        foreach (Projectile p in Projectiles.ToArray())
+                        {
+                            p.Update(gameTime);
+                        }
+
+                        foreach (EnemyProjectile eP in EnemyProjectiles.ToArray())
+                        {
+                            eP.Update(gameTime);
+                        }
+
+                        foreach (Enemy e in Enemies.ToArray())
+                        {
+                            e.Update(gameTime);
+                        }
+                        foreach (Enemy e in Enemies.ToArray())
+                        {
+                            e.LateUpdate(gameTime);
+                        }
+                    }
+
                     foreach (Ammo a in Ammo.ToArray())
                     {
                         a.Update();
-                    }
-
-                    foreach (Projectile p in Projectiles.ToArray())
-                    {
-                        p.Update(gameTime);
-                    }
-
-                    foreach (EnemyProjectile eP in EnemyProjectiles.ToArray())
-                    {
-                        eP.Update(gameTime);
-                    }
-
-                    foreach (Enemy e in Enemies.ToArray())
-                    {
-                        e.Update(gameTime);
                     }
 
                     _player.Update(gameTime);
                     _cat.Update(gameTime);
                     _dragon.Update(gameTime);
                     _collisionManager.Update(gameTime);
-
-                    foreach (Enemy e in Enemies.ToArray())
-                    {
-                        e.LateUpdate(gameTime);
-                    }
-
+                   
                     _player.LateUpdate(gameTime);
                     _cat.LateUpdate(gameTime);
                     _dragon.LateUpdate(gameTime);
@@ -448,37 +451,41 @@ namespace PlaguePandemicsBats
                 if (!hasPlayerTouchedBlueHouse)
                 {
                     background.Draw(gameTime);
-                    _scene.Draw(gameTime);
+                    
+                    _cat.Draw(_spriteBatch);
+                    _dragon.Draw(_spriteBatch);
+
+                    //DRAW ENEMIES & PROJECTILES
+                    foreach (Ammo a in Ammo.ToArray())
+                    {
+                        a.Draw(_spriteBatch);
+                    }
+
+                    foreach (Projectile p in Projectiles.ToArray())
+                    {
+                        p.Draw(_spriteBatch);
+                    }
+
+                    foreach (EnemyProjectile eP in EnemyProjectiles.ToArray())
+                    {
+                        eP.Draw(_spriteBatch);
+                    }
+
+                    foreach (Enemy e in Enemies.ToArray())
+                    {
+                        e.Draw(_spriteBatch);
+                    }
+
                 }
                 else
+                {
+                    LoadLevel2();
                     _finalScene.Draw(gameTime);
+                }
                 
-
+                _scene.Draw(gameTime);
                 _player.Draw(_spriteBatch);
-                _cat.Draw(_spriteBatch);
-                _dragon.Draw(_spriteBatch);
-
-                //DRAW ENEMIES & PROJECTILES
-                foreach (Ammo a in Ammo.ToArray())
-                {
-                    a.Draw(_spriteBatch);
-                }
-
-                foreach (Projectile p in Projectiles.ToArray())
-                {
-                    p.Draw(_spriteBatch);
-                }
-
-                foreach (EnemyProjectile eP in EnemyProjectiles.ToArray())
-                {
-                    eP.Draw(_spriteBatch);
-                }
-
-                foreach (Enemy e in Enemies.ToArray())
-                {
-                    e.Draw(_spriteBatch);
-                }
-
+                
                 //DRAW THE TOP LEFT CORNER ICON
                 _spriteBatch.Draw(texture, new Vector2(10, 45), Color.White);
 
@@ -721,14 +728,16 @@ namespace PlaguePandemicsBats
             _dragon = new Dragon(this);
             _scene = new Scene(this, "MainScene");            
             _ui = new UI(this);
-
-            if(hasPlayerTouchedBlueHouse)
-                _finalScene = new Scene(this, "FinalScene");
             
             //BACKGROUND 
             background = new TilingBackground(this, "Fullgrass", new Vector2(4));
         }
 
+        private void LoadLevel2()
+        {
+            _finalScene = new Scene(this, "FinalScene");
+            background = new TilingBackground(this, "lab", new Vector2(4));
+        }
         /// <summary>
         /// This method allows the game to reload level
         /// </summary>
