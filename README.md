@@ -90,7 +90,7 @@ This class benefits from properties such as the player position & direction, col
 Reaching 0 lives triggers an event upon loss saving the highscore and opening the Game Over screen along with the option to restart.
 
 ```cs
-Player.OnPlayerLose += () =>
+ Player.SaveScore += () =>
             {
                SaveHighScore(_player.Highscore);
                 _gameState = GameState.GameOver;
