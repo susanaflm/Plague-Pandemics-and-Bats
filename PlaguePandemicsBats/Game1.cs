@@ -382,7 +382,6 @@ namespace PlaguePandemicsBats
                     {
                         corona = new Corona(this);
                         _hasCoronaSpawned = true;
-                        corona.SetPosition(new Vector2(303, 300));
                     }
 
                     if (hasPlayerTouchedBlueHouse)
@@ -471,6 +470,7 @@ namespace PlaguePandemicsBats
                 else if (hasPlayerTouchedBlueHouse)
                 {
                     finalscene.Draw(gameTime);
+                    corona.Draw(gameTime);
                 }
 
                 _cat.Draw(_spriteBatch);

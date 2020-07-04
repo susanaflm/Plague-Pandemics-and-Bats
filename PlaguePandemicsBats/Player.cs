@@ -178,7 +178,11 @@ namespace PlaguePandemicsBats
                     {
                         _position = _oldPosition;
                         _game.hasPlayerTouchedBlueHouse = true;
-                        SetPosition(new Vector2(300, 300));
+                        SetPosition(new Vector2(295, 300));
+
+                        _lastCheckPointPosition = _position;
+                        _lastCheckPointScore = _score;
+                        _lastCheckPointAmmo = _ammoCount;
                     }
 
                     if (c.Tag == "TP")
