@@ -120,6 +120,10 @@ namespace PlaguePandemicsBats
                 {
                     _game.Dragon.SetPosition(new Vector2(x + _game.Dragon.SpriteSize.X / 2, y + _game.Dragon.SpriteSize.Y / 2));
                 }
+                else if (image ["itemIdentifier"]?.Value<string>() == "borona")
+                {
+                    new Corona(_game, new Vector2(x, y));
+                }
                 else if (image ["itemIdentifier"]?.Value<string>() == "NoCollider")
                 {
                     Sprite sprite = new Sprite(_game, imgName, scale: new Vector2(scaleX, scaleY), collides: false);

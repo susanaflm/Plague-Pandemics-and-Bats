@@ -27,6 +27,18 @@
 /processorParam:TextureFormat=Compressed
 /build:bigfont.spritefont
 
+#begin borona.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:borona.png
+
 #begin button.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -334,4 +346,16 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:TrimmedSheet.png
+
+#begin WinScreen.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:WinScreen.png
 

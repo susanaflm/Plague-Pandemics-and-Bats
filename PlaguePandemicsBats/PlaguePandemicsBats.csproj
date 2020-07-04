@@ -51,6 +51,7 @@
     <Compile Include="CircleCollider.cs" />
     <Compile Include="Collider.cs" />
     <Compile Include="CollisionManager.cs" />
+    <Compile Include="Corona.cs" />
     <Compile Include="Dragon.cs" />
     <Compile Include="Enemy.cs" />
     <Compile Include="EnemyProjectile.cs" />
@@ -164,6 +165,7 @@
   <ItemGroup>
     <Content Include="Content\button.png" />
     <Content Include="Content\characterPickMenu.png" />
+    <Content Include="Content\borona.png" />
     <Content Include="Content\creditsButton.png" />
     <Content Include="Content\creditsButtonOnHover.png" />
     <Content Include="Content\die.wav" />
@@ -313,6 +315,7 @@
     <Content Include="Content\punch.wav" />
     <Content Include="Content\quit.png" />
     <Content Include="Content\TrimmedSheet.png" />
+    <Content Include="Content\WinScreen.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Content\pandemics\assets\orig\animations\" />

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace PlaguePandemicsBats
 {
-    public class Dragon 
+    public class Dragon
     {
         #region Private variables
         private const float _dragonHeight = 1.5f;
@@ -33,7 +33,7 @@ namespace PlaguePandemicsBats
         #endregion
 
         #region Constructor
-        public Dragon(Game1 game) 
+        public Dragon(Game1 game)
         {
             _game = game;
             _position = new Vector2(-2, 0);
@@ -106,12 +106,12 @@ namespace PlaguePandemicsBats
                 if (_frame > 2)
                     _frame = 0;
 
-                _currentSprite = _spritesDirection[_direction][_frame];
+                _currentSprite = _spritesDirection [_direction] [_frame];
 
                 _currentSprite.SetPosition(_position);
                 _dragonCollider.SetPosition(_position);
             }
-            
+
         }
 
         /// <summary>
@@ -139,7 +139,7 @@ namespace PlaguePandemicsBats
         {
             _direction = dir;
 
-            _position += _dragonDirection[_direction] * _acceleration * gameTime.DeltaTime();
+            _position += _dragonDirection [_direction] * _acceleration * gameTime.DeltaTime();
 
             if (Vector2.DistanceSquared(_position, _game.Player.Position) >= 36)
             {
@@ -157,7 +157,7 @@ namespace PlaguePandemicsBats
             {
                 _currentSprite.Draw(spriteBatch);
                 _dragonCollider?.Draw(null);
-            }            
+            }
         }
 
         /// <summary>
@@ -166,7 +166,7 @@ namespace PlaguePandemicsBats
         public void Die()
         {
             isDragonAlive = false;
-            _game.CollisionManager.Remove(_dragonCollider);          
+            _game.CollisionManager.Remove(_dragonCollider);
         }
 
         #endregion

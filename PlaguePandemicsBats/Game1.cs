@@ -33,7 +33,7 @@ namespace PlaguePandemicsBats
     /// </summary>
     public enum GameState
     {
-        MainMenu, Highscores, Playing, Paused, ChooseName, ChooseCharacter, LoadingScreen, GameOver
+        MainMenu, Highscores, Playing, Paused, ChooseName, ChooseCharacter, LoadingScreen, GameOver, WinGame
     }
     #endregion
 
@@ -407,7 +407,15 @@ namespace PlaguePandemicsBats
                         _gameState = GameState.MainMenu;
 
                     _back4menuButton.Update(mouseState, 0);
+                    break;
+                #endregion
 
+                #region Win Game
+                case GameState.WinGame:
+                    IsMouseVisible = false;
+
+                    if (KeyboardManager.IsKeyGoingDown(Keys.Escape))
+                        Exit();
                     break;
                 default:
                     break;
@@ -638,11 +646,22 @@ namespace PlaguePandemicsBats
                 _spriteBatch.Draw(go, rec, Color.White);
                 _back4menuButton.Draw(_spriteBatch, 0);
             }
+            #endregion
+
+            #region Win Game
+            if (_gameState == GameState.WinGame)
+            {
+                Texture2D wg = Content.Load<Texture2D>("WinScreen");
+                Rectangle rec = new Rectangle(0, 0, GraphicsDevice.Viewport.Width, GraphicsDevice.Viewport.Height);
+
+                _spriteBatch.Draw(wg, rec, Color.White);
+            }
+            #endregion
 
             _spriteBatch.End();
 
             base.Draw(gameTime);
-            #endregion
+            
         }
 
         /// <summary>
@@ -664,6 +683,14 @@ namespace PlaguePandemicsBats
             {
                 _highScore = 0;
             }
+        }
+
+        /// <summary>
+        /// When corona dies
+        /// </summary>
+        public void CoronaDied()
+        {
+            _gameState = GameState.WinGame;
         }
 
         /// <summary>
@@ -694,7 +721,7 @@ namespace PlaguePandemicsBats
             _cat = new Cat(this);
             _dragon = new Dragon(this);
             _scene = new Scene(this, "MainScene");
-            //_finalScene = new Scene(this, "FinalScene");
+            _finalScene = new Scene(this, "FinalScene");
             _ui = new UI(this);
 
             //BACKGROUND 
