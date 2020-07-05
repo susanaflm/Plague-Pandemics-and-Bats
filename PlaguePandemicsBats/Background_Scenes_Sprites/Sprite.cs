@@ -7,6 +7,7 @@ namespace PlaguePandemicsBats
 {
     public class Sprite
     {
+        #region Variables
         private Texture2D texture; 
         internal Rectangle bounds; 
         private Vector2 origin;
@@ -20,7 +21,9 @@ namespace PlaguePandemicsBats
         internal OBBCollider obbCollider;
         internal CircleCollider cCollider;
         internal AABBCollider aabbCollider;
+        #endregion
 
+        #region Constructor
         public Sprite(Game1 game, string name, ColliderType colliderType = ColliderType.OBB, float width = 0, float height = 0, Vector2? scale = null, bool collides = false)
         {
             _game = game;
@@ -85,13 +88,25 @@ namespace PlaguePandemicsBats
                 
             }
         }
+        #endregion
 
+        #region Methods
+        /// <summary>
+        /// Forces de Origin of the Sprite
+        /// </summary>
+        /// <param name="origem"></param>
+        /// <returns></returns>
         public Sprite ForceOrigin(Vector2 origem)
         {
             origin = origem;
             return this;
         }
 
+        /// <summary>
+        /// Sets the position of the Sprite
+        /// </summary>
+        /// <param name="position"></param>
+        /// <returns></returns>
         public Sprite SetPosition(Vector2 position)
         {
             this.position = position;
@@ -101,6 +116,11 @@ namespace PlaguePandemicsBats
             return this;
         }
 
+        /// <summary>
+        /// Sets Rotation of the Sprite
+        /// </summary>
+        /// <param name="rotation"></param>
+        /// <returns></returns>
         public Sprite SetRotation(float rotation)
         {
             obbCollider?.Rotate(rotation);
@@ -108,6 +128,10 @@ namespace PlaguePandemicsBats
             return this;
         }
 
+        /// <summary>
+        /// Draw the sprite
+        /// </summary>
+        /// <param name="spriteBatch"></param>
         public void Draw(SpriteBatch spriteBatch)
         {
             spriteBatch.Draw(
@@ -124,5 +148,6 @@ namespace PlaguePandemicsBats
             aabbCollider?.Draw(null);
             cCollider?.Draw(null);
         }
+        #endregion
     }
 }

@@ -9,11 +9,14 @@ namespace PlaguePandemicsBats
 {
     public class PinkZombie : Enemy
     {
+        #region Private Variables
         private const float _zombieWidth = 0.5f;
 
         private float _patrolDistance = 1f;
         private Vector2 _originPosition;
+        #endregion
 
+        #region Constructor
         public PinkZombie(Game1 game, Vector2 position) : base(game)
         {
             _position = position;
@@ -39,11 +42,19 @@ namespace PlaguePandemicsBats
             _enemyCollider.SetDebug(false);
             game.CollisionManager.Add(_enemyCollider);
         }
+        #endregion
 
+        #region Methods
+        /// <summary>
+        /// Behaviour of the enemy, Patrol movement
+        /// </summary>
+        /// <param name="gameTime"></param>
         internal override void Behaviour(GameTime gameTime)
         {
+            //Change the Position
             _position += _acceleration * gameTime.DeltaTime() * _enemyDirection[_direction];
 
+            //Patrol Distance
             float dist = Math.Abs(Camera.PixelSize(Vector2.Distance(_originPosition, _position)));
 
             if (dist >= Camera.PixelSize(_patrolDistance))
@@ -52,6 +63,10 @@ namespace PlaguePandemicsBats
                 _direction = Direction.Up;
         }
 
+        /// <summary>
+        /// Updates the Collider effects
+        /// </summary>
+        /// <param name="gameTime"></param>
         public override void LateUpdate(GameTime gameTime)
         {
             base.LateUpdate(gameTime);
@@ -72,5 +87,6 @@ namespace PlaguePandemicsBats
                 }
             }
         }
+        #endregion
     }
 }

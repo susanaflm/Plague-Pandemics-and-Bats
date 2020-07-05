@@ -22,6 +22,7 @@ namespace PlaguePandemicsBats
         private int _health;
         private float _timer;
         private float _shootTimer = 1f;
+        private bool isDead = false;
         #endregion
 
         #region Constructor
@@ -33,9 +34,10 @@ namespace PlaguePandemicsBats
             _health = 500;
 
             _coronaSprite = new Sprite(game, "borona",width: _coronaWidth);
+            _coronaSprite.SetPosition(_position);
 
             _coronaCollider = new CircleCollider(game, "Corona", _position, _coronaSprite.size.X / 2);
-            _coronaCollider.SetDebug(true);
+            _coronaCollider.SetDebug(false);
             game.CollisionManager.Add(_coronaCollider);
         }
         #endregion
@@ -44,14 +46,26 @@ namespace PlaguePandemicsBats
 
         public void Update(GameTime gameTime)
         {
+            //Check if the corona has died
             if (_health <= 0)
+            {
+                isDead = true;
+            }
+
+            //Sends projectiles towards the player
+            Attack(gameTime);
+
+            //If the corona is dead, then the gamestate is updated to win screen
+            if (isDead)
             {
                 _game.CoronaDied();
             }
-
-            Attack(gameTime);
         }
 
+        /// <summary>
+        /// Check collisions with the corona
+        /// </summary>
+        /// <param name="gameTime"></param>
         public void LateUpdate(GameTime gameTime)
         {
             if (_coronaCollider._inCollision)
@@ -59,11 +73,6 @@ namespace PlaguePandemicsBats
                 if (_coronaCollider.collisions[0].Tag == "Player")
                 {
                     _game.Player.Die();
-                }
-
-                if (_coronaCollider.collisions[0].Tag == "Projectile")
-                {
-                    _health -= 100;
                 }
             }
         }
@@ -76,7 +85,7 @@ namespace PlaguePandemicsBats
         {
             _timer += gameTime.DeltaTime();
 
-            if (_shootTimer - _timer <= 0)
+            if (_shootTimer - _timer <= 0 && Vector2.Distance(_game.Player.Position, _position) <= 20f)
             {
                 Vector2 projOrientation = _game.Player.Position - _position;
 
@@ -87,6 +96,16 @@ namespace PlaguePandemicsBats
                 _timer = 0;
             }
         }
+
+        /// <summary>
+        /// Deal Damage to the corona
+        /// </summary>
+        /// <param name="damage"></param>
+        public void DealDamage(int damage)
+        {
+            _health -= damage;
+        }
+
 
         /// <summary>
         /// Sets the Position of Corona

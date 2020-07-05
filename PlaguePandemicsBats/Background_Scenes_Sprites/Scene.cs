@@ -142,6 +142,10 @@ namespace PlaguePandemicsBats
         #endregion
 
         #region Methods
+        /// <summary>
+        /// Draw Sprites
+        /// </summary>
+        /// <param name="gameTime"></param>
         public void Draw(GameTime gameTime)
         {
             _spriteBatch.Begin(samplerState: SamplerState.PointClamp);

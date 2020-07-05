@@ -63,7 +63,6 @@ namespace PlaguePandemicsBats
         private GameState _gameState = GameState.MainMenu;
         private int _highScore;
         private bool _wasGameLoaded;
-        private bool _hasCoronaSpawned = false;
         #endregion
 
         #region Public variables
@@ -224,7 +223,9 @@ namespace PlaguePandemicsBats
             #endregion
 
             // GAME Songs
-             MediaPlayer.Play(_menuSong);
+            MediaPlayer.Play(_menuSong);
+            MediaPlayer.Volume = 0.1f;
+            MediaPlayer.IsRepeating = true;
         }
 
         /// <summary>
@@ -239,6 +240,7 @@ namespace PlaguePandemicsBats
 
             MouseState mouseState = Mouse.GetState();
 
+            //Updates the objects accordingly to the GameStates
             switch (_gameState)
             {
                 #region Main Menu
@@ -339,12 +341,6 @@ namespace PlaguePandemicsBats
                         _buttonPlay.isClicked = false;
                     }
 
-                    if (hasPlayerTouchedBlueHouse)
-                    {
-                        LoadLevel2();
-                        corona.Update(gameTime);
-                    }
-
                     foreach (Projectile p in Projectiles.ToArray())
                     {
                         p.Update(gameTime);
@@ -362,12 +358,13 @@ namespace PlaguePandemicsBats
 
                     foreach (Ammo a in Ammo.ToArray())
                     {
-                        a.Update();
+                        a.Update(gameTime);
                     }
 
                     _player.Update(gameTime);
                     _cat.Update(gameTime);
                     _dragon.Update(gameTime);
+                    corona.Update(gameTime);
                     _collisionManager.Update(gameTime);
 
                     foreach (Enemy e in Enemies.ToArray())
@@ -378,14 +375,9 @@ namespace PlaguePandemicsBats
                     _cat.LateUpdate(gameTime);
                     _dragon.LateUpdate(gameTime);
 
-                    if (hasPlayerTouchedBlueHouse && !_hasCoronaSpawned)
-                    {
-                        corona = new Corona(this);
-                        _hasCoronaSpawned = true;
-                    }
-
                     if (hasPlayerTouchedBlueHouse)
                     {
+                        LoadLevel2();
                         corona.LateUpdate(gameTime);
                     }
 
@@ -431,7 +423,6 @@ namespace PlaguePandemicsBats
                         _gameState = GameState.MainMenu;
                         MediaPlayer.Play(_menuSong);
                     }
-                        
 
                     _back4menuButton.Update(mouseState, 0);
                     break;
@@ -439,10 +430,15 @@ namespace PlaguePandemicsBats
 
                 #region Win Game
                 case GameState.WinGame:
-                    IsMouseVisible = false;
+                    IsMouseVisible = true;
 
                     if (KeyboardManager.IsKeyGoingDown(Keys.Escape))
                         Exit();
+
+                    if (_player.Score > _player.Highscore)
+                    {
+                        SaveHighScore(_player.Score);
+                    }
                     break;
                 default:
                     break;
@@ -461,7 +457,7 @@ namespace PlaguePandemicsBats
             GraphicsDevice.Clear(Color.White);
 
             _spriteBatch.Begin(samplerState: SamplerState.PointClamp);
-
+            //Draws Different things for the different GameStates
             #region Playing
             if (_gameState == GameState.Playing)
             {
@@ -473,11 +469,13 @@ namespace PlaguePandemicsBats
                     background.Draw(gameTime);
                     _scene.Draw(gameTime);
                 }
-                else if (hasPlayerTouchedBlueHouse)
+
+                if (hasPlayerTouchedBlueHouse)
                 {
                     finalscene.Draw(gameTime);
-                    corona.Draw(_spriteBatch);
                 }
+
+                corona.Draw(_spriteBatch);
 
                 _cat.Draw(_spriteBatch);
                 _dragon.Draw(_spriteBatch);
@@ -747,7 +745,8 @@ namespace PlaguePandemicsBats
             _dragon = new Dragon(this);
             _scene = new Scene(this, "MainScene");
             _ui = new UI(this);
-            
+            corona = new Corona(this);
+
             //BACKGROUND 
             background = new TilingBackground(this, "Fullgrass", new Vector2(4));
             finalscene = new TilingBackground(this, "lab", new Vector2(3));
@@ -781,6 +780,7 @@ namespace PlaguePandemicsBats
             _enemyProjectiles.Clear();
             _scene.Sprites.Clear();
             _collisionManager.Clear();
+            _ammoList.Clear();
             hasPlayerTouchedBlueHouse = false;
 
             //Unload Components

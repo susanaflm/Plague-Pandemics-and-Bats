@@ -76,11 +76,13 @@ namespace PlaguePandemicsBats
         /// <param name="gameTime"></param>
         public void Update(GameTime gameTime)
         {
+            //Delta time and timer
             _deltaTime += gameTime.DeltaTime();
             _timer += gameTime.DeltaTime();
 
             _oldPosition = _position;
 
+            //If the player found the cat
             if (_isFollowingPlayer)
             {
                 //Filter the enemies list from game according to a range
@@ -99,6 +101,7 @@ namespace PlaguePandemicsBats
                 }
             }
 
+            //Updates the frame and sprites
             _frame = (int)(_deltaTime * 6) % 3;
 
             if (_frame > 2)
@@ -209,6 +212,7 @@ namespace PlaguePandemicsBats
             faceDir.Normalize();
             _acceleration = 1.2f;
 
+            //move the cat towards the enemy
             _position += faceDir * _acceleration * gameTime.DeltaTime();
         }
 

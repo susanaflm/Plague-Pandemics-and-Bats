@@ -10,11 +10,12 @@ namespace PlaguePandemicsBats
 {
     class Bat : Enemy
     {
-
+        #region Constants
         private const float _batWidth = 0.2f;
         private const float _batHeight = 0.3f;
+        #endregion
 
-        //private int _state = 0;
+        #region Constructor
         public Bat(Game1 game, Vector2 position) : base(game)
         {
             _position = position;
@@ -36,9 +37,15 @@ namespace PlaguePandemicsBats
             _enemyCollider.SetDebug(false);
             game.CollisionManager.Add(_enemyCollider);
         }
+        #endregion
 
+        /// <summary>
+        /// The bat will follow the player
+        /// </summary>
+        /// <param name="gameTime"></param>
         internal override void Behaviour(GameTime gameTime)
         {
+            //Calculate the Direction of the player and aply it to an angle
              Vector2 faceDir = _game.Player.Position - _position;
              float angle = (float)Math.Atan2(faceDir.Y, faceDir.X);
 
@@ -53,6 +60,8 @@ namespace PlaguePandemicsBats
              else
                  _direction = Direction.Left;
 
+             //Normalize the Direction
+             //Change the bat position
              faceDir.Normalize();
              _position += faceDir * _acceleration * gameTime.DeltaTime();
             

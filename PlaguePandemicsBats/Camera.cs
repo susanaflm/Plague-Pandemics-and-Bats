@@ -9,12 +9,9 @@ namespace PlaguePandemicsBats
 
         // Monogame window size
         private Vector2 _pxSize; 
-
         // Monogame window in worldsize
         private Vector2 _wdSize; 
-       
         private Vector2 _ratio;
-        
         private Vector2 _target;       
            
         public Camera(Game game, Vector2 worldSize)
@@ -46,11 +43,8 @@ namespace PlaguePandemicsBats
                 throw new Exception("Singleton called twice");
 
             instance = this;
-
             _wdSize = worldSize;
-            
             _ratio = _pxSize / _wdSize;
-
             _target = Vector2.Zero;
         }
 
@@ -67,7 +61,6 @@ namespace PlaguePandemicsBats
         public static void Zoom(float zoom) 
         {
             instance._wdSize *= zoom;
-
             instance.UpdateRatio();
         }
 

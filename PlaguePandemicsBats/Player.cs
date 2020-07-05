@@ -17,9 +17,9 @@ namespace PlaguePandemicsBats
         public static event Action SaveScore;
 
         #region Private variables 
-        private const float playerWidth = 0.4f;
-        private const float playerGWidth = 0.33f;
-        private const float playerHeight = 0.44f;
+        private const float playerWidth = 0.3f;
+        private const float playerGWidth = 0.35f;
+
 
         private Game1 _game;
         private Dictionary<Direction, Vector2> _playerDirection;
@@ -86,18 +86,18 @@ namespace PlaguePandemicsBats
 
             _spriteDirectionMale = new Dictionary<Direction, Sprite []>
             {
-                [Direction.Up] = new [] { new Sprite(game, "GuyU0", width: playerGWidth, height: playerHeight), new Sprite(game, "GuyU1", width: playerGWidth, height: playerHeight), new Sprite(game, "GuyU2", width: playerGWidth, height: playerHeight) },
-                [Direction.Down] = new [] { new Sprite(game, "GuyD0", width: playerGWidth, height: playerHeight), new Sprite(game, "GuyD1", width: playerGWidth, height: playerHeight), new Sprite(game, "GuyD2", width: playerGWidth, height: playerHeight) },
-                [Direction.Left] = new [] { new Sprite(game, "GuyL0", width: playerGWidth, height: playerHeight), new Sprite(game, "GuyL1", width: playerGWidth, height: playerHeight), new Sprite(game, "GuyL2", width: playerGWidth, height: playerHeight) },
-                [Direction.Right] = new [] { new Sprite(game, "GuyR0", width: playerGWidth, height: playerHeight), new Sprite(game, "GuyR1", width: playerGWidth, height: playerHeight), new Sprite(game, "GuyR2", width: playerGWidth, height: playerHeight) }
+                [Direction.Up] = new [] { new Sprite(game, "GuyU0", width: playerWidth), new Sprite(game, "GuyU1", width: playerWidth), new Sprite(game, "GuyU2", width: playerWidth) },
+                [Direction.Down] = new [] { new Sprite(game, "GuyD0", width: playerWidth), new Sprite(game, "GuyD1", width: playerWidth), new Sprite(game, "GuyD2", width: playerWidth) },
+                [Direction.Left] = new [] { new Sprite(game, "GuyL0", width: playerWidth), new Sprite(game, "GuyL1", width: playerWidth), new Sprite(game, "GuyL2", width: playerWidth) },
+                [Direction.Right] = new [] { new Sprite(game, "GuyR0", width: playerWidth), new Sprite(game, "GuyR1", width: playerWidth), new Sprite(game, "GuyR2", width: playerWidth) }
             };
 
             _spriteDirectionFemale = new Dictionary<Direction, Sprite []>
             {
-                [Direction.Up] = new [] { new Sprite(game, "GirlU0", width: playerWidth, height: playerHeight), new Sprite(game, "GirlU1", width: playerWidth, height: playerHeight), new Sprite(game, "GirlU2", width: playerWidth, height: playerHeight) },
-                [Direction.Down] = new [] { new Sprite(game, "GirlD0", width: playerWidth, height: playerHeight), new Sprite(game, "GirlD1", width: playerWidth, height: playerHeight), new Sprite(game, "GirlD2", width: playerWidth, height: playerHeight) },
-                [Direction.Left] = new [] { new Sprite(game, "GirlL0", width: playerWidth, height: playerHeight), new Sprite(game, "GirlL1", width: playerWidth, height: playerHeight), new Sprite(game, "GirlL2", width: playerWidth, height: playerHeight) },
-                [Direction.Right] = new [] { new Sprite(game, "GirlR0", width: playerWidth, height: playerHeight), new Sprite(game, "GirlR1", width: playerWidth, height: playerHeight), new Sprite(game, "GirlR2", width: playerWidth, height: playerHeight) }
+                [Direction.Up] = new [] { new Sprite(game, "GirlU0", width: playerGWidth), new Sprite(game, "GirlU1", width: playerGWidth), new Sprite(game, "GirlU2", width: playerGWidth) },
+                [Direction.Down] = new [] { new Sprite(game, "GirlD0", width: playerGWidth), new Sprite(game, "GirlD1", width: playerGWidth), new Sprite(game, "GirlD2", width: playerGWidth) },
+                [Direction.Left] = new [] { new Sprite(game, "GirlL0", width: playerGWidth), new Sprite(game, "GirlL1", width: playerGWidth), new Sprite(game, "GirlL2", width: playerGWidth) },
+                [Direction.Right] = new [] { new Sprite(game, "GirlR0", width: playerGWidth), new Sprite(game, "GirlR1", width: playerGWidth), new Sprite(game, "GirlR2", width: playerGWidth) }
             };
             #endregion
 
@@ -158,6 +158,10 @@ namespace PlaguePandemicsBats
         #endregion
 
         #region Methods
+        /// <summary>
+        /// Checks the if the player is in Collision and take action
+        /// </summary>
+        /// <param name="gameTime"></param>
         public void LateUpdate(GameTime gameTime)
         {
             if (_playerCollider._inCollision)
@@ -178,7 +182,7 @@ namespace PlaguePandemicsBats
                     {
                         _position = _oldPosition;
                         _game.hasPlayerTouchedBlueHouse = true;
-                        SetPosition(new Vector2(295, 300));
+                        SetPosition(new Vector2(300, 300));
 
                         _lastCheckPointPosition = _position;
                         _lastCheckPointScore = _score;
@@ -216,19 +220,27 @@ namespace PlaguePandemicsBats
             }
         }
 
+        /// <summary>
+        /// Updates the player
+        /// </summary>
+        /// <param name="gameTime"></param>
         public void Update(GameTime gameTime)
         {
+            //Delta time and Total time
             float deltaTime = gameTime.DeltaTime();
             float totalTime = gameTime.TotalTime();
 
+            //Timer
             _timer += gameTime.DeltaTime();
 
+            //Check if the punch is available
             if (_punchTimer - _timer <= 0)
             {
                 _isPunchAvailable = true;
                 _timer = 0;
             }
 
+            //Changes the sprites according to the player gender
             if (_playerGender == 0)
             {
                 _currentSprite = _spriteDirectionFemale[_direction][_frame];
@@ -240,14 +252,16 @@ namespace PlaguePandemicsBats
 
             _oldPosition = _position;
 
-            HandleInput(gameTime);
+            HandleInput();
 
+            //Change the player position
             _position += _acceleration * deltaTime * _playerDirection[_direction];
             _currentSprite.SetPosition(_position);
             _playerCollider.SetPosition(_position);
 
             _acceleration = 0;
 
+            //Do the animation when player is moving
             if (_oldPosition != _position)
             {
                 _frame = (int)(totalTime * 6) % 3;
@@ -257,12 +271,18 @@ namespace PlaguePandemicsBats
             else
                 _frame = 0;
 
+            //Check if the player is dead
             if (_health <= 0)
                 Die();
 
+            //The Camera will always follow the player
             Camera.LookAt(_position);
         }
 
+        /// <summary>
+        /// Update the player Score
+        /// </summary>
+        /// <param name="x">Score to be added</param>
         public void UpdateScore(int x)
         {
             _score += x;
@@ -273,11 +293,18 @@ namespace PlaguePandemicsBats
             }
         }
 
+        /// <summary>
+        /// Adds ammo to the player
+        /// </summary>
+        /// <param name="ammoQuantity">Ammo to be accrued</param>
         public void AddAmmo(int ammoQuantity)
         {
             _ammoCount += ammoQuantity;
         }
 
+        /// <summary>
+        /// Damage nearby enemies
+        /// </summary>
         private void Punch()
         {
             foreach (Enemy enemy in _game.Enemies)
@@ -290,7 +317,11 @@ namespace PlaguePandemicsBats
             }
         }
 
-        public void HandleInput(GameTime gameTime)
+        /// <summary>
+        /// Handles the user input commands
+        /// </summary>
+        /// <param name="gameTime"></param>
+        public void HandleInput()
         {
             if (KeyboardManager.IsKeyDown(Keys.W) || KeyboardManager.IsKeyDown(Keys.Up))
             {
@@ -328,7 +359,7 @@ namespace PlaguePandemicsBats
                 Punch();
                 _isPunchAvailable = false;
             }
-            if (KeyboardManager.IsKeyGoingDown(Keys.E))
+            if (KeyboardManager.IsKeyGoingDown(Keys.E) && !isDragonHiden)
             {
                 _game.Dragon.SetPosition(_position - new Vector2(4, 4) * _playerDirection[_game.Player.Direction]);
                 _game.Dragon.dragonAttackActive = true;
@@ -375,6 +406,10 @@ namespace PlaguePandemicsBats
             _playerCollider.SetPosition(position);
         }
 
+        /// <summary>
+        /// Set Spawn of the player when creating him
+        /// </summary>
+        /// <param name="position"></param>
         public void SetSpawn(Vector2 position)
         {
             _playerSpawn = position;

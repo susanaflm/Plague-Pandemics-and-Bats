@@ -7,6 +7,7 @@ namespace PlaguePandemicsBats
 {
     public class Projectile
     {
+        #region Private Variables
         private const float _projectileSpeed = 3f;
         private const float _projectileWidth = 0.12f;
         private const float _maxDistance = 4f;
@@ -20,7 +21,9 @@ namespace PlaguePandemicsBats
         private OBBCollider _projectileCollider;
 
         private Dictionary<Direction, Vector2> _projectileDirection;
+        #endregion
 
+        #region Constructor
         public Projectile(Game1 game)
         {
             _game = game;
@@ -51,27 +54,45 @@ namespace PlaguePandemicsBats
             _projectileCollider.SetDebug(false);
             game.CollisionManager.Add(_projectileCollider);
         }
+        #endregion
 
+        #region Methods
+        /// <summary>
+        /// Set the origin of the projectile
+        /// </summary>
         public void Shoot()
         {
             _origin = _position;
         }
 
+        /// <summary>
+        /// Update the projectile
+        /// </summary>
+        /// <param name="gameTime"></param>
         public void Update(GameTime gameTime)
         {
+            //Check collisions
             if (_projectileCollider._inCollision)
             {
                 foreach (Collider c in _projectileCollider.collisions)
                 {
-                    if (c.Tag == "Enemy" || c.Tag == "Obstacle" || c.Tag == "RedTree" || c.Tag == "TP")
+                    if (c.Tag == "Enemy" || c.Tag == "Obstacle" || c.Tag == "RedTree" || c.Tag == "TP" || c.Tag == "Corona")
                     {
                         _game.Projectiles.Remove(this);
                         _game.CollisionManager.Remove(_projectileCollider);
+                    }
+
+                    if (c.Tag == "Corona")
+                    {
+                        _game.corona.DealDamage(100);
                     }
                 }
                
             }
 
+            //Distancing dead
+            //If the projectile went too far from its origin the projectile dies
+            //Otherwise change the projectile position
             float dist = Vector2.Distance(_origin, _position);
 
             if (dist >= _maxDistance)
@@ -89,11 +110,15 @@ namespace PlaguePandemicsBats
             }
         }
 
+        /// <summary>
+        /// Draw the projectile
+        /// </summary>
+        /// <param name="sb"></param>
         public void Draw(SpriteBatch sb)
         {
             _sprite.Draw(sb);
             _projectileCollider?.Draw(null);
         }
-
+        #endregion
     }
 }

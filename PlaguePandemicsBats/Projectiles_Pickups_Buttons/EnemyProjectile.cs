@@ -10,6 +10,7 @@ namespace PlaguePandemicsBats
 {
     public class EnemyProjectile
     {
+        #region Private Variables
         private const float _projWidth = 0.2f;
 
         private Game1 _game;
@@ -26,7 +27,9 @@ namespace PlaguePandemicsBats
         private Sprite[] _sprites;
         private Sprite _currentSprite;
         private CircleCollider _projCollider;
+        #endregion
 
+        #region Constructor
         public EnemyProjectile(Game1 game, Vector2 orientation, Vector2 position)
         {
             _game = game;
@@ -63,11 +66,19 @@ namespace PlaguePandemicsBats
 
             game.EnemyProjectiles.Add(this);
         }
+        #endregion
 
+        #region Methods
+        /// <summary>
+        /// Updates the projectile
+        /// </summary>
+        /// <param name="gameTime"></param>
         public void Update(GameTime gameTime)
         {
+            //Delta time sum
             _deltaTime += gameTime.DeltaTime();
 
+            //Check collisions
             if (_projCollider._inCollision)
             {
                 if (_projCollider.collisions[0].Tag == "Player" || _projCollider.collisions[0].Tag == "Obstacle" || _projCollider.collisions[0].Tag == "RedTree" || _projCollider.collisions[0].Tag == "TP")
@@ -82,8 +93,10 @@ namespace PlaguePandemicsBats
                 }
             }
 
+            //Change the projectile position
             _position += _projSpeed * _orientation * gameTime.DeltaTime();
 
+            //Updates the frame and drawn sprite
             _frame = (int)(_deltaTime * 10) % 16;
 
             if (_frame > 15)
@@ -95,6 +108,7 @@ namespace PlaguePandemicsBats
             _currentSprite.SetPosition(_position);
             _projCollider.SetPosition(_position);
 
+            //Projectile distance dead
             if (Vector2.Distance(_origin, _position) >= _distance)
             {
                 _game.EnemyProjectiles.Remove(this);
@@ -102,10 +116,15 @@ namespace PlaguePandemicsBats
             }
         }
 
+        /// <summary>
+        /// Draw the projectile
+        /// </summary>
+        /// <param name="sb"></param>
         public void Draw(SpriteBatch sb)
         {
             _currentSprite.Draw(sb);
             _projCollider?.Draw(null);
         }
+        #endregion
     }
 }

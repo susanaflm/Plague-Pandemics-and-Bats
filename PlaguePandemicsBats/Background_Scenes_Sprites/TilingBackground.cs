@@ -23,12 +23,9 @@ namespace PlaguePandemicsBats
         public TilingBackground(Game game, string texture, Vector2 realSize)
         {
             _game = game;
-
             _realSize = realSize;
 
             _background = game.Content.Load<Texture2D>(texture);
-
-            //spritebatch tem acesso à placa gráfica através do graphics device
             _spriteBatch = new SpriteBatch(_game.GraphicsDevice);
 
         }
@@ -42,6 +39,7 @@ namespace PlaguePandemicsBats
         /// <param name="gameTime"></param>
         public void Draw(GameTime gameTime)
         {
+            //Compute the furthest camera viewing points
             Vector2 camTopLeft = Camera.Target() - Camera.Size() / 2f;
             Vector2 camBottomRight = Camera.Target() + Camera.Size() / 2f;
 
@@ -53,6 +51,7 @@ namespace PlaguePandemicsBats
 
             _spriteBatch.Begin();
 
+            //Draw the sprite multiple times in the camera point of view
             for (float x = bottomleft.X; x <= topright.X; x += _realSize.X)
             {
                 for (float y = bottomleft.Y; y <= topright.Y; y += _realSize.Y)

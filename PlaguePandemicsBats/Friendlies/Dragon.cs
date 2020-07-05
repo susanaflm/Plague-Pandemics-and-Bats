@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 
 namespace PlaguePandemicsBats
 {
+    //Easter Egg of the game, one time usage gameplay wise
     public class Dragon
     {
         #region Private variables
