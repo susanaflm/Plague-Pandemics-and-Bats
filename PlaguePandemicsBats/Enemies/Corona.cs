@@ -9,32 +9,32 @@ using System.Threading.Tasks;
 
 namespace PlaguePandemicsBats
 {
-    public class Corona : DrawableGameComponent
+    public class Corona
     {
         #region Private variables
-        private readonly Game1 _game;
-        private readonly Texture2D _texture;
-        private readonly SpriteBatch _spriteBatch;
-        private readonly CircleCollider _coronaCollider;
+        private const float _coronaWidth = 5f;
 
-        private Direction _direction = Direction.Down;
-        private Rectangle _rec;
+        private Game1 _game;
+        private CircleCollider _coronaCollider;
+
         private Vector2 _position;
+        private Sprite _coronaSprite;
         private int _health;
         private float _timer;
+        private float _shootTimer = 1f;
         #endregion
 
         #region Constructor
-        public Corona(Game1 game) : base(game)
+        public Corona(Game1 game)
         {
             _game = game;
-            _texture = _game.Content.Load<Texture2D>("borona");
-            _spriteBatch = new SpriteBatch(_game.GraphicsDevice);
-            _position = game.Player.Position;
+            _position = new Vector2(305, 300);
 
             _health = 500;
 
-            _coronaCollider = new CircleCollider(_game, "Corona", new Vector2(_texture.Width - _texture.Width / 2), _texture.Width / 2f);
+            _coronaSprite = new Sprite(game, "borona",width: _coronaWidth);
+
+            _coronaCollider = new CircleCollider(game, "Corona", _position, _coronaSprite.size.X / 2);
             _coronaCollider.SetDebug(true);
             game.CollisionManager.Add(_coronaCollider);
         }
@@ -42,9 +42,9 @@ namespace PlaguePandemicsBats
 
         #region Methods
 
-        public override void Update(GameTime gameTime)
+        public void Update(GameTime gameTime)
         {
-            if (_health == 0)
+            if (_health <= 0)
             {
                 _game.CoronaDied();
             }
@@ -68,44 +68,42 @@ namespace PlaguePandemicsBats
             }
         }
 
+        /// <summary>
+        /// This handles the corona projectiles
+        /// </summary>
+        /// <param name="gameTime"></param>
         public void Attack(GameTime gameTime)
         {
             _timer += gameTime.DeltaTime();
 
-            Vector2 projOrientation = _game.Player.Position - _position;
+            if (_shootTimer - _timer <= 0)
+            {
+                Vector2 projOrientation = _game.Player.Position - _position;
 
-            float angle = (float)Math.Atan2(projOrientation.Y, projOrientation.X);
+                projOrientation.Normalize();
 
-            if (angle <= -3 * Math.PI / 4)
-                _direction = Direction.Left;
-            else if (angle <= -Math.PI / 4)
-                _direction = Direction.Down;
-            else if (angle <= Math.PI / 4)
-                _direction = Direction.Right;
-            else if (angle <= 3 * Math.PI / 4)
-                _direction = Direction.Up;
-            else
-                _direction = Direction.Left;
+                new EnemyProjectile(_game, projOrientation, _position);
 
-            projOrientation.Normalize();
-
-            new EnemyProjectile(_game, projOrientation, _position);
+                _timer = 0;
+            }
         }
 
+        /// <summary>
+        /// Sets the Position of Corona
+        /// </summary>
+        /// <param name="position"></param>
         public void SetPosition(Vector2 position)
         {
             _position = position;
         }
 
         /// <summary>
-        /// 
+        /// Draws the Corona
         /// </summary>
         /// <param name="gameTime"></param>
-        public override void Draw(GameTime gameTime)
+        public void Draw(SpriteBatch sb)
         {
-            _spriteBatch.Begin(samplerState: SamplerState.PointClamp);
-            _spriteBatch.Draw(_texture, _rec, Color.White);
-            _spriteBatch.End();
+            _coronaSprite.Draw(sb);
         }
 
         #endregion

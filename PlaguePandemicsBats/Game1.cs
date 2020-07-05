@@ -424,8 +424,14 @@ namespace PlaguePandemicsBats
                 case GameState.GameOver:
                     IsMouseVisible = true;
 
+                    MediaPlayer.Stop();
+
                     if (_back4menuButton.isClicked)
+                    {
                         _gameState = GameState.MainMenu;
+                        MediaPlayer.Play(_menuSong);
+                    }
+                        
 
                     _back4menuButton.Update(mouseState, 0);
                     break;
@@ -470,7 +476,7 @@ namespace PlaguePandemicsBats
                 else if (hasPlayerTouchedBlueHouse)
                 {
                     finalscene.Draw(gameTime);
-                    corona.Draw(gameTime);
+                    corona.Draw(_spriteBatch);
                 }
 
                 _cat.Draw(_spriteBatch);
@@ -751,6 +757,7 @@ namespace PlaguePandemicsBats
         {
             _scene.Sprites.Clear();
             Enemies.Clear();
+            EnemyProjectiles.Clear();
         }
         /// <summary>
         /// This method allows the game to reload level
@@ -769,6 +776,7 @@ namespace PlaguePandemicsBats
             _enemyProjectiles.Clear();
             _scene.Sprites.Clear();
             _collisionManager.Clear();
+            hasPlayerTouchedBlueHouse = false;
 
             //Unload Components
             _player = null;
