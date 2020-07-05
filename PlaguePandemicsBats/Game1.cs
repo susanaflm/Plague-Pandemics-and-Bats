@@ -753,12 +753,17 @@ namespace PlaguePandemicsBats
             finalscene = new TilingBackground(this, "lab", new Vector2(3));
         }
 
+        /// <summary>
+        /// Clear Some Lists that are not needed
+        /// </summary>
         private void LoadLevel2()
         {
             _scene.Sprites.Clear();
             Enemies.Clear();
             EnemyProjectiles.Clear();
+            Ammo.Clear();
         }
+
         /// <summary>
         /// This method allows the game to reload level
         /// </summary>
