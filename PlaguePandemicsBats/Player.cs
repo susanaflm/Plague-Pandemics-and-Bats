@@ -9,6 +9,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using System.Threading;
 using Microsoft.Xna.Framework.Audio;
+using Microsoft.Xna.Framework.Media;
 
 namespace PlaguePandemicsBats
 {
@@ -35,6 +36,7 @@ namespace PlaguePandemicsBats
         private Vector2 _playerSpawn;
         private SpriteFont _font;
         private SoundEffect _punchSound;
+        private SoundEffect _corona;
         private SoundEffect _gameLoss;
         private float _acceleration;
         private float _timer = 0;
@@ -69,9 +71,14 @@ namespace PlaguePandemicsBats
             _game = game;
             _position = new Vector2(0, 0);
             _lastCheckPointPosition = _position;
+
+            //FONTS
             _font = _game.Content.Load<SpriteFont>("bigfont");
+
+            //SOUNDS
             _punchSound = _game.Content.Load<SoundEffect>("punch");
             _gameLoss = _game.Content.Load<SoundEffect>("endgameSound");
+            _corona = _game.Content.Load<SoundEffect>("coronaSpeech");
 
             filePath = _game.Content.RootDirectory + "/highscore.txt";
 
@@ -180,10 +187,12 @@ namespace PlaguePandemicsBats
 
                     if (c.Tag == "BlueHouse")
                     {
+                        MediaPlayer.Stop();
                         _position = _oldPosition;
                         _game.hasPlayerTouchedBlueHouse = true;
-                        SetPosition(new Vector2(300, 300));
-
+                        _corona.Play();
+                        SetPosition(new Vector2(290, 300));
+                                                
                         _lastCheckPointPosition = _position;
                         _lastCheckPointScore = _score;
                         _lastCheckPointAmmo = _ammoCount;
@@ -345,7 +354,7 @@ namespace PlaguePandemicsBats
             }
             if (KeyboardManager.IsKeyDown(Keys.LeftShift))
             {
-                _position = Vector2.One;
+                _acceleration = 2f;
             }
             if (KeyboardManager.IsKeyGoingDown(Keys.Space) && _ammoCount > 0)
             {

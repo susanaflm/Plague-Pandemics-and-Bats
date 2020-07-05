@@ -31,7 +31,7 @@ namespace PlaguePandemicsBats
             _game = game;
             _position = new Vector2(305, 300);
 
-            _health = 500;
+            _health = 1000;
 
             _coronaSprite = new Sprite(game, "borona",width: _coronaWidth);
             _coronaSprite.SetPosition(_position);
@@ -85,7 +85,7 @@ namespace PlaguePandemicsBats
         {
             _timer += gameTime.DeltaTime();
 
-            if (_shootTimer - _timer <= 0 && Vector2.Distance(_game.Player.Position, _position) <= 20f)
+            if (_shootTimer - _timer <= 0 && Vector2.Distance(_position, _game.Player.Position) <= 13f)
             {
                 Vector2 projOrientation = _game.Player.Position - _position;
 

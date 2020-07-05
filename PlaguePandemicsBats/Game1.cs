@@ -718,6 +718,7 @@ namespace PlaguePandemicsBats
         public void CoronaDied()
         {
             _gameState = GameState.WinGame;
+            SaveHighScore(Player.Highscore);
         }
 
         /// <summary>

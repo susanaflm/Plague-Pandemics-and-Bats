@@ -63,6 +63,12 @@
 /processorParam:TextureFormat=Color
 /build:characterPickMenu.png
 
+#begin coronaSpeech.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:coronaSpeech.wav
+
 #begin creditsButton.png
 /importer:TextureImporter
 /processor:TextureProcessor

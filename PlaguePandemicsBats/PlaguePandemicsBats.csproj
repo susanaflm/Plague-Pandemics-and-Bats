@@ -159,6 +159,7 @@
     <Content Include="Content\button.png" />
     <Content Include="Content\characterPickMenu.png" />
     <Content Include="Content\borona.png" />
+    <Content Include="Content\coronaSpeech.wav" />
     <Content Include="Content\creditsButton.png" />
     <Content Include="Content\creditsButtonOnHover.png" />
     <Content Include="Content\die.wav" />
