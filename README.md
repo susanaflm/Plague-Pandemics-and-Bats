@@ -153,4 +153,4 @@ Teleports are available in various ways, checkpoints, houses, buildings, closely
 
 ## Corona
 
-The final boss of the game, the ultimate and super powerful enemy that is the corona. The `Player` will require that vaccines he/her saved up to that moment to defeat this threat.
+The final boss of the game, the ultimate and super powerful enemy that is the corona. The `Player` will require the vaccines they had saved up to that moment to defeat this threat.
